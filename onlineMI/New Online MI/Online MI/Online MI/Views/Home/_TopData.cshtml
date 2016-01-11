@@ -1,0 +1,12 @@
+﻿@model Online_MI.Models.MiViewModel
+
+<div class="test">
+    @{
+        if (ViewBag.CurrentData = "Complaints")
+        {
+            <p>
+                @Model.ComplaintsSummary.First().ComplaintDetailAgainst
+            </p>
+        }
+    }
+</div>

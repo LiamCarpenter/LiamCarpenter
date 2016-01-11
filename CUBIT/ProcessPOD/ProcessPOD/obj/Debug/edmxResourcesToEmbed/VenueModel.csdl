@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VenueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="venue">
+    <Key>
+      <PropertyRef Name="ve_reference" />
+    </Key>
+    <Property Name="ve_reference" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ve_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_externalsupplier" Type="Boolean" />
+    <Property Name="ve_upload" Type="Boolean" />
+    <Property Name="ve_address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_address2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="to_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gride" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gridn" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="co_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ar_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="hg_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_nysrating" Type="Int32" />
+    <Property Name="ve_nyspreferred" Type="Int32" />
+    <Property Name="vt_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_telephone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_femsec" Type="Boolean" />
+    <Property Name="ve_gen_iip" Type="Boolean" />
+    <Property Name="ve_gen_iso9001" Type="Boolean" />
+    <Property Name="ve_gen_disabled" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_lastinspected" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_specialoffers" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_commentv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_commenti" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="boss_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ct_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_paynet" Type="Boolean" />
+    <Property Name="ve_acc_creditlimit" Type="Double" />
+    <Property Name="ve_acc_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_expirydate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_commission" Type="Double" />
+    <Property Name="ve_acc_roomhireonly" Type="Boolean" />
+    <Property Name="ve_rat_ddrfrom" Type="Double" />
+    <Property Name="ve_rat_ddrto" Type="Double" />
+    <Property Name="ve_rat_24from" Type="Double" />
+    <Property Name="ve_rat_24to" Type="Double" />
+    <Property Name="ve_rat_hdfrom" Type="Double" />
+    <Property Name="ve_rat_hdto" Type="Double" />
+    <Property Name="ve_rat_fdfrom" Type="Double" />
+    <Property Name="ve_rat_fdto" Type="Double" />
+    <Property Name="ve_rat_dbbfrom" Type="Double" />
+    <Property Name="ve_rat_dbbto" Type="Double" />
+    <Property Name="ve_rat_bbfrom" Type="Double" />
+    <Property Name="ve_rat_bbto" Type="Double" />
+    <Property Name="ve_rat_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rs_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_golf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_team" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_corporate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_pool" Type="Boolean" />
+    <Property Name="ve_fac_jacuzzi" Type="Boolean" />
+    <Property Name="ve_fac_sauna" Type="Boolean" />
+    <Property Name="ve_fac_solarium" Type="Boolean" />
+    <Property Name="ve_fac_gym" Type="Boolean" />
+    <Property Name="ve_fac_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ai_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_airportmiles" Type="Int32" />
+    <Property Name="rw_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_stationmiles" Type="Double" />
+    <Property Name="ve_loc_parking" Type="Boolean" />
+    <Property Name="ve_loc_parkingspaces" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_parkingcost" Type="Double" />
+    <Property Name="mw_name" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ju_name" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_equ_laptop" Type="Double" />
+    <Property Name="ve_equ_lcd" Type="Double" />
+    <Property Name="ve_equ_flipchart" Type="Double" />
+    <Property Name="ve_equ_tvvideo" Type="Double" />
+    <Property Name="ve_equ_screen" Type="Double" />
+    <Property Name="ve_equ_ohp" Type="Double" />
+    <Property Name="ve_equ_videocamera" Type="Double" />
+    <Property Name="ve_equ_audio" Type="Double" />
+    <Property Name="ve_equ_extension" Type="Double" />
+    <Property Name="ve_equ_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_aircon" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_natural" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_blackout" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_soundproof" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_isdn" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_businesscentre" Type="Boolean" />
+    <Property Name="ve_con_externalaccess" Type="Boolean" />
+    <Property Name="ve_con_teleconference" Type="Boolean" />
+    <Property Name="ve_con_videoconference" Type="Boolean" />
+    <Property Name="ve_con_noconference" Type="Int32" />
+    <Property Name="ve_con_nosyndicate" Type="Int32" />
+    <Property Name="ve_con_nobedroomsyndicate" Type="Int32" />
+    <Property Name="ve_con_ceilingheight" Type="Double" />
+    <Property Name="ve_con_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_noguest" Type="Int32" />
+    <Property Name="ve_bed_ensuite" Type="Boolean" />
+    <Property Name="ve_bed_nonsmoking" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_safe" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_minibar" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_aircon" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_modem" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_cablesatellite" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_iron" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_teacoffee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_desk" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_contact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeepostcode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_currency" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_EH" Type="Double" />
+    <Property Name="ve_FB" Type="Double" />
+    <Property Name="ve_RH" Type="Double" />
+    <Property Name="ve_DD" Type="Double" />
+    <Property Name="ve_EX" Type="Double" />
+    <Property Name="ve_CX" Type="Double" />
+    <Property Name="ve_cat_awards" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_cat_special" Type="Boolean" />
+    <Property Name="ve_cat_sanwich" Type="Double" />
+    <Property Name="ve_cat_buffet" Type="Double" />
+    <Property Name="ve_cat_restaurant" Type="Double" />
+    <Property Name="ve_cat_water" Type="Double" />
+    <Property Name="ve_cat_orange" Type="Double" />
+    <Property Name="ve_cat_biscuits" Type="Double" />
+    <Property Name="ve_cat_butties" Type="Double" />
+    <Property Name="ve_cat_dinner" Type="Double" />
+    <Property Name="ve_cat_privatedining" Type="Double" />
+    <Property Name="ve_cat_comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABCID" Type="Int32" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoCaption" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bedrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="public_wifi" Type="Boolean" />
+    <Property Name="restaurant" Type="Boolean" />
+    <Property Name="functionrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="breakoutrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_address3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="editedbynys" Type="Boolean" />
+    <Property Name="insertedbynys" Type="Boolean" />
+    <Property Name="abcnysid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="oldname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lattitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="exrate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="forecastoverride" Type="Double" />
+    <Property Name="actualoverride" Type="Double" />
+    <Property Name="overridefrom" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="overrideto" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="marketstandardcommission" Type="Double" />
+    <Property Name="vat" Type="Double" />
+    <Property Name="Updatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdated2" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="cannotMapFlag" Type="Int32" />
+    <Property Name="alternativepostcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="useNYSdata" Type="Int32" />
+    <Property Name="useNYSmeetingrooms" Type="Int32" />
+    <Property Name="centraltel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_noparking" Type="Boolean" />
+    <Property Name="commisioninvoiceemail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_greenscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_iso14001" Type="Boolean" />
+    <Property Name="ve_loc_tubestation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_tubestationmiles" Type="Double" />
+    <Property Name="noncom" Type="Boolean" />
+    <Property Name="noncommchecked" Type="Boolean" />
+    <Property Name="stopAutoInvoiceChaser" Type="Boolean" />
+    <Property Name="wifi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="confermachasingemail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bsh" Type="Boolean" />
+    <Property Name="ve_vatnumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="mevischasingemail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_junctionmiles" Type="Double" />
+    <Property Name="ve_fac_spa" Type="Boolean" />
+    <Property Name="ve_fac_leisureclub" Type="Boolean" />
+    <Property Name="ve_fac_golfcheck" Type="Boolean" />
+    <Property Name="ve_fac_teamcheck" Type="Boolean" />
+    <Property Name="ve_fac_corporatecheck" Type="Boolean" />
+    <Property Name="ve_fac_outsidecheck" Type="Boolean" />
+    <Property Name="ve_fac_outside" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_restaurant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_roomservice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_bar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_restaurantcheck" Type="Boolean" />
+    <Property Name="ve_fac_barcheck" Type="Boolean" />
+    <Property Name="sendCreditCardForm" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="venue_Deleted">
+    <Key>
+      <PropertyRef Name="ve_reference" />
+    </Key>
+    <Property Name="ve_reference" Type="Int32" Nullable="false" />
+    <Property Name="ve_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_externalsupplier" Type="Boolean" />
+    <Property Name="ve_upload" Type="Boolean" />
+    <Property Name="ve_address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_address2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="to_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gride" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gridn" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="co_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ar_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="hg_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_nysrating" Type="Int32" />
+    <Property Name="ve_nyspreferred" Type="Int32" />
+    <Property Name="vt_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_telephone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_femsec" Type="Boolean" />
+    <Property Name="ve_gen_iip" Type="Boolean" />
+    <Property Name="ve_gen_iso9001" Type="Boolean" />
+    <Property Name="ve_gen_disabled" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_lastinspected" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_specialoffers" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_commentv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_commenti" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="boss_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ct_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_paynet" Type="Boolean" />
+    <Property Name="ve_acc_creditlimit" Type="Double" />
+    <Property Name="ve_acc_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_expirydate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ve_acc_commission" Type="Double" />
+    <Property Name="ve_acc_roomhireonly" Type="Boolean" />
+    <Property Name="ve_rat_ddrfrom" Type="Double" />
+    <Property Name="ve_rat_ddrto" Type="Double" />
+    <Property Name="ve_rat_24from" Type="Double" />
+    <Property Name="ve_rat_24to" Type="Double" />
+    <Property Name="ve_rat_hdfrom" Type="Double" />
+    <Property Name="ve_rat_hdto" Type="Double" />
+    <Property Name="ve_rat_fdfrom" Type="Double" />
+    <Property Name="ve_rat_fdto" Type="Double" />
+    <Property Name="ve_rat_dbbfrom" Type="Double" />
+    <Property Name="ve_rat_dbbto" Type="Double" />
+    <Property Name="ve_rat_bbfrom" Type="Double" />
+    <Property Name="ve_rat_bbto" Type="Double" />
+    <Property Name="ve_rat_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rs_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_golf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_team" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_corporate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_pool" Type="Boolean" />
+    <Property Name="ve_fac_jacuzzi" Type="Boolean" />
+    <Property Name="ve_fac_sauna" Type="Boolean" />
+    <Property Name="ve_fac_solarium" Type="Boolean" />
+    <Property Name="ve_fac_gym" Type="Boolean" />
+    <Property Name="ve_fac_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ai_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_airportmiles" Type="Int32" />
+    <Property Name="rw_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_stationmiles" Type="Double" />
+    <Property Name="ve_loc_parking" Type="Boolean" />
+    <Property Name="ve_loc_parkingspaces" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_parkingcost" Type="Double" />
+    <Property Name="mw_name" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ju_name" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_equ_laptop" Type="Double" />
+    <Property Name="ve_equ_lcd" Type="Double" />
+    <Property Name="ve_equ_flipchart" Type="Double" />
+    <Property Name="ve_equ_tvvideo" Type="Double" />
+    <Property Name="ve_equ_screen" Type="Double" />
+    <Property Name="ve_equ_ohp" Type="Double" />
+    <Property Name="ve_equ_videocamera" Type="Double" />
+    <Property Name="ve_equ_audio" Type="Double" />
+    <Property Name="ve_equ_extension" Type="Double" />
+    <Property Name="ve_equ_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_aircon" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_natural" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_blackout" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_soundproof" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_isdn" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_con_businesscentre" Type="Boolean" />
+    <Property Name="ve_con_externalaccess" Type="Boolean" />
+    <Property Name="ve_con_teleconference" Type="Boolean" />
+    <Property Name="ve_con_videoconference" Type="Boolean" />
+    <Property Name="ve_con_noconference" Type="Int32" />
+    <Property Name="ve_con_nosyndicate" Type="Int32" />
+    <Property Name="ve_con_nobedroomsyndicate" Type="Int32" />
+    <Property Name="ve_con_ceilingheight" Type="Double" />
+    <Property Name="ve_con_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_noguest" Type="Int32" />
+    <Property Name="ve_bed_ensuite" Type="Boolean" />
+    <Property Name="ve_bed_nonsmoking" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_safe" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_minibar" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_aircon" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_modem" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_cablesatellite" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_iron" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_teacoffee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_desk" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_bed_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ve_contact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeeaddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_payeepostcode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_currency" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ve_EH" Type="Double" />
+    <Property Name="ve_FB" Type="Double" />
+    <Property Name="ve_RH" Type="Double" />
+    <Property Name="ve_DD" Type="Double" />
+    <Property Name="ve_EX" Type="Double" />
+    <Property Name="ve_CX" Type="Double" />
+    <Property Name="ve_cat_awards" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_cat_special" Type="Boolean" />
+    <Property Name="ve_cat_sanwich" Type="Double" />
+    <Property Name="ve_cat_buffet" Type="Double" />
+    <Property Name="ve_cat_restaurant" Type="Double" />
+    <Property Name="ve_cat_water" Type="Double" />
+    <Property Name="ve_cat_orange" Type="Double" />
+    <Property Name="ve_cat_biscuits" Type="Double" />
+    <Property Name="ve_cat_butties" Type="Double" />
+    <Property Name="ve_cat_dinner" Type="Double" />
+    <Property Name="ve_cat_privatedining" Type="Double" />
+    <Property Name="ve_cat_comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABCID" Type="Int32" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoCaption" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bedrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="public_wifi" Type="Boolean" />
+    <Property Name="restaurant" Type="Boolean" />
+    <Property Name="functionrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="breakoutrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_address3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="editedbynys" Type="Boolean" />
+    <Property Name="insertedbynys" Type="Boolean" />
+    <Property Name="abcnysid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="oldname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lattitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="exrate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="forecastoverride" Type="Double" />
+    <Property Name="actualoverride" Type="Double" />
+    <Property Name="overridefrom" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="overrideto" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="marketstandardcommission" Type="Double" />
+    <Property Name="vat" Type="Double" />
+    <Property Name="Updatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdated2" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="cannotMapFlag" Type="Int32" />
+    <Property Name="alternativepostcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="useNYSdata" Type="Int32" />
+    <Property Name="useNYSmeetingrooms" Type="Int32" />
+    <Property Name="centraltel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_noparking" Type="Boolean" />
+    <Property Name="commisioninvoiceemail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_greenscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_gen_iso14001" Type="Boolean" />
+    <Property Name="ve_loc_tubestation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_tubestationmiles" Type="Double" />
+    <Property Name="noncom" Type="Boolean" />
+    <Property Name="noncommchecked" Type="Boolean" />
+    <Property Name="stopAutoInvoiceChaser" Type="Boolean" />
+    <Property Name="wifi" Type="Boolean" />
+    <Property Name="confermachasingemail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bsh" Type="Boolean" />
+    <Property Name="ve_vatnumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="mevischasingemail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ve_loc_junctionmiles" Type="Double" />
+    <Property Name="ve_fac_spa" Type="Boolean" />
+    <Property Name="ve_fac_lesureclub" Type="Boolean" />
+    <Property Name="ve_fac_golfcheck" Type="Boolean" />
+    <Property Name="ve_fac_teamcheck" Type="Boolean" />
+    <Property Name="ve_fac_corporatecheck" Type="Boolean" />
+    <Property Name="ve_fac_outsidecheck" Type="Boolean" />
+    <Property Name="ve_fac_outside" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_restaurant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_roomservice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_bar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ve_fac_restaurantcheck" Type="Boolean" />
+    <Property Name="ve_fac_barcheck" Type="Boolean" />
+    <Property Name="sendCreditCardForm" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Venue_SearchType">
+    <Key>
+      <PropertyRef Name="venue_SearchTypeID" />
+    </Key>
+    <Property Name="venue_SearchTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="Int32" />
+  </EntityType>
+  <EntityType Name="venue_type">
+    <Key>
+      <PropertyRef Name="vt_id" />
+    </Key>
+    <Property Name="vt_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="vt_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vt_searchtype" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VenueDBMeetingRoom">
+    <Key>
+      <PropertyRef Name="VenueDBMeetingRoomID" />
+    </Key>
+    <Property Name="VenueDBMeetingRoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VenueNYSREF" Type="Int32" />
+    <Property Name="VenueDBID" Type="Int32" />
+    <Property Name="roomename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="theatre" Type="Int32" />
+    <Property Name="theatre_BP" Type="Int32" />
+    <Property Name="classroom" Type="Int32" />
+    <Property Name="classroom_bp" Type="Int32" />
+    <Property Name="ushape" Type="Int32" />
+    <Property Name="boardroom" Type="Int32" />
+    <Property Name="hollowsq" Type="Int32" />
+    <Property Name="cocktail" Type="Int32" />
+    <Property Name="dinner" Type="Int32" />
+    <Property Name="banquet" Type="Int32" />
+    <Property Name="dinnerdance" Type="Int32" />
+    <Property Name="reception" Type="Int32" />
+    <Property Name="cabaret" Type="Int32" />
+    <Property Name="cabaret_bp" Type="Int32" />
+    <Property Name="staging" Type="Boolean" />
+    <Property Name="disabledaccess" Type="Boolean" />
+    <Property Name="halfday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fullday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="roomlength" Type="Double" />
+    <Property Name="roomwidth" Type="Double" />
+    <Property Name="roomheight" Type="Double" />
+    <Property Name="aircon" Type="Boolean" />
+    <Property Name="naturallight" Type="Boolean" />
+    <Property Name="blackout" Type="Boolean" />
+    <Property Name="videoconference" Type="Boolean" />
+    <Property Name="vehicleaccess" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="venuegrouppreference">
+    <Key>
+      <PropertyRef Name="venuegrouppreferenceid" />
+    </Key>
+    <Property Name="venuegrouppreferenceid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="groupid" Type="Int32" />
+    <Property Name="hg_id" Type="Int32" />
+    <Property Name="venuegrouppreferencevalue" Type="Int32" />
+    <Property Name="datecreated" Type="DateTime" Precision="3" />
+    <Property Name="lastupdated" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="companyid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="venueOption">
+    <Key>
+      <PropertyRef Name="venueOptionID" />
+    </Key>
+    <Property Name="venueOptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="groupid" Type="Int32" />
+    <Property Name="venueReference" Type="Int32" />
+    <Property Name="hideFromClient" Type="Boolean" />
+    <Property Name="hideFromAllClients" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="venuepreference">
+    <Key>
+      <PropertyRef Name="venuepreferenceid" />
+    </Key>
+    <Property Name="venuepreferenceid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="groupid" Type="Int32" />
+    <Property Name="ve_reference" Type="Int32" />
+    <Property Name="venuepreferencevalue" Type="Int32" />
+    <Property Name="datecreated" Type="DateTime" Precision="3" />
+    <Property Name="lastupdated" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="companyid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="venueSecondData">
+    <Key>
+      <PropertyRef Name="venueSecondDataid" />
+    </Key>
+    <Property Name="venueSecondDataid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ve_reference" Type="Int32" />
+    <Property Name="overview" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="image1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="image2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="datecreated" Type="DateTime" Precision="3" />
+    <Property Name="lastupdated" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="NYSDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="venue" EntityType="Self.venue" />
+    <EntitySet Name="venue_Deleted" EntityType="Self.venue_Deleted" />
+    <EntitySet Name="Venue_SearchType" EntityType="Self.Venue_SearchType" />
+    <EntitySet Name="venue_type" EntityType="Self.venue_type" />
+    <EntitySet Name="VenueDBMeetingRoom" EntityType="Self.VenueDBMeetingRoom" />
+    <EntitySet Name="venuegrouppreference" EntityType="Self.venuegrouppreference" />
+    <EntitySet Name="venueOption" EntityType="Self.venueOption" />
+    <EntitySet Name="venuepreference" EntityType="Self.venuepreference" />
+    <EntitySet Name="venueSecondData" EntityType="Self.venueSecondData" />
+  </EntityContainer>
+</Schema>

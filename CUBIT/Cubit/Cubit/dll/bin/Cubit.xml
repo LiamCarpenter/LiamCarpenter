@@ -1,0 +1,3726 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Cubit
+</name>
+</assembly>
+<members>
+<member name="M:Cubit.FeedAdmin.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Sub Page_Load
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Page load for FeedAdmin
+ 1. 
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btnsave_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnsave_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Button to save parameter details
+ 1. Checks user has entered correct details before attempting to save
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.saveParameter(System.String,System.String,System.Int32)">
+	<summary>
+ Function saveParameter
+ </summary>
+	<param name="pstrfrom"></param>
+	<param name="pstrto"></param>
+	<param name="pinttransactionid"></param>
+	<returns>
+ True is saved correctly
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Connects to DatabaseObjects and saves user entered values
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btnadd_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnadd_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Clears lstparameters and calls populateparameter method to clear fields
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btncancel_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btncancel_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Cancels current edit of parameter
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.ddtransactionsedit_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ Sub ddtransactionsedit_SelectedIndexChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ Selects a transaction record for edit
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btntransadd_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btntransadd_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ Deselects ddtransactionsedit, shows transactionsedit panel and clears fields 
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btntranscancel_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btntranscancel_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ Cancels current transaction record edit mode
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.btntranssave_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btntranssave_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ Checks user entered values for validity, if OK calls savetransaction method
+ </remarks>
+</member><member name="M:Cubit.FeedAdmin.savetransaction(System.String,System.Double,System.String)">
+	<summary>
+ Function savetransaction
+ </summary>
+	<param name="pstrcode"></param>
+	<param name="pdblvalue"></param>
+	<returns>
+ True is saved correctly
+ </returns>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ Save user edit transaction record
+ </remarks>
+</member><member name="T:Cubit.clslogger">
+	<summary>
+ Class clslogger
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Set up class for logging
+ </remarks>
+</member><member name="P:Cubit.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Cubit.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Cubit.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:Cubit.FeedAdmin.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pnmain">
+	<summary>
+pnmain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddgroup">
+	<summary>
+ddgroup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup">
+	<summary>
+lblgroup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup0">
+	<summary>
+lblgroup0 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lstparameters">
+	<summary>
+lstparameters control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pnedit">
+	<summary>
+pnedit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtfrom">
+	<summary>
+txtfrom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtto">
+	<summary>
+txtto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddtransactions">
+	<summary>
+ddtransactions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btncancel">
+	<summary>
+btncancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnsave">
+	<summary>
+btnsave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup2">
+	<summary>
+lblgroup2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lbluser">
+	<summary>
+lbluser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnMissingInvoices">
+	<summary>
+btnMissingInvoices control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnCopyFromMevis">
+	<summary>
+btnCopyFromMevis control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnclose">
+	<summary>
+btnclose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnadd">
+	<summary>
+btnadd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup1">
+	<summary>
+lblgroup1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddtransactionsedit">
+	<summary>
+ddtransactionsedit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btntransadd">
+	<summary>
+btntransadd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pntransactionedit">
+	<summary>
+pntransactionedit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtvalue">
+	<summary>
+txtvalue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup11">
+	<summary>
+lblgroup11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup4">
+	<summary>
+lblgroup4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup3">
+	<summary>
+lblgroup3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btntranssave">
+	<summary>
+btntranssave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btntranscancel">
+	<summary>
+btntranscancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddtype">
+	<summary>
+ddtype control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcode">
+	<summary>
+ddcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pnoptionsouter">
+	<summary>
+pnoptionsouter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pnoptions">
+	<summary>
+pnoptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btncanceloptions">
+	<summary>
+btncanceloptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnsaveoptions">
+	<summary>
+btnsaveoptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup8">
+	<summary>
+lblgroup8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup7">
+	<summary>
+lblgroup7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblcostcentre">
+	<summary>
+lblcostcentre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label21">
+	<summary>
+Label21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup10">
+	<summary>
+lblgroup10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label22">
+	<summary>
+Label22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label23">
+	<summary>
+Label23 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label19">
+	<summary>
+Label19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label20">
+	<summary>
+Label20 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup12">
+	<summary>
+lblgroup12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup13">
+	<summary>
+lblgroup13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup9">
+	<summary>
+lblgroup9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup5">
+	<summary>
+lblgroup5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtoptionsid">
+	<summary>
+txtoptionsid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtmappingsid">
+	<summary>
+txtmappingsid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtAICol8value">
+	<summary>
+txtAICol8value control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtAICol9value">
+	<summary>
+txtAICol9value control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtAICol10value">
+	<summary>
+txtAICol10value control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtAICol7value">
+	<summary>
+txtAICol7value control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtAICol6value">
+	<summary>
+txtAICol6value control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtccdefault">
+	<summary>
+txtccdefault control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtpodefault">
+	<summary>
+txtpodefault control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref1default">
+	<summary>
+txtcref1default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref2default">
+	<summary>
+txtcref2default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref3default">
+	<summary>
+txtcref3default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref4default">
+	<summary>
+txtcref4default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref5default">
+	<summary>
+txtcref5default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref6default">
+	<summary>
+txtcref6default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref7default">
+	<summary>
+txtcref7default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref8default">
+	<summary>
+txtcref8default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtcref9default">
+	<summary>
+txtcref9default control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtCostCentreValue">
+	<summary>
+txtCostCentreValue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcharge">
+	<summary>
+ddcharge control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcc">
+	<summary>
+ddcc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddpo">
+	<summary>
+ddpo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref1">
+	<summary>
+ddcref1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref2">
+	<summary>
+ddcref2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref3">
+	<summary>
+ddcref3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref4">
+	<summary>
+ddcref4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref5">
+	<summary>
+ddcref5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref6">
+	<summary>
+ddcref6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref7">
+	<summary>
+ddcref7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref8">
+	<summary>
+ddcref8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddcref9">
+	<summary>
+ddcref9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.chkexvat">
+	<summary>
+chkexvat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.chkgross">
+	<summary>
+chkgross control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.chkadditional">
+	<summary>
+chkadditional control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.chkOOH">
+	<summary>
+chkOOH control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.rdextras">
+	<summary>
+rdextras control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup15">
+	<summary>
+lblgroup15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblor">
+	<summary>
+lblor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.ddBossCode">
+	<summary>
+ddBossCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtBossCode">
+	<summary>
+txtBossCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtadditionalfee">
+	<summary>
+txtadditionalfee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtinvoicefee">
+	<summary>
+txtinvoicefee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.txtOOHfee">
+	<summary>
+txtOOHfee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.pnAnchor">
+	<summary>
+pnAnchor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnexport">
+	<summary>
+btnexport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.lblgroup14">
+	<summary>
+lblgroup14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.flUpload">
+	<summary>
+flUpload control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnBookedDownLoad">
+	<summary>
+btnBookedDownLoad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedAdmin.btnTransDownLoad">
+	<summary>
+btnTransDownLoad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:Cubit.FeedInvoiceEmailEdit.grdVenue_ItemCommand(System.Object,System.Web.UI.WebControls.DataGridCommandEventArgs)">
+	<summary>
+ Sub grdVenue_ItemCommand
+ </summary>
+	<param name="source"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Captures grdVenue events:
+ 1. Sort command when user clicks headers
+ 2. Row selection command which sends user to edit screen with selected row dataid
+ </remarks>
+</member><member name="M:Cubit.FeedMain.#cctor">
+	<summary>
+ Sub New
+ </summary>
+	<remarks>
+ Sets up page for logging
+ </remarks>
+</member><member name="M:Cubit.FeedMain.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Sub Page_Load
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Page load for FeedMain
+ 1. tests for encrypted connection string and encrypts if Encrypt 
+ key = true and no already encrypted
+ 2. Checks users windows login against database to see if allowed to use application
+ </remarks>
+</member><member name="M:Cubit.FeedMain.setPanels">
+	<summary>
+ Positions various panels to correct location so when they are made visible the 
+ appear in the correct place
+ </summary>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ </remarks>
+</member><member name="P:Cubit.FeedMain.sortCriteria">
+	<summary>
+ Gets/sets the column name for grdData to be sorted on
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ </remarks>
+</member><member name="P:Cubit.FeedMain.sortDir">
+	<summary>
+ Property sortDir
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ Gets/sets the sort direction for grdData to be sorted on
+ </remarks>
+</member><member name="M:Cubit.FeedMain.populateData(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+	<summary>
+ Sub bind
+ </summary>
+	<param name="pintgroupid"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Populate datagrid with outstanding transaction records for selected group
+ </remarks>
+</member><member name="M:Cubit.FeedMain.checkLoginstatus(System.String)">
+	<summary>
+ Sub checkLoginstatus
+ </summary>
+	<param name="pstrUserName"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Check users windows login against database
+ </remarks>
+</member><member name="M:Cubit.FeedMain.grdData_ItemCommand(System.Object,System.Web.UI.WebControls.DataGridCommandEventArgs)">
+	<summary>
+ Sub grdData_ItemCommand
+ </summary>
+	<param name="source"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Captures grdData events:
+ 1. Sort command when user clicks headers
+ 2. Row selection command which sends user to edit screen with selected row dataid
+ </remarks>
+</member><member name="M:Cubit.FeedMain.grdData_SortCommand(System.Object,System.Web.UI.WebControls.DataGridSortCommandEventArgs)">
+	<summary>
+ Sub grdData_SortCommand
+ </summary>
+	<param name="source"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Sorts the grdData depending upon last sort request
+ </remarks>
+</member><member name="M:Cubit.FeedMain.populateGroups(System.Int32)">
+	<summary>
+ Sub populateGroups
+ </summary>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Connects to DatabaseObjects and populates ddgroup with all groups in database
+ </remarks>
+</member><member name="M:Cubit.FeedMain.ddgroup_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ Sub ddgroup_SelectedIndexChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Allows user to select a group to view current outstanding transaction
+</remarks>
+</member><member name="M:Cubit.FeedMain.btnadmin_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnadmin_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Captures btnadmin click event and sends user to FeedAdmin screen
+ </remarks>
+</member><member name="M:Cubit.FeedMain.setSearchSessions">
+	<summary>
+ Sub setSearchSessions
+ </summary>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ Sets up sessions so can return to same point 
+ </remarks>
+</member><member name="M:Cubit.FeedMain.btnsearch_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnsearch_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ Rebinds grdData using criteria user inputted
+ </remarks>
+</member><member name="M:Cubit.FeedMain.SetBookingIDtoExportStatus(System.Int32,System.Boolean)">
+	<summary>
+ Sub SetBookingIDtoExportStatus
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pblnOk"></param>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ Updates FeedData record status on export to BOSS setting correct status if failure occurs
+ </remarks>
+</member><member name="M:Cubit.FeedMain.createInvoice(System.Int32)">
+	<summary>
+ Function createInvoice
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<returns>
+ Boolean value dependant upon successful Invoice record creation
+ </returns>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ This will create an invoice record for each FeedData record with the passed in bookingID
+ </remarks>
+</member><member name="M:Cubit.FeedMain.exportData(System.Int32)">
+	<summary>
+ Sub exportData
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<returns>
+ Boolean value dependant upon successful creation of xml file for BOSS
+ </returns>
+	<remarks>
+ Created 24/03/2009 Nick Massarella
+ Creates xml file for FeedData records grouped by bookingID ready to be picked up by 
+ the BOSS application 
+ </remarks>
+</member><member name="M:Cubit.FeedMain.populateStatus">
+	<summary>
+ Sub populateStatus
+ </summary>
+	<remarks>
+ Created 24/03/2009 Nick Massarella
+ Calls FeedStatus databaseobjects method to retrieve a list os statuses
+ </remarks>
+</member><member name="M:Cubit.FeedMain.btncancelsearch_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btncancelsearch_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 24/03/2009 Nick Massarella
+ Hides search options panel
+ </remarks>
+</member><member name="M:Cubit.FeedMain.btnno_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnno_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ Cancels export button click and hides warning panel
+ </remarks>
+</member><member name="T:Cubit.FeedMain">
+	<summary>
+ Public Class FeedMain
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Main page class
+ </remarks>
+</member><member name="M:Cubit.FeedInvoiceEmail.#cctor">
+	<summary>
+ Sub New
+ </summary>
+	<remarks>
+ Sets up page for logging
+ </remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.Scriptmanager1">
+	<summary>
+Scriptmanager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.pnmain">
+	<summary>
+pnmain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.lblcount">
+	<summary>
+lblcount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.lbluserid">
+	<summary>
+lbluserid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.lbluser">
+	<summary>
+lbluser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.pndata">
+	<summary>
+pndata control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.grdData">
+	<summary>
+grdData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.lblGroupView">
+	<summary>
+lblGroupView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.txtscrolltop">
+	<summary>
+txtscrolltop control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.txtscrollleft">
+	<summary>
+txtscrollleft control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.pnsure">
+	<summary>
+pnsure control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.lblfeed">
+	<summary>
+lblfeed control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.btnno">
+	<summary>
+btnno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.btnyes">
+	<summary>
+btnyes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.btnCheckAndSend">
+	<summary>
+btnCheckAndSend control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.btnclose">
+	<summary>
+btnclose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmail.btnSendUnsent">
+	<summary>
+btnSendUnsent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnhide">
+	<summary>
+pnhide control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnmain">
+	<summary>
+pnmain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lbluser">
+	<summary>
+lbluser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lbluserid">
+	<summary>
+lbluserid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnsave">
+	<summary>
+btnsave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btncancel">
+	<summary>
+btncancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnsearch">
+	<summary>
+pnsearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtdataid">
+	<summary>
+txtdataid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lblgroup3">
+	<summary>
+lblgroup3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtbookingid">
+	<summary>
+txtbookingid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtsupplerinvoice">
+	<summary>
+txtsupplerinvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtsupplerinvoice_hidden">
+	<summary>
+txtsupplerinvoice_hidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lblfail">
+	<summary>
+lblfail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtfail">
+	<summary>
+txtfail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtvenuename">
+	<summary>
+txtvenuename control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtoriginalvenuename">
+	<summary>
+txtoriginalvenuename control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtbosscode">
+	<summary>
+txtbosscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtemail">
+	<summary>
+txtemail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtarrivaldate">
+	<summary>
+txtarrivaldate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtdeparturedate">
+	<summary>
+txtdeparturedate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txttraveller">
+	<summary>
+txttraveller control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtbookingref">
+	<summary>
+txtbookingref control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtclientname">
+	<summary>
+txtclientname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txttotal">
+	<summary>
+txttotal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtguestPNR">
+	<summary>
+txtguestPNR control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label31">
+	<summary>
+Label31 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtroomdetails">
+	<summary>
+txtroomdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtbooker">
+	<summary>
+txtbooker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label21">
+	<summary>
+Label21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtVenuereference">
+	<summary>
+txtVenuereference control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lbluser1">
+	<summary>
+lbluser1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnfind">
+	<summary>
+btnfind control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtscrolltop">
+	<summary>
+txtscrolltop control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtscrollleft">
+	<summary>
+txtscrollleft control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnvenue">
+	<summary>
+pnvenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnInnerVenue">
+	<summary>
+pnInnerVenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Label28">
+	<summary>
+Label28 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtDatavenuename2">
+	<summary>
+txtDatavenuename2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtDatavenuename1">
+	<summary>
+txtDatavenuename1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtDatavenuenameFind">
+	<summary>
+txtDatavenuenameFind control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnnovenue">
+	<summary>
+btnnovenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnfindcancel">
+	<summary>
+btnfindcancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnfind2">
+	<summary>
+btnfind2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pndata">
+	<summary>
+pndata control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.grdVenue">
+	<summary>
+grdVenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnAndOr">
+	<summary>
+btnAndOr control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtvenuedetails">
+	<summary>
+txtvenuedetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.txtbookeddate">
+	<summary>
+txtbookeddate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lblGroupView">
+	<summary>
+lblGroupView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.pnsure">
+	<summary>
+pnsure control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.lblfeed">
+	<summary>
+lblfeed control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnno">
+	<summary>
+btnno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedInvoiceEmailEdit.btnyes">
+	<summary>
+btnyes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnhide">
+	<summary>
+pnhide control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnmain">
+	<summary>
+pnmain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lbluserid">
+	<summary>
+lbluserid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lbluser">
+	<summary>
+lbluser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnsave">
+	<summary>
+btnsave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnclose">
+	<summary>
+btnclose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btncancel">
+	<summary>
+btncancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnsearch">
+	<summary>
+pnsearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtVenuebosscodehidden">
+	<summary>
+txtVenuebosscodehidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtdataid">
+	<summary>
+txtdataid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblgroup4">
+	<summary>
+lblgroup4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblgroup3">
+	<summary>
+lblgroup3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txttransactionlinenumber">
+	<summary>
+txttransactionlinenumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txttransactionnumber">
+	<summary>
+txttransactionnumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label39">
+	<summary>
+Label39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txttransactiondate">
+	<summary>
+txttransactiondate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label33">
+	<summary>
+Label33 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label32">
+	<summary>
+Label32 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblfail">
+	<summary>
+lblfail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicol6">
+	<summary>
+lblaicol6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicol7">
+	<summary>
+lblaicol7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicol8">
+	<summary>
+lblaicol8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicol9">
+	<summary>
+lblaicol9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicol10">
+	<summary>
+lblaicol10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtfail">
+	<summary>
+txtfail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicol6">
+	<summary>
+txtaicol6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.extPoCode">
+	<summary>
+extPoCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicol7">
+	<summary>
+txtaicol7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicol8">
+	<summary>
+txtaicol8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicol9">
+	<summary>
+txtaicol9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicol10">
+	<summary>
+txtaicol10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtdept">
+	<summary>
+txtdept control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtref3">
+	<summary>
+txtref3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtEX">
+	<summary>
+txtEX control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtgroupname">
+	<summary>
+txtgroupname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtgroupid">
+	<summary>
+txtgroupid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtVenuereferencehidden">
+	<summary>
+txtVenuereferencehidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtDD">
+	<summary>
+txtDD control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtvenuenamehidden">
+	<summary>
+txtvenuenamehidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtvenuename">
+	<summary>
+txtvenuename control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtarrivaldate">
+	<summary>
+txtarrivaldate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtdeparturedate">
+	<summary>
+txtdeparturedate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtguestname">
+	<summary>
+txtguestname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtCategoryname">
+	<summary>
+txtCategoryname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label40">
+	<summary>
+Label40 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtCategorybosscode">
+	<summary>
+txtCategorybosscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtnettamount">
+	<summary>
+txtnettamount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label30">
+	<summary>
+Label30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtcurrency">
+	<summary>
+txtcurrency control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtvatrate">
+	<summary>
+txtvatrate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtvatamount">
+	<summary>
+txtvatamount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txttotalamount">
+	<summary>
+txttotalamount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtguestPNR">
+	<summary>
+txtguestPNR control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtref2">
+	<summary>
+txtref2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtref1">
+	<summary>
+txtref1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label31">
+	<summary>
+Label31 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtsupplierinvoice">
+	<summary>
+txtsupplierinvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtconfermainvoiceno">
+	<summary>
+txtconfermainvoiceno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbooker">
+	<summary>
+txtbooker control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblaicostcode">
+	<summary>
+lblaicostcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtaicostcode">
+	<summary>
+txtaicostcode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label19">
+	<summary>
+Label19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtroomdetails">
+	<summary>
+txtroomdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label20">
+	<summary>
+Label20 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbookerinitials">
+	<summary>
+txtbookerinitials control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label21">
+	<summary>
+Label21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtVenuereference">
+	<summary>
+txtVenuereference control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label22">
+	<summary>
+Label22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblLR">
+	<summary>
+lblLR control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtVenuebosscode">
+	<summary>
+txtVenuebosscode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label23">
+	<summary>
+Label23 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtVenuecommision">
+	<summary>
+txtVenuecommision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label24">
+	<summary>
+Label24 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtTransactioncode">
+	<summary>
+txtTransactioncode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label27">
+	<summary>
+Label27 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label25">
+	<summary>
+Label25 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label26">
+	<summary>
+Label26 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtstatusname">
+	<summary>
+txtstatusname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtTransactionvaluenew">
+	<summary>
+txtTransactionvaluenew control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtTransactionvalue">
+	<summary>
+txtTransactionvalue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lbluser0">
+	<summary>
+lbluser0 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lbluser1">
+	<summary>
+lbluser1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtcostcodehidden">
+	<summary>
+txtcostcodehidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lbluser2">
+	<summary>
+lbluser2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnreset">
+	<summary>
+btnreset control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnfind">
+	<summary>
+btnfind control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnboss">
+	<summary>
+pnboss control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label34">
+	<summary>
+Label34 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label37">
+	<summary>
+Label37 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label35">
+	<summary>
+Label35 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label38">
+	<summary>
+Label38 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label36">
+	<summary>
+Label36 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbosscomNett">
+	<summary>
+txtbosscomNett control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbossid">
+	<summary>
+txtbossid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbosscomVat">
+	<summary>
+txtbosscomVat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbosstotal">
+	<summary>
+txtbosstotal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnbossinner">
+	<summary>
+pnbossinner control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnBossGrid">
+	<summary>
+pnBossGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.grdBoss">
+	<summary>
+grdBoss control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtscrolltop">
+	<summary>
+txtscrolltop control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtscrollleft">
+	<summary>
+txtscrollleft control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnshowhidden">
+	<summary>
+btnshowhidden control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnvenue">
+	<summary>
+pnvenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnInnerVenue">
+	<summary>
+pnInnerVenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label29">
+	<summary>
+Label29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Label28">
+	<summary>
+Label28 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtDatavenuename2">
+	<summary>
+txtDatavenuename2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtDatavenuename1">
+	<summary>
+txtDatavenuename1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtDatavenuenameFind">
+	<summary>
+txtDatavenuenameFind control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnnovenue">
+	<summary>
+btnnovenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnfindcancel">
+	<summary>
+btnfindcancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnfind2">
+	<summary>
+btnfind2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pndata">
+	<summary>
+pndata control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.grdVenue">
+	<summary>
+grdVenue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnAndOr">
+	<summary>
+btnAndOr control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtvenuedetails">
+	<summary>
+txtvenuedetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtholder">
+	<summary>
+txtholder control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.txtbookeddate">
+	<summary>
+txtbookeddate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.chkExcludeExport">
+	<summary>
+chkExcludeExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblExcludeExport">
+	<summary>
+lblExcludeExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblComplaints">
+	<summary>
+lblComplaints control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblGroupView">
+	<summary>
+lblGroupView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.pnsure">
+	<summary>
+pnsure control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.lblfeed">
+	<summary>
+lblfeed control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnno">
+	<summary>
+btnno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedEdit.btnyes">
+	<summary>
+btnyes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:Cubit.clsNYS.#cctor">
+	<summary>
+ Sub New
+ </summary>
+	<remarks>
+ Sets up logging for all pages
+ </remarks>
+</member><member name="T:Cubit.clsNYS">
+	<summary>
+ Class clsNYS
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Class created so all required classes can inherit for refraction of code
+ </remarks>
+</member><member name="F:Cubit.FeedMain.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.pnmain">
+	<summary>
+pnmain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lbluserinitials">
+	<summary>
+lbluserinitials control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lbluserid">
+	<summary>
+lbluserid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblcount">
+	<summary>
+lblcount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lbluser">
+	<summary>
+lbluser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblversion">
+	<summary>
+lblversion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.pnsearch">
+	<summary>
+pnsearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtname">
+	<summary>
+txtname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.ddstatus">
+	<summary>
+ddstatus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btncancelsearch">
+	<summary>
+btncancelsearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnsearch">
+	<summary>
+btnsearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtinvoice">
+	<summary>
+txtinvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtguestname">
+	<summary>
+txtguestname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtguestpnr">
+	<summary>
+txtguestpnr control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup3">
+	<summary>
+lblgroup3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup2">
+	<summary>
+lblgroup2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup1">
+	<summary>
+lblgroup1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup5">
+	<summary>
+lblgroup5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup0">
+	<summary>
+lblgroup0 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.extVenueName">
+	<summary>
+extVenueName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.extInvoice">
+	<summary>
+extInvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.extguestname">
+	<summary>
+extguestname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.extguestPNRSearch">
+	<summary>
+extguestPNRSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.pndata">
+	<summary>
+pndata control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.grdData">
+	<summary>
+grdData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtexportresult">
+	<summary>
+txtexportresult control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblexportresult">
+	<summary>
+lblexportresult control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnusesearch">
+	<summary>
+btnusesearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblGroupView">
+	<summary>
+lblGroupView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblgroup">
+	<summary>
+lblgroup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtscrolltop">
+	<summary>
+txtscrolltop control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.txtscrollleft">
+	<summary>
+txtscrollleft control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnBossImport">
+	<summary>
+btnBossImport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnexport">
+	<summary>
+btnexport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnadmin">
+	<summary>
+btnadmin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnTestFileImport">
+	<summary>
+btnTestFileImport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnTestDelete">
+	<summary>
+btnTestDelete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnEdit">
+	<summary>
+btnEdit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnSaveGrid">
+	<summary>
+btnSaveGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnTestFileDownload">
+	<summary>
+btnTestFileDownload control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.pnsure">
+	<summary>
+pnsure control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.lblfeed">
+	<summary>
+lblfeed control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnno">
+	<summary>
+btnno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.btnyes">
+	<summary>
+btnyes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Cubit.FeedMain.ddgroup">
+	<summary>
+ddgroup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:Cubit.FeedEdit.Page_Load(System.Object,System.EventArgs)">
+	<summary>
+ Sub Page_Load
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ 
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.setUser">
+	<summary>
+ Sub setUser
+ </summary>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ Sets up logged in user and warns if not allowed to view application
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.populateData(System.Int32)">
+	<summary>
+ Sub populateData
+ </summary>
+	<param name="pintid"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Connects to DatabaseObjects to retrieve a FeedData record for selected id
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.checkVenueName(System.Double,System.Double)">
+	<summary>
+ Sub checkVenueName
+ </summary>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Checks if venuename hidden and venuename fields have same value
+  if not the data is saved in the VenueAlternate table if it doesn't already exist
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.saveValue(System.String,System.String,System.Int32,System.String,System.Double,System.Double,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Function saveValue
+ </summary>
+	<param name="pstrvalue"></param>
+	<param name="pstrname"></param>
+	<param name="pintreference"></param>
+	<param name="pstrbosscode"></param>
+	<param name="pdblcommissionEX"></param>
+	<param name="pdblcommissionDD"></param>
+	<param name="pstrcostcode"></param>
+	<returns>
+ True if data saved correctly
+ </returns>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Saves user entered values to database and checks if data saved correctly
+ R15 CR - added optional pstrpocode
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnfind_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnfind_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Button to locate Venue from edit screen, by name from VenuesDB and display possible matches
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnfind2_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnfind2_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Button to locate Venue from find screen, by name from VenuesDB and display possible matches
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.findVenue(System.String,System.Boolean)">
+	<summary>
+ Function findVenue
+ </summary>
+	<param name="pstrvenuename"></param>
+	<param name="pblnfromedit"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Connects to dababaseobjects to search for venues using data from screen or user inputted
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.grdVenue_ItemCommand(System.Object,System.Web.UI.WebControls.DataGridCommandEventArgs)">
+	<summary>
+ Sub grdVenue_ItemCommand
+ </summary>
+	<param name="source"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ Captures grdVenue events:
+ 1. Sort command when user clicks headers
+ 2. Row selection command which sends user to edit screen with selected row dataid
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.grdVenue_SortCommand(System.Object,System.Web.UI.WebControls.DataGridSortCommandEventArgs)">
+	<summary>
+ Sub grdVenue_SortCommand
+ </summary>
+	<param name="source"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ Sorts the grdVenue depending upon last sort request
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnfindcancel_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnfindcancel_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ Hides venue search panel
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnAndOr_Click(System.Object,System.EventArgs)">
+	<summary>
+ Sub btnAndOr_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ Allows user to search on either And/Or depending on button text
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnnovenue_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnnovenue_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ Hides venue search panel and puts venue fields into edit mode to allow user to manually change values
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnclose_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+ Sub btnclose_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 30/03/2009 Nick Massarella
+ Returns user to FeedMain - only available when viewing completed records
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnshowhidden_Click(System.Object,System.EventArgs)">
+	<summary>
+ Sub btnshowhidden_Click
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ Created 30/03/2009 Nick Massarella
+ User button to show hidden fields - button only visible to nickmassarella
+ </remarks>
+</member><member name="M:Cubit.FeedEdit.btnreset_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+	<summary>
+	</summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Cubit.FeedEdit.setAjax">
+	<summary>
+ Sub setAjax
+ </summary>
+	<remarks>
+ Created on 17/03/2010 by Craig Rickell
+ Sets AJAX for autocomplete on txtpo
+ </remarks>
+</member>
+</members>
+</doc>

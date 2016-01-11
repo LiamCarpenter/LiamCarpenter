@@ -1,0 +1,28 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\CSVParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\EvoUtilities.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\log4net.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\CSVParser.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\CSVParser.xml
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\EvoUtilities.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\EvoUtilities.xml
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\OpenPOP.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Debug\MIMEParser.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Debug\OpenPOP.csprojResolveAssemblyReference.cache

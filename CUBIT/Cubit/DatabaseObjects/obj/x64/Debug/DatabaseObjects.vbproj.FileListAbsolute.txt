@@ -1,0 +1,16 @@
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\DatabaseObjects.dll
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\DatabaseObjects.pdb
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\DatabaseObjects.xml
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoDatabaseUtils.dll
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoUtilities.dll
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\log4net.dll
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoDatabaseUtils.pdb
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoDatabaseUtils.xml
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoUtilities.pdb
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\bin\x64\Debug\EvoUtilities.xml
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.vbprojResolveAssemblyReference.cache
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.Resources.resources
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.vbproj.GenerateResource.Cache
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.dll
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.xml
+E:\Development\Work\CUBIT\Cubit\DatabaseObjects\obj\x64\Debug\DatabaseObjects.pdb

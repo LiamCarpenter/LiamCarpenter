@@ -1,0 +1,17 @@
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\ProcessPOD.exe.config
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\ProcessPOD.exe
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\ProcessPOD.pdb
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\ProcessPOD.xml
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\Cubit.EF.dll
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\EntityFramework.dll
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\Cubit.EF.pdb
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\Cubit.EF.xml
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\EntityFramework.xml
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.vbprojResolveAssemblyReference.cache
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.Resources.resources
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.vbproj.GenerateResource.Cache
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.exe
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.xml
+E:\Development\Work\CUBIT\ProcessPOD\ProcessPOD\obj\Debug\ProcessPOD.pdb

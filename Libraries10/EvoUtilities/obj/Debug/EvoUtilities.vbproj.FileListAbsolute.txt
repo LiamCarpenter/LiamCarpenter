@@ -1,0 +1,14 @@
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EvoUtilities.dll.config
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EvoUtilities.dll
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EvoUtilities.pdb
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EvoUtilities.xml
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EntityFramework.dll
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\log4net.dll
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EntityFramework.xml
+E:\Development\Work\Libraries10\EvoUtilities\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development\Work\Libraries10\EvoUtilities\obj\Debug\EvoUtilities.Resources.resources
+E:\Development\Work\Libraries10\EvoUtilities\obj\Debug\EvoUtilities.vbproj.GenerateResource.Cache
+E:\Development\Work\Libraries10\EvoUtilities\obj\Debug\EvoUtilities.dll
+E:\Development\Work\Libraries10\EvoUtilities\obj\Debug\EvoUtilities.xml
+E:\Development\Work\Libraries10\EvoUtilities\obj\Debug\EvoUtilities.pdb

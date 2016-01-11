@@ -1,0 +1,31 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb
+C:\Users\ashleymarron\projects\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+C:\Users\ashleymarron\projects\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+C:\Users\ashleymarron\projects\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+C:\Users\ashleymarron\projects\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb
+C:\Development\TFS Projects\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+C:\Development\TFS Projects\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+C:\Development\TFS Projects\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+C:\Development\TFS Projects\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll.config
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.dll
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\MIMEParser.pdb
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\EntityFramework.dll
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\EntityFramework.xml
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.dll
+E:\Development\Work\LIBRARIES10\OpenPop\MIMEParser\obj\Debug\MIMEParser.pdb

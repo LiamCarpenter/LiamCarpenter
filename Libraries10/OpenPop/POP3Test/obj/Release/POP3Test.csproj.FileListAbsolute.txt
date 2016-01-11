@@ -1,0 +1,27 @@
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\bin\Release\OpenPOPTest.exe
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\bin\Release\MIMEParser.dll
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\bin\Release\OpenPOP.dll
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\obj\Release\ResolveAssemblyReference.cache
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\obj\Release\OpenPOP.NET_Sample_App.frmTest.resources
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\obj\Release\POP3Test.csproj.GenerateResource.Cache
+C:\Development\2008\LIBRARIES\OpenPop\POP3Test\obj\Release\OpenPOPTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\OpenPOPTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOPTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\OpenPOP.NET_Sample_App.frmTest.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\ResGen.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\ResGen.write.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOPTest.exe.config
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\GenerateResource.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOPTest.exe.config
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOPTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Release\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\OpenPOP.NET_Sample_App.frmTest.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\GenerateResource.read.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Release\OpenPOPTest.exe

@@ -31,5 +31,7 @@ namespace CostImprovementAssistant
         public Nullable<bool> Spare2 { get; set; }
         public Nullable<bool> Active { get; set; }
         public string TrustCode { get; set; }
+    
+        public virtual Trusts Trusts { get; set; }
     }
 }

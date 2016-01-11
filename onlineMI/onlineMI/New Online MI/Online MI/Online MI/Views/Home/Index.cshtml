@@ -1,0 +1,1475 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<div>
+    <div id="uppLoading" ng-show="states.isLoading">
+        <p class="progressContent">
+            Loading, please wait...
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-lg-11 col-md-11">
+            <h2 class="pull-left">@ViewBag.Title</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-8 col-lg-3 text-right">
+            <div class="input-daterange input-group" id="datepicker">
+                @Html.TextBox("FromDate", "", new { @class = "form-control", placeholder = "From Date" })
+                <span class="input-group-addon">to</span>
+                @Html.TextBox("ToDate", "", new { @class = "form-control", placeholder = "To Date" })
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <button id="btnRefresh" ng-click="getRevisedDashboardData()" type="button" class="btn btn-primary form-control">Refresh</button>
+        </div>
+    </div>
+    <br />
+    <!--start: Top Line-->
+    <!--start: Travel -->
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="box box-solid bg-travel bordertravel">
+                <div class="box-header">
+                    <h3 class="box-title">Travel</h3>
+                </div>
+                <div class="box-body bg-white">
+                    <div class="row">
+                        <!--start: Rail -->
+                        <div class="col-lg-4 col-md-4">
+                            <div class="small-box bg-travel1">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].Rail + dashboard[0].IR }}</h3>
+                                    <p class="text-white">TRAINS BOOKED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-ticket"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="RailDetails" ng-click="getRail()" href="#" class="btn btn-primary btn-flat">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-flat" ng-click="downloadRail()" ng-if="states.railCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--start: Flights-->
+                        <div class="col-lg-4 col-md-4">
+                            <div class="small-box bg-travel1">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].Flights }}</h3>
+                                    <p class="text-white">FLIGHTS BOOKED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plane"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="FlightDetails" href="#" class="btn btn-primary btn-flat" ng-click="getFlights($event)">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-flat" ng-click="downloadFlights()" ng-if="states.flightCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--start:Accom-->
+                        <div class="col-lg-4 col-md-4">
+                            <div class="small-box bg-travel1">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].Accom }}</h3>
+                                    <p class="text-white">ACCOMMODATION BOOKED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="AccommodationDetails" ng-click="getAccommodation()" href="#" class="btn btn-primary btn-flat">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-flat" ng-click="downloadAccommodation()" ng-if="states.accommodationCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--start: Conferencing-->
+        <div class="col-lg-4 col-md-4">
+            <!--start: Conference Box-->
+            <div class="box box-solid bg-conferences borderconferences">
+                <div class="box-header">
+                    <h3 class="box-title">Conferencing</h3>
+                </div>
+                <div class="box-body bg-white">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="small-box bg-conferences1">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].Conference }}</h3>
+                                    <p class="text-white">CONFERENCES BOOKED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="ConferenceDetails" ng-click="getConferences()" href="#" class="btn btn-warning btn-flat">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning btn-flat" ng-click="downloadConference()" ng-if="states.conferenceCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--start: Complaints and Feedback -->
+        <div class="col-lg-8 col-md-8">
+            <div class="box box-solid bg-light-blue borderblue">
+                <div class="box-header">
+                    <h3 class="box-title">Complaints &amp; Feedback</h3>
+                </div>
+                <div class="box-body bg-white">
+                    <div class="row">
+                        <!--start: Complaints Box-->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="small-box bg-light-blue">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].Complaints }}</h3>
+                                    <p class="text-white">COMPLAINTS RECEIVED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-file-text"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="ComplaintsSummary" href="#" class="btn btn-primary btn-flat" ng-click="getComplaints()">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-flat" ng-click="downloadComplaints()" ng-if="states.complaintCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>      
+                        <!--start:Feedback Box-->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="small-box bg-light-blue">
+                                <div class="inner">
+                                    <h3 class="text-white">{{ dashboard[0].ConferenceFeedback + dashboard[0].CorporateFeedback }}</h3>
+                                    <p class="text-white">FEEDBACK RECEIVED</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-file-text"></i>
+                                </div>
+                                <div class="small-box-footer">
+                                    <a id="FeedbackDetails" href="#" class="btn btn-primary btn-flat" ng-click="getFeedback()">
+                                        DETAILS
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-flat" ng-click="downloadFeedback()" ng-if="states.feedbackCount > 0">
+                                        EXPORT
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start: Details Popup -->
+    <div class="modal fade" id="modDetailsPopup" tabindex="-1" role="dialog" aria-labelledby="modDetailsPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="modDetailsPopupTitle">{{ utilities.DetailsTitle }}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <!--start:Flight Details-->
+                            <div class="row" ng-if="states.showFlights">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-lg-offset-10 text-right">
+                                        <a href="#" class="btn btn-primary btn-flat" ng-click="downloadFlights()" ng-if="states.flightCount > 0">
+                                            EXPORT
+                                            <i class="fa fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="space-10"></div>
+                                <div class="row" style="overflow:auto;">
+                                    <div class="col-lg-12 col-md-12">
+                                        <table id="tblFlightDetails" st-table="displayFlights" st-safe-src="flights" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Invoice</th>
+                                                    <th>Passenger</th>
+                                                    <th>Supplier</th>
+                                                    <th>Start</th>
+                                                    <th>End</th>
+                                                    <th>Route</th>
+                                                    <th>Fare</th>
+                                                    <th>Fee</th>
+                                                    <th>Tax</th>
+                                                    <th>Billed</th>
+                                                    <th ng-show="states.clientUOY">Work Order</th>
+                                                    <th ng-show="states.clientUOY">Dept</th>
+                                                    <th>Booker</th>
+                                                </tr>
+                                                <tr ng-if="flights.length > 0">
+                                                    <th>
+                                                        <input st-search="'rInvoiceNo'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="rPassengerName" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Supplier'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'StartDate'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'EndDate'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Route'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Fare'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Fee'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Tax'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Billed'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th ng-show="states.clientUOY">
+                                                        <input st-search="'WorkOrder'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th ng-show="states.clientUOY">
+                                                        <input st-search="'DeptCode'" class="form-control" placeholder="Filter" type="text" id="FlightDepartment" name="FlightDepartment" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Booker'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="flight in displayFlights">
+                                                    <td>
+                                                        {{ flight.rInvoiceNo}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.rPassengerName}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Supplier}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.StartDate | date:'dd/MM/yyyy' }}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.EndDate  | date:'dd/MM/yyyy'}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Route }}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Fare | currency:"£"}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Fee | currency:"£"}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Tax | currency:"£"}}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Billed | currency:"£"}}
+                                                    </td>
+                                                    <td ng-show="states.clientUOY">
+                                                        {{ flight.WorkOrder }}
+                                                    </td>
+                                                    <td ng-show="states.clientUOY">
+                                                        {{ flight.DeptCode }}
+                                                    </td>
+                                                    <td>
+                                                        {{ flight.Booker }}
+                                                    </td>
+                                                </tr>
+                                                <tr ng-if="flights.length == 0">
+                                                    <td colspan="3">
+                                                        No flights have been booked for your selected period.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot ng-show="flights.length > 10">
+                                                <tr>
+                                                    <td colspan="13" class="text-center">
+                                                        <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Flight Details-->
+                            <!--start: Complaint Detail-->
+                            <div class="row" ng-if="states.showComplaints" style="overflow:hidden;">
+                                <div class="col-lg-12 col-md-12">
+                                    <table st-table="displayComplaints" st-safe-src="complaints" class="table table-bordered table-responsive table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Against</th>
+                                                <th>Raised</th>
+                                                <th>Details</th>
+                                                <th>Resolution</th>
+                                            </tr>
+                                            <tr ng-if="complaints.length > 0">
+                                                <th>
+                                                    <input st-search="'ComplaintDetailAgainst'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'ComplaintDetailDate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'ComplaintDetailText'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'ComplaintDetailResolution'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="complaint in displayComplaints">
+                                                <td>
+                                                    {{ complaint.ComplaintDetailAgainst}}
+                                                </td>
+                                                <td>
+                                                    {{ complaint.ComplaintDetailDate | date:'dd/MM/yyyy'}}
+                                                </td>
+                                                <td>
+                                                    {{ complaint.ComplaintDetailText}}
+                                                </td>
+                                                <td>
+                                                    {{ complaint.ComplaintDetailResolution}}
+                                                </td>
+                                            </tr>
+                                            <tr ng-if="complaints.length == 0">
+                                                <td colspan="4">
+                                                    There are no complaints for the selected period.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot ng-show="complaint.length > 10">
+                                            <tr>
+                                                <td colspan="4" class="text-center">
+                                                    <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--end: Complaint Detail-->
+                            <!--start: Rail Detail -->
+                            <div class="row" ng-if="states.showRail" style="overflow:auto;">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-lg-offset-10 text-right">
+                                            <a href="#" class="btn btn-primary btn-flat" ng-click="downloadRail()" ng-if="states.railCount > 0">
+                                                EXPORT
+                                                <i class="fa fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="space-10"></div>
+                                    <h4>International Rail</h4>
+                                    <table st-table="displayIntRail" st-safe-src="intrail" class="table table-bordered table-striped table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Invoice</th>
+                                                <th>Passenger</th>
+                                                <th>Supplier</th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Route</th>
+                                                <th>Fare</th>
+                                                <th>Charge</th>
+                                                <th>Discount</th>
+                                                <th>Billed</th>
+                                                <th ng-show="states.clientUOY">Work Order</th>
+                                                <th ng-show="states.clientUOY">Dept</th>
+                                                <th>Booker</th>
+                                            </tr>
+                                            <tr ng-if="intrail.length > 0">
+                                                <th>
+                                                    <input st-search="'rInvoiceNo'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'rPassengerName'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Supplier'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'StartDate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'EndDate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Route'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Fare'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Charge'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Discount'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Billed'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th ng-show="states.clientUOY">
+                                                    <input st-search="'WorkOrder'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th ng-show="states.clientUOY">
+                                                    <input st-search="'DeptCode'" class="form-control" placeholder="Filter" type="text" id="IntRailDepartment" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Booker'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="rail in displayIntRail">
+                                                <td>
+                                                    {{ rail.rInvoiceNo }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.rPassengerName }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Supplier }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.StartDate | date:'dd/MM/yyyy' }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.EndDate | date:'dd/MM/yyyy' }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Route }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Fare | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Charge | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Discount | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Billed | currency:"£"}}
+                                                </td>
+                                                <td ng-show="states.clientUOY">
+                                                    {{ rail.WorkOrder }}
+                                                </td>
+                                                <td ng-show="states.clientUOY">
+                                                    {{ rail.DeptCode }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Booker }}
+                                                </td>
+                                            </tr>
+                                            <tr ng-if="intrail.length == 0">
+                                                <td colspan="13">
+                                                    No international rail have been booked for your selected period.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot ng-show="intrail.length > 10">
+                                            <tr>
+                                                <td colspan="13" class="text-center">
+                                                    <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <h4>UK Rail</h4>
+                                    <table st-table="displayUkRail" st-safe-src="ukrail" class="table table-bordered table-striped table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Invoice</th>
+                                                <th>Passenger</th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Route</th>
+                                                <th>Fare</th>
+                                                <th>Charge</th>
+                                                <th>Discount</th>
+                                                <th>Billed</th>
+                                                <th ng-show="states.clientUOY">Work Order</th>
+                                                <th ng-show="states.clientUOY">Dept</th>
+                                                <th>Booker</th>
+                                            </tr>
+                                            <tr ng-if="ukrail.length > 0">
+                                                <th>
+                                                    <input st-search="'rInvoiceNo'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'rPassengerName'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'StartDate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'EndDate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Route'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Fare'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Charge'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Discount'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Billed'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th ng-show="states.clientUOY">
+                                                    <input st-search="'WorkOrder'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th ng-show="states.clientUOY">
+                                                    <input st-search="'DeptCode'" class="form-control" placeholder="Filter" type="text" id="UKRailDepartment" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'Booker'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="rail in displayUkRail">
+                                                <td>
+                                                    {{ rail.rInvoiceNo }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.rPassengerName }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.StartDate | date:'dd/MM/yyyy' }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.EndDate | date:'dd/MM/yyyy' }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Route }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Fare | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Charge | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Discount | currency:"£" }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Billed | currency:"£"}}
+                                                </td>
+                                                <td ng-show="states.clientUOY">
+                                                    {{ rail.WorkOrder }}
+                                                </td>
+                                                <td ng-show="states.clientUOY">
+                                                    {{ rail.DeptCode }}
+                                                </td>
+                                                <td>
+                                                    {{ rail.Booker }}
+                                                </td>
+                                            </tr>
+                                            <tr ng-if="ukrail.length == 0">
+                                                <td colspan="12">
+                                                    No UK rail has been booked for your selected period.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot ng-show="ukrail.length > 10">
+                                            <tr>
+                                                <td colspan="12" class="text-center">
+                                                    <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--end: Rail Detail -->
+                            <!--start: Accommodation Detail -->
+                            <div class="row" ng-if="states.showAccommodation">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-lg-offset-10 text-right">
+                                        <a href="#" class="btn btn-primary btn-flat" ng-click="downloadAccommodation()" ng-if="states.accommodationCount > 0">
+                                            EXPORT
+                                            <i class="fa fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="space-10"></div>
+                                <div class="row" style="overflow:auto;">
+                                    <div class="col-lg-12 col-md-12">
+                                        <table st-table="displayAccommodation" st-safe-src="accommodation" class="table table-bordered table-striped table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th>Invoice</th>
+                                                    <th>Guest</th>
+                                                    <th>Venue</th>
+                                                    <th>Location</th>
+                                                    <th>Arrival</th>
+                                                    <th>Departure</th>
+                                                    <th>Fare(inc)</th>
+                                                    <th>Fare(exc)</th>
+                                                    <th>VAT</th>
+                                                    <th ng-show="states.clientUOY">Work Order</th>
+                                                    <th ng-show="states.clientUOY">Dept</th>
+                                                    <th>Booker</th>
+                                                </tr>
+                                                <tr ng-if="accommodation.length > 0">
+                                                    <th>
+                                                        <input st-search="'inm_no'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'inm_ldname'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'VenueName'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Location'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Arrival'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Departure'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'FareIncVat'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'FareExcVat'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'VAT'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th ng-show="states.clientUOY">
+                                                        <input st-search="'WorkOrder'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                    <th ng-show="states.clientUOY">
+                                                        <input st-search="'DeptCode'" class="form-control" placeholder="Filter" type="text" id="AccommodationDepartment" />
+                                                    </th>
+                                                    <th>
+                                                        <input st-search="'Booker'" class="form-control" placeholder="Filter" type="text" />
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="accom in displayAccommodation">
+                                                    <td>{{ accom.inm_no }}</td>
+                                                    <td>{{ accom.inm_ldname }}</td>
+                                                    <td>{{ accom.VenueName }}</td>
+                                                    <td>{{ accom.Location }}</td>
+                                                    <td>{{ accom.Arrival  | date:'dd/MM/yyyy'}}</td>
+                                                    <td>{{ accom.Departure  | date:'dd/MM/yyyy'}}</td>
+                                                    <td>{{ accom.FareIncVat | currency:"£" }}</td>
+                                                    <td>{{ accom.FareExcVat | currency:"£" }}</td>
+                                                    <td>{{ accom.VAT | currency:"£" }}</td>
+                                                    <td ng-show="states.clientUOY">{{ accom.WorkOrder }}</td>
+                                                    <td ng-show="states.clientUOY">{{ accom.DeptCode }}</td>
+                                                    <td>{{ accom.Booker }}</td>
+                                                </tr>
+                                                <tr ng-if="accommodation.length == 0">
+                                                    <td colspan="12">
+                                                        No accommodation has been booked for your selected period.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot ng-show="accommodation.length > 10">
+                                                <tr>
+                                                    <td colspan="12" class="text-center">
+                                                        <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Accommodation Detail -->
+                            <!--start: Conference Detail -->
+                            <div class="row" ng-if="states.showConference" style="overflow:auto;">
+                                <div class=" col-lg-12 col-md-12">
+                                <table st-table="displayConference" st-safe-src="conference" class="table table-bordered table-striped table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>NYS Agent</th>
+                                            <th>Lead Name</th>
+                                            <th>Event Name</th>
+                                            <th>Booked</th>
+                                            <th>Event Date</th>
+                                            <th>Days</th>
+                                            <th>Venue</th>
+                                            <th>Location</th>
+                                            <th>Delegates</th>
+                                            <th>Basis</th>
+                                            <th>Room(inc)</th>
+                                            <th>Room(exc)</th>
+                                            <th>DDR(exc)</th>
+                                            <th>DDR(inc)</th>
+                                            <th>Equip(inc)</th>
+                                            <th>Equip(exc)</th>
+                                            <th>Extras(inc)</th>
+                                            <th>Extras(exc)</th>
+                                            <th>Food(inc)</th>
+                                            <th>Food(exc)</th>
+                                            <th>Other(exc)</th>
+                                            <th>Other(inc)</th>
+                                            <th>Accom(exc)</th>
+                                            <th>Accom(inc)</th>
+                                            <th>Total(exc)</th>
+                                            <th>Total(inc)</th>
+                                            <th>VAT</th>
+                                            <th>Dist VAT</th>
+                                            <th>Invoice No</th>
+                                            <th>NYS Ref</th>
+                                            <th>Meeting Reason</th>
+                                            <th>Savings - Cancel</th>
+                                            <th>Savings - Complaint</th>
+                                            <th>Savings - Invoice</th>
+                                            <th>Savings - RH vs DDR</th>
+                                            <th>Savings - Low Cost Venue</th>
+                                            <th>Savings - Dynamic Neg.</th>
+                                            <th>Savings - Low cost equip</th>
+                                            <th>Savings - Total</th>
+                                            <th>Savings - Lost</th>
+                                            <th>Savings - Not taken</th>
+                                            <th>Savings - Comments</th>
+                                            <th>Invoice Date</th>
+                                        </tr>
+                                        <tr ng-if="conference.length > 0">
+                                            <th><input st-search="'booker'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'leadname'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'eventenquiryname'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'bookingdate'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'inm_start'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'days'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'HotelBooked'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'location'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'dels'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'rc/ddr'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'roomexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'roomincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'ddrexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'ddrincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'ehexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'ehincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'extraexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'extraincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'foodexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'foodincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'otherexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'otherincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'accexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'accincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'totalexvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'totalincvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'vat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'disbursmentvat'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'inm_no'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'enquiryNYSref'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'meetingname'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingscancellationfees'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingscomplaintrefund'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingsinvoicesavings'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingsroomhirevsddr'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingschannelledtolowcostvenue'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingsdynamicnegotiation'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingslowcostequipment'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'totalsavings'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingslost'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingsnottaken'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'savingscomments'" class="form-control" placeholder="Filter" type="text" /></th>
+                                            <th><input st-search="'inm_invdt'" class="form-control" placeholder="Filter" type="text" /></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="conf in displayConference">
+                                            <td>{{ conf.booker }}</td>
+                                            <td>{{ conf.leadname}}</td>
+                                            <td>{{ conf.eventenquiryname}}</td>
+                                            <td>{{ conf.bookingdate | date:'dd/MM/yyyy'}}</td>
+                                            <td>{{ conf.inm_start  | date:'dd/MM/yyyy'}}</td>
+                                            <td>{{ conf.days}}</td>
+                                            <td>{{ conf.HotelBooked}}</td>
+                                            <td>{{ conf.location}}</td>
+                                            <td>{{ conf.dels}}</td>
+                                            <td>{{ conf.rcddr}}</td>
+                                            <td>{{ conf.roomexvat | currency:"£"}}</td>
+                                            <td>{{ conf.roomincvat | currency:"£"}}</td>
+                                            <td>{{ conf.ddrexvat | currency:"£"}}</td>
+                                            <td>{{ conf.ddrincvat | currency:"£"}}</td>
+                                            <td>{{ conf.ehexvat | currency:"£"}}</td>
+                                            <td>{{ conf.ehincvat | currency:"£"}}</td>
+                                            <td>{{ conf.extraexvat | currency:"£"}}</td>
+                                            <td>{{ conf.extraincvat | currency:"£"}}</td>
+                                            <td>{{ conf.foodexvat | currency:"£"}}</td>
+                                            <td>{{ conf.foodincvat | currency:"£"}}</td>
+                                            <td>{{ conf.otherexvat | currency:"£"}}</td>
+                                            <td>{{ conf.otherincvat | currency:"£"}}</td>
+                                            <td>{{ conf.accexvat | currency:"£"}}</td>
+                                            <td>{{ conf.accincvat | currency:"£"}}</td>
+                                            <td>{{ conf.totalexvat | currency:"£"}}</td>
+                                            <td>{{ conf.totalincvat | currency:"£"}}</td>
+                                            <td>{{ conf.vat | currency:"£"}}</td>
+                                            <td>{{ conf.disbursmentvat | currency:"£"}}</td>
+                                            <td>{{ conf.inm_no}}</td>
+                                            <td>{{ conf.enquiryNYSref}}</td>
+                                            <td>{{ conf.meetingname}}</td>
+                                            <td>{{ conf.savingscancellationfees | currency:"£"}}</td>
+                                            <td>{{ conf.savingscomplaintrefund | currency:"£"}}</td>
+                                            <td>{{ conf.savingsinvoicesavings | currency:"£"}}</td>
+                                            <td>{{ conf.savingsroomhirevsddr | currency:"£"}}</td>
+                                            <td>{{ conf.savingschannelledtolowcostvenue | currency:"£"}}</td>
+                                            <td>{{ conf.savingsdynamicnegotiation | currency:"£"}}</td>
+                                            <td>{{ conf.savingslowcostequipment | currency:"£"}}</td>
+                                            <td>{{ conf.totalsavings | currency:"£"}}</td>
+                                            <td>{{ conf.savingslost | currency:"£"}}</td>
+                                            <td>{{ conf.savingsnottaken | currency:"£"}}</td>
+                                            <td>{{ conf.savingscomments}}</td>
+                                            <td>{{ conf.inm_invdt | date:'dd/MM/yyyy'}}</td>
+                                        </tr>
+                                        <tr ng-if="conference.length == 0">
+                                            <td colspan="44">
+                                                No conferences have been booked within your selected period.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot ng-show="conference.length > 10">
+                                        <tr>
+                                            <td colspan="44" class="text-center">
+                                                <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            </div>
+                            <!--end: Conference Detail -->
+                            <!--start: Feedback Detail -->
+                            <div class="row" ng-if="states.showFeedback" style="overflow:auto;">
+                                <div class="col-lg-12 col-md-12">
+                                    <h4>Conference Feedback</h4>
+                                    <table st-table="displayConferenceFeedback" st-safe-src="conferencefeedback" class="table table-bordered table-striped table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2"></th>
+                                                <th colspan="8">NYS Feedback</th>
+                                                <th colspan="9">Venue Feedback</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Enquiry Reference</th>
+                                                <th>Date Received</th>
+
+                                                <th>Initial Enquiry</th>
+                                                <th>Variety of Venues</th>
+                                                <th>Negotiation of rates</th>
+                                                <th>Pre-event admin</th>
+                                                <th>Communication</th>
+                                                <th>Invoicing Process</th>
+                                                <th>Quality Checking</th>
+                                                <th>Comments</th>
+
+                                                <th>Efficiency</th>
+                                                <th>Helpfulness</th>
+                                                <th>Quality of food</th>
+                                                <th>Variety of food</th>
+                                                <th>Cleanliness of rooms</th>
+                                                <th>Technical facilities</th>
+                                                <th>Overall impression</th>
+                                                <th>Would use again</th>
+                                                <th>Comments</th>
+
+                                            </tr>
+                                            <tr ng-if="conferencefeedback.length > 0">
+                                                <th>
+                                                    <input st-search="'enquirynysreference'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'feedbackdatereceived'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'initialenquiry'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'varietyofvenues'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'negotiationofrates'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'preeventadmin'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'nyscommunication'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'invoicingprocess'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'qualitychecking'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'nyscomments'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'staffefficiency'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'staffhelpfulness'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'qualityoffood'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'varietyoffood'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'cleanlinessofrooms'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'technicalfacilities'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'overallimpression'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'woulduseagain'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'venuecomments'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="feed in displayConferenceFeedback">
+                                                <td>
+                                                    {{ feed.enquirynysref }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.feedbackdatereceived  | date:'dd/MM/yyyy'}}
+                                                </td>
+                                                <td>
+                                                    {{ feed.initialenquiry }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.varietyofvenues }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.negotiationofrates }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.preeventadmin }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.nyscommunication }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.invoicingprocess }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.qualitychecking }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.nyscomments }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.staffefficiency }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.staffhelpfulness }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.qualityoffood }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.varietyoffood }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.cleanlinessofrooms }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.technicalfacilities }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.overallimpression }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.woulduseagain }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.venuecomments }}
+                                                </td>
+                                            </tr>
+                                            <tr ng-if="conferencefeedback.length == 0">
+                                                <td colspan="19">
+                                                    No conference feedback has been received during the selected time frame.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot ng-show="conferencefeedback.length > 10">
+                                            <tr>
+                                                <td colspan="19" class="text-center">
+                                                    <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <h4>Corporate Feedback</h4>
+                                    <table st-table="displayCorporateFeedback" st-safe-src="corporatefeedback" class="table table-bordered table-striped table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Contact</th>
+                                                <th>Speed of logon</th>
+                                                <th>Effectiveness</th>
+                                                <th>Efficiency</th>
+                                                <th>Availability</th>
+                                                <th>Ticket Confirmation Recevied</th>
+                                                <th>Travel Options</th>
+                                                <th>Overall Service</th>
+                                                <th>Improvements</th>
+                                                <th>Other Comments</th>
+                                                <th>NYS Investigation</th>
+                                                <th>Action Taken</th>
+                                                <th>Date Received</th>
+                                            </tr>
+                                            <tr ng-if="corporatefeedback.length > 0">
+                                                <th>
+                                                    <input st-search="'contact'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'speedOfLogon'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'effectiveness'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'efficiency'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'availability'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'ticketConfirmationsReceived'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'travelOptions'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'overallService'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'improvements'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'otherComments'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'nysinvestigate'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'actiontaken'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                                <th>
+                                                    <input st-search="'datereceived'" class="form-control" placeholder="Filter" type="text" />
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="feed in displayCorporateFeedback">
+                                                <td>
+                                                    {{ feed.contact }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.speedOfLogon }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.effectiveness }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.efficiency }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.availability }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.ticketConfirmationsReceived }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.travelOptions }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.overallService }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.improvements }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.otherComments }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.nysinvestigate }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.actiontaken }}
+                                                </td>
+                                                <td>
+                                                    {{ feed.datereceived  | date:'dd/MM/yyyy'}}
+                                                </td>
+                                            </tr>
+                                            <tr ng-if="corporatefeedback.length == 0">
+                                                <td colspan="13">
+                                                    No corporate feedback has been received within your selected period.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot ng-show="corporatefeedback.length > 10">
+                                            <tr>
+                                                <td colspan="13" class="text-center">
+                                                    <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--end: Feedback Detail -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end: Details Popup -->
+
+    <!--start: Traveller Tracking -->
+    <div class="modal fade" id="modTravellerTrackingPopup" tabindex="-1" role="dialog" aria-labelledby="modTravellerTrackingPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Traveller Tracking</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    Dates from and to
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        @Html.TextBox("FromDate", "", new { @class = "form-control", placeholder = "From Date" })
+                                        <span class="input-group-addon">to</span>
+                                        @Html.TextBox("ToDate", "", new { @class = "form-control", placeholder = "To Date" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    Location
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <br/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="button" class="btn btn-primary form-control">Refresh</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h4>Air Tracking</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <table id="tblAirTracking" class="table table-bordered">
+                                <thead>
+                                    <th>
+                                        Record Locator
+                                    </th>
+                                    <th>
+                                        Travel Dates
+                                    </th>
+                                    <th>
+                                        Passenger Name
+                                    </th>
+                                    <th>
+                                        Airline Name
+                                    </th>
+                                    <th>
+                                        Routing
+                                    </th>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h4>UK Rail Tracking Tracking</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <table id="tblUKRailTracking" class="table table-bordered">
+                                <thead>
+                                    <th>
+                                        Ticket Ref
+                                    </th>
+                                    <th>
+                                        Passenger
+                                    </th>
+                                    <th>
+                                        Route
+                                    </th>
+                                    <th>
+                                        Departure
+                                    </th>
+                                    <th>
+                                        Return Date
+                                    </th>
+                                    <th>
+                                        Operator
+                                    </th>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h4>International Rail Tracking</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <table id="tblIntRailTracking" class="table table-bordered">
+                                <thead>
+                                    <th>
+                                        Order Identifier
+                                    </th>
+                                    <th>
+                                        Record Locator
+                                    </th>
+                                    <th>
+                                        Passenger
+                                    </th>
+                                    <th>
+                                        Route
+                                    </th>
+                                    <th>
+                                        Departure Date
+                                    </th>
+                                    <th>
+                                        Return Date
+                                    </th>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h4>Hotel Tracking</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <table id="tblHotelTracking" class="table table-bordered">
+                                <thead>
+                                    <th>Transaction Number</th>
+                                    <th>Passenger</th>
+                                    <th>Venue</th>
+                                    <th>Arrival Date</th>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h4>Conference Tracking</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <table id="tblConferenceTracking" class="table table-bordered">
+                                <thead>
+                                    <th></th>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end: Traveller Tracking -->
+
+
+    <!--start: GeoChart-->
+    <div class="row collapse">
+        <div class="col-lg-12 col-md-12">
+            <div class="bg-travel" style="overflow:hidden; padding-left: 10px;">
+                <h3 class="text-white" style="position:absolute;top:5px;z-index:1000">
+                    <i class="fa fa-map-marker"></i>
+                    Traveller Locations
+                </h3>
+                <div id="GeoChart">
+                    <!--GEOCHART-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end: GeoChart-->
+    <br />
+
+</div>
+@section scripts {
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $('.input-daterange').datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+
+            $('#btnRefresh').bind('click', function () {
+                if ($('#FromDate').val() == '' || $('#ToDate').val() == '') {
+                    alert("Please complete both date fields before continuing.");
+                    return false;
+                }
+            });
+
+        })
+
+        google.load("visualization", "1", { packages: ["geochart"] });
+        google.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+
+            var data = google.visualization.arrayToDataTable([
+              ['Country', 'Popularity'],
+              ['Germany', 200],
+              ['United States', 300],
+              ['Brazil', 400],
+              ['Canada', 500],
+              ['France', 600],
+              ['RU', 700],
+              ['GB', 1000]
+            ]);
+
+            var options = {
+                backgroundColor: '#009DDD',
+                height: 400,
+                keepAspectRatio: false,
+                legend: 'none',
+                region: 'GB'
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('GeoChart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+}

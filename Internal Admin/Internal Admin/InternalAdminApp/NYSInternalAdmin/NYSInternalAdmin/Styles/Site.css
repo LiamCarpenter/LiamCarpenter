@@ -1,0 +1,496 @@
+﻿body {
+}
+
+.list2 {
+	font-family:Arial;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	color:#404040;
+	overflow:scroll;
+	height:200px;
+	border: 1px solid silver;
+	list-style-type: none;
+	margin: 0px;
+	background-color: #FFF;
+	text-align: left;
+	z-index:555;
+}
+
+	ul.list2 li {
+		padding: 0px 0px;
+	}
+
+	.listitem2 {
+		color: #404040;
+		z-index:555;
+	}
+
+	.hoverlistitem2 {
+		background-color:#666666;
+		cursor:pointer;
+		font-weight:600;
+		font-size:10pt;
+		z-index:555;
+	}
+
+.nysauto{
+	font-family:Arial;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	color:#404040;
+	overflow:scroll;
+	height:200px;
+	}
+.reportV 
+{
+	background-color:Silver;
+	border-color:silver;
+	border-style:solid;
+	border-width:2px;
+}
+.gridHead	{	
+		background-color:#fd977e;
+		font-family:Arial;
+		font-size:8pt;
+		font-weight:bold;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		height:15px;
+		color:#171717;
+	}	
+.gridItem	{
+		background-color:white;
+		font-family:Arial;
+		font-size:8pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridAlternate	{
+		background-color:#fcb8a7;
+		font-family:Arial;
+		font-size:8pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridAlternateTwo	{
+		background-color:#fcb8a7;
+		font-family:Arial;
+		font-size:8pt;
+		font-weight:300;
+		font-style:italic;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridSelected	{
+		background-color:#FF6699;
+		font-family:Arial;
+		font-size:8pt;
+		font-weight:bold;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.imageButton 
+{
+	width:79px;
+}
+.nyslabelHeader 
+{font-family: verdana;
+font-size:16pt;
+color:#2e4066;
+text-align: left;
+}
+.nyslabelHeaderCentre 
+{font-family: verdana;
+font-size:16pt;
+font-weight:500;
+color:#515151;
+text-align:center;
+}
+.nyslabelHeaderLeft
+{font-family: verdana;
+font-size:16pt;
+font-weight:500;
+color:#515151;
+text-align:left;
+}
+.nyslabellogonlg
+{font-family: verdana;
+font-size:10pt;
+color:#515151;
+text-align: left;
+}
+.nyslabellogon
+{font-family: verdana;
+font-size:8pt;
+color:#515151;
+text-align: left;
+}
+.nyspanelwhite	{
+	background-color:white;
+	border-color:silver;
+	border-style:solid;
+	border-width:1px;
+	}
+	
+.nyspanels	{
+	background-color:#F7F7F7;
+	border-color:silver;
+	border-style:solid;
+	border-width:1px;
+	}
+.nyspanelsSM	{
+	background-color:#378abf;
+	border-color:silver;
+	border-style:solid;
+	border-width:1px;
+	}
+.reportView	{
+	background-color:white;
+	border-color:silver;
+	border-style:solid;
+	border-width:1px;
+	height:100%;
+	width:100%;
+	}
+.nyspanelsScroll	{
+	background-color:White;
+	border-color:silver;
+	border-style:solid;
+	border-width:2px;
+	overflow:auto;
+	}
+
+.nysitaliclabel
+{
+    font-family: verdana;
+    font-size: 9pt;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+    color: #515151;
+}
+.nysitaliclabelred{
+	font-family:verdana;
+	font-size:9pt;
+	font-weight:500;
+	font-style:italic;
+	text-align:left;
+	color:red;
+	}
+
+.nyslabel{
+	font-family:verdana;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:left;
+	color:#515151;
+	}
+.nysheader{
+	font-family:verdana;
+	font-size:14pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	color:#515151;
+	}
+.nysheaderSm{
+	font-family:verdana;
+	font-size:10pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	color:#515151;
+	}
+.nysheaderSmLeft{
+	font-family:verdana;
+	font-size:11pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#515151;
+	}
+.nysheaderMenu
+{
+    font-family:verdana;
+	font-size:12pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:none;
+	border-bottom-style: solid; 
+    border-bottom-width: 1px; 
+    border-bottom-color: #000000;
+    text-align:left;
+	color:White;
+	background-color:#515151;
+	}
+.nysheaderText
+{
+    font-family:verdana;
+	font-size:12pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	color:White;
+	}
+.nysheaderlge{
+	font-family:Arial;
+	font-size:18pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	text-align:left;
+	color:black;
+	}
+
+.nyslabelcentre{
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:center;
+	color:#404040;
+	}
+
+.btnclasshand  
+{
+	cursor:pointer;
+	}
+.nysdropdown	{	
+	border: 1px solid Silver;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:#515151;
+	height:20px;
+	}
+	
+.nystextbox	{	
+	border: 1px solid Silver;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:#515151;
+	}
+	
+.nyscheckbox	{	
+	font-family:Arial;
+	font-size:8pt;
+	font-weight:300;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	border-color:Silver;
+	background-color:White;
+	BORDER-BOTTOM:Silver 1px solid;	
+	BORDER-LEFT:Silver 1px solid;	
+	BORDER-RIGHT:Silver 1px solid;	
+	BORDER-TOP:Silver 1px solid;	
+	color:#515151;
+	height:20px;
+	width:20px;
+	}
+	
+.nystextboxred	{	
+	border: 1px solid red;
+	font-family:Arial;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:black;
+	}
+.nyslink{
+	font-family:verdana;
+	font-size:12pt;
+	font-weight:100;
+	font-style:normal;
+	text-align:left;
+	color:#2e4066;
+	background-color:Transparent;
+	border-style:none;
+	cursor:pointer;
+	}
+.nyshyperlink{
+	font-family:verdana;
+	font-size:9pt;
+	font-weight:100;
+	font-style:normal;
+	text-align:left;
+	color:blue;
+	background-color:Transparent;
+	border-style:none;
+	cursor:pointer;
+	}	
+/* MonoSoftware.Web.Dialogs */
+	BODY {background:white;}
+	TD {font:10px Arial;}
+	BUTTON, .Button {width:70px;height:23px;font:8pt Arial;}
+	
+	.Error{font:10px Arial; color:red;}
+	.InputBox {font:10px Arial; width:100%}	
+	.bodyclass  { color: black; font-size: 9pt; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; text-decoration: none }
+.resultclass  { color: black; font-size: 10px; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif }
+.overresultclass  { color:Maroon; 
+				font-size: 9pt; 
+				font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+				font-weight :bold;}
+
+.cal_Theme1 .ajax__calendar_container
+
+{
+background-color: #e2e2e2; border:solid 1px #cccccc;
+
+}
+
+.cal_Theme1 .ajax__calendar_header
+
+{
+background-color: #ffffff; margin-bottom: 4px;
+
+} 
+
+.cal_Theme1 .ajax__calendar_title,
+
+.cal_Theme1 .ajax__calendar_next,
+
+.cal_Theme1 .ajax__calendar_prev
+
+{
+color: #004080; padding-top: 3px;
+
+}
+
+.cal_Theme1 .ajax__calendar_body
+
+{
+background-color: #e9e9e9; border: solid 1px #cccccc;
+
+}
+
+ .cal_Theme1 .ajax__calendar_dayname
+
+{
+text-align:center; font-weight:bold; margin-bottom: 4px; margin-top: 2px;
+
+} 
+
+.cal_Theme1 .ajax__calendar_day
+
+{
+text-align:center;
+
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+
+.cal_Theme1 .ajax__calendar_active
+
+{
+color: #004080; font-weight:bold; background-color: #ffffff;
+
+}
+
+ 
+
+ 
+
+.cal_Theme1 .ajax__calendar_today
+
+{
+font-weight:bold;
+
+}
+
+ 
+
+ 
+
+.cal_Theme1 .ajax__calendar_other,
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title
+
+{
+color: #bbbbbb;
+
+}
+
+.modalProgressGreyBackground 
+{
+    background:#CCCCCC;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+
+.modalProgressRedBackground 
+{
+    background:Red;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+
+.modalPopup
+{
+    text-align:center;
+    font-family:Arial;
+    padding-top: 30px; 
+    border-style:solid; 
+    border-width:1px; 
+    background-color:White; 
+    width:300px; 
+    height:100px;
+}
+
+td.field_width{width: 500px;}
+td.title_width{width: 400px;}
+

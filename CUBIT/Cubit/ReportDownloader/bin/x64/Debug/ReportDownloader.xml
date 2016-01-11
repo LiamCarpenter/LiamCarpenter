@@ -1,0 +1,327 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ReportDownloader
+</name>
+</assembly>
+<members>
+<member name="M:ReportDownloader.checkBossFiles.SetBookingIDtoExportStatus(System.Int32,System.Boolean)">
+	<summary>
+ Sub SetBookingIDtoExportStatus - Updates FeedData record status on import 
+ from BOSS setting correct status if failure or not occurs
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pblnOk"></param>
+	<remarks>
+ Created 27/03/2009 Nick Massarella
+ </remarks>
+</member><member name="T:ReportDownloader.checkBossFiles">
+	<summary>
+ Class checkBossFiles - used to check a specific directory for returned 
+ text files from the BOSS application
+ </summary>
+	<remarks>
+ Created 13/04/2009 Nick Massarella
+ </remarks>
+</member><member name="T:ReportDownloader.dataImportBooked">
+	<summary>
+ Class dataImport - used to store imported data from the CSV file so it can be sorted correctly
+ </summary>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.Main">
+	<summary>
+ Function Main - downloads today's CSV file if it hasn't already been dowloaded, then passes to 
+ importFile method.
+ </summary>
+	<returns>
+ True/False depending upon validity of data downloaded
+ </returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.readAllText(System.String)">
+	<summary>
+ Function readAllText - reads the passed in file if it exists
+ </summary>
+	<param name="filename"></param>
+	<returns>An empty string denoting the file doesn't exist</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReaderBooked.ErrorLineDetails">
+	<summary>
+ Class ErrorLineDetails - used to add CSV lines that fail import so a report can be created
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.checkLength(System.String,System.String,System.Int32)">
+	<summary>
+ Function checkLength - tests the length of the passed in value
+ </summary>
+	<param name="fieldName"></param>
+	<param name="a"></param>
+	<param name="l"></param>
+	<returns>An exception if the test fails</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.item(System.Collections.Generic.IList{System.String},System.Int32)">
+	<summary>
+ Function item- return item at index trimmed, if array too short then return empty string
+ </summary>
+	<param name="a"></param>
+	<param name="index"></param>
+	<returns>A trimmed value  if OK, otherwise an empty string</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReaderBooked.FieldIndexes">
+	<summary>
+ Enum FieldIndexes -  determines the column of each required field
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.importFile(System.String,System.String,System.String,System.String)">
+	<summary>
+ Function importFile - reads the new file, adds each line to a dataimport record. 
+ There are two different ways as the file may contain records in a single column or 
+ multiple columns. Sends sorted list to the saveData method.
+ </summary>
+	<param name="pstrFile"></param>
+	<returns>True/false depending upon any failures</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.saveData(System.Collections.Generic.List{ReportDownloader.dataImportBooked},System.String,System.String,System.String)">
+	<summary>
+ Function saveData - checks data for validity, if OK saves to database and copies CSV file to Archive, 
+ if not each related record is removed from the database and written to a report for chacking
+ </summary>
+	<param name="dinosaurs"></param>
+	<returns>True/false dependant upon failures</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderBooked.ToCsvCell(System.String)">
+	<summary>
+ Function ToCsvCell - checks for invalid data and removes if found
+ </summary>
+	<param name="s"></param>
+	<returns>Cleaned up string value</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReaderBooked">
+	<summary>
+ Class CSVReader - checks for today's CSV file, if it hasn't already been downloaded, 
+ then it is downloaded. Then the data is checked for validity and if OK each line is 
+ imported into the database as a unique record. If a failure occurs a CSV report of
+ the failure is created
+ </summary>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:ReportDownloader.CSVReaderTrans.Main(System.String)">
+	<summary>
+ Function Main - downloads today's CSV file if it hasn't already been dowloaded, then passes to 
+ importFile method.
+ </summary>
+	<returns>
+ True/False depending upon validity of data downloaded
+ </returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+ '
+
+</member><member name="M:ReportDownloader.CSVReaderTrans.readAllText(System.String,System.String)">
+	<summary>
+ Function readAllText - reads the passed in file if it exists
+ </summary>
+	<param name="filename"></param>
+	<returns>An empty string denoting the file doesn't exist</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReaderTrans.ErrorLineDetails">
+	<summary>
+ Class ErrorLineDetails - used to add CSV lines that fail import so a report can be created
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderTrans.checkLength(System.String,System.String,System.Int32)">
+	<summary>
+ Function checkLength - tests the length of the passed in value
+ </summary>
+	<param name="fieldName"></param>
+	<param name="a"></param>
+	<param name="l"></param>
+	<returns>An exception if the test fails</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderTrans.item(System.Collections.Generic.IList{System.String},System.Int32)">
+	<summary>
+ Function item- return item at index trimmed, if array too short then return empty string
+ </summary>
+	<param name="a"></param>
+	<param name="index"></param>
+	<returns>A trimmed value  if OK, otherwise an empty string</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReaderTrans.FieldIndexes">
+	<summary>
+ Enum FieldIndexes -  determines the column of each required field
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderTrans.saveData(System.Collections.Generic.List{DatabaseObjects.TransactionData},System.String)">
+	<summary>
+ Function saveData - checks data for validity, if OK saves to database and copies CSV file to Archive, 
+ if not each related record is removed from the database and written to a report for chacking
+ </summary>
+	<param name="dinosaurs"></param>
+	<returns>True/false dependant upon failures</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReaderTrans.ToCsvCell(System.String)">
+	<summary>
+ Function ToCsvCell - checks for invalid data and removes if found
+ </summary>
+	<param name="s"></param>
+	<returns>Cleaned up string value</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="P:ReportDownloader.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ReportDownloader.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ReportDownloader.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:ReportDownloader.dataImport">
+	<summary>
+ Class dataImport - used to store imported data from the CSV file so it can be sorted correctly
+ </summary>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:ReportDownloader.CSVReader.Main">
+	<summary>
+ Function Main - downloads today's CSV file if it hasn't already been dowloaded, then passes to 
+ importFile method.
+ </summary>
+	<returns>
+ True/False depending upon validity of data downloaded
+ </returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.readAllText(System.String)">
+	<summary>
+ Function readAllText - reads the passed in file if it exists
+ </summary>
+	<param name="filename"></param>
+	<returns>An empty string denoting the file doesn't exist</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReader.ErrorLineDetails">
+	<summary>
+ Class ErrorLineDetails - used to add CSV lines that fail import so a report can be created
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.checkLength(System.String,System.String,System.Int32)">
+	<summary>
+ Function checkLength - tests the length of the passed in value
+ </summary>
+	<param name="fieldName"></param>
+	<param name="a"></param>
+	<param name="l"></param>
+	<returns>An exception if the test fails</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.item(System.Collections.Generic.IList{System.String},System.Int32)">
+	<summary>
+ Function item- return item at index trimmed, if array too short then return empty string
+ </summary>
+	<param name="a"></param>
+	<param name="index"></param>
+	<returns>A trimmed value  if OK, otherwise an empty string</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReader.FieldIndexes">
+	<summary>
+ Enum FieldIndexes -  determines the column of each required field
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.importFile(System.String)">
+	<summary>
+ Function importFile - reads the new file, adds each line to a dataimport record. 
+ There are two different ways as the file may contain records in a single column or 
+ multiple columns. Sends sorted list to the saveData method.
+ </summary>
+	<param name="pstrFile"></param>
+	<returns>True/false depending upon any failures</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.saveData(System.Collections.Generic.List{ReportDownloader.dataImport})">
+	<summary>
+ Function saveData - checks data for validity, if OK saves to database and copies CSV file to Archive, 
+ if not each related record is removed from the database and written to a report for chacking
+ </summary>
+	<param name="dinosaurs"></param>
+	<returns>True/false dependant upon failures</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.CSVReader.ToCsvCell(System.String)">
+	<summary>
+ Function ToCsvCell - checks for invalid data and removes if found
+ </summary>
+	<param name="s"></param>
+	<returns>Cleaned up string value</returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.CSVReader">
+	<summary>
+ Class CSVReader - checks for today's CSV file, if it hasn't already been downloaded, 
+ then it is downloaded. Then the data is checked for validity and if OK each line is 
+ imported into the database as a unique record. If a failure occurs a CSV report of
+ the failure is created
+ </summary>
+	<remarks>
+ Created 13/03/2009 Nick Massarella
+ </remarks>
+</member><member name="T:ReportDownloader.WebRetrieve">
+	<summary>
+ Class WebRetrieve - Checks if today's file is ready for download, if so it does it. 
+ File can be up to 2MB
+ </summary>
+	<remarks>Created 14/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.Utility.SortOrder">
+	<summary>
+ Sort order enumeration
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.Utility.Sorter`1.#ctor">
+	<summary>
+ Instantiate the class.
+ </summary>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.Utility.Sorter`1.#ctor(System.String)">
+	<summary>
+ Instantiate the class, setting the sort string.
+ Example: "LastName DESC, FirstName"
+ </summary>
+	<param name="SortValue"></param>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="P:ReportDownloader.Utility.Sorter`1.SortString">
+	<summary>
+ The sort string used to perform the sort. Can sort on multiple fields.
+ Use the property names of the class and basic SQL Syntax.
+ 
+ Example: "LastName DESC, FirstName"
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="M:ReportDownloader.Utility.Sorter`1.Compare(`0,`0)">
+	<summary>
+ This is an implementation of IComparer(Of T).Compare
+ Can sort on multiple fields, or just one.
+ </summary>
+	<param name="x"></param>
+	<param name="y"></param>
+	<returns></returns>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member><member name="T:ReportDownloader.Utility.Sorter`1">
+	<summary>
+ This instance class is used to sort a generic collection of object instances.
+ It automatically fetches the type and performs the necessary comparison(s) to sort.
+ 
+ To use, instantiate this class, set the sort string property, and pass this
+ instance to the internal Sort() function of your generic collection.
+ 
+ Example:
+     Dim MyList As List(Of MyClassType) = 'Populate the list somehow
+     Dim Sorter As New Sorter(Of MyClassType)    '''     Sorter.SortString = "Field1 DESC, Field2"
+     MyList.Sort(Sorter) 'After this call, the list is sorted
+ </summary>
+	<typeparam name="T"></typeparam>
+	<remarks>Created 13/03/2009 Nick Massarella</remarks>
+</member>
+</members>
+</doc>

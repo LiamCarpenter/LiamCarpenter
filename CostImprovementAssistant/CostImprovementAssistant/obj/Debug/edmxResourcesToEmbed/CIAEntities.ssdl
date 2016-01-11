@@ -263,6 +263,18 @@
     </Key>
     <Property Name="QualityIndicatorsTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <EntityType Name="SchemeBudgetTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="SchemeId" />
+      <PropertyRef Name="BudgetTypeName" />
+      <PropertyRef Name="Trustcode" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="SchemeId" Type="int" Nullable="false" />
+    <Property Name="BudgetTypeName" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Trustcode" Type="nchar" MaxLength="45" Nullable="false" />
+  </EntityType>
   <EntityType Name="SchemeKpia">
     <Key>
       <PropertyRef Name="SchemeID" />
@@ -318,7 +330,7 @@
     <Property Name="Spare1" Type="bit" />
     <Property Name="Spare2" Type="bit" />
     <Property Name="Active" Type="bit" />
-    <Property Name="TrustCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
   </EntityType>
   <EntityType Name="Stakeholders">
     <Key>
@@ -332,6 +344,277 @@
     <Property Name="Impact" Type="nvarchar" MaxLength="20" />
     <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
   </EntityType>
+  <EntityType Name="Trusts">
+    <Key>
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="TrustName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Assumptio__Trust__7D0E9093">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Assumptions" Type="Self.Assumptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Assumptions">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Breakdown__Trust__7E02B4CC">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="BreakdownOfEnablingCosts" Type="Self.BreakdownOfEnablingCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfEnablingCosts">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Breakdown__Trust__7EF6D905">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="BreakdownOfSavings" Type="Self.BreakdownOfSavings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfSavings">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BudgetTyp__Trust__7FEAFD3E">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="BudgetType" Type="Self.BudgetType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BudgetType">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BusinessL__Trust__00DF2177">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="BusinessLevel" Type="Self.BusinessLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BusinessLevel">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BusinessS__Trust__01D345B0">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="BusinessSector" Type="Self.BusinessSector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BusinessSector">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Category__TrustC__02C769E9">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Category" Type="Self.Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CiaForm__TrustCo__03BB8E22">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="CiaForm" Type="Self.CiaForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="CiaForm">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Departmen__Trust__04AFB25B">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Department" Type="Self.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Department">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dependenc__Trust__05A3D694">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Dependencies" Type="Self.Dependencies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Dependencies">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Generated__Trust__0697FACD">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="GeneratedIncome" Type="Self.GeneratedIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="GeneratedIncome">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Issues__TrustCod__078C1F06">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Issues" Type="Self.Issues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Issues">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KpiaSourc__Trust__0880433F">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="KpiaSourcesReporting" Type="Self.KpiaSourcesReporting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="KpiaSourcesReporting">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Milestone__Trust__09746778">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Milestones" Type="Self.Milestones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Milestones">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QiConditi__Trust__0A688BB1">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="QiConditions" Type="Self.QiConditions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="QiConditions">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QiConditi__Trust__0B5CAFEA">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="QiConditionTable" Type="Self.QiConditionTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="QiConditionTable">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QualityIm__Trust__0C50D423">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="QualityImpact" Type="Self.QualityImpact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="QualityImpact">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchemeKpi__Trust__0D44F85C">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="SchemeKpia" Type="Self.SchemeKpia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeKpia">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchemeQua__Trust__0E391C95">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="SchemeQualityIndicators" Type="Self.SchemeQualityIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeQualityIndicators">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchemeRis__Trust__0F2D40CE">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="SchemeRisks" Type="Self.SchemeRisks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeRisks">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Staff__TrustCode__14E61A24">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stakehold__Trust__11158940">
+    <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+    <End Role="Stakeholders" Type="Self.Stakeholders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trusts">
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Stakeholders">
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_breakdownofsavings_bt2">
     <End Role="BudgetType" Type="Self.BudgetType" Multiplicity="1" />
     <End Role="BreakdownOfSavings" Type="Self.BreakdownOfSavings" Multiplicity="*" />
@@ -686,11 +969,101 @@
     <EntitySet Name="QiConditionTable" EntityType="Self.QiConditionTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="QualityImpact" EntityType="Self.QualityImpact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="QualityIndicators" EntityType="Self.QualityIndicators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchemeBudgetTypes" EntityType="Self.SchemeBudgetTypes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SchemeKpia" EntityType="Self.SchemeKpia" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SchemeQualityIndicators" EntityType="Self.SchemeQualityIndicators" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SchemeRisks" EntityType="Self.SchemeRisks" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stakeholders" EntityType="Self.Stakeholders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trusts" EntityType="Self.Trusts" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Assumptio__Trust__7D0E9093" Association="Self.FK__Assumptio__Trust__7D0E9093">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Assumptions" EntitySet="Assumptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Breakdown__Trust__7E02B4CC" Association="Self.FK__Breakdown__Trust__7E02B4CC">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="BreakdownOfEnablingCosts" EntitySet="BreakdownOfEnablingCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Breakdown__Trust__7EF6D905" Association="Self.FK__Breakdown__Trust__7EF6D905">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BudgetTyp__Trust__7FEAFD3E" Association="Self.FK__BudgetTyp__Trust__7FEAFD3E">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="BudgetType" EntitySet="BudgetType" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BusinessL__Trust__00DF2177" Association="Self.FK__BusinessL__Trust__00DF2177">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BusinessS__Trust__01D345B0" Association="Self.FK__BusinessS__Trust__01D345B0">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="BusinessSector" EntitySet="BusinessSector" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Category__TrustC__02C769E9" Association="Self.FK__Category__TrustC__02C769E9">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Category" EntitySet="Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CiaForm__TrustCo__03BB8E22" Association="Self.FK__CiaForm__TrustCo__03BB8E22">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="CiaForm" EntitySet="CiaForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Departmen__Trust__04AFB25B" Association="Self.FK__Departmen__Trust__04AFB25B">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Department" EntitySet="Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dependenc__Trust__05A3D694" Association="Self.FK__Dependenc__Trust__05A3D694">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Dependencies" EntitySet="Dependencies" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Generated__Trust__0697FACD" Association="Self.FK__Generated__Trust__0697FACD">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="GeneratedIncome" EntitySet="GeneratedIncome" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Issues__TrustCod__078C1F06" Association="Self.FK__Issues__TrustCod__078C1F06">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Issues" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KpiaSourc__Trust__0880433F" Association="Self.FK__KpiaSourc__Trust__0880433F">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="KpiaSourcesReporting" EntitySet="KpiaSourcesReporting" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Milestone__Trust__09746778" Association="Self.FK__Milestone__Trust__09746778">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Milestones" EntitySet="Milestones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QiConditi__Trust__0A688BB1" Association="Self.FK__QiConditi__Trust__0A688BB1">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="QiConditions" EntitySet="QiConditions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QiConditi__Trust__0B5CAFEA" Association="Self.FK__QiConditi__Trust__0B5CAFEA">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="QiConditionTable" EntitySet="QiConditionTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QualityIm__Trust__0C50D423" Association="Self.FK__QualityIm__Trust__0C50D423">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="QualityImpact" EntitySet="QualityImpact" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchemeKpi__Trust__0D44F85C" Association="Self.FK__SchemeKpi__Trust__0D44F85C">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="SchemeKpia" EntitySet="SchemeKpia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchemeQua__Trust__0E391C95" Association="Self.FK__SchemeQua__Trust__0E391C95">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="SchemeQualityIndicators" EntitySet="SchemeQualityIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchemeRis__Trust__0F2D40CE" Association="Self.FK__SchemeRis__Trust__0F2D40CE">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="SchemeRisks" EntitySet="SchemeRisks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__TrustCode__14E61A24" Association="Self.FK__Staff__TrustCode__14E61A24">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Staff" EntitySet="Staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stakehold__Trust__11158940" Association="Self.FK__Stakehold__Trust__11158940">
+      <End Role="Trusts" EntitySet="Trusts" />
+      <End Role="Stakeholders" EntitySet="Stakeholders" />
+    </AssociationSet>
     <AssociationSet Name="FK_breakdownofsavings_bt2" Association="Self.FK_breakdownofsavings_bt2">
       <End Role="BudgetType" EntitySet="BudgetType" />
       <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />

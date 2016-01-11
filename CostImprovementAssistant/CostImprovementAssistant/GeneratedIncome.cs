@@ -47,5 +47,6 @@ namespace CostImprovementAssistant
         public string TrustCode { get; set; }
     
         public virtual CiaForm CiaForm { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

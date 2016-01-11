@@ -1,0 +1,1497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{5E0EBC60-2D24-46C3-BC49-F4C4B9CA18C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NYSInternalAdmin</RootNamespace>
+    <AssemblyName>NYSInternalAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NYSInternalAdmin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NYSInternalAdmin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>NYSInternalAdmin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>NYSInternalAdmin.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10103bf0df26eb01, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\AjaxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BossData, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BossApp\BossData\bin\Debug\BossData.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>dlls\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CDO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>dlls\Interop.CDO.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>dlls\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MonoSoftware.Web.Dialogs, Version=1.5.0.0, Culture=neutral, PublicKeyToken=faf3283597ac56ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\MonoSoftware.Web.Dialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NysDat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MevisApp\NysDat\bin\Debug\NysDat.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfMetamorphosis">
+      <HintPath>dlls\PdfMetamorphosis.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrollingGrid, Version=1.5.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\ScrollingGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="skmDataGrid, Version=1.0.1689.19001, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\skmDataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxService.asmx" />
+    <Content Include="AMFeedback.aspx" />
+    <Content Include="AMVenueChaser.aspx" />
+    <Content Include="AMTemplate.aspx" />
+    <Content Include="dlls\Interop.ADODB.dll" />
+    <Content Include="dlls\Interop.CDO.dll" />
+    <Content Include="dlls\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="dlls\ScrollingGrid.dll" />
+    <Content Include="dlls\skmDataGrid.dll" />
+    <Content Include="IAFeederAdquiraInstructions.aspx" />
+    <Content Include="IAOtherTTAllClients.aspx" />
+    <Content Include="IAPoCheck.aspx" />
+    <Content Include="IAAdminCCP.aspx" />
+    <Content Include="IAClientStatements.aspx" />
+    <Content Include="CommStats\Statement.htm" />
+    <Content Include="IAAdmin.aspx" />
+    <Content Include="IAEAEnquiriesSummary.aspx" />
+    <Content Include="IAEnquiryCancellationFormCheck.aspx" />
+    <Content Include="IAEnquiryBespoke.aspx" />
+    <Content Include="IABoss2.aspx" />
+    <Content Include="dlls\AjaxControls.dll" />
+    <Content Include="dlls\AjaxControlToolkit.dll" />
+    <Content Include="dlls\log4net.dll" />
+    <Content Include="dlls\MonoSoftware.Web.Dialogs.dll" />
+    <Content Include="dlls\PdfMetamorphosis.dll" />
+    <Content Include="dlls\System.Web.Extensions.Design.dll" />
+    <Content Include="dlls\System.Web.Extensions.dll" />
+    <Content Include="docs\o2Invoice.htm" />
+    <Content Include="docs\goodsreceipt-po.htm" />
+    <Content Include="docs\Payments\Body.htm" />
+    <Content Include="IAAirTTAllClients.aspx" />
+    <Content Include="IACommissionClaim.aspx" />
+    <Content Include="IACommissionStatement.aspx" />
+    <Content Include="IACompanyCreditCard.aspx" />
+    <Content Include="IAComplaintsAllFields.aspx" />
+    <Content Include="IAComplaintsBookings.aspx" />
+    <Content Include="IAComplaintsFeedback.aspx" />
+    <Content Include="IAConfermaReport.aspx" />
+    <Content Include="IAConfermaReportArrival.aspx" />
+    <Content Include="IAContractsAA.aspx" />
+    <Content Include="IAContractsAmendSummary.aspx" />
+    <Content Include="IAContractsNotSigned.aspx" />
+    <Content Include="IAContractsNotReceived.aspx" />
+    <Content Include="IAContractsSummary.aspx" />
+    <Content Include="IAContractsSummaryByUser.aspx" />
+    <Content Include="IAContractsSummaryWeekPies.aspx" />
+    <Content Include="IACostCodeAdmin.aspx" />
+    <Content Include="IAEnquiryGovConfirmedVenueReport.aspx" />
+    <Content Include="IAEnquiryTakeOver.aspx" />
+    <Content Include="IAEvolviProductivity.aspx" />
+    <Content Include="IAFeeCalc.aspx" />
+    <Content Include="IAInactiveMevisContacts.aspx" />
+    <Content Include="IAInternalSelfCheck.aspx" />
+    <Content Include="IAInternationalRailTTAllClients.aspx" />
+    <Content Include="IALogonAdmin.aspx" />
+    <Content Include="IAO2Invoice.aspx" />
+    <Content Include="IAOOP.aspx" />
+    <Content Include="IAOutstandingCommission.aspx" />
+    <Content Include="IABlanketPoCheck.aspx" />
+    <Content Include="IAMIBuilder.aspx" />
+    <Content Include="IAManualSingleFeeder.aspx" />
+    <Content Include="IAPoCheckJLR.aspx" />
+    <Content Include="IARSAReport.aspx" />
+    <Content Include="IATestEvolvi.aspx" />
+    <Content Include="IAUnpaidCommission.aspx" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\continue_out.gif" />
+    <Content Include="images\continue_over.gif" />
+    <Content Include="images\csv_out.gif" />
+    <Content Include="images\csv_over.gif" />
+    <Content Include="images\empty.gif" />
+    <Content Include="images\empy_larger.gif" />
+    <Content Include="images\Export.gif" />
+    <Content Include="images\IALogonPanel2.gif" />
+    <Content Include="images\login_out.gif" />
+    <Content Include="images\login_over.gif" />
+    <Content Include="images\logout_out.gif" />
+    <Content Include="images\logout_over.gif" />
+    <Content Include="images\menu.gif" />
+    <Content Include="images\refresh.gif" />
+    <Content Include="images\refresh_out.gif" />
+    <Content Include="images\refresh_over.gif" />
+    <Content Include="images\run_out.gif" />
+    <Content Include="images\run_over.gif" />
+    <Content Include="images\SSOHeader.gif" />
+    <Content Include="images\trans_light.gif" />
+    <Content Include="images\valid-xhtml10-blue.png" />
+    <Content Include="images\vcss-blue.gif" />
+    <Content Include="images\white.gif" />
+    <Content Include="LaunchAdmin.htm" />
+    <Content Include="IAControl.aspx" />
+    <Content Include="IAAdminEvolvi.aspx" />
+    <Content Include="IAAdminFlightClass.aspx" />
+    <Content Include="IABoss.aspx" />
+    <Content Include="IAFeraInvoices.aspx" />
+    <Content Include="IAFeederFile.aspx" />
+    <Content Include="IAUKRailTTAllClients.aspx" />
+    <Content Include="MICommissionOverride.aspx" />
+    <Content Include="MonoDialogPage.aspx" />
+    <Content Include="Non Deployment\Config.txt" />
+    <Content Include="Non Deployment\ReleaseDocs\How Client Statements Are Arrived At.txt" />
+    <Content Include="ReloadLog4NetConfig.aspx" />
+    <Content Include="Styles\MonoDialogs.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="UserControls\ucReportMenu.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ad_StatementsParameters.vb">
+      <DependentUpon>NYSDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ad_statements_refoptions.vb">
+      <DependentUpon>NYSDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxService.asmx.vb">
+      <DependentUpon>AjaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMFeedback.aspx.designer.vb">
+      <DependentUpon>AMFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMFeedback.aspx.vb">
+      <DependentUpon>AMFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMVenueChaser.aspx.designer.vb">
+      <DependentUpon>AMVenueChaser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMVenueChaser.aspx.vb">
+      <DependentUpon>AMVenueChaser.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AMTemplate.aspx.designer.vb">
+      <DependentUpon>AMTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMTemplate.aspx.vb">
+      <DependentUpon>AMTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cubit\ClientMapping_autogenerated.vb" />
+    <Compile Include="Cubit\clsClientOptionAutogenerated.vb" />
+    <Compile Include="Cubit\clsFeedBookedData_autogenerated.vb" />
+    <Compile Include="Cubit\clsFeedCategoryAutogenerated.vb" />
+    <Compile Include="Cubit\clsFeedImportData_autogenerated.vb" />
+    <Compile Include="Cubit\clsFeedParameterAutogenerated.vb" />
+    <Compile Include="Cubit\clsGroup.vb" />
+    <Compile Include="Cubit\clsStuff.vb" />
+    <Compile Include="Cubit\clsVenue.vb" />
+    <Compile Include="Cubit\CSVReader.vb" />
+    <Compile Include="Cubit\CSVReaderBooked.vb" />
+    <Compile Include="Cubit\CSVReaderTrans.vb" />
+    <Compile Include="Cubit\TransactionData_autogenerated.vb" />
+    <Compile Include="Cubit\WebRetrieve.vb" />
+    <Compile Include="datasets\dsRailAllClientsTT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRailAllClientsTT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IAFeederAdquiraInstructions.aspx.designer.vb">
+      <DependentUpon>IAFeederAdquiraInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAFeederAdquiraInstructions.aspx.vb">
+      <DependentUpon>IAFeederAdquiraInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAOtherTTAllClients.aspx.designer.vb">
+      <DependentUpon>IAOtherTTAllClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAOtherTTAllClients.aspx.vb">
+      <DependentUpon>IAOtherTTAllClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAPoCheck.aspx.designer.vb">
+      <DependentUpon>IAPoCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAPoCheck.aspx.vb">
+      <DependentUpon>IAPoCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseObjects\Bednight_builder.vb" />
+    <Compile Include="DatabaseObjects\clsAirport.vb" />
+    <Compile Include="DatabaseObjects\clsPo.vb" />
+    <Compile Include="DatabaseObjects\clsPO_New.vb" />
+    <Compile Include="DatabaseObjects\DWPCostcentre_autogenerated.vb" />
+    <Compile Include="DatabaseObjects\FlightBuilder_autogenerated.vb" />
+    <Compile Include="DatabaseObjects\O2PoAdmin_autogenerated.vb" />
+    <Compile Include="DatabaseObjects\O2status_autogenerated.vb" />
+    <Compile Include="DatabaseObjects\Rail_builder.vb" />
+    <Compile Include="datasets\dsAirTTAllClients_FromBOSS.Designer.vb">
+      <DependentUpon>dsAirTTAllClients_FromBOSS.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="datasets\dsEAEnquiriesSummary.Designer.vb">
+      <DependentUpon>dsEAEnquiriesSummary.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="datasets\dsContractsNotRecieved.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsNotRecieved.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsEnquiryCancellationFormCheck.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEnquiryCancellationFormCheck.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsEnquiryGovConfirmedVenueReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEnquiryGovConfirmedVenueReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsInactiveMevisContacts.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInactiveMevisContacts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IAAdminCCP.aspx.designer.vb">
+      <DependentUpon>IAAdminCCP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAAdminCCP.aspx.vb">
+      <DependentUpon>IAAdminCCP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Feeders\ICE.vb" />
+    <Compile Include="IAClientStatements.aspx.designer.vb">
+      <DependentUpon>IAClientStatements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAClientStatements.aspx.vb">
+      <DependentUpon>IAClientStatements.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="datasets\dsBespokeReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBespokeReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsCommissionOverride.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCommissionOverride.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsInternalSelfCheck.vb">
+      <DependentUpon>dsInternalSelfCheck.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsRSAReport_Deposits.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRSAReport_Deposits.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsRSAReport_Invoices.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRSAReport_Invoices.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsEnquiryTakeOver.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEnquiryTakeOver.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Feeders\NCAS_autogenerated.vb" />
+    <Compile Include="Feeders\RCN_autogenerated.vb" />
+    <Compile Include="IAAdmin.aspx.designer.vb">
+      <DependentUpon>IAAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAAdmin.aspx.vb">
+      <DependentUpon>IAAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAEAEnquiriesSummary.aspx.designer.vb">
+      <DependentUpon>IAEAEnquiriesSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEAEnquiriesSummary.aspx.vb">
+      <DependentUpon>IAEAEnquiriesSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAEnquiryCancellationFormCheck.aspx.designer.vb">
+      <DependentUpon>IAEnquiryCancellationFormCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEnquiryCancellationFormCheck.aspx.vb">
+      <DependentUpon>IAEnquiryCancellationFormCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAEnquiryBespoke.aspx.designer.vb">
+      <DependentUpon>IAEnquiryBespoke.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEnquiryBespoke.aspx.vb">
+      <DependentUpon>IAEnquiryBespoke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IABoss2.aspx.designer.vb">
+      <DependentUpon>IABoss2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IABoss2.aspx.vb">
+      <DependentUpon>IABoss2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="datasets\CUBITDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CUBITDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsCompAllFields.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompAllFields.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsCompanyCreditCard.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompanyCreditCard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsCompBookings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompBookings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsCompFeedback.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompFeedback.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsConfermaReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConfermaReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsConfermaReportArrival.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConfermaReportArrival.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsAmendSummary1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsAmendSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsAmendSummaryByUser1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsAmendSummaryByUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsAmendSummaryPerc1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsAmendSummaryPerc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsReceived.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsReceived.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsSummary1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsSummaryByUser1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsSummaryByUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsSummaryByUserChart1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsSummaryByUserChart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dscontractsSummaryNotSigned.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dscontractsSummaryNotSigned.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsEurostarTTAllClients.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEurostarTTAllClients.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsEvolviProductivity.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEvolviProductivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsInternalSelfCheck.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInternalSelfCheck.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsOutstandingCommission.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOutstandingCommission.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsContractsSummaryAA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContractsSummaryAA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\dsUnpaidCommission.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUnpaidCommission.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Feeders\Anchor_autogenerated.vb" />
+    <Compile Include="Feeders\CIMA_autogenerated.vb" />
+    <Compile Include="Feeders\DWP_autogenerated.vb" />
+    <Compile Include="Feeders\FeederFileCreation.vb" />
+    <Compile Include="Feeders\Highway_autogenerated.vb" />
+    <Compile Include="Feeders\LV_autogenerated.vb" />
+    <Compile Include="Feeders\NhsBsa_autogenerated.vb" />
+    <Compile Include="Feeders\Nhsi_autogenerated.vb" />
+    <Compile Include="Feeders\Npsa_autogenerated.vb" />
+    <Compile Include="Feeders\O2_autogenerated.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IAAirTTAllClients.aspx.designer.vb">
+      <DependentUpon>IAAirTTAllClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAAirTTAllClients.aspx.vb">
+      <DependentUpon>IAAirTTAllClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IACommissionClaim.aspx.designer.vb">
+      <DependentUpon>IACommissionClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IACommissionClaim.aspx.vb">
+      <DependentUpon>IACommissionClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IACommissionStatement.aspx.designer.vb">
+      <DependentUpon>IACommissionStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IACommissionStatement.aspx.vb">
+      <DependentUpon>IACommissionStatement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IACompanyCreditCard.aspx.designer.vb">
+      <DependentUpon>IACompanyCreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IACompanyCreditCard.aspx.vb">
+      <DependentUpon>IACompanyCreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAComplaintsAllFields.aspx.designer.vb">
+      <DependentUpon>IAComplaintsAllFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAComplaintsAllFields.aspx.vb">
+      <DependentUpon>IAComplaintsAllFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAComplaintsBookings.aspx.designer.vb">
+      <DependentUpon>IAComplaintsBookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAComplaintsBookings.aspx.vb">
+      <DependentUpon>IAComplaintsBookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAComplaintsFeedback.aspx.designer.vb">
+      <DependentUpon>IAComplaintsFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAComplaintsFeedback.aspx.vb">
+      <DependentUpon>IAComplaintsFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAConfermaReport.aspx.designer.vb">
+      <DependentUpon>IAConfermaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAConfermaReport.aspx.vb">
+      <DependentUpon>IAConfermaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAConfermaReportArrival.aspx.designer.vb">
+      <DependentUpon>IAConfermaReportArrival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAConfermaReportArrival.aspx.vb">
+      <DependentUpon>IAConfermaReportArrival.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsAA.aspx.designer.vb">
+      <DependentUpon>IAContractsAA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsAA.aspx.vb">
+      <DependentUpon>IAContractsAA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsAmendSummary.aspx.designer.vb">
+      <DependentUpon>IAContractsAmendSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsAmendSummary.aspx.vb">
+      <DependentUpon>IAContractsAmendSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsNotSigned.aspx.designer.vb">
+      <DependentUpon>IAContractsNotSigned.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsNotSigned.aspx.vb">
+      <DependentUpon>IAContractsNotSigned.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsNotReceived.aspx.designer.vb">
+      <DependentUpon>IAContractsNotReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsNotReceived.aspx.vb">
+      <DependentUpon>IAContractsNotReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsSummary.aspx.designer.vb">
+      <DependentUpon>IAContractsSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsSummary.aspx.vb">
+      <DependentUpon>IAContractsSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsSummaryByUser.aspx.designer.vb">
+      <DependentUpon>IAContractsSummaryByUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsSummaryByUser.aspx.vb">
+      <DependentUpon>IAContractsSummaryByUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAContractsSummaryWeekPies.aspx.designer.vb">
+      <DependentUpon>IAContractsSummaryWeekPies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAContractsSummaryWeekPies.aspx.vb">
+      <DependentUpon>IAContractsSummaryWeekPies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAControl.aspx.designer.vb">
+      <DependentUpon>IAControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAControl.aspx.vb">
+      <DependentUpon>IAControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IACostCodeAdmin.aspx.designer.vb">
+      <DependentUpon>IACostCodeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IACostCodeAdmin.aspx.vb">
+      <DependentUpon>IACostCodeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAEnquiryGovConfirmedVenueReport.aspx.designer.vb">
+      <DependentUpon>IAEnquiryGovConfirmedVenueReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEnquiryGovConfirmedVenueReport.aspx.vb">
+      <DependentUpon>IAEnquiryGovConfirmedVenueReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAEnquiryTakeOver.aspx.designer.vb">
+      <DependentUpon>IAEnquiryTakeOver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEnquiryTakeOver.aspx.vb">
+      <DependentUpon>IAEnquiryTakeOver.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAEvolviProductivity.aspx.designer.vb">
+      <DependentUpon>IAEvolviProductivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAEvolviProductivity.aspx.vb">
+      <DependentUpon>IAEvolviProductivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAFeeCalc.aspx.designer.vb">
+      <DependentUpon>IAFeeCalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAFeeCalc.aspx.vb">
+      <DependentUpon>IAFeeCalc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAInactiveMevisContacts.aspx.designer.vb">
+      <DependentUpon>IAInactiveMevisContacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAInactiveMevisContacts.aspx.vb">
+      <DependentUpon>IAInactiveMevisContacts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAInternalSelfCheck.aspx.designer.vb">
+      <DependentUpon>IAInternalSelfCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAInternalSelfCheck.aspx.vb">
+      <DependentUpon>IAInternalSelfCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAInternationalRailTTAllClients.aspx.designer.vb">
+      <DependentUpon>IAInternationalRailTTAllClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAInternationalRailTTAllClients.aspx.vb">
+      <DependentUpon>IAInternationalRailTTAllClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IALogonAdmin.aspx.designer.vb">
+      <DependentUpon>IALogonAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IALogonAdmin.aspx.vb">
+      <DependentUpon>IALogonAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAAdminEvolvi.aspx.designer.vb">
+      <DependentUpon>IAAdminEvolvi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAAdminEvolvi.aspx.vb">
+      <DependentUpon>IAAdminEvolvi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAAdminFlightClass.aspx.designer.vb">
+      <DependentUpon>IAAdminFlightClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAAdminFlightClass.aspx.vb">
+      <DependentUpon>IAAdminFlightClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IABoss.aspx.designer.vb">
+      <DependentUpon>IABoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IABoss.aspx.vb">
+      <DependentUpon>IABoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAFeraInvoices.aspx.designer.vb">
+      <DependentUpon>IAFeraInvoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAFeraInvoices.aspx.vb">
+      <DependentUpon>IAFeraInvoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAO2Invoice.aspx.designer.vb">
+      <DependentUpon>IAO2Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAO2Invoice.aspx.vb">
+      <DependentUpon>IAO2Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAOOP.aspx.designer.vb">
+      <DependentUpon>IAOOP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAOOP.aspx.vb">
+      <DependentUpon>IAOOP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAOutstandingCommission.aspx.designer.vb">
+      <DependentUpon>IAOutstandingCommission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAOutstandingCommission.aspx.vb">
+      <DependentUpon>IAOutstandingCommission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IABlanketPoCheck.aspx.designer.vb">
+      <DependentUpon>IABlanketPoCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IABlanketPoCheck.aspx.vb">
+      <DependentUpon>IABlanketPoCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAMIBuilder.aspx.designer.vb">
+      <DependentUpon>IAMIBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAMIBuilder.aspx.vb">
+      <DependentUpon>IAMIBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAManualSingleFeeder.aspx.designer.vb">
+      <DependentUpon>IAManualSingleFeeder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAManualSingleFeeder.aspx.vb">
+      <DependentUpon>IAManualSingleFeeder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAPoCheckJLR.aspx.designer.vb">
+      <DependentUpon>IAPoCheckJLR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAPoCheckJLR.aspx.vb">
+      <DependentUpon>IAPoCheckJLR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IARSAReport.aspx.designer.vb">
+      <DependentUpon>IARSAReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IARSAReport.aspx.vb">
+      <DependentUpon>IARSAReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IAFeederFile.aspx.designer.vb">
+      <DependentUpon>IAFeederFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAFeederFile.aspx.vb">
+      <DependentUpon>IAFeederFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IATestEvolvi.aspx.designer.vb">
+      <DependentUpon>IATestEvolvi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IATestEvolvi.aspx.vb">
+      <DependentUpon>IATestEvolvi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAUKRailTTAllClients.aspx.designer.vb">
+      <DependentUpon>IAUKRailTTAllClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAUKRailTTAllClients.aspx.vb">
+      <DependentUpon>IAUKRailTTAllClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IAUnpaidCommission.aspx.designer.vb">
+      <DependentUpon>IAUnpaidCommission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IAUnpaidCommission.aspx.vb">
+      <DependentUpon>IAUnpaidCommission.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MICommissionOverride.aspx.designer.vb">
+      <DependentUpon>MICommissionOverride.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MICommissionOverride.aspx.vb">
+      <DependentUpon>MICommissionOverride.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NYSDBModel.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NYSDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NYSDBModel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NYSDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NYSDBModel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NYSDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sorter.vb" />
+    <Compile Include="UsefulItems\clsBoss.vb" />
+    <Compile Include="UsefulItems\clsEncryption.vb" />
+    <Compile Include="UsefulItems\clslogger.vb" />
+    <Compile Include="UsefulItems\clsNYS.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsefulItems\clsSSOUser.vb" />
+    <Compile Include="UsefulItems\EvoFriendlyException.vb" />
+    <Compile Include="UsefulItems\LogUtils.vb" />
+    <Compile Include="UsefulItems\MD5.vb" />
+    <Compile Include="UsefulItems\SendMail.vb" />
+    <Compile Include="UsefulItems\VariableConversions.vb" />
+    <Compile Include="UserControls\ucReportMenu.ascx.designer.vb">
+      <DependentUpon>ucReportMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucReportMenu.ascx.vb">
+      <DependentUpon>ucReportMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repAirTTAllClients_FromBOSS.rdlc" />
+    <EmbeddedResource Include="Reports\repBespokeReport.rdlc" />
+    <EmbeddedResource Include="Reports\repCommissionOverride.rdlc" />
+    <EmbeddedResource Include="Reports\repCompAllFields.rdlc" />
+    <EmbeddedResource Include="Reports\repCompanyCreditCard.rdlc" />
+    <EmbeddedResource Include="Reports\repCompBookings.rdlc" />
+    <EmbeddedResource Include="Reports\repCompFeedback.rdlc" />
+    <EmbeddedResource Include="Reports\repConfermaReport.rdlc" />
+    <EmbeddedResource Include="Reports\repConfermaReportArrival.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsAmendSummary.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsAmendSummaryByUser.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsAmendSummaryChart.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsAmendSummaryPerc.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsNotReceived.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsReveived.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummary.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryAA.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryByUser.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryByUserChart.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryNotSigned.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryWeek1.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryWeek2.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryWeek3.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryWeek4.rdlc" />
+    <EmbeddedResource Include="Reports\repContractsSummaryWeek5.rdlc" />
+    <EmbeddedResource Include="Reports\repEAEnquiriesSummary.rdlc" />
+    <EmbeddedResource Include="Reports\repEnquiryCancellationFormCheck.rdlc" />
+    <EmbeddedResource Include="Reports\repEnquiryGovCancellationVenueReport.rdlc" />
+    <EmbeddedResource Include="Reports\repEnquiryTakeOver.rdlc" />
+    <EmbeddedResource Include="Reports\repEurostarTTAllClients.rdlc" />
+    <EmbeddedResource Include="Reports\repEvolviProductivity.rdlc" />
+    <EmbeddedResource Include="Reports\repInactiveMevisContacts.rdlc" />
+    <EmbeddedResource Include="Reports\repInternalSelfCheck.rdlc" />
+    <EmbeddedResource Include="Reports\repOOP.rdlc" />
+    <EmbeddedResource Include="Reports\repOutstandingCommission.rdlc" />
+    <EmbeddedResource Include="Reports\repRailTTAllClients.rdlc" />
+    <EmbeddedResource Include="Reports\repRSAReport_Deposits.rdlc" />
+    <EmbeddedResource Include="Reports\repRSAReport_Invoices.rdlc" />
+    <EmbeddedResource Include="Reports\repUnpaidCommission.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+    <None Include="datasets\CUBITDataSet.xsc">
+      <DependentUpon>CUBITDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\CUBITDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CUBITDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\CUBITDataSet.xss">
+      <DependentUpon>CUBITDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsAirTTAllClients_FromBOSS.xsc">
+      <DependentUpon>dsAirTTAllClients_FromBOSS.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsAirTTAllClients_FromBOSS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAirTTAllClients_FromBOSS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsAirTTAllClients_FromBOSS.xss">
+      <DependentUpon>dsAirTTAllClients_FromBOSS.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsBespokeReport.xsc">
+      <DependentUpon>dsBespokeReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsBespokeReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBespokeReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsBespokeReport.xss">
+      <DependentUpon>dsBespokeReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompAllFields.xsc">
+      <DependentUpon>dsCompAllFields.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompAllFields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompAllFields.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsCompAllFields.xss">
+      <DependentUpon>dsCompAllFields.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompanyCreditCard.xsc">
+      <DependentUpon>dsCompanyCreditCard.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompanyCreditCard.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompanyCreditCard.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsCompanyCreditCard.xss">
+      <DependentUpon>dsCompanyCreditCard.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompBookings.xsc">
+      <DependentUpon>dsCompBookings.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompBookings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompBookings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsCompBookings.xss">
+      <DependentUpon>dsCompBookings.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompFeedback.xsc">
+      <DependentUpon>dsCompFeedback.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCompFeedback.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompFeedback.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsCompFeedback.xss">
+      <DependentUpon>dsCompFeedback.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsConfermaReport.xsc">
+      <DependentUpon>dsConfermaReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsConfermaReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfermaReport.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsConfermaReport.xss">
+      <DependentUpon>dsConfermaReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsConfermaReportArrival.xsc">
+      <DependentUpon>dsConfermaReportArrival.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsConfermaReportArrival.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfermaReportArrival.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsConfermaReportArrival.xss">
+      <DependentUpon>dsConfermaReportArrival.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummary.xsc">
+      <DependentUpon>dsContractsAmendSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsAmendSummary1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsAmendSummary.xss">
+      <DependentUpon>dsContractsAmendSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryByUser.xsc">
+      <DependentUpon>dsContractsAmendSummaryByUser.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryByUser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsAmendSummaryByUser1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryByUser.xss">
+      <DependentUpon>dsContractsAmendSummaryByUser.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryPerc.xsc">
+      <DependentUpon>dsContractsAmendSummaryPerc.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryPerc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsAmendSummaryPerc1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsAmendSummaryPerc.xss">
+      <DependentUpon>dsContractsAmendSummaryPerc.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsNotRecieved.xsc">
+      <DependentUpon>dsContractsNotRecieved.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsNotRecieved.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsNotRecieved.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsContractsNotRecieved.xss">
+      <DependentUpon>dsContractsNotRecieved.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsReceived.xsc">
+      <DependentUpon>dsContractsReceived.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsReceived.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsReceived.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsReceived.xss">
+      <DependentUpon>dsContractsReceived.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummary.xsc">
+      <DependentUpon>dsContractsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsSummary1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsSummary.xss">
+      <DependentUpon>dsContractsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUser.xsc">
+      <DependentUpon>dsContractsSummaryByUser.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsSummaryByUser1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUser.xss">
+      <DependentUpon>dsContractsSummaryByUser.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUserChart.xsc">
+      <DependentUpon>dsContractsSummaryByUserChart.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUserChart.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsSummaryByUserChart1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsSummaryByUserChart.xss">
+      <DependentUpon>dsContractsSummaryByUserChart.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEAEnquiriesSummary.xsc">
+      <DependentUpon>dsEAEnquiriesSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEAEnquiriesSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEAEnquiriesSummary.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsEAEnquiriesSummary.xss">
+      <DependentUpon>dsEAEnquiriesSummary.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryCancellationFormCheck.xsc">
+      <DependentUpon>dsEnquiryCancellationFormCheck.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryCancellationFormCheck.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEnquiryCancellationFormCheck.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsEnquiryCancellationFormCheck.xss">
+      <DependentUpon>dsEnquiryCancellationFormCheck.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryGovConfirmedVenueReport.xsc">
+      <DependentUpon>dsEnquiryGovConfirmedVenueReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryGovConfirmedVenueReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEnquiryGovConfirmedVenueReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsEnquiryGovConfirmedVenueReport.xss">
+      <DependentUpon>dsEnquiryGovConfirmedVenueReport.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEurostarTTAllClients.xsc">
+      <DependentUpon>dsEurostarTTAllClients.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEurostarTTAllClients.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEurostarTTAllClients.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsEurostarTTAllClients.xss">
+      <DependentUpon>dsEurostarTTAllClients.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEvolviProductivity.xsc">
+      <DependentUpon>dsEvolviProductivity.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEvolviProductivity.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEvolviProductivity.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsEvolviProductivity.xss">
+      <DependentUpon>dsEvolviProductivity.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsInactiveMevisContacts.xsc">
+      <DependentUpon>dsInactiveMevisContacts.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsInactiveMevisContacts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInactiveMevisContacts.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsInactiveMevisContacts.xss">
+      <DependentUpon>dsInactiveMevisContacts.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsInternalSelfCheck.xsc">
+      <DependentUpon>dsInternalSelfCheck.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsInternalSelfCheck.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInternalSelfCheck.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsInternalSelfCheck.xss">
+      <DependentUpon>dsInternalSelfCheck.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsOutstandingCommission.xsc">
+      <DependentUpon>dsOutstandingCommission.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsOutstandingCommission.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOutstandingCommission.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsOutstandingCommission.xss">
+      <DependentUpon>dsOutstandingCommission.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRailAllClientsTT.xsc">
+      <DependentUpon>dsRailAllClientsTT.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRailAllClientsTT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRailAllClientsTT.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsRailAllClientsTT.xss">
+      <DependentUpon>dsRailAllClientsTT.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRSAReport_Deposits.xsc">
+      <DependentUpon>dsRSAReport_Deposits.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRSAReport_Deposits.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRSAReport_Deposits.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="datasets\dsRSAReport_Deposits.xss">
+      <DependentUpon>dsRSAReport_Deposits.xsd</DependentUpon>
+    </None>
+    <None Include="docs\Payments\head.rtf" />
+    <None Include="docs\Payments\line.rtf" />
+    <None Include="docs\Payments\Templates\CommissionFinal.rtf" />
+    <None Include="docs\Payments\Templates\CommissionFirst.rtf" />
+    <None Include="docs\Payments\Templates\CommissionInitial.rtf" />
+    <None Include="docs\Payments\Templates\CommissionLaw.rtf" />
+    <None Include="docs\Payments\Templates\CommissionSecond.rtf" />
+    <None Include="docs\Payments\Templates\CommissionSpecial.rtf" />
+    <None Include="datasets\dscontractsSummaryNotSigned.xsc">
+      <DependentUpon>dscontractsSummaryNotSigned.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dscontractsSummaryNotSigned.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dscontractsSummaryNotSigned.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dscontractsSummaryNotSigned.xss">
+      <DependentUpon>dscontractsSummaryNotSigned.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryAA.xsc">
+      <DependentUpon>dsContractsSummaryAA.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsContractsSummaryAA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContractsSummaryAA.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsContractsSummaryAA.xss">
+      <DependentUpon>dsContractsSummaryAA.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsUnpaidCommission.xsc">
+      <DependentUpon>dsUnpaidCommission.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsUnpaidCommission.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUnpaidCommission.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsUnpaidCommission.xss">
+      <DependentUpon>dsUnpaidCommission.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCommissionOverride.xsc">
+      <DependentUpon>dsCommissionOverride.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsCommissionOverride.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCommissionOverride.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsCommissionOverride.xss">
+      <DependentUpon>dsCommissionOverride.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRSAReport_Invoices.xsc">
+      <DependentUpon>dsRSAReport_Invoices.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsRSAReport_Invoices.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRSAReport_Invoices.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsRSAReport_Invoices.xss">
+      <DependentUpon>dsRSAReport_Invoices.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryTakeOver.xsc">
+      <DependentUpon>dsEnquiryTakeOver.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\dsEnquiryTakeOver.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEnquiryTakeOver.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\dsEnquiryTakeOver.xss">
+      <DependentUpon>dsEnquiryTakeOver.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="user.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Non Deployment\ReleaseDocs\Checklist IA - Release 3.0.doc" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="NYSDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NYSDBModel.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="NYSDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NYSDBModel.edmx</DependentUpon>
+      <LastGenOutput>NYSDBModel.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="NYSDBModel.edmx.diagram">
+      <DependentUpon>NYSDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NYSDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NYSDBModel.edmx</DependentUpon>
+      <LastGenOutput>NYSDBModel.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="docs\DatabaseObjects\" />
+    <Folder Include="docs\PaymentDocs\" />
+    <Folder Include="MEVIS_Services\" />
+    <Folder Include="MIFILES\" />
+    <Folder Include="Non Deployment\TSQL\" />
+    <Folder Include="Reports\Scripts\" />
+    <Folder Include="XMLFILES\CIMA\CEL\" />
+    <Folder Include="XMLFILES\CIMA\CIMA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\LIBRARIES10\CSVParser\CSVParser.vbproj">
+      <Project>{EF690B6C-1FE1-4066-8727-3B46B5F8C600}</Project>
+      <Name>CSVParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\LIBRARIES10\EvoDatabaseUtils\EvoDatabaseUtils.vbproj">
+      <Project>{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}</Project>
+      <Name>EvoDatabaseUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\LIBRARIES10\EvoUtilities\EvoUtilities.vbproj">
+      <Project>{A9EC19B1-0065-4001-9C05-603F94AC0420}</Project>
+      <Name>EvoUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\LIBRARIES10\EvoZipUtils\EvoZipUtils.vbproj">
+      <Project>{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}</Project>
+      <Name>EvoZipUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AccessibilityCplAdminLib">
+      <Guid>{714DD4F6-7676-4BDE-925A-C2FEC2073F36}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>42998</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

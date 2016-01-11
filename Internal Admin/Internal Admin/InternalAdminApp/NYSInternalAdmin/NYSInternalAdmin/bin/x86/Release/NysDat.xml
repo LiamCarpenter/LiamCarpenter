@@ -1,0 +1,74 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+NysDat
+</name>
+</assembly>
+<members>
+<member name="M:NysDat.clsContactDat.saveFromNYSWeb(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Function for adding new contacts to DB from NYS Webform
+ 
+ SP still has same update functionality as saveFromWeb function
+ it just needs pintcontactid not to be 0 to run update
+ </summary>
+	<param name="pintcontactid"></param>
+	<param name="pstrcontacttel"></param>
+	<param name="pstrcontactfax"></param>
+	<param name="pstrcontactref1"></param>
+	<param name="pstrcontactoffice"></param>
+	<param name="pintcompanyid"></param>
+	<param name="pstrfirstname"></param>
+	<param name="pstrlastname"></param>
+	<param name="pstremail"></param>
+	<param name="pstrsalutation"></param>
+	<param name="pstrstatus"></param>
+	<returns>
+ if insert: new contact id
+ if update: contact id that was passed
+ </returns>
+	<remarks>Created: 27/04/2010 - Craig Rickell</remarks>
+</member><member name="P:NysDat.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:NysDat.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:NysDat.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:NysDat.clsTravellerProfiles.listDeactivatedProfiles(System.Int32)">
+	<summary>
+ Returns a list of profiles that were in the last LV Traveller file - but that are not in the current file
+ </summary>
+	<returns>list(of clsLvTraveller) containing deactivated users</returns>
+	<remarks></remarks>
+</member><member name="M:NysDat.clsTravellerProfiles.deactivateOldProfiles(System.DateTime,System.Int32)">
+	<summary>
+ Deactivates the profiles that are older than the datetime passed - because all new records imported should be saved with the same datetime
+ </summary>
+	<param name="pdteNewRecordsDate"></param>
+	<remarks></remarks>
+</member><member name="M:NysDat.clsEnquiryVenueDat.releaseEmailSentSave(System.Int32)">
+	<summary>
+ sets releaseemailsent bit to true for given enquiryvenueid
+ </summary>
+	<returns>
+ boolean
+ 
+ if enquiryvenue is found in db then updates table and = true
+ if enquiryvenue is not found in db then = false
+ </returns>
+	<remarks></remarks>
+ R2.5 CR
+ send the enquiryvenueid as a parameter
+ also make the function shared
+
+</member>
+</members>
+</doc>

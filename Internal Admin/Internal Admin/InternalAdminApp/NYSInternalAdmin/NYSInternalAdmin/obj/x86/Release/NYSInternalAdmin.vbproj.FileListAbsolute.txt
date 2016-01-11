@@ -1,0 +1,76 @@
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\AjaxControls.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\AjaxControlToolkit.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\CSVParser.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\log4net.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\MonoSoftware.Web.Dialogs.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\PdfMetamorphosis.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\ScrollingGrid.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\skmDataGrid.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\ICSharpCode.SharpZipLib.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\CSVParser.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.pdb
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbprojResolveAssemblyReference.cache
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\Interop.AccessibilityCplAdminLib.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbproj.ResolveComReference.cache
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.Resources.resources
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbproj.GenerateResource.Cache
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\RdlCompile.cache
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\RdlCompile.compiled
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.dll
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.xml
+E:\Development\VS10\NYS_APPS10\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NYSInternalAdmin.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\AjaxControls.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\AjaxControlToolkit.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\CSVParser.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\log4net.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\MonoSoftware.Web.Dialogs.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\PdfMetamorphosis.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\ScrollingGrid.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\skmDataGrid.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\ICSharpCode.SharpZipLib.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\CSVParser.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoDatabaseUtils.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoUtilities.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\EvoZipUtils.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\BossData.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.pdb
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\bin\x86\Release\NysDat.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbprojResolveAssemblyReference.cache
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\Interop.AccessibilityCplAdminLib.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbproj.ResolveComReference.cache
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.Resources.resources
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.vbproj.GenerateResource.Cache
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\RdlCompile.cache
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\RdlCompile.compiled
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.dll
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.xml
+E:\Development 2014\VS10\INTERNALADMIN_APP\INTERNALADMIN_APP\NYSInternalAdmin\NYSInternalAdmin\obj\x86\Release\NYSInternalAdmin.pdb

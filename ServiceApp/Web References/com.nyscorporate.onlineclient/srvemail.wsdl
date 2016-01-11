@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getClientData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClientDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getClientDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pClientID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCodeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCodeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCodeListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveTrained">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pstrEmailAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pintTrainingType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveTrainedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="saveTrainedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getClientDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getClientData" />
+  </wsdl:message>
+  <wsdl:message name="getClientDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getClientDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserData" />
+  </wsdl:message>
+  <wsdl:message name="getUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCodeListSoapIn">
+    <wsdl:part name="parameters" element="tns:getCodeList" />
+  </wsdl:message>
+  <wsdl:message name="getCodeListSoapOut">
+    <wsdl:part name="parameters" element="tns:getCodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveTrainedSoapIn">
+    <wsdl:part name="parameters" element="tns:saveTrained" />
+  </wsdl:message>
+  <wsdl:message name="saveTrainedSoapOut">
+    <wsdl:part name="parameters" element="tns:saveTrainedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="srvEmailSoap">
+    <wsdl:operation name="getClientData">
+      <wsdl:input message="tns:getClientDataSoapIn" />
+      <wsdl:output message="tns:getClientDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <wsdl:input message="tns:getUserDataSoapIn" />
+      <wsdl:output message="tns:getUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeList">
+      <wsdl:input message="tns:getCodeListSoapIn" />
+      <wsdl:output message="tns:getCodeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveTrained">
+      <wsdl:input message="tns:saveTrainedSoapIn" />
+      <wsdl:output message="tns:saveTrainedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="srvEmailSoap" type="tns:srvEmailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getClientData">
+      <soap:operation soapAction="http://tempuri.org/getClientData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <soap:operation soapAction="http://tempuri.org/getUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeList">
+      <soap:operation soapAction="http://tempuri.org/getCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTrained">
+      <soap:operation soapAction="http://tempuri.org/saveTrained" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="srvEmailSoap12" type="tns:srvEmailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getClientData">
+      <soap12:operation soapAction="http://tempuri.org/getClientData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <soap12:operation soapAction="http://tempuri.org/getUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeList">
+      <soap12:operation soapAction="http://tempuri.org/getCodeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTrained">
+      <soap12:operation soapAction="http://tempuri.org/saveTrained" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="srvEmail">
+    <wsdl:port name="srvEmailSoap" binding="tns:srvEmailSoap">
+      <soap:address location="https://onlineclient.nyscorporate.com/sso/srvemail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="srvEmailSoap12" binding="tns:srvEmailSoap12">
+      <soap12:address location="https://onlineclient.nyscorporate.com/sso/srvemail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

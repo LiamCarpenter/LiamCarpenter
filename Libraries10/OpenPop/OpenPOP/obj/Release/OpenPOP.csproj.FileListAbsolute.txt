@@ -1,0 +1,8 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Release\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Release\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Release\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Release\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Release\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\bin\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Release\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\OpenPOP\obj\Release\OpenPOP.dll

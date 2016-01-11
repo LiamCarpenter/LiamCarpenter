@@ -53,6 +53,30 @@
         <AssociationConnector Association="ciaModel.FK_Issues_Impact" />
         <AssociationConnector Association="ciaModel.fkSkpi2" />
         <AssociationConnector Association="ciaModel.fkQicons_qicon" />
+        <EntityTypeShape EntityType="ciaModel.SchemeBudgetTypes" Width="1.5" PointX="7.625" PointY="0.75" />
+        <EntityTypeShape EntityType="ciaModel.Trusts" Width="1.5" PointX="0.75" PointY="21" />
+        <AssociationConnector Association="ciaModel.FK__Assumptio__Trust__7D0E9093" />
+        <AssociationConnector Association="ciaModel.FK__Breakdown__Trust__7E02B4CC" />
+        <AssociationConnector Association="ciaModel.FK__Breakdown__Trust__7EF6D905" />
+        <AssociationConnector Association="ciaModel.FK__BudgetTyp__Trust__7FEAFD3E" />
+        <AssociationConnector Association="ciaModel.FK__BusinessL__Trust__00DF2177" />
+        <AssociationConnector Association="ciaModel.FK__BusinessS__Trust__01D345B0" />
+        <AssociationConnector Association="ciaModel.FK__Category__TrustC__02C769E9" />
+        <AssociationConnector Association="ciaModel.FK__CiaForm__TrustCo__03BB8E22" />
+        <AssociationConnector Association="ciaModel.FK__Departmen__Trust__04AFB25B" />
+        <AssociationConnector Association="ciaModel.FK__Dependenc__Trust__05A3D694" />
+        <AssociationConnector Association="ciaModel.FK__Generated__Trust__0697FACD" />
+        <AssociationConnector Association="ciaModel.FK__Issues__TrustCod__078C1F06" />
+        <AssociationConnector Association="ciaModel.FK__KpiaSourc__Trust__0880433F" />
+        <AssociationConnector Association="ciaModel.FK__Milestone__Trust__09746778" />
+        <AssociationConnector Association="ciaModel.FK__QiConditi__Trust__0A688BB1" />
+        <AssociationConnector Association="ciaModel.FK__QiConditi__Trust__0B5CAFEA" />
+        <AssociationConnector Association="ciaModel.FK__QualityIm__Trust__0C50D423" />
+        <AssociationConnector Association="ciaModel.FK__SchemeKpi__Trust__0D44F85C" />
+        <AssociationConnector Association="ciaModel.FK__SchemeQua__Trust__0E391C95" />
+        <AssociationConnector Association="ciaModel.FK__SchemeRis__Trust__0F2D40CE" />
+        <AssociationConnector Association="ciaModel.FK__Staff__TrustCode__14E61A24" />
+        <AssociationConnector Association="ciaModel.FK__Stakehold__Trust__11158940" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -82,5 +82,6 @@ namespace CostImprovementAssistant
         public virtual ICollection<SchemeRisks> SchemeRisks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stakeholders> Stakeholders { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

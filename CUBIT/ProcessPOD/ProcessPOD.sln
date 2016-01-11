@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProcessPOD", "ProcessPOD\ProcessPOD.vbproj", "{511530A9-B0AF-41D6-81D8-F2E14056667D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cubit.EF", "..\Cubit.EF\Cubit.EF.vbproj", "{2273745A-5290-4B9E-832D-6657973BB500}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://nysgroup.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ..\\Cubit.EF\\Cubit.EF.vbproj
+		SccProjectName0 = ../Cubit.EF
+		SccLocalPath0 = ..\\Cubit.EF
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ProcessPOD\\ProcessPOD.vbproj
+		SccProjectName2 = ProcessPOD
+		SccLocalPath2 = ProcessPOD
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{511530A9-B0AF-41D6-81D8-F2E14056667D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511530A9-B0AF-41D6-81D8-F2E14056667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511530A9-B0AF-41D6-81D8-F2E14056667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511530A9-B0AF-41D6-81D8-F2E14056667D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2273745A-5290-4B9E-832D-6657973BB500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2273745A-5290-4B9E-832D-6657973BB500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2273745A-5290-4B9E-832D-6657973BB500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2273745A-5290-4B9E-832D-6657973BB500}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

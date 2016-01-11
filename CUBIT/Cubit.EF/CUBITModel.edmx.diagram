@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50621994a3a44ad5b2236b4010686063" Name="Diagram1">
+        <EntityTypeShape EntityType="CUBITModel.ad_hotelCheck_outcomes" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ad_hotelChecker" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ad_hotelChecker_temp" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ad_hotelstoIgnore" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ad_vipTravellers" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.cima" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ClientMappings" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ClientOptions" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.code" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.CostCodeExp" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.EACTCodes" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.EOECostCentre" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedAmendment" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedBookedData" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedCategory" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedImportData" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedImportDataDuplicate" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedInvoice" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedParameter" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedStatus" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedTransaction" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.FeedTransactionInvoice" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.NPSAProjectCode" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.PurposeCode" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.SubClientOptions" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.sysdiagrams" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.TransactionData" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.TransactionData_oldData" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.UHSMCostcode" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.VenueAlternate" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.DCCostCodes" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.LastDate" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.LVCodes" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUBITModel.ConfirmaImport" Width="1.5" PointX="7.375" PointY="17.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

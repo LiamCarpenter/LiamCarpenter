@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VenueModelStoreContainer" CdmEntityContainer="NYSDBEntities">
+    <EntitySetMapping Name="venue">
+      <EntityTypeMapping TypeName="VenueModel.venue">
+        <MappingFragment StoreEntitySet="venue">
+          <ScalarProperty Name="ve_reference" ColumnName="ve_reference" />
+          <ScalarProperty Name="ve_name" ColumnName="ve_name" />
+          <ScalarProperty Name="ve_externalsupplier" ColumnName="ve_externalsupplier" />
+          <ScalarProperty Name="ve_upload" ColumnName="ve_upload" />
+          <ScalarProperty Name="ve_address1" ColumnName="ve_address1" />
+          <ScalarProperty Name="ve_address2" ColumnName="ve_address2" />
+          <ScalarProperty Name="to_name" ColumnName="to_name" />
+          <ScalarProperty Name="ve_postcode" ColumnName="ve_postcode" />
+          <ScalarProperty Name="ve_gride" ColumnName="ve_gride" />
+          <ScalarProperty Name="ve_gridn" ColumnName="ve_gridn" />
+          <ScalarProperty Name="co_name" ColumnName="co_name" />
+          <ScalarProperty Name="ar_name" ColumnName="ar_name" />
+          <ScalarProperty Name="hg_code" ColumnName="hg_code" />
+          <ScalarProperty Name="ve_nysrating" ColumnName="ve_nysrating" />
+          <ScalarProperty Name="ve_nyspreferred" ColumnName="ve_nyspreferred" />
+          <ScalarProperty Name="vt_code" ColumnName="vt_code" />
+          <ScalarProperty Name="ve_telephone" ColumnName="ve_telephone" />
+          <ScalarProperty Name="ve_fax" ColumnName="ve_fax" />
+          <ScalarProperty Name="ve_email" ColumnName="ve_email" />
+          <ScalarProperty Name="ve_website" ColumnName="ve_website" />
+          <ScalarProperty Name="ve_gen_femsec" ColumnName="ve_gen_femsec" />
+          <ScalarProperty Name="ve_gen_iip" ColumnName="ve_gen_iip" />
+          <ScalarProperty Name="ve_gen_iso9001" ColumnName="ve_gen_iso9001" />
+          <ScalarProperty Name="ve_gen_disabled" ColumnName="ve_gen_disabled" />
+          <ScalarProperty Name="ve_gen_lastinspected" ColumnName="ve_gen_lastinspected" />
+          <ScalarProperty Name="ve_gen_specialoffers" ColumnName="ve_gen_specialoffers" />
+          <ScalarProperty Name="ve_gen_commentv" ColumnName="ve_gen_commentv" />
+          <ScalarProperty Name="ve_gen_commenti" ColumnName="ve_gen_commenti" />
+          <ScalarProperty Name="boss_code" ColumnName="boss_code" />
+          <ScalarProperty Name="ct_code" ColumnName="ct_code" />
+          <ScalarProperty Name="ve_acc_paynet" ColumnName="ve_acc_paynet" />
+          <ScalarProperty Name="ve_acc_creditlimit" ColumnName="ve_acc_creditlimit" />
+          <ScalarProperty Name="ve_acc_number" ColumnName="ve_acc_number" />
+          <ScalarProperty Name="ve_acc_expirydate" ColumnName="ve_acc_expirydate" />
+          <ScalarProperty Name="ve_acc_commission" ColumnName="ve_acc_commission" />
+          <ScalarProperty Name="ve_acc_roomhireonly" ColumnName="ve_acc_roomhireonly" />
+          <ScalarProperty Name="ve_rat_ddrfrom" ColumnName="ve_rat_ddrfrom" />
+          <ScalarProperty Name="ve_rat_ddrto" ColumnName="ve_rat_ddrto" />
+          <ScalarProperty Name="ve_rat_24from" ColumnName="ve_rat_24from" />
+          <ScalarProperty Name="ve_rat_24to" ColumnName="ve_rat_24to" />
+          <ScalarProperty Name="ve_rat_hdfrom" ColumnName="ve_rat_hdfrom" />
+          <ScalarProperty Name="ve_rat_hdto" ColumnName="ve_rat_hdto" />
+          <ScalarProperty Name="ve_rat_fdfrom" ColumnName="ve_rat_fdfrom" />
+          <ScalarProperty Name="ve_rat_fdto" ColumnName="ve_rat_fdto" />
+          <ScalarProperty Name="ve_rat_dbbfrom" ColumnName="ve_rat_dbbfrom" />
+          <ScalarProperty Name="ve_rat_dbbto" ColumnName="ve_rat_dbbto" />
+          <ScalarProperty Name="ve_rat_bbfrom" ColumnName="ve_rat_bbfrom" />
+          <ScalarProperty Name="ve_rat_bbto" ColumnName="ve_rat_bbto" />
+          <ScalarProperty Name="ve_rat_comment" ColumnName="ve_rat_comment" />
+          <ScalarProperty Name="rs_code" ColumnName="rs_code" />
+          <ScalarProperty Name="ve_fac_golf" ColumnName="ve_fac_golf" />
+          <ScalarProperty Name="ve_fac_team" ColumnName="ve_fac_team" />
+          <ScalarProperty Name="ve_fac_corporate" ColumnName="ve_fac_corporate" />
+          <ScalarProperty Name="ve_fac_pool" ColumnName="ve_fac_pool" />
+          <ScalarProperty Name="ve_fac_jacuzzi" ColumnName="ve_fac_jacuzzi" />
+          <ScalarProperty Name="ve_fac_sauna" ColumnName="ve_fac_sauna" />
+          <ScalarProperty Name="ve_fac_solarium" ColumnName="ve_fac_solarium" />
+          <ScalarProperty Name="ve_fac_gym" ColumnName="ve_fac_gym" />
+          <ScalarProperty Name="ve_fac_comment" ColumnName="ve_fac_comment" />
+          <ScalarProperty Name="ai_code" ColumnName="ai_code" />
+          <ScalarProperty Name="ve_loc_airportmiles" ColumnName="ve_loc_airportmiles" />
+          <ScalarProperty Name="rw_code" ColumnName="rw_code" />
+          <ScalarProperty Name="ve_loc_stationmiles" ColumnName="ve_loc_stationmiles" />
+          <ScalarProperty Name="ve_loc_parking" ColumnName="ve_loc_parking" />
+          <ScalarProperty Name="ve_loc_parkingspaces" ColumnName="ve_loc_parkingspaces" />
+          <ScalarProperty Name="ve_loc_parkingcost" ColumnName="ve_loc_parkingcost" />
+          <ScalarProperty Name="mw_name" ColumnName="mw_name" />
+          <ScalarProperty Name="ju_name" ColumnName="ju_name" />
+          <ScalarProperty Name="ve_loc_comment" ColumnName="ve_loc_comment" />
+          <ScalarProperty Name="ve_equ_laptop" ColumnName="ve_equ_laptop" />
+          <ScalarProperty Name="ve_equ_lcd" ColumnName="ve_equ_lcd" />
+          <ScalarProperty Name="ve_equ_flipchart" ColumnName="ve_equ_flipchart" />
+          <ScalarProperty Name="ve_equ_tvvideo" ColumnName="ve_equ_tvvideo" />
+          <ScalarProperty Name="ve_equ_screen" ColumnName="ve_equ_screen" />
+          <ScalarProperty Name="ve_equ_ohp" ColumnName="ve_equ_ohp" />
+          <ScalarProperty Name="ve_equ_videocamera" ColumnName="ve_equ_videocamera" />
+          <ScalarProperty Name="ve_equ_audio" ColumnName="ve_equ_audio" />
+          <ScalarProperty Name="ve_equ_extension" ColumnName="ve_equ_extension" />
+          <ScalarProperty Name="ve_equ_comment" ColumnName="ve_equ_comment" />
+          <ScalarProperty Name="ve_con_aircon" ColumnName="ve_con_aircon" />
+          <ScalarProperty Name="ve_con_natural" ColumnName="ve_con_natural" />
+          <ScalarProperty Name="ve_con_blackout" ColumnName="ve_con_blackout" />
+          <ScalarProperty Name="ve_con_soundproof" ColumnName="ve_con_soundproof" />
+          <ScalarProperty Name="ve_con_isdn" ColumnName="ve_con_isdn" />
+          <ScalarProperty Name="ve_con_businesscentre" ColumnName="ve_con_businesscentre" />
+          <ScalarProperty Name="ve_con_externalaccess" ColumnName="ve_con_externalaccess" />
+          <ScalarProperty Name="ve_con_teleconference" ColumnName="ve_con_teleconference" />
+          <ScalarProperty Name="ve_con_videoconference" ColumnName="ve_con_videoconference" />
+          <ScalarProperty Name="ve_con_noconference" ColumnName="ve_con_noconference" />
+          <ScalarProperty Name="ve_con_nosyndicate" ColumnName="ve_con_nosyndicate" />
+          <ScalarProperty Name="ve_con_nobedroomsyndicate" ColumnName="ve_con_nobedroomsyndicate" />
+          <ScalarProperty Name="ve_con_ceilingheight" ColumnName="ve_con_ceilingheight" />
+          <ScalarProperty Name="ve_con_comment" ColumnName="ve_con_comment" />
+          <ScalarProperty Name="ve_bed_noguest" ColumnName="ve_bed_noguest" />
+          <ScalarProperty Name="ve_bed_ensuite" ColumnName="ve_bed_ensuite" />
+          <ScalarProperty Name="ve_bed_nonsmoking" ColumnName="ve_bed_nonsmoking" />
+          <ScalarProperty Name="ve_bed_safe" ColumnName="ve_bed_safe" />
+          <ScalarProperty Name="ve_bed_minibar" ColumnName="ve_bed_minibar" />
+          <ScalarProperty Name="ve_bed_aircon" ColumnName="ve_bed_aircon" />
+          <ScalarProperty Name="ve_bed_modem" ColumnName="ve_bed_modem" />
+          <ScalarProperty Name="ve_bed_cablesatellite" ColumnName="ve_bed_cablesatellite" />
+          <ScalarProperty Name="ve_bed_iron" ColumnName="ve_bed_iron" />
+          <ScalarProperty Name="ve_bed_teacoffee" ColumnName="ve_bed_teacoffee" />
+          <ScalarProperty Name="ve_bed_desk" ColumnName="ve_bed_desk" />
+          <ScalarProperty Name="ve_bed_comment" ColumnName="ve_bed_comment" />
+          <ScalarProperty Name="ve_contact" ColumnName="ve_contact" />
+          <ScalarProperty Name="ve_payeename" ColumnName="ve_payeename" />
+          <ScalarProperty Name="ve_payeeaddress1" ColumnName="ve_payeeaddress1" />
+          <ScalarProperty Name="ve_payeeaddress2" ColumnName="ve_payeeaddress2" />
+          <ScalarProperty Name="ve_payeeaddress3" ColumnName="ve_payeeaddress3" />
+          <ScalarProperty Name="ve_payeepostcode" ColumnName="ve_payeepostcode" />
+          <ScalarProperty Name="ve_currency" ColumnName="ve_currency" />
+          <ScalarProperty Name="ve_EH" ColumnName="ve_EH" />
+          <ScalarProperty Name="ve_FB" ColumnName="ve_FB" />
+          <ScalarProperty Name="ve_RH" ColumnName="ve_RH" />
+          <ScalarProperty Name="ve_DD" ColumnName="ve_DD" />
+          <ScalarProperty Name="ve_EX" ColumnName="ve_EX" />
+          <ScalarProperty Name="ve_CX" ColumnName="ve_CX" />
+          <ScalarProperty Name="ve_cat_awards" ColumnName="ve_cat_awards" />
+          <ScalarProperty Name="ve_cat_special" ColumnName="ve_cat_special" />
+          <ScalarProperty Name="ve_cat_sanwich" ColumnName="ve_cat_sanwich" />
+          <ScalarProperty Name="ve_cat_buffet" ColumnName="ve_cat_buffet" />
+          <ScalarProperty Name="ve_cat_restaurant" ColumnName="ve_cat_restaurant" />
+          <ScalarProperty Name="ve_cat_water" ColumnName="ve_cat_water" />
+          <ScalarProperty Name="ve_cat_orange" ColumnName="ve_cat_orange" />
+          <ScalarProperty Name="ve_cat_biscuits" ColumnName="ve_cat_biscuits" />
+          <ScalarProperty Name="ve_cat_butties" ColumnName="ve_cat_butties" />
+          <ScalarProperty Name="ve_cat_dinner" ColumnName="ve_cat_dinner" />
+          <ScalarProperty Name="ve_cat_privatedining" ColumnName="ve_cat_privatedining" />
+          <ScalarProperty Name="ve_cat_comments" ColumnName="ve_cat_comments" />
+          <ScalarProperty Name="ABCID" ColumnName="ABCID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="PhotoCaption" ColumnName="PhotoCaption" />
+          <ScalarProperty Name="PhotoType" ColumnName="PhotoType" />
+          <ScalarProperty Name="bedrooms" ColumnName="bedrooms" />
+          <ScalarProperty Name="public_wifi" ColumnName="public_wifi" />
+          <ScalarProperty Name="restaurant" ColumnName="restaurant" />
+          <ScalarProperty Name="functionrooms" ColumnName="functionrooms" />
+          <ScalarProperty Name="breakoutrooms" ColumnName="breakoutrooms" />
+          <ScalarProperty Name="ve_address3" ColumnName="ve_address3" />
+          <ScalarProperty Name="editedbynys" ColumnName="editedbynys" />
+          <ScalarProperty Name="insertedbynys" ColumnName="insertedbynys" />
+          <ScalarProperty Name="abcnysid" ColumnName="abcnysid" />
+          <ScalarProperty Name="oldname" ColumnName="oldname" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="lattitude" ColumnName="lattitude" />
+          <ScalarProperty Name="exrate" ColumnName="exrate" />
+          <ScalarProperty Name="forecastoverride" ColumnName="forecastoverride" />
+          <ScalarProperty Name="actualoverride" ColumnName="actualoverride" />
+          <ScalarProperty Name="overridefrom" ColumnName="overridefrom" />
+          <ScalarProperty Name="overrideto" ColumnName="overrideto" />
+          <ScalarProperty Name="marketstandardcommission" ColumnName="marketstandardcommission" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="LastUpdated2" ColumnName="LastUpdated2" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="cannotMapFlag" ColumnName="cannotMapFlag" />
+          <ScalarProperty Name="alternativepostcode" ColumnName="alternativepostcode" />
+          <ScalarProperty Name="useNYSdata" ColumnName="useNYSdata" />
+          <ScalarProperty Name="useNYSmeetingrooms" ColumnName="useNYSmeetingrooms" />
+          <ScalarProperty Name="centraltel" ColumnName="centraltel" />
+          <ScalarProperty Name="ve_loc_noparking" ColumnName="ve_loc_noparking" />
+          <ScalarProperty Name="commisioninvoiceemail" ColumnName="commisioninvoiceemail" />
+          <ScalarProperty Name="ve_gen_greenscheme" ColumnName="ve_gen_greenscheme" />
+          <ScalarProperty Name="ve_gen_iso14001" ColumnName="ve_gen_iso14001" />
+          <ScalarProperty Name="ve_loc_tubestation" ColumnName="ve_loc_tubestation" />
+          <ScalarProperty Name="ve_loc_tubestationmiles" ColumnName="ve_loc_tubestationmiles" />
+          <ScalarProperty Name="noncom" ColumnName="noncom" />
+          <ScalarProperty Name="noncommchecked" ColumnName="noncommchecked" />
+          <ScalarProperty Name="stopAutoInvoiceChaser" ColumnName="stopAutoInvoiceChaser" />
+          <ScalarProperty Name="wifi" ColumnName="wifi" />
+          <ScalarProperty Name="confermachasingemail" ColumnName="confermachasingemail" />
+          <ScalarProperty Name="bsh" ColumnName="bsh" />
+          <ScalarProperty Name="ve_vatnumber" ColumnName="ve_vatnumber" />
+          <ScalarProperty Name="mevischasingemail" ColumnName="mevischasingemail" />
+          <ScalarProperty Name="ve_loc_junctionmiles" ColumnName="ve_loc_junctionmiles" />
+          <ScalarProperty Name="ve_fac_spa" ColumnName="ve_fac_spa" />
+          <ScalarProperty Name="ve_fac_leisureclub" ColumnName="ve_fac_leisureclub" />
+          <ScalarProperty Name="ve_fac_golfcheck" ColumnName="ve_fac_golfcheck" />
+          <ScalarProperty Name="ve_fac_teamcheck" ColumnName="ve_fac_teamcheck" />
+          <ScalarProperty Name="ve_fac_corporatecheck" ColumnName="ve_fac_corporatecheck" />
+          <ScalarProperty Name="ve_fac_outsidecheck" ColumnName="ve_fac_outsidecheck" />
+          <ScalarProperty Name="ve_fac_outside" ColumnName="ve_fac_outside" />
+          <ScalarProperty Name="ve_fac_restaurant" ColumnName="ve_fac_restaurant" />
+          <ScalarProperty Name="ve_fac_roomservice" ColumnName="ve_fac_roomservice" />
+          <ScalarProperty Name="ve_fac_bar" ColumnName="ve_fac_bar" />
+          <ScalarProperty Name="ve_fac_restaurantcheck" ColumnName="ve_fac_restaurantcheck" />
+          <ScalarProperty Name="ve_fac_barcheck" ColumnName="ve_fac_barcheck" />
+          <ScalarProperty Name="sendCreditCardForm" ColumnName="sendCreditCardForm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venue_Deleted">
+      <EntityTypeMapping TypeName="VenueModel.venue_Deleted">
+        <MappingFragment StoreEntitySet="venue_Deleted">
+          <ScalarProperty Name="ve_reference" ColumnName="ve_reference" />
+          <ScalarProperty Name="ve_name" ColumnName="ve_name" />
+          <ScalarProperty Name="ve_externalsupplier" ColumnName="ve_externalsupplier" />
+          <ScalarProperty Name="ve_upload" ColumnName="ve_upload" />
+          <ScalarProperty Name="ve_address1" ColumnName="ve_address1" />
+          <ScalarProperty Name="ve_address2" ColumnName="ve_address2" />
+          <ScalarProperty Name="to_name" ColumnName="to_name" />
+          <ScalarProperty Name="ve_postcode" ColumnName="ve_postcode" />
+          <ScalarProperty Name="ve_gride" ColumnName="ve_gride" />
+          <ScalarProperty Name="ve_gridn" ColumnName="ve_gridn" />
+          <ScalarProperty Name="co_name" ColumnName="co_name" />
+          <ScalarProperty Name="ar_name" ColumnName="ar_name" />
+          <ScalarProperty Name="hg_code" ColumnName="hg_code" />
+          <ScalarProperty Name="ve_nysrating" ColumnName="ve_nysrating" />
+          <ScalarProperty Name="ve_nyspreferred" ColumnName="ve_nyspreferred" />
+          <ScalarProperty Name="vt_code" ColumnName="vt_code" />
+          <ScalarProperty Name="ve_telephone" ColumnName="ve_telephone" />
+          <ScalarProperty Name="ve_fax" ColumnName="ve_fax" />
+          <ScalarProperty Name="ve_email" ColumnName="ve_email" />
+          <ScalarProperty Name="ve_website" ColumnName="ve_website" />
+          <ScalarProperty Name="ve_gen_femsec" ColumnName="ve_gen_femsec" />
+          <ScalarProperty Name="ve_gen_iip" ColumnName="ve_gen_iip" />
+          <ScalarProperty Name="ve_gen_iso9001" ColumnName="ve_gen_iso9001" />
+          <ScalarProperty Name="ve_gen_disabled" ColumnName="ve_gen_disabled" />
+          <ScalarProperty Name="ve_gen_lastinspected" ColumnName="ve_gen_lastinspected" />
+          <ScalarProperty Name="ve_gen_specialoffers" ColumnName="ve_gen_specialoffers" />
+          <ScalarProperty Name="ve_gen_commentv" ColumnName="ve_gen_commentv" />
+          <ScalarProperty Name="ve_gen_commenti" ColumnName="ve_gen_commenti" />
+          <ScalarProperty Name="boss_code" ColumnName="boss_code" />
+          <ScalarProperty Name="ct_code" ColumnName="ct_code" />
+          <ScalarProperty Name="ve_acc_paynet" ColumnName="ve_acc_paynet" />
+          <ScalarProperty Name="ve_acc_creditlimit" ColumnName="ve_acc_creditlimit" />
+          <ScalarProperty Name="ve_acc_number" ColumnName="ve_acc_number" />
+          <ScalarProperty Name="ve_acc_expirydate" ColumnName="ve_acc_expirydate" />
+          <ScalarProperty Name="ve_acc_commission" ColumnName="ve_acc_commission" />
+          <ScalarProperty Name="ve_acc_roomhireonly" ColumnName="ve_acc_roomhireonly" />
+          <ScalarProperty Name="ve_rat_ddrfrom" ColumnName="ve_rat_ddrfrom" />
+          <ScalarProperty Name="ve_rat_ddrto" ColumnName="ve_rat_ddrto" />
+          <ScalarProperty Name="ve_rat_24from" ColumnName="ve_rat_24from" />
+          <ScalarProperty Name="ve_rat_24to" ColumnName="ve_rat_24to" />
+          <ScalarProperty Name="ve_rat_hdfrom" ColumnName="ve_rat_hdfrom" />
+          <ScalarProperty Name="ve_rat_hdto" ColumnName="ve_rat_hdto" />
+          <ScalarProperty Name="ve_rat_fdfrom" ColumnName="ve_rat_fdfrom" />
+          <ScalarProperty Name="ve_rat_fdto" ColumnName="ve_rat_fdto" />
+          <ScalarProperty Name="ve_rat_dbbfrom" ColumnName="ve_rat_dbbfrom" />
+          <ScalarProperty Name="ve_rat_dbbto" ColumnName="ve_rat_dbbto" />
+          <ScalarProperty Name="ve_rat_bbfrom" ColumnName="ve_rat_bbfrom" />
+          <ScalarProperty Name="ve_rat_bbto" ColumnName="ve_rat_bbto" />
+          <ScalarProperty Name="ve_rat_comment" ColumnName="ve_rat_comment" />
+          <ScalarProperty Name="rs_code" ColumnName="rs_code" />
+          <ScalarProperty Name="ve_fac_golf" ColumnName="ve_fac_golf" />
+          <ScalarProperty Name="ve_fac_team" ColumnName="ve_fac_team" />
+          <ScalarProperty Name="ve_fac_corporate" ColumnName="ve_fac_corporate" />
+          <ScalarProperty Name="ve_fac_pool" ColumnName="ve_fac_pool" />
+          <ScalarProperty Name="ve_fac_jacuzzi" ColumnName="ve_fac_jacuzzi" />
+          <ScalarProperty Name="ve_fac_sauna" ColumnName="ve_fac_sauna" />
+          <ScalarProperty Name="ve_fac_solarium" ColumnName="ve_fac_solarium" />
+          <ScalarProperty Name="ve_fac_gym" ColumnName="ve_fac_gym" />
+          <ScalarProperty Name="ve_fac_comment" ColumnName="ve_fac_comment" />
+          <ScalarProperty Name="ai_code" ColumnName="ai_code" />
+          <ScalarProperty Name="ve_loc_airportmiles" ColumnName="ve_loc_airportmiles" />
+          <ScalarProperty Name="rw_code" ColumnName="rw_code" />
+          <ScalarProperty Name="ve_loc_stationmiles" ColumnName="ve_loc_stationmiles" />
+          <ScalarProperty Name="ve_loc_parking" ColumnName="ve_loc_parking" />
+          <ScalarProperty Name="ve_loc_parkingspaces" ColumnName="ve_loc_parkingspaces" />
+          <ScalarProperty Name="ve_loc_parkingcost" ColumnName="ve_loc_parkingcost" />
+          <ScalarProperty Name="mw_name" ColumnName="mw_name" />
+          <ScalarProperty Name="ju_name" ColumnName="ju_name" />
+          <ScalarProperty Name="ve_loc_comment" ColumnName="ve_loc_comment" />
+          <ScalarProperty Name="ve_equ_laptop" ColumnName="ve_equ_laptop" />
+          <ScalarProperty Name="ve_equ_lcd" ColumnName="ve_equ_lcd" />
+          <ScalarProperty Name="ve_equ_flipchart" ColumnName="ve_equ_flipchart" />
+          <ScalarProperty Name="ve_equ_tvvideo" ColumnName="ve_equ_tvvideo" />
+          <ScalarProperty Name="ve_equ_screen" ColumnName="ve_equ_screen" />
+          <ScalarProperty Name="ve_equ_ohp" ColumnName="ve_equ_ohp" />
+          <ScalarProperty Name="ve_equ_videocamera" ColumnName="ve_equ_videocamera" />
+          <ScalarProperty Name="ve_equ_audio" ColumnName="ve_equ_audio" />
+          <ScalarProperty Name="ve_equ_extension" ColumnName="ve_equ_extension" />
+          <ScalarProperty Name="ve_equ_comment" ColumnName="ve_equ_comment" />
+          <ScalarProperty Name="ve_con_aircon" ColumnName="ve_con_aircon" />
+          <ScalarProperty Name="ve_con_natural" ColumnName="ve_con_natural" />
+          <ScalarProperty Name="ve_con_blackout" ColumnName="ve_con_blackout" />
+          <ScalarProperty Name="ve_con_soundproof" ColumnName="ve_con_soundproof" />
+          <ScalarProperty Name="ve_con_isdn" ColumnName="ve_con_isdn" />
+          <ScalarProperty Name="ve_con_businesscentre" ColumnName="ve_con_businesscentre" />
+          <ScalarProperty Name="ve_con_externalaccess" ColumnName="ve_con_externalaccess" />
+          <ScalarProperty Name="ve_con_teleconference" ColumnName="ve_con_teleconference" />
+          <ScalarProperty Name="ve_con_videoconference" ColumnName="ve_con_videoconference" />
+          <ScalarProperty Name="ve_con_noconference" ColumnName="ve_con_noconference" />
+          <ScalarProperty Name="ve_con_nosyndicate" ColumnName="ve_con_nosyndicate" />
+          <ScalarProperty Name="ve_con_nobedroomsyndicate" ColumnName="ve_con_nobedroomsyndicate" />
+          <ScalarProperty Name="ve_con_ceilingheight" ColumnName="ve_con_ceilingheight" />
+          <ScalarProperty Name="ve_con_comment" ColumnName="ve_con_comment" />
+          <ScalarProperty Name="ve_bed_noguest" ColumnName="ve_bed_noguest" />
+          <ScalarProperty Name="ve_bed_ensuite" ColumnName="ve_bed_ensuite" />
+          <ScalarProperty Name="ve_bed_nonsmoking" ColumnName="ve_bed_nonsmoking" />
+          <ScalarProperty Name="ve_bed_safe" ColumnName="ve_bed_safe" />
+          <ScalarProperty Name="ve_bed_minibar" ColumnName="ve_bed_minibar" />
+          <ScalarProperty Name="ve_bed_aircon" ColumnName="ve_bed_aircon" />
+          <ScalarProperty Name="ve_bed_modem" ColumnName="ve_bed_modem" />
+          <ScalarProperty Name="ve_bed_cablesatellite" ColumnName="ve_bed_cablesatellite" />
+          <ScalarProperty Name="ve_bed_iron" ColumnName="ve_bed_iron" />
+          <ScalarProperty Name="ve_bed_teacoffee" ColumnName="ve_bed_teacoffee" />
+          <ScalarProperty Name="ve_bed_desk" ColumnName="ve_bed_desk" />
+          <ScalarProperty Name="ve_bed_comment" ColumnName="ve_bed_comment" />
+          <ScalarProperty Name="ve_contact" ColumnName="ve_contact" />
+          <ScalarProperty Name="ve_payeename" ColumnName="ve_payeename" />
+          <ScalarProperty Name="ve_payeeaddress1" ColumnName="ve_payeeaddress1" />
+          <ScalarProperty Name="ve_payeeaddress2" ColumnName="ve_payeeaddress2" />
+          <ScalarProperty Name="ve_payeeaddress3" ColumnName="ve_payeeaddress3" />
+          <ScalarProperty Name="ve_payeepostcode" ColumnName="ve_payeepostcode" />
+          <ScalarProperty Name="ve_currency" ColumnName="ve_currency" />
+          <ScalarProperty Name="ve_EH" ColumnName="ve_EH" />
+          <ScalarProperty Name="ve_FB" ColumnName="ve_FB" />
+          <ScalarProperty Name="ve_RH" ColumnName="ve_RH" />
+          <ScalarProperty Name="ve_DD" ColumnName="ve_DD" />
+          <ScalarProperty Name="ve_EX" ColumnName="ve_EX" />
+          <ScalarProperty Name="ve_CX" ColumnName="ve_CX" />
+          <ScalarProperty Name="ve_cat_awards" ColumnName="ve_cat_awards" />
+          <ScalarProperty Name="ve_cat_special" ColumnName="ve_cat_special" />
+          <ScalarProperty Name="ve_cat_sanwich" ColumnName="ve_cat_sanwich" />
+          <ScalarProperty Name="ve_cat_buffet" ColumnName="ve_cat_buffet" />
+          <ScalarProperty Name="ve_cat_restaurant" ColumnName="ve_cat_restaurant" />
+          <ScalarProperty Name="ve_cat_water" ColumnName="ve_cat_water" />
+          <ScalarProperty Name="ve_cat_orange" ColumnName="ve_cat_orange" />
+          <ScalarProperty Name="ve_cat_biscuits" ColumnName="ve_cat_biscuits" />
+          <ScalarProperty Name="ve_cat_butties" ColumnName="ve_cat_butties" />
+          <ScalarProperty Name="ve_cat_dinner" ColumnName="ve_cat_dinner" />
+          <ScalarProperty Name="ve_cat_privatedining" ColumnName="ve_cat_privatedining" />
+          <ScalarProperty Name="ve_cat_comments" ColumnName="ve_cat_comments" />
+          <ScalarProperty Name="ABCID" ColumnName="ABCID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="PhotoCaption" ColumnName="PhotoCaption" />
+          <ScalarProperty Name="PhotoType" ColumnName="PhotoType" />
+          <ScalarProperty Name="bedrooms" ColumnName="bedrooms" />
+          <ScalarProperty Name="public_wifi" ColumnName="public_wifi" />
+          <ScalarProperty Name="restaurant" ColumnName="restaurant" />
+          <ScalarProperty Name="functionrooms" ColumnName="functionrooms" />
+          <ScalarProperty Name="breakoutrooms" ColumnName="breakoutrooms" />
+          <ScalarProperty Name="ve_address3" ColumnName="ve_address3" />
+          <ScalarProperty Name="editedbynys" ColumnName="editedbynys" />
+          <ScalarProperty Name="insertedbynys" ColumnName="insertedbynys" />
+          <ScalarProperty Name="abcnysid" ColumnName="abcnysid" />
+          <ScalarProperty Name="oldname" ColumnName="oldname" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="lattitude" ColumnName="lattitude" />
+          <ScalarProperty Name="exrate" ColumnName="exrate" />
+          <ScalarProperty Name="forecastoverride" ColumnName="forecastoverride" />
+          <ScalarProperty Name="actualoverride" ColumnName="actualoverride" />
+          <ScalarProperty Name="overridefrom" ColumnName="overridefrom" />
+          <ScalarProperty Name="overrideto" ColumnName="overrideto" />
+          <ScalarProperty Name="marketstandardcommission" ColumnName="marketstandardcommission" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="LastUpdated2" ColumnName="LastUpdated2" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="cannotMapFlag" ColumnName="cannotMapFlag" />
+          <ScalarProperty Name="alternativepostcode" ColumnName="alternativepostcode" />
+          <ScalarProperty Name="useNYSdata" ColumnName="useNYSdata" />
+          <ScalarProperty Name="useNYSmeetingrooms" ColumnName="useNYSmeetingrooms" />
+          <ScalarProperty Name="centraltel" ColumnName="centraltel" />
+          <ScalarProperty Name="ve_loc_noparking" ColumnName="ve_loc_noparking" />
+          <ScalarProperty Name="commisioninvoiceemail" ColumnName="commisioninvoiceemail" />
+          <ScalarProperty Name="ve_gen_greenscheme" ColumnName="ve_gen_greenscheme" />
+          <ScalarProperty Name="ve_gen_iso14001" ColumnName="ve_gen_iso14001" />
+          <ScalarProperty Name="ve_loc_tubestation" ColumnName="ve_loc_tubestation" />
+          <ScalarProperty Name="ve_loc_tubestationmiles" ColumnName="ve_loc_tubestationmiles" />
+          <ScalarProperty Name="noncom" ColumnName="noncom" />
+          <ScalarProperty Name="noncommchecked" ColumnName="noncommchecked" />
+          <ScalarProperty Name="stopAutoInvoiceChaser" ColumnName="stopAutoInvoiceChaser" />
+          <ScalarProperty Name="wifi" ColumnName="wifi" />
+          <ScalarProperty Name="confermachasingemail" ColumnName="confermachasingemail" />
+          <ScalarProperty Name="bsh" ColumnName="bsh" />
+          <ScalarProperty Name="ve_vatnumber" ColumnName="ve_vatnumber" />
+          <ScalarProperty Name="mevischasingemail" ColumnName="mevischasingemail" />
+          <ScalarProperty Name="ve_loc_junctionmiles" ColumnName="ve_loc_junctionmiles" />
+          <ScalarProperty Name="ve_fac_spa" ColumnName="ve_fac_spa" />
+          <ScalarProperty Name="ve_fac_lesureclub" ColumnName="ve_fac_lesureclub" />
+          <ScalarProperty Name="ve_fac_golfcheck" ColumnName="ve_fac_golfcheck" />
+          <ScalarProperty Name="ve_fac_teamcheck" ColumnName="ve_fac_teamcheck" />
+          <ScalarProperty Name="ve_fac_corporatecheck" ColumnName="ve_fac_corporatecheck" />
+          <ScalarProperty Name="ve_fac_outsidecheck" ColumnName="ve_fac_outsidecheck" />
+          <ScalarProperty Name="ve_fac_outside" ColumnName="ve_fac_outside" />
+          <ScalarProperty Name="ve_fac_restaurant" ColumnName="ve_fac_restaurant" />
+          <ScalarProperty Name="ve_fac_roomservice" ColumnName="ve_fac_roomservice" />
+          <ScalarProperty Name="ve_fac_bar" ColumnName="ve_fac_bar" />
+          <ScalarProperty Name="ve_fac_restaurantcheck" ColumnName="ve_fac_restaurantcheck" />
+          <ScalarProperty Name="ve_fac_barcheck" ColumnName="ve_fac_barcheck" />
+          <ScalarProperty Name="sendCreditCardForm" ColumnName="sendCreditCardForm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venue_SearchType">
+      <EntityTypeMapping TypeName="VenueModel.Venue_SearchType">
+        <MappingFragment StoreEntitySet="Venue_SearchType">
+          <ScalarProperty Name="venue_SearchTypeID" ColumnName="venue_SearchTypeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venue_type">
+      <EntityTypeMapping TypeName="VenueModel.venue_type">
+        <MappingFragment StoreEntitySet="venue_type">
+          <ScalarProperty Name="vt_code" ColumnName="vt_code" />
+          <ScalarProperty Name="vt_desc" ColumnName="vt_desc" />
+          <ScalarProperty Name="vt_id" ColumnName="vt_id" />
+          <ScalarProperty Name="vt_searchtype" ColumnName="vt_searchtype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenueDBMeetingRoom">
+      <EntityTypeMapping TypeName="VenueModel.VenueDBMeetingRoom">
+        <MappingFragment StoreEntitySet="VenueDBMeetingRoom">
+          <ScalarProperty Name="VenueDBMeetingRoomID" ColumnName="VenueDBMeetingRoomID" />
+          <ScalarProperty Name="VenueNYSREF" ColumnName="VenueNYSREF" />
+          <ScalarProperty Name="VenueDBID" ColumnName="VenueDBID" />
+          <ScalarProperty Name="roomename" ColumnName="roomename" />
+          <ScalarProperty Name="theatre" ColumnName="theatre" />
+          <ScalarProperty Name="theatre_BP" ColumnName="theatre_BP" />
+          <ScalarProperty Name="classroom" ColumnName="classroom" />
+          <ScalarProperty Name="classroom_bp" ColumnName="classroom_bp" />
+          <ScalarProperty Name="ushape" ColumnName="ushape" />
+          <ScalarProperty Name="boardroom" ColumnName="boardroom" />
+          <ScalarProperty Name="hollowsq" ColumnName="hollowsq" />
+          <ScalarProperty Name="cocktail" ColumnName="cocktail" />
+          <ScalarProperty Name="dinner" ColumnName="dinner" />
+          <ScalarProperty Name="banquet" ColumnName="banquet" />
+          <ScalarProperty Name="dinnerdance" ColumnName="dinnerdance" />
+          <ScalarProperty Name="reception" ColumnName="reception" />
+          <ScalarProperty Name="cabaret" ColumnName="cabaret" />
+          <ScalarProperty Name="cabaret_bp" ColumnName="cabaret_bp" />
+          <ScalarProperty Name="staging" ColumnName="staging" />
+          <ScalarProperty Name="disabledaccess" ColumnName="disabledaccess" />
+          <ScalarProperty Name="halfday" ColumnName="halfday" />
+          <ScalarProperty Name="fullday" ColumnName="fullday" />
+          <ScalarProperty Name="roomlength" ColumnName="roomlength" />
+          <ScalarProperty Name="roomwidth" ColumnName="roomwidth" />
+          <ScalarProperty Name="roomheight" ColumnName="roomheight" />
+          <ScalarProperty Name="aircon" ColumnName="aircon" />
+          <ScalarProperty Name="naturallight" ColumnName="naturallight" />
+          <ScalarProperty Name="blackout" ColumnName="blackout" />
+          <ScalarProperty Name="videoconference" ColumnName="videoconference" />
+          <ScalarProperty Name="vehicleaccess" ColumnName="vehicleaccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venuegrouppreference">
+      <EntityTypeMapping TypeName="VenueModel.venuegrouppreference">
+        <MappingFragment StoreEntitySet="venuegrouppreference">
+          <ScalarProperty Name="venuegrouppreferenceid" ColumnName="venuegrouppreferenceid" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="hg_id" ColumnName="hg_id" />
+          <ScalarProperty Name="venuegrouppreferencevalue" ColumnName="venuegrouppreferencevalue" />
+          <ScalarProperty Name="datecreated" ColumnName="datecreated" />
+          <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="updatedby" ColumnName="updatedby" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venueOption">
+      <EntityTypeMapping TypeName="VenueModel.venueOption">
+        <MappingFragment StoreEntitySet="venueOption">
+          <ScalarProperty Name="venueOptionID" ColumnName="venueOptionID" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="venueReference" ColumnName="venueReference" />
+          <ScalarProperty Name="hideFromClient" ColumnName="hideFromClient" />
+          <ScalarProperty Name="hideFromAllClients" ColumnName="hideFromAllClients" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venuepreference">
+      <EntityTypeMapping TypeName="VenueModel.venuepreference">
+        <MappingFragment StoreEntitySet="venuepreference">
+          <ScalarProperty Name="venuepreferenceid" ColumnName="venuepreferenceid" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="ve_reference" ColumnName="ve_reference" />
+          <ScalarProperty Name="venuepreferencevalue" ColumnName="venuepreferencevalue" />
+          <ScalarProperty Name="datecreated" ColumnName="datecreated" />
+          <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="updatedby" ColumnName="updatedby" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venueSecondData">
+      <EntityTypeMapping TypeName="VenueModel.venueSecondData">
+        <MappingFragment StoreEntitySet="venueSecondData">
+          <ScalarProperty Name="venueSecondDataid" ColumnName="venueSecondDataid" />
+          <ScalarProperty Name="ve_reference" ColumnName="ve_reference" />
+          <ScalarProperty Name="overview" ColumnName="overview" />
+          <ScalarProperty Name="image1" ColumnName="image1" />
+          <ScalarProperty Name="image2" ColumnName="image2" />
+          <ScalarProperty Name="datecreated" ColumnName="datecreated" />
+          <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="updatedby" ColumnName="updatedby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

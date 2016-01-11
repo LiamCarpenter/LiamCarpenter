@@ -1,0 +1,149 @@
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\dll\MonoSoftware.Web.Dialogs.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\Cubit.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\Cubit.pdb
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\Cubit.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\CSVParser.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\DatabaseObjects.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoDatabaseUtils.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoUtilities.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\log4net.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\MonoSoftware.Web.Dialogs.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\ReportDownloader.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\CSVParser.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoDatabaseUtils.pdb
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoDatabaseUtils.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoUtilities.pdb
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\EvoUtilities.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\DatabaseObjects.pdb
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\DatabaseObjects.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\ReportDownloader.pdb
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\bin\ReportDownloader.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.vbprojResolveAssemblyReference.cache
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.Resources.resources
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.vbproj.GenerateResource.Cache
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.dll
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.xml
+E:\Development\VS10\NYS_APPS10\CUBIT_APP\Cubit\Cubit\obj\Release\Cubit.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\dll\MonoSoftware.Web.Dialogs.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\log4net.config
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\Cubit.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\Cubit.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\Cubit.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\CSVParser.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\log4net.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\MonoSoftware.Web.Dialogs.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.pdb
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\bin\CSVParser.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.vbprojResolveAssemblyReference.cache
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.Resources.resources
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.vbproj.GenerateResource.Cache
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.dll
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.xml
+C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\dll\MonoSoftware.Web.Dialogs.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\log4net.config
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\Cubit.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\Cubit.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\Cubit.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\CSVParser.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\log4net.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\MonoSoftware.Web.Dialogs.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoDatabaseUtils.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EvoUtilities.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\DatabaseObjects.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\ReportDownloader.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\CSVParser.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.vbprojResolveAssemblyReference.cache
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.Resources.resources
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.vbproj.GenerateResource.Cache
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\obj\Release\Cubit.pdb
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EntityFramework.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EntityFramework.SqlServer.dll
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EntityFramework.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\EntityFramework.SqlServer.xml
+C:\Development\ReadOnly\CUBIT_APP2\Cubit\Cubit\bin\Cubit.dll.config
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.vbprojResolveAssemblyReference.cache
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.Resources.resources
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.vbproj.GenerateResource.Cache
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\obj\Release\Cubit.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\dll\MonoSoftware.Web.Dialogs.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\log4net.config
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\Cubit.dll.config
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\Cubit.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\Cubit.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\Cubit.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\CSVParser.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\DatabaseObjects.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EntityFramework.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EntityFramework.SqlServer.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoUtilities.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\log4net.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\MonoSoftware.Web.Dialogs.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\ReportDownloader.dll
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoUtilities.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EvoUtilities.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\DatabaseObjects.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\DatabaseObjects.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\ReportDownloader.pdb
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\ReportDownloader.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\CSVParser.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EntityFramework.xml
+C:\Development\TFS Projects\CUBIT\Cubit\Cubit\bin\EntityFramework.SqlServer.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\dll\MonoSoftware.Web.Dialogs.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\log4net.config
+C:\Development\CUBIT\Cubit\Cubit\bin\Cubit.dll.config
+C:\Development\CUBIT\Cubit\Cubit\bin\Cubit.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\Cubit.pdb
+C:\Development\CUBIT\Cubit\Cubit\bin\Cubit.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\CSVParser.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\DatabaseObjects.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\EntityFramework.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\EntityFramework.SqlServer.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoUtilities.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\log4net.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\MonoSoftware.Web.Dialogs.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\ReportDownloader.dll
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.pdb
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoDatabaseUtils.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoUtilities.pdb
+C:\Development\CUBIT\Cubit\Cubit\bin\EvoUtilities.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\DatabaseObjects.pdb
+C:\Development\CUBIT\Cubit\Cubit\bin\DatabaseObjects.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\ReportDownloader.pdb
+C:\Development\CUBIT\Cubit\Cubit\bin\ReportDownloader.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\CSVParser.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\EntityFramework.xml
+C:\Development\CUBIT\Cubit\Cubit\bin\EntityFramework.SqlServer.xml
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.vbprojResolveAssemblyReference.cache
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.Resources.resources
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.vbproj.GenerateResource.Cache
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.dll
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.xml
+C:\Development\CUBIT\Cubit\Cubit\obj\Release\Cubit.pdb

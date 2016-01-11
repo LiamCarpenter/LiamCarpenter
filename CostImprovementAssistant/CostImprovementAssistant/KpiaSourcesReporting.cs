@@ -25,5 +25,6 @@ namespace CostImprovementAssistant
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SchemeKpia> SchemeKpia { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

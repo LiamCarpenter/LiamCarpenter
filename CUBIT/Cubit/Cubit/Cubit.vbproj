@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73AACE73-2129-4844-B0B7-D52E0F512889}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cubit</RootNamespace>
+    <AssemblyName>Cubit</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Cubit.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Cubit.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Cubit.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Cubit.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.11119.20010, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET 2.0 AJAX Extensions\Ajax Control Toolkit\Binaries\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoSoftware.Web.Dialogs, Version=1.5.0.0, Culture=neutral, PublicKeyToken=faf3283597ac56ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScrollingGrid, Version=1.5.1.0, Culture=neutral" />
+    <Reference Include="skmDataGrid, Version=1.0.1689.19001, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AjaxControlToolkit" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxService.asmx" />
+    <Content Include="bin\AjaxControls.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\CSVParser.dll" />
+    <Content Include="bin\CSVParser.xml" />
+    <Content Include="bin\Cubit.dll" />
+    <Content Include="bin\Cubit.pdb" />
+    <Content Include="bin\Cubit.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\ScrollingGrid.dll" />
+    <Content Include="bin\skmDataGrid.dll" />
+    <Content Include="Cubit.css" />
+    <Content Include="dll\log4net.dll" />
+    <Content Include="dll\MonoSoftware.Web.Dialogs.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\ScrollingGrid.dll" />
+    <Content Include="dll\skmDataGrid.dll" />
+    <Content Include="dll\System.Web.Extensions.Design.dll" />
+    <Content Include="dll\System.Web.Extensions.dll" />
+    <Content Include="docs\InvoiceBody.htm" />
+    <Content Include="docs\InvoiceMain.htm" />
+    <Content Include="FeedAdmin.aspx" />
+    <Content Include="FeedEdit.aspx" />
+    <Content Include="FeedMain.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\add.gif" />
+    <Content Include="images\admin.gif" />
+    <Content Include="images\boss.gif" />
+    <Content Include="images\cancel.gif" />
+    <Content Include="images\cancel_trans.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\closeb.gif" />
+    <Content Include="images\close_over.gif" />
+    <Content Include="images\CORP_JPEG.JPG" />
+    <Content Include="images\delete_dialog.gif" />
+    <Content Include="images\discount_dialogV2.gif" />
+    <Content Include="images\down.gif" />
+    <Content Include="images\down_over.gif" />
+    <Content Include="images\down_time.gif" />
+    <Content Include="images\down_time_over.gif" />
+    <Content Include="images\export.gif" />
+    <Content Include="images\find.gif" />
+    <Content Include="images\left.gif" />
+    <Content Include="images\left_over.gif" />
+    <Content Include="images\no.gif" />
+    <Content Include="images\novenue.gif" />
+    <Content Include="images\reset.gif" />
+    <Content Include="images\right.gif" />
+    <Content Include="images\right_over.gif" />
+    <Content Include="images\save.gif" />
+    <Content Include="images\search.gif" />
+    <Content Include="images\trans.gif" />
+    <Content Include="images\trans_grey.gif" />
+    <Content Include="images\usesearch.gif" />
+    <Content Include="images\valid-xhtml10-blue.png" />
+    <Content Include="images\vcss-blue.gif" />
+    <Content Include="images\yes.gif" />
+    <Content Include="js\calendar.js" />
+    <Content Include="launch.htm" />
+    <Content Include="MonoDialogPage.aspx" />
+    <Content Include="MonoDialogs.css" />
+    <Content Include="ReloadLog4NetConfig.aspx" />
+    <Content Include="ScrollingGrid.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxService.asmx.vb">
+      <DependentUpon>AjaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConfirmaImport.vb">
+      <DependentUpon>Cubit-FeedImportData-Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cubit-FeedImportData-Model.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cubit-FeedImportData-Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cubit-FeedImportData-Model.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cubit-FeedImportData-Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Cubit-FeedImportData-Model.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cubit-FeedImportData-Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeedAdmin.aspx.designer.vb">
+      <DependentUpon>FeedAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedAdmin.aspx.vb">
+      <DependentUpon>FeedAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedEdit.aspx.designer.vb">
+      <DependentUpon>FeedEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedEdit.aspx.vb">
+      <DependentUpon>FeedEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedImportDataEF.vb">
+      <DependentUpon>Cubit-FeedImportData-Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeedInvoiceEmail.aspx.designer.vb">
+      <DependentUpon>FeedInvoiceEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedInvoiceEmail.aspx.vb">
+      <DependentUpon>FeedInvoiceEmail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FeedInvoiceEmailEdit.aspx.designer.vb">
+      <DependentUpon>FeedInvoiceEmailEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedInvoiceEmailEdit.aspx.vb">
+      <DependentUpon>FeedInvoiceEmailEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedMain.aspx.designer.vb">
+      <DependentUpon>FeedMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedMain.aspx.vb">
+      <DependentUpon>FeedMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedParameterEF.vb">
+      <DependentUpon>Cubit-FeedImportData-Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTransactionEF.vb">
+      <DependentUpon>Cubit-FeedImportData-Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UsefulItems\clsEncryption.vb" />
+    <Compile Include="UsefulItems\clslogger.vb" />
+    <Compile Include="UsefulItems\clsNYS.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsefulItems\clsTravellerProfiles.vb" />
+    <Compile Include="UsefulItems\ConfigUtils.vb" />
+    <Compile Include="UsefulItems\LogUtils.vb" />
+    <Compile Include="UsefulItems\MaintainScrollPanel.vb" />
+    <Compile Include="UsefulItems\NYSFriendlyException.vb" />
+    <Compile Include="UsefulItems\Utils.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\DatabaseObjects.dll" />
+    <Content Include="bin\DatabaseObjects.pdb" />
+    <Content Include="bin\DatabaseObjects.xml" />
+    <Content Include="bin\EvoDatabaseUtils.dll" />
+    <Content Include="bin\EvoDatabaseUtils.pdb" />
+    <Content Include="bin\EvoDatabaseUtils.xml" />
+    <Content Include="bin\EvoUtilities.dll" />
+    <Content Include="bin\EvoUtilities.pdb" />
+    <Content Include="bin\EvoUtilities.xml" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\ReportDownloader.dll" />
+    <Content Include="bin\ReportDownloader.pdb" />
+    <Content Include="bin\ReportDownloader.xml" />
+    <Content Include="dll\AjaxControls.dll" />
+    <Content Include="dll\AjaxControlToolkit.dll" />
+    <Content Include="FeedInvoiceEmail.aspx" />
+    <Content Include="FeedInvoiceEmailEdit.aspx" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <EntityDeploy Include="Cubit-FeedImportData-Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Cubit-FeedImportData-Model.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Cubit-FeedImportData-Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cubit-FeedImportData-Model.edmx</DependentUpon>
+      <LastGenOutput>Cubit-FeedImportData-Model.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Cubit-FeedImportData-Model.edmx.diagram">
+      <DependentUpon>Cubit-FeedImportData-Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Cubit-FeedImportData-Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cubit-FeedImportData-Model.edmx</DependentUpon>
+      <LastGenOutput>Cubit-FeedImportData-Model.vb</LastGenOutput>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Release.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="user.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\LIBRARIES10\EvoDatabaseUtils\EvoDatabaseUtils.vbproj">
+      <Project>{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}</Project>
+      <Name>EvoDatabaseUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\LIBRARIES10\EvoUtilities\EvoUtilities.vbproj">
+      <Project>{A9EC19B1-0065-4001-9C05-603F94AC0420}</Project>
+      <Name>EvoUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseObjects\DatabaseObjects.vbproj">
+      <Project>{18FA62EC-1D63-44E4-9577-A5292C9B13CD}</Project>
+      <Name>DatabaseObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportDownloader\ReportDownloader.vbproj">
+      <Project>{C322CA6C-27E5-41EE-B30D-8EE0B0F41E02}</Project>
+      <Name>ReportDownloader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\LIBRARIES10\CSVParser\CSVParser.vbproj">
+      <Project>{EF690B6C-1FE1-4066-8727-3B46B5F8C600}</Project>
+      <Name>CSVParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BOSS_FILES_EXPORT\Backup\" />
+    <Folder Include="BOSS_FILES_IMPORT\Error\" />
+    <Folder Include="BOSS_FILES_IMPORT\Imported\" />
+    <Folder Include="downloadedFilesBooked\Archive\" />
+    <Folder Include="downloadedFilesBooked\Duplicates\" />
+    <Folder Include="downloadedFilesBooked\ErrorReports\" />
+    <Folder Include="downloadedFiles\Archive\" />
+    <Folder Include="downloadedFiles\Duplicates\" />
+    <Folder Include="downloadedFiles\ErrorReports\" />
+    <Folder Include="uploadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49709</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Cubit</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

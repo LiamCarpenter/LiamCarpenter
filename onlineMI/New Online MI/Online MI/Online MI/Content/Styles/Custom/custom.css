@@ -1,0 +1,283 @@
+﻿/*
+    Skin Online_MI
+    --------
+*/
+/* skin-Online_MI navbar */
+.skin-Online_MI .navbar {
+  background-color: rgb(0, 57, 118);
+  border-bottom: 1px solid #eee;
+}
+.skin-Online_MI .navbar .nav a {
+  color: #ffffff;
+}
+.skin-Online_MI .navbar .nav > li > a:hover,
+.skin-Online_MI .navbar .nav > li > a:active,
+.skin-Online_MI .navbar .nav > li > a:focus,
+.skin-Online_MI .navbar .nav .open > a,
+.skin-Online_MI .navbar .nav .open > a:hover,
+.skin-Online_MI .navbar .nav .open > a:focus {
+  background: #ffffff;
+  color: #999999;
+}
+.skin-Online_MI .navbar .navbar-right > .nav {
+  margin-right: 10px;
+}
+.skin-Online_MI .navbar .sidebar-toggle .icon-bar {
+  background: #ffffff;
+}
+.skin-Online_MI .navbar .sidebar-toggle:hover .icon-bar {
+  background: #999999 !important;
+}
+/* skin-Online_MI logo */
+.skin-Online_MI .logo {
+  background-color: rgb(0, 57, 118);
+  color: #f9f9f9;
+}
+.skin-Online_MI .logo > a {
+  color: #f9f9f9;
+}
+.skin-Online_MI .logo:hover {
+  /*background: #005699;*/
+}
+/* skin-Online_MI content header */
+.skin-Online_MI .right-side > .content-header {
+  background: transparent;
+  box-shadow: none;
+}
+/* Skin-red user panel */
+.skin-Online_MI .user-panel > .image > img {
+  border: 1px solid #444;
+}
+.skin-Online_MI .user-panel > .info,
+.skin-Online_MI .user-panel > .info > a {
+  color: #eee;
+}
+/* skin-Online_MI sidebar */
+.skin-Online_MI .sidebar {
+  border-bottom: 0px solid #333;
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li {
+  border-top: 0px solid #3380bc;
+  border-bottom: 0px solid #3380bc;
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li:first-of-type {
+  border-top: 0px solid #3380bc;
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li:first-of-type > a {
+  border-top: 0px solid #3380bc;
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li > a {
+  margin-right: 1px;
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li > a:hover,
+.skin-Online_MI .sidebar > .sidebar-menu > li.active > a {
+  color: #FFFFFF;
+  background: rgb(0, 57, 118);
+}
+.skin-Online_MI .sidebar > .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #6e7fad;
+}
+.skin-Online_MI .left-side {
+  background: rgb(29, 84, 146);
+}
+.skin-Online_MI .sidebar a {
+  color: #eee;
+}
+.skin-Online_MI .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-Online_MI .treeview-menu > li > a {
+  color: #ccc;
+}
+.skin-Online_MI .treeview-menu > li.active > a,
+.skin-Online_MI .treeview-menu > li > a:hover {
+  color: #fff;
+}
+.skin-Online_MI .sidebar-form {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 0px solid #555;
+  margin: 10px 10px;
+}
+.skin-Online_MI .sidebar-form input[type="text"],
+.skin-Online_MI .sidebar-form .btn {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0 solid rgba(255, 255, 255, 0.1);
+  height: 35px;
+  outline: none;
+}
+.skin-Online_MI .sidebar-form input[type="text"] {
+  color: #666;
+  -webkit-border-top-left-radius: 2px !important;
+  -webkit-border-top-right-radius: 0 !important;
+  -webkit-border-bottom-right-radius: 0 !important;
+  -webkit-border-bottom-left-radius: 2px !important;
+  -moz-border-radius-topleft: 2px !important;
+  -moz-border-radius-topright: 0 !important;
+  -moz-border-radius-bottomright: 0 !important;
+  -moz-border-radius-bottomleft: 2px !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 2px !important;
+}
+.skin-Online_MI .sidebar-form input[type="text"]:focus,
+.skin-Online_MI .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #3380bc;
+  border: 0;
+}
+.skin-Online_MI .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left: 0;
+}
+.skin-Online_MI .sidebar-form .btn {
+  color: #8ab23f;
+  -webkit-border-top-left-radius: 0 !important;
+  -webkit-border-top-right-radius: 2px !important;
+  -webkit-border-bottom-right-radius: 2px !important;
+  -webkit-border-bottom-left-radius: 0 !important;
+  -moz-border-radius-topleft: 0 !important;
+  -moz-border-radius-topright: 2px !important;
+  -moz-border-radius-bottomright: 2px !important;
+  -moz-border-radius-bottomleft: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 0;
+}
+
+.modal-lg {
+    width: 90%;
+}
+
+/* Loading Styles */
+#uppLoading 
+{
+background-color: #000;
+ position: fixed;
+ z-index: 999999;
+ opacity: 0.8;
+ filter:alpha(opacity=80); /* For IE8 and earlier */
+ color:#ccf;
+ font-family:Arial, courier;
+ font-size:2em;
+ text-align:center;
+ vertical-align:middle;
+ margin: -4px;
+ padding: 4px;
+ top: 0;
+ right: 0;
+ left: 0;
+ bottom: 0;
+ padding-top:10px;
+}
+
+.progressContent
+{
+	position:fixed;
+	top: 45%;
+	right: 40%;
+}
+
+table {
+    font-size: 0.8em;
+}
+
+.space-2 {
+    height: 2px !important;
+}
+
+.space-4 {
+    height: 4px !important;
+}
+
+.space-6 {
+    height: 6px !important;
+}
+
+.space-8 {
+    height: 8px !important;
+}
+
+.space-10 {
+    height: 10px !important;
+}
+
+.space-12 {
+    height: 12px !important;
+}
+
+.space-14 {
+    height: 14px !important;
+}
+
+.space-16 {
+    height: 16px !important;
+}
+
+.space-18 {
+    height: 18px !important;
+}
+
+.space-20 {
+    height: 20px !important;
+}
+
+.menuImage {
+    border: solid 4px rgb(0, 57, 118);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.nysPink {
+    color: rgb(236,0,141);
+}
+
+.nysBlue {
+    color: rgb(0,157,221);
+}
+
+.nysGreen {
+    color: rgb(178,187,26);
+}
+
+.nysErrorRed {
+    color: red;
+}
+
+/* start: Input Form Messages */
+.inputFormSuccess {
+    color: Green;
+}
+
+.inputFormSuccess::after {
+    font-family: FontAwesome;
+    content: "\f00c";
+}
+
+.inputFormError {
+    color: red;
+}
+
+.inputFormError::after {
+    font-family: FontAwesome;
+    content: "\f00d" ;
+}
+
+
+.inputBorderError {
+    
+    border: 3px solid red;
+}
+/* end: Input Form Messages */
+
+/* start: Text Utilities */
+.text-small {
+    font-size: 10px !important;
+}
+
+/* end: Text Utilities */

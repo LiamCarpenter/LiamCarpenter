@@ -25,5 +25,6 @@ namespace CostImprovementAssistant
         public virtual BudgetType BudgetType { get; set; }
         public virtual BudgetType BudgetType1 { get; set; }
         public virtual CiaForm CiaForm { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

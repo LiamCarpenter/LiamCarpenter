@@ -1,0 +1,27 @@
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\bin\Release\TNEFTest.exe
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\bin\Release\MIMEParser.dll
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\bin\Release\OpenPOP.dll
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\obj\Release\ResolveAssemblyReference.cache
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\obj\Release\TNEFTest.frmTest.resources
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\obj\Release\TNEFTest.csproj.GenerateResource.Cache
+C:\Development\2008\LIBRARIES\OpenPop\TNEFTest\obj\Release\TNEFTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\TNEFTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\TNEFTest.frmTest.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\ResGen.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\ResGen.write.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\TNEFTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\TNEFTest.exe.config
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\GenerateResource.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\TNEFTest.exe.config
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\TNEFTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Release\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\TNEFTest.frmTest.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\GenerateResource.read.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Release\TNEFTest.exe

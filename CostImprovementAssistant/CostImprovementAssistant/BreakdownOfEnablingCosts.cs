@@ -23,5 +23,6 @@ namespace CostImprovementAssistant
     
         public virtual CiaForm CiaForm { get; set; }
         public virtual BudgetType BudgetType { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

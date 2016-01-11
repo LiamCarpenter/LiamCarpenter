@@ -1,0 +1,75 @@
+﻿
+
+
+One
+===
+
+AutoInvoiceConferma_email
+
+
+2014-05-21 10:02:02,093 [6208] ERROR NYS_MailService.srvMail 21389 [(null)] - Failure retrieving email - FERA: B156182.pdf **Ex.Message=The process cannot access the file because it is being used by another process.
+
+  C:\Users\ashleymarron\projects\SERVICE_APP\srvMail.vb(4241):log.Error("Failure retrieving email - " & strCompanyName & ": " & strFileName)
+  C:\Users\ashleymarron\projects\SERVICE_APP\srvMail.vb(4451):log.Error("Failure retrieving email - " & strCompanyName & ": " & strFileName & " **Ex.Message=" & ex.Message)
+
+  AutoInvoiceProcessFolder
+
+
+            Dim strReadFromFolder As String = getConfig("InvoiceInput")  === \\nys-boss\BOSS\32bitboss\PDFfiles\
+            Dim strSentFolder As String = getConfig("InvoiceSent").Replace("###", strDatePath)
+            Dim strNotSentFolder As String = getConfig("InvoiceNotSent").Replace("###", strDatePath)
+            Dim strErrorFolder As String = getConfig("InvoiceError").Replace("###", strDatePath)
+            Dim strAwaitingFolder As String = getConfig("InvoiceAwaiting")
+
+
+
+On start up
+===========
+
+2014-05-21 10:01:40,839 [6188] INFO  NYS_MailService.srvMail 135 [OnStart] - Application Start-1
+2014-05-21 10:01:40,866 [6188] INFO  NYS_MailService.srvMail 162 [OnStart] - Mail Service Started
+2014-05-21 10:01:40,868 [6188] INFO  NYS_MailService.srvMail 164 [OnStart] - trigger time has passed, next trigger will be tomorrow
+2014-05-21 10:01:40,868 [6188] INFO  NYS_MailService.srvMail 164 [OnStart] - Cubit time is: 07:30
+2014-05-21 10:01:40,869 [6188] INFO  NYS_MailService.srvMail 165 [OnStart] - CUBIT Afternoon time is: 16:30
+2014-05-21 10:01:40,869 [6188] INFO  NYS_MailService.srvMail 165 [OnStart] - Cubit Finish time is: 08:00
+2014-05-21 10:01:40,869 [6188] INFO  NYS_MailService.srvMail 165 [OnStart] - CUBIT time has passed, next CUBIT file check will be tomorrow
+2014-05-21 10:01:40,870 [6188] INFO  NYS_MailService.srvMail 166 [OnStart] - archive time has passed, next archive will be tomorrow
+2014-05-21 10:01:40,871 [6188] INFO  NYS_MailService.srvMail 167 [OnStart] - Cubit Invoice time has passed, next Cubit Invoice will be tomorrow
+2014-05-21 10:01:40,871 [6188] INFO  NYS_MailService.srvMail 167 [OnStart] - EX Rates time has passed, next update will be tomorrow
+2014-05-21 10:01:40,872 [6188] INFO  NYS_MailService.srvMail 168 [OnStart] - Corporate Feedback time has passed, next attempt will be tomorrow
+2014-05-21 10:01:40,873 [6188] INFO  NYS_MailService.srvMail 169 [OnStart] - Invoice Check time has passed, next attempt will be tomorrow
+2014-05-21 10:01:40,879 [6188] INFO  NYS_MailService.srvMail 175 [OnStart] - Today is not the correct day to generate LV User Report, next attempt will be 27/05/2014 at 8:0
+2014-05-21 10:01:40,884 [6188] INFO  NYS_MailService.srvMail 180 [OnStart doWork] - starting check Evolvi thread
+2014-05-21 10:01:40,884 [6188] INFO  NYS_MailService.srvMail 180 [OnStart doWork] - starting check EvolviProcess thread
+2014-05-21 10:01:40,885 [6188] INFO  NYS_MailService.srvMail 181 [OnStart doWork] - starting SSO Sync thread
+2014-05-21 10:01:40,885 [6188] INFO  NYS_MailService.srvMail 181 [OnStart doWork] - starting checkFera thread
+2014-05-21 10:01:40,887 [6188] INFO  NYS_MailService.srvMail 183 [OnStart doWork] - starting checkFera awaiting thread
+2014-05-21 10:01:40,888 [6188] INFO  NYS_MailService.srvMail 184 [OnStart doWork] - starting send emails thread
+2014-05-21 10:01:40,892 [6208] INFO  NYS_MailService.srvMail 188 [(null)] - AUTO Invoice Process Folder - Starting
+2014-05-21 10:01:40,909 [6484] INFO  NYS_MailService.srvMail 205 [(null)] - SSO Client Sync Started
+2014-05-21 10:01:40,961 [7632] ERROR NYS_MailService.srvMail 257 [(null)] - Evolvi file load error:Index was outside the bounds of the array.
+2014-05-21 10:01:41,291 [6484] INFO  NYS_MailService.srvMail 588 [(null)] - SSO Client Sync Complete
+2014-05-21 10:01:41,291 [6484] INFO  NYS_MailService.srvMail 588 [(null)] - SSO User Sync Started
+2014-05-21 10:02:02,093 [6208] ERROR NYS_MailService.srvMail 21389 [(null)] - Failure retrieving email - FERA: B156182.pdf **Ex.Message=The process cannot access the file because it is being used by another process.
+2014-05-21 10:02:23,440 [6208] ERROR NYS_MailService.srvMail 42737 [(null)] - Read Failure - Fera/YDH/YDH R: The process cannot access the file because it is being used by another process.
+2014-05-21 10:02:23,440 [6208] ERROR NYS_MailService.srvMail 42737 [(null)] - AUTO Invoice Process Folder - exception thrown: The process cannot access the file because it is being used by another process.
+2014-05-21 10:02:23,440 [6208] INFO  NYS_MailService.srvMail 42737 [(null)] - AUTO Invoice Process Folder - Ending
+2014-05-21 10:02:40,886 [6436] INFO  NYS_MailService.srvMail 60183 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:02:47,142 [6484] INFO  NYS_MailService.srvMail 66439 [(null)] - SSO User Sync Complete
+2014-05-21 10:02:47,142 [6484] INFO  NYS_MailService.srvMail 66439 [(null)] - SSO CodeList Sync Started
+2014-05-21 10:02:51,080 [6484] INFO  NYS_MailService.srvMail 70377 [(null)] - SSO CodeList Sync Complete
+2014-05-21 10:03:40,890 [6436] INFO  NYS_MailService.srvMail 120187 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:04:40,898 [6436] INFO  NYS_MailService.srvMail 180194 [Timer1_Elapsed doWork] - starting check Evolvi thread
+2014-05-21 10:04:40,898 [6436] INFO  NYS_MailService.srvMail 180194 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:04:41,020 [6772] ERROR NYS_MailService.srvMail 180316 [(null)] - Evolvi file load error:Index was outside the bounds of the array.
+2014-05-21 10:05:40,915 [7260] INFO  NYS_MailService.srvMail 240211 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:06:40,943 [7260] INFO  NYS_MailService.srvMail 300239 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:06:40,943 [7260] INFO  NYS_MailService.srvMail 300239 [Timer1_Elapsed doWork] - starting send emails thread
+2014-05-21 10:07:40,945 [5712] INFO  NYS_MailService.srvMail 360242 [Timer1_Elapsed doWork] - starting check Evolvi thread
+2014-05-21 10:07:40,945 [5712] INFO  NYS_MailService.srvMail 360242 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:07:40,950 [7332] ERROR NYS_MailService.srvMail 360247 [(null)] - Evolvi file load error:Index was outside the bounds of the array.
+2014-05-21 10:08:40,971 [5012] INFO  NYS_MailService.srvMail 420268 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:09:40,988 [6808] INFO  NYS_MailService.srvMail 480284 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:10:41,019 [6808] INFO  NYS_MailService.srvMail 540315 [Timer1_Elapsed doWork] - starting check Evolvi thread
+2014-05-21 10:10:41,019 [6808] INFO  NYS_MailService.srvMail 540315 [Timer1_Elapsed doWork] - starting check EvolviProcess thread
+2014-05-21 10:10:41,143 [7460] ERROR NYS_MailService.srvMail 540439 [(null)] - Evolvi file load error:Index was outside the bounds of the array.

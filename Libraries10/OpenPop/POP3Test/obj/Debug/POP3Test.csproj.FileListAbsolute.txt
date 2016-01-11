@@ -1,0 +1,28 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\MIMEParser.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOP.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOP.NET_Sample_App.frmTest.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\ResGen.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\ResGen.write.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.exe.config
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\MIMEParser.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOP.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOP.NET_Sample_App.frmTest.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\GenerateResource.read.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.pdb
+E:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\bin\Debug\OpenPOPTest.exe.config
+E:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.exe
+E:\Development\VS10\LIBRARIES10\OpenPop\POP3Test\obj\Debug\OpenPOPTest.pdb

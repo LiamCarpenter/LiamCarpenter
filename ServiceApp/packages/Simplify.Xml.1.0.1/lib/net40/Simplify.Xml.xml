@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simplify.Xml</name>
+    </assembly>
+    <members>
+        <member name="T:Simplify.Xml.XmlExtensions">
+            <summary>
+            Provides extensions for System.Xml.Linq classes
+            </summary>
+        </member>
+        <member name="M:Simplify.Xml.XmlExtensions.OuterXml(System.Xml.Linq.XElement)">
+            <summary>
+            Gets the outer XML string of an XElement (inner XML and itself).
+            </summary>
+            <param name="element">The outer XML stringt.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.Xml.XmlExtensions.InnerXml(System.Xml.Linq.XElement)">
+            <summary>
+            Gets the inner XML string of an XElement.
+            </summary>
+            <param name="element">The inner XML stringt.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simplify.Xml.XmlSerializer">
+            <summary>
+            Objects XML serialization/deserialization extensions
+            </summary>
+        </member>
+        <member name="M:Simplify.Xml.XmlSerializer.Serialize``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Serializes the specified items list to a XML string.
+            </summary>
+            <typeparam name="T">Type of an item</typeparam>
+            <param name="items">The items list to serialize.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.Xml.XmlSerializer.ToXElement``1(``0)">
+            <summary>
+            Serialize object to XElement.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">Object to serialize.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.Xml.XmlSerializer.FromXElement``1(System.Xml.Linq.XElement)">
+            <summary>
+            Deserialize XElement to object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xElement">The XElement to deserialize.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

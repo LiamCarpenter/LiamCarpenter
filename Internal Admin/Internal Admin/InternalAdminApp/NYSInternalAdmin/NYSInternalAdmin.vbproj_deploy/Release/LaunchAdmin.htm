@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+		<title>NYS Corporate Internal MI/Admin</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+		<meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+		<meta name="ProgId" content="FrontPage.Editor.Document" />
+	</head>
+	<body>
+	    <script type="text/javascript" language="JavaScript">
+            
+        var qPos = document.URL.indexOf('?');
+        if (qPos == -1) {
+            qPos = 1000;
+        };
+            window.onload = loadapp; 
+
+            function loadapp()
+            {
+
+                var win = window.open('IALogonAdmin.aspx?Token=' + document.URL.substr(qPos+7), 'MIApplicWindow',
+                'titlebar=no,toolbar=no,directories=no,status=yes,scrollbars=yes,resizable=yes,resize=no,menubar=no,height=700,width=1050,top=0,left=0');
+                win.moveTo(0,0);
+                if (win) {
+                    window.open('', '_parent', '');
+                    self.opener = this;
+                    self.close();
+                }
+            }
+
+		</script>
+	</body>
+</html>

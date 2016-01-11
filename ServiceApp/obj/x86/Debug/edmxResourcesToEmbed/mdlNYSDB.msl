@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NYSDBModelStoreContainer" CdmEntityContainer="NYSDBEntities">
+    <EntitySetMapping Name="ChiesiGLIOCodes">
+      <EntityTypeMapping TypeName="NYSDBModel.ChiesiGLIOCodes">
+        <MappingFragment StoreEntitySet="ChiesiGLIOCodes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NYSDescription" ColumnName="NYSDescription" />
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="IOCode" ColumnName="IOCode" />
+          <ScalarProperty Name="GLDescription" ColumnName="GLDescription" />
+          <ScalarProperty Name="TravelType" ColumnName="TravelType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EvolviDataEF">
+      <EntityTypeMapping TypeName="NYSDBModel.EvolviDataEF">
+        <MappingFragment StoreEntitySet="EvolviData">
+          <ScalarProperty Name="EvolviDataID" ColumnName="EvolviDataID" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="ExternalRef" ColumnName="ExternalRef" />
+          <ScalarProperty Name="IssueRef" ColumnName="IssueRef" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="MachineType" ColumnName="MachineType" />
+          <ScalarProperty Name="MachineNumber" ColumnName="MachineNumber" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="PersonalCCUsed" ColumnName="PersonalCCUsed" />
+          <ScalarProperty Name="FulfilmentType" ColumnName="FulfilmentType" />
+          <ScalarProperty Name="AccountRef" ColumnName="AccountRef" />
+          <ScalarProperty Name="AccountExternalRef" ColumnName="AccountExternalRef" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Immediate" ColumnName="Immediate" />
+          <ScalarProperty Name="EvolviInvoice" ColumnName="EvolviInvoice" />
+          <ScalarProperty Name="EvolviPayment" ColumnName="EvolviPayment" />
+          <ScalarProperty Name="EvolviFinancial" ColumnName="EvolviFinancial" />
+          <ScalarProperty Name="BookingAgentRef" ColumnName="BookingAgentRef" />
+          <ScalarProperty Name="BookingAgentExternalRef" ColumnName="BookingAgentExternalRef" />
+          <ScalarProperty Name="BranchExternalRef" ColumnName="BranchExternalRef" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="TicketingAgentRef" ColumnName="TicketingAgentRef" />
+          <ScalarProperty Name="TicketingAgentExternalRef" ColumnName="TicketingAgentExternalRef" />
+          <ScalarProperty Name="TicketingAgentBranchExternalRef" ColumnName="TicketingAgentBranchExternalRef" />
+          <ScalarProperty Name="TicketingAgentUnit" ColumnName="TicketingAgentUnit" />
+          <ScalarProperty Name="LeadRef" ColumnName="LeadRef" />
+          <ScalarProperty Name="AccountContactRef" ColumnName="AccountContactRef" />
+          <ScalarProperty Name="AccountContactFirstName" ColumnName="AccountContactFirstName" />
+          <ScalarProperty Name="AccountContactLastName" ColumnName="AccountContactLastName" />
+          <ScalarProperty Name="AccountContactTitle" ColumnName="AccountContactTitle" />
+          <ScalarProperty Name="AccountContactNumber" ColumnName="AccountContactNumber" />
+          <ScalarProperty Name="AccountContactEmail" ColumnName="AccountContactEmail" />
+          <ScalarProperty Name="AccountContactOrganisation" ColumnName="AccountContactOrganisation" />
+          <ScalarProperty Name="AccountContactAddress1" ColumnName="AccountContactAddress1" />
+          <ScalarProperty Name="AccountContactAddress2" ColumnName="AccountContactAddress2" />
+          <ScalarProperty Name="AccountContactAddress3" ColumnName="AccountContactAddress3" />
+          <ScalarProperty Name="AccountContactCity" ColumnName="AccountContactCity" />
+          <ScalarProperty Name="AccountContactCounty" ColumnName="AccountContactCounty" />
+          <ScalarProperty Name="AccountContactPostcode" ColumnName="AccountContactPostcode" />
+          <ScalarProperty Name="DeliveryContactRef" ColumnName="DeliveryContactRef" />
+          <ScalarProperty Name="DeliveryContactFirstName" ColumnName="DeliveryContactFirstName" />
+          <ScalarProperty Name="DeliveryContactLastName" ColumnName="DeliveryContactLastName" />
+          <ScalarProperty Name="DeliveryContactTitle" ColumnName="DeliveryContactTitle" />
+          <ScalarProperty Name="DeliveryContactNumber" ColumnName="DeliveryContactNumber" />
+          <ScalarProperty Name="DeliveryContactEmail" ColumnName="DeliveryContactEmail" />
+          <ScalarProperty Name="DeliveryContactOrganisation" ColumnName="DeliveryContactOrganisation" />
+          <ScalarProperty Name="DeliveryContactAddress1" ColumnName="DeliveryContactAddress1" />
+          <ScalarProperty Name="DeliveryContactAddress2" ColumnName="DeliveryContactAddress2" />
+          <ScalarProperty Name="DeliveryContactAddress3" ColumnName="DeliveryContactAddress3" />
+          <ScalarProperty Name="DeliveryContactCity" ColumnName="DeliveryContactCity" />
+          <ScalarProperty Name="DeliveryContactCounty" ColumnName="DeliveryContactCounty" />
+          <ScalarProperty Name="DeliveryContactPostcode" ColumnName="DeliveryContactPostcode" />
+          <ScalarProperty Name="datecreated" ColumnName="datecreated" />
+          <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="updatedby" ColumnName="updatedby" />
+          <ScalarProperty Name="BookingAgentFirstName" ColumnName="BookingAgentFirstName" />
+          <ScalarProperty Name="BookingAgentLastName" ColumnName="BookingAgentLastName" />
+          <ScalarProperty Name="BookingAgentTitle" ColumnName="BookingAgentTitle" />
+          <ScalarProperty Name="BookingAgentEmailAddress" ColumnName="BookingAgentEmailAddress" />
+          <ScalarProperty Name="OnBehalfRef" ColumnName="OnBehalfRef" />
+          <ScalarProperty Name="OnBehalfExternalRef" ColumnName="OnBehalfExternalRef" />
+          <ScalarProperty Name="OnBehalfBranchExternalRef" ColumnName="OnBehalfBranchExternalRef" />
+          <ScalarProperty Name="OnBehalfUnit" ColumnName="OnBehalfUnit" />
+          <ScalarProperty Name="OnBehalfFirstName" ColumnName="OnBehalfFirstName" />
+          <ScalarProperty Name="OnBehalfLastName" ColumnName="OnBehalfLastName" />
+          <ScalarProperty Name="OnBehalfTitle" ColumnName="OnBehalfTitle" />
+          <ScalarProperty Name="OnBehalfEmailAddress" ColumnName="OnBehalfEmailAddress" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TravellerProfiles">
+      <EntityTypeMapping TypeName="NYSDBModel.TravellerProfiles">
+        <MappingFragment StoreEntitySet="TravellerProfiles">
+          <ScalarProperty Name="TravellerID" ColumnName="TravellerID" />
+          <ScalarProperty Name="TravellerEmail" ColumnName="TravellerEmail" />
+          <ScalarProperty Name="TravellerCode1" ColumnName="TravellerCode1" />
+          <ScalarProperty Name="TravellerCode2" ColumnName="TravellerCode2" />
+          <ScalarProperty Name="TravellerSex" ColumnName="TravellerSex" />
+          <ScalarProperty Name="TravellerFirstname" ColumnName="TravellerFirstname" />
+          <ScalarProperty Name="TravellerLastname" ColumnName="TravellerLastname" />
+          <ScalarProperty Name="TravellerActive" ColumnName="TravellerActive" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="TravellerGroupID" ColumnName="TravellerGroupID" />
+          <ScalarProperty Name="TravellerLocation" ColumnName="TravellerLocation" />
+          <ScalarProperty Name="TravellerCode3" ColumnName="TravellerCode3" />
+          <ScalarProperty Name="TravellerCode4" ColumnName="TravellerCode4" />
+          <ScalarProperty Name="TravellerCode5" ColumnName="TravellerCode5" />
+          <ScalarProperty Name="TravellerCode6" ColumnName="TravellerCode6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterceptorCharges">
+      <EntityTypeMapping TypeName="NYSDBModel.InterceptorCharges">
+        <MappingFragment StoreEntitySet="InterceptorCharges">
+          <ScalarProperty Name="PlainPaperTicketingFeeTotal" ColumnName="PlainPaperTicketingFeeTotal" />
+          <ScalarProperty Name="PlainPaperTicketingFee" ColumnName="PlainPaperTicketingFee" />
+          <ScalarProperty Name="CourierFeeTotal" ColumnName="CourierFeeTotal" />
+          <ScalarProperty Name="CourierFee" ColumnName="CourierFee" />
+          <ScalarProperty Name="SaturdaySDFeeTotal" ColumnName="SaturdaySDFeeTotal" />
+          <ScalarProperty Name="SaturdaySDFee" ColumnName="SaturdaySDFee" />
+          <ScalarProperty Name="KioskFeeTotal" ColumnName="KioskFeeTotal" />
+          <ScalarProperty Name="KioskFee" ColumnName="KioskFee" />
+          <ScalarProperty Name="ToDFeeTotal" ColumnName="ToDFeeTotal" />
+          <ScalarProperty Name="ToDFee" ColumnName="ToDFee" />
+          <ScalarProperty Name="ClientBossCode" ColumnName="ClientBossCode" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="IssueType" ColumnName="IssueType" />
+          <ScalarProperty Name="CancellationFeeTotal" ColumnName="CancellationFeeTotal" />
+          <ScalarProperty Name="CancellationFee" ColumnName="CancellationFee" />
+          <ScalarProperty Name="SpecialDeliveryFeeTotal" ColumnName="SpecialDeliveryFeeTotal" />
+          <ScalarProperty Name="SpecialDeliveryFee" ColumnName="SpecialDeliveryFee" />
+          <ScalarProperty Name="OfflineFeeTotal" ColumnName="OfflineFeeTotal" />
+          <ScalarProperty Name="OfflineFee" ColumnName="OfflineFee" />
+          <ScalarProperty Name="PostageFeeTotal" ColumnName="PostageFeeTotal" />
+          <ScalarProperty Name="PostageFee" ColumnName="PostageFee" />
+          <ScalarProperty Name="TransactionFeeTotal" ColumnName="TransactionFeeTotal" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="TotalTickets" ColumnName="TotalTickets" />
+          <ScalarProperty Name="IssueRef" ColumnName="IssueRef" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="interceptorClients">
+      <EntityTypeMapping TypeName="NYSDBModel.interceptorClients">
+        <MappingFragment StoreEntitySet="interceptorClients">
+          <ScalarProperty Name="PlainPaperTicketingOfflineFeePerBasket" ColumnName="PlainPaperTicketingOfflineFeePerBasket" />
+          <ScalarProperty Name="PlainPaperTicketingOfflineFeePerOrderItem" ColumnName="PlainPaperTicketingOfflineFeePerOrderItem" />
+          <ScalarProperty Name="PlainPaperTicketingOfflineFeePerPassenger" ColumnName="PlainPaperTicketingOfflineFeePerPassenger" />
+          <ScalarProperty Name="PlainPaperTicketingOfflineTicketFee" ColumnName="PlainPaperTicketingOfflineTicketFee" />
+          <ScalarProperty Name="PlainPaperTicketingOnlineFeePerBasket" ColumnName="PlainPaperTicketingOnlineFeePerBasket" />
+          <ScalarProperty Name="PlainPaperTicketingOnlineFeePerOrderItem" ColumnName="PlainPaperTicketingOnlineFeePerOrderItem" />
+          <ScalarProperty Name="PlainPaperTicketingOnlineFeePerPassenger" ColumnName="PlainPaperTicketingOnlineFeePerPassenger" />
+          <ScalarProperty Name="PlainPaperTicketingOnlineTicketFee" ColumnName="PlainPaperTicketingOnlineTicketFee" />
+          <ScalarProperty Name="InterceptorDiscountPercent" ColumnName="InterceptorDiscountPercent" />
+          <ScalarProperty Name="InterceptorDiscountActive" ColumnName="InterceptorDiscountActive" />
+          <ScalarProperty Name="addBookerToInvoice" ColumnName="addBookerToInvoice" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOfflineFeePerBasket" ColumnName="SaturdaySpecialDeliveryOfflineFeePerBasket" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOfflineFeePerOrderItem" ColumnName="SaturdaySpecialDeliveryOfflineFeePerOrderItem" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOfflineFeePerTraveller" ColumnName="SaturdaySpecialDeliveryOfflineFeePerTraveller" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOfflineFeePerTicket" ColumnName="SaturdaySpecialDeliveryOfflineFeePerTicket" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOnlineFeePerBasket" ColumnName="SaturdaySpecialDeliveryOnlineFeePerBasket" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOnlineFeePerOrderItem" ColumnName="SaturdaySpecialDeliveryOnlineFeePerOrderItem" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOnlineFeePerTraveller" ColumnName="SaturdaySpecialDeliveryOnlineFeePerTraveller" />
+          <ScalarProperty Name="SaturdaySpecialDeliveryOnlineFeePerTicket" ColumnName="SaturdaySpecialDeliveryOnlineFeePerTicket" />
+          <ScalarProperty Name="SpecialDeliveryOfflineFeePerBasket" ColumnName="SpecialDeliveryOfflineFeePerBasket" />
+          <ScalarProperty Name="SpecialDeliveryOfflineFeePerOrderItem" ColumnName="SpecialDeliveryOfflineFeePerOrderItem" />
+          <ScalarProperty Name="SpecialDeliveryOfflineFeePerTraveller" ColumnName="SpecialDeliveryOfflineFeePerTraveller" />
+          <ScalarProperty Name="SpecialDeliveryOfflineFeePerTicket" ColumnName="SpecialDeliveryOfflineFeePerTicket" />
+          <ScalarProperty Name="SpecialDeliveryOnlineFeePerBasket" ColumnName="SpecialDeliveryOnlineFeePerBasket" />
+          <ScalarProperty Name="SpecialDeliveryOnlineFeePerOrderItem" ColumnName="SpecialDeliveryOnlineFeePerOrderItem" />
+          <ScalarProperty Name="SpecialDeliveryOnlineFeePerTraveller" ColumnName="SpecialDeliveryOnlineFeePerTraveller" />
+          <ScalarProperty Name="SpecialDeliveryOnlineFeePerTicket" ColumnName="SpecialDeliveryOnlineFeePerTicket" />
+          <ScalarProperty Name="CourierOfflineFeePerBasket" ColumnName="CourierOfflineFeePerBasket" />
+          <ScalarProperty Name="CourierOfflineFeePerOrderItem" ColumnName="CourierOfflineFeePerOrderItem" />
+          <ScalarProperty Name="CourierOfflineFeePerTraveller" ColumnName="CourierOfflineFeePerTraveller" />
+          <ScalarProperty Name="CourierOfflineFeePerTicket" ColumnName="CourierOfflineFeePerTicket" />
+          <ScalarProperty Name="CourierOnlineFeePerBasket" ColumnName="CourierOnlineFeePerBasket" />
+          <ScalarProperty Name="CourierOnlineFeePerOrderItem" ColumnName="CourierOnlineFeePerOrderItem" />
+          <ScalarProperty Name="CourierOnlineFeePerTraveller" ColumnName="CourierOnlineFeePerTraveller" />
+          <ScalarProperty Name="CourierOnlineFeePerTicket" ColumnName="CourierOnlineFeePerTicket" />
+          <ScalarProperty Name="PostageOfflineFeePerBasket" ColumnName="PostageOfflineFeePerBasket" />
+          <ScalarProperty Name="PostageOfflineFeePerOrderItem" ColumnName="PostageOfflineFeePerOrderItem" />
+          <ScalarProperty Name="PostageOfflineFeePerTraveller" ColumnName="PostageOfflineFeePerTraveller" />
+          <ScalarProperty Name="PostageOfflineFeePerTicket" ColumnName="PostageOfflineFeePerTicket" />
+          <ScalarProperty Name="PostageOnlineFeePerBasket" ColumnName="PostageOnlineFeePerBasket" />
+          <ScalarProperty Name="PostageOnlineFeePerOrderItem" ColumnName="PostageOnlineFeePerOrderItem" />
+          <ScalarProperty Name="PostageOnlineFeePerTraveller" ColumnName="PostageOnlineFeePerTraveller" />
+          <ScalarProperty Name="PostageOnlineFeePerTicket" ColumnName="PostageOnlineFeePerTicket" />
+          <ScalarProperty Name="ToDOfflineFeePerBasket" ColumnName="ToDOfflineFeePerBasket" />
+          <ScalarProperty Name="ToDOfflineFeePerOrderItem" ColumnName="ToDOfflineFeePerOrderItem" />
+          <ScalarProperty Name="ToDOfflineFeePerTraveller" ColumnName="ToDOfflineFeePerTraveller" />
+          <ScalarProperty Name="ToDOfflineFeePerTicket" ColumnName="ToDOfflineFeePerTicket" />
+          <ScalarProperty Name="ToDOnlineFeePerBasket" ColumnName="ToDOnlineFeePerBasket" />
+          <ScalarProperty Name="ToDOnlineFeePerOrderItem" ColumnName="ToDOnlineFeePerOrderItem" />
+          <ScalarProperty Name="ToDOnlineFeePerTraveller" ColumnName="ToDOnlineFeePerTraveller" />
+          <ScalarProperty Name="ToDOnlineFeePerTicket" ColumnName="ToDOnlineFeePerTicket" />
+          <ScalarProperty Name="KioskOfflineFeePerBasket" ColumnName="KioskOfflineFeePerBasket" />
+          <ScalarProperty Name="KioskOfflineFeePerOrderItem" ColumnName="KioskOfflineFeePerOrderItem" />
+          <ScalarProperty Name="KioskOfflineFeePerTraveller" ColumnName="KioskOfflineFeePerTraveller" />
+          <ScalarProperty Name="KioskOfflineFeePerTicket" ColumnName="KioskOfflineFeePerTicket" />
+          <ScalarProperty Name="KioskOnlineFeePerBasket" ColumnName="KioskOnlineFeePerBasket" />
+          <ScalarProperty Name="KioskOnlineFeePerOrderItem" ColumnName="KioskOnlineFeePerOrderItem" />
+          <ScalarProperty Name="KioskOnlineFeePerTraveller" ColumnName="KioskOnlineFeePerTraveller" />
+          <ScalarProperty Name="KioskOnlineFeePerTicket" ColumnName="KioskOnlineFeePerTicket" />
+          <ScalarProperty Name="InterceptorFeesActive" ColumnName="InterceptorFeesActive" />
+          <ScalarProperty Name="splitUniqueFieldName" ColumnName="splitUniqueFieldName" />
+          <ScalarProperty Name="splitFieldValue" ColumnName="splitFieldValue" />
+          <ScalarProperty Name="splitFieldName" ColumnName="splitFieldName" />
+          <ScalarProperty Name="splitNodeName" ColumnName="splitNodeName" />
+          <ScalarProperty Name="customPOActive" ColumnName="customPOActive" />
+          <ScalarProperty Name="customPO" ColumnName="customPO" />
+          <ScalarProperty Name="clientName" ColumnName="clientName" />
+          <ScalarProperty Name="bossCode" ColumnName="bossCode" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOSSinvtot">
+      <EntityTypeMapping TypeName="NYSDBModel.BOSSinvtotEF">
+        <MappingFragment StoreEntitySet="BOSSinvtot">
+          <ScalarProperty Name="datecreated" ColumnName="datecreated" />
+          <ScalarProperty Name="tot_cursym" ColumnName="tot_cursym" />
+          <ScalarProperty Name="tot_roe" ColumnName="tot_roe" />
+          <ScalarProperty Name="tot_curncy" ColumnName="tot_curncy" />
+          <ScalarProperty Name="tot_email" ColumnName="tot_email" />
+          <ScalarProperty Name="tot_noprnt" ColumnName="tot_noprnt" />
+          <ScalarProperty Name="tot_crstyp" ColumnName="tot_crstyp" />
+          <ScalarProperty Name="tot_nofee" ColumnName="tot_nofee" />
+          <ScalarProperty Name="tot_fileno" ColumnName="tot_fileno" />
+          <ScalarProperty Name="tot_agvat" ColumnName="tot_agvat" />
+          <ScalarProperty Name="tot_agcomm" ColumnName="tot_agcomm" />
+          <ScalarProperty Name="tot_cref2" ColumnName="tot_cref2" />
+          <ScalarProperty Name="tot_cref1" ColumnName="tot_cref1" />
+          <ScalarProperty Name="tot_atolx" ColumnName="tot_atolx" />
+          <ScalarProperty Name="tot_atol" ColumnName="tot_atol" />
+          <ScalarProperty Name="tot_errs" ColumnName="tot_errs" />
+          <ScalarProperty Name="tot_print" ColumnName="tot_print" />
+          <ScalarProperty Name="tot_bdm" ColumnName="tot_bdm" />
+          <ScalarProperty Name="tot_retail" ColumnName="tot_retail" />
+          <ScalarProperty Name="tot_morcrs" ColumnName="tot_morcrs" />
+          <ScalarProperty Name="tot_paxs" ColumnName="tot_paxs" />
+          <ScalarProperty Name="tot_rtelno" ColumnName="tot_rtelno" />
+          <ScalarProperty Name="tot_raddr" ColumnName="tot_raddr" />
+          <ScalarProperty Name="tot_note" ColumnName="tot_note" />
+          <ScalarProperty Name="tot_noerrs" ColumnName="tot_noerrs" />
+          <ScalarProperty Name="tot_reason" ColumnName="tot_reason" />
+          <ScalarProperty Name="tot_disput" ColumnName="tot_disput" />
+          <ScalarProperty Name="tot_vtoncm" ColumnName="tot_vtoncm" />
+          <ScalarProperty Name="tot_comdue" ColumnName="tot_comdue" />
+          <ScalarProperty Name="tot_comm" ColumnName="tot_comm" />
+          <ScalarProperty Name="tot_dposit" ColumnName="tot_dposit" />
+          <ScalarProperty Name="tot_recvd" ColumnName="tot_recvd" />
+          <ScalarProperty Name="tot_ccamt" ColumnName="tot_ccamt" />
+          <ScalarProperty Name="tot_discnt" ColumnName="tot_discnt" />
+          <ScalarProperty Name="tot_billed" ColumnName="tot_billed" />
+          <ScalarProperty Name="tot_amount" ColumnName="tot_amount" />
+          <ScalarProperty Name="tot_bilvat" ColumnName="tot_bilvat" />
+          <ScalarProperty Name="tot_amtvat" ColumnName="tot_amtvat" />
+          <ScalarProperty Name="tot_supvat" ColumnName="tot_supvat" />
+          <ScalarProperty Name="tot_ourvat" ColumnName="tot_ourvat" />
+          <ScalarProperty Name="tot_ourchg" ColumnName="tot_ourchg" />
+          <ScalarProperty Name="tot_srvchg" ColumnName="tot_srvchg" />
+          <ScalarProperty Name="tot_tax" ColumnName="tot_tax" />
+          <ScalarProperty Name="tot_fare" ColumnName="tot_fare" />
+          <ScalarProperty Name="tot_duedt" ColumnName="tot_duedt" />
+          <ScalarProperty Name="tot_invdt" ColumnName="tot_invdt" />
+          <ScalarProperty Name="tot_type" ColumnName="tot_type" />
+          <ScalarProperty Name="tot_costc" ColumnName="tot_costc" />
+          <ScalarProperty Name="tot_pono" ColumnName="tot_pono" />
+          <ScalarProperty Name="tot_br" ColumnName="tot_br" />
+          <ScalarProperty Name="tot_crsref" ColumnName="tot_crsref" />
+          <ScalarProperty Name="tot_change" ColumnName="tot_change" />
+          <ScalarProperty Name="tot_invno" ColumnName="tot_invno" />
+          <ScalarProperty Name="tot_custid" ColumnName="tot_custid" />
+          <ScalarProperty Name="tot_ukey" ColumnName="tot_ukey" />
+          <ScalarProperty Name="invtotID" ColumnName="invtotID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

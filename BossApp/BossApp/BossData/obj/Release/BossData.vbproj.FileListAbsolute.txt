@@ -1,0 +1,16 @@
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\BossData.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\BossData.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\BossData.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoDatabaseUtils.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoUtilities.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\log4net.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoDatabaseUtils.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoDatabaseUtils.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoUtilities.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Release\EvoUtilities.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.vbprojResolveAssemblyReference.cache
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.Resources.resources
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.vbproj.GenerateResource.Cache
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Release\BossData.pdb

@@ -1,0 +1,620 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DatabaseObjects
+</name>
+</assembly>
+<members>
+<member name="M:DatabaseObjects.clsVenue.makeVenueFromRow(System.Data.IDataReader)">
+	<summary>
+ Function makeSystemnysuserFromRow
+ </summary>
+	<param name="r"></param>
+	<returns>
+ Venue record details
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.makeVenueFromRow2(System.Data.IDataReader)">
+	<summary>
+ Function makeSystemnysuserFromRow2
+ </summary>
+	<param name="r"></param>
+	<returns>
+ Venue ane record
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.Populate(System.String,System.String,System.String,System.String)">
+	<summary>
+ Function Populate
+ </summary>
+	<param name="pvenuename1"></param>
+	<param name="pvenuename2"></param>
+	<param name="pstrandor"></param>
+	<returns>
+ A list of venues matching on name
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Updated 20/05/2009 - added groupid so can join and retrieve transient rates if any
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.venueNameFind(System.String)">
+	<summary>
+ Function venueNameFind
+ </summary>
+	<param name="pvenuename"></param>
+	<returns>
+ A list of venue names that start with the passed in value
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.venueAlternativenameCheck(System.String)">
+	<summary>
+ Function venueAlternativenameCheck
+ </summary>
+	<param name="pstrvenuename"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DatabaseObjects.clsVenue.venueExactNameFind(System.String,System.String)">
+	<summary>
+ Function venueExactNameFind
+ </summary>
+	<param name="pvenuename"></param>
+	<returns>
+ A list of venues with exactly the same name as the passed in value
+ </returns>
+	<remarks>
+ Created 25/03/2009 Nick Massarella
+ Updated 20/05/2009 - added groupid so can join and retrieve transient rates if any
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.venueInvoiceFind(System.String)">
+	<summary>
+ Function venueInvoiceFind
+ </summary>
+	<param name="pvenueinvoice"></param>
+	<returns>
+ A list of venue invoices that start with the passed in value
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.guestNameFind(System.String)">
+	<summary>
+ Function guestNameFind
+ </summary>
+	<param name="pguestname"></param>
+	<returns>
+ A list of guest names that start with the passed in value
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.guestPNRFind(System.String)">
+	<summary>
+ Function guestPNRFind
+ </summary>
+	<param name="pguestpnr"></param>
+	<returns>
+ A list of guest PNRs that start with the passed in value
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.save(System.Int32,System.String,System.String,System.String,System.Int32,System.Double,System.Double)">
+	<summary>
+ Function save
+ </summary>
+	<param name="pintref"></param>
+	<param name="pstrname"></param>
+	<param name="pstrconfermaname"></param>
+	<param name="pstrcode"></param>
+	<param name="pintuserid"></param>
+	<returns>
+ VenueAlternateID which will be greater than 0 if saved correctly
+ </returns>
+	<remarks>
+ Created 18/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsVenue.saveBossCode(System.Int32,System.String)">
+	<summary>
+ Function saveBossCode
+ </summary>
+	<param name="pintref"></param>
+	<param name="pstrbosscode"></param>
+	<returns>
+ Venue reference if saved correctly
+ </returns>
+	<remarks>
+ Created 31/03/2009 Nick Massarella
+ Saves venue Boss code to VenuesDB if the bosscode field was empty
+ </remarks>
+</member><member name="T:DatabaseObjects.clsVenue">
+	<summary>
+ Class clsSystemNYSUser
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Class retrieves currently logged in user details from their Windows login
+  to allow access to application and record against amendments of records
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.#ctor">
+	<summary>
+ Instantiate class
+ </summary>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.#ctor(System.Nullable{System.Int32})">
+	<summary>
+ Instantiate class with one set parameter
+ </summary>
+	<param name="pTransactionnumber"></param>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.makeFeedDataFromRowTrans(System.Data.IDataReader)">
+	<summary>
+ Function makeFeedDataFromRowTrans - creates a collection of FeedImportData records
+ </summary>
+	<param name="r"></param>
+	<returns>A FeedImportData record</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.getForEdit(System.Int32)">
+	<summary>
+ Function [get] - retrieves a FeedImportData record by its unique ID
+ </summary>
+	<param name="pDataid"></param>
+	<returns>A FeedImportData record</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.list(System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
+	<summary>
+ Function list - retrieves a list FeedImportData record by passed in values
+ </summary>
+	<param name="pintgroupid"></param>
+	<param name="pstrvenuename"></param>
+	<param name="pstrinvoiceno"></param>
+	<param name="pstrguestpnr"></param>
+	<param name="pstrguestname"></param>
+	<param name="pintstatus"></param>
+	<returns>A list of FeedImportData records</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.saveImport">
+	<summary>
+ Function save - saves FeedImportData record
+ </summary>
+	<returns>Saved FeedImportData record ID</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.delete(System.String)">
+	<summary>
+ Sub delete - deletes FeedImportData record by its unique ID
+ </summary>
+	<param name="pBookingIDs"></param>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.savevalue(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.Double,System.Double,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Function savevalue - saves updated by user transactionvalue 
+ </summary>
+	<param name="pintuserid"></param>
+	<param name="pintdataid"></param>
+	<param name="pstrvalue"></param>
+	<param name="pstrname"></param>
+	<param name="pintreference"></param>
+	<param name="pstrbosscode"></param>
+	<param name="pdblcommissionEX"></param>
+	<param name="pdblcommissionDD"></param>
+	<param name="pstrcostcode"></param>
+	<returns>The updated FeedImportData record unique ID</returns>
+	<remarks>
+ Created 17/03/2009 Nick Massarella
+ R15 CR - added optional pstrpocode
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.saveFail(System.Int32,System.String)">
+	<summary>
+ Function saveFail - adds the failure text to the failed record
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pstrfailreason"></param>
+	<returns>The updated FeedImportData record unique ID</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.saveStatus(System.Int32,System.Int32)">
+	<summary>
+ Function saveStatus - updates a FeedImportData record's status ID
+ </summary>
+	<param name="pintdataid"></param>
+	<param name="pintstatusid"></param>
+	<returns>The updated FeedImportData record unique ID</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.SetBookingIDtoExportStatus(System.Int32,System.Int32)">
+	<summary>
+ Function SetBookingIDtoExportStatus - updates FeedImportData records status ID grouped by transaction number
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pintstatusid"></param>
+	<returns>The updated FeedImportData transaction number</returns>
+	<remarks>Created 17/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.exportList(System.Int32,System.Int32)">
+	<summary>
+ Function exportList - retrieves a list of FeedImportData records at a set status
+ </summary>
+	<param name="pintgroupid"></param>
+	<param name="pintstatus"></param>
+	<returns>A list of distinct transaction numbers</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.exportCheck(System.Int32,System.Int32)">
+	<summary>
+ Function exportCheck - check that FeedImportData records grouped together 
+ by transaction number are at same status
+ </summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pintstatus"></param>
+	<returns>FeedImportData record ID if exists</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.exportListBossCodeCheck(System.Int32,System.Int32)">
+	<summary>
+ Function exportListBossCodeCheck - checks FeedImportData records ready for export have a 
+ valid Bosscode
+ </summary>
+	<param name="pintgroupid"></param>
+	<param name="pintstatus"></param>
+	<returns>All records where the Bosscode is invalid</returns>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedImportData.getBookingColumnValue(System.Int32,System.String)">
+	<summary>
+ Gets the column value for the specified column name, for the record selected
+ </summary>
+	<param name="pintRecordDataID"></param>
+	<param name="pstrColumnName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:DatabaseObjects.FeedImportData">
+	<summary>
+  Class FeedImportData - Accesses database to add/edit/list records in FeedAmendment table
+ </summary>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Boolean},System.DateTime,System.String)">
+	<summary>
+	</summary>
+	<param name="pInvoiceid"></param>
+	<param name="ptransactionnumber"></param>
+	<param name="pSystemnysuserid"></param>
+	<param name="pInvoiceexportednett"></param>
+	<param name="pInvoiceexportedvat"></param>
+	<param name="pInvoiceexportedgross"></param>
+	<param name="pInvoiceexport"></param>
+	<param name="pInvoiceexportdate"></param>
+	<param name="ptransactionfee"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="ptransactionnumber"></param>
+	<param name="pdataitemnett"></param>
+	<param name="pdataitemvat"></param>
+	<param name="pdataitemgross"></param>
+	<param name="ptransactionfee"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="pdataid"></param>
+	<param name="pcategoryname"></param>
+	<param name="pdataitemnett"></param>
+	<param name="pdataitemvat"></param>
+	<param name="pdataitemgross"></param>
+	<param name="ptransactionfee"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.String,System.Double,System.Double,System.Double)">
+	<summary>
+	</summary>
+	<param name="pbossid"></param>
+	<param name="pbosstotal"></param>
+	<param name="pbosscomNett"></param>
+	<param name="pbosscomVat"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="pdirectorate"></param>
+	<param name="pdepartment"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor(System.String)">
+	<summary>
+	</summary>
+	<param name="pCustomerCode"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.#ctor">
+	<summary>
+	</summary>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRow(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRowBoss(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRowBossAll(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRowTotals(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRowCima(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.makeFeedInvoiceFromRowCode(System.Data.IDataReader)">
+	<summary>
+	</summary>
+	<param name="r"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.getCima(System.Int32)">
+	<summary>
+	</summary>
+	<param name="pcimacode"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.getCode(System.String)">
+	<summary>
+	</summary>
+	<param name="pstrcustomername"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.get(System.Int32)">
+	<summary>
+	</summary>
+	<param name="pInvoiceid"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.bookingTotalValue(System.Int32,System.Int32)">
+	<summary>
+	</summary>
+	<param name="pinttransactionnumber"></param>
+	<param name="pintinvoiceid"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.list">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.FeedInvoiceBossSave(System.Int32,System.String,System.Double,System.Double,System.Double)">
+	<summary>
+	</summary>
+	<param name="pintinvoiceid"></param>
+	<param name="pstrbossid"></param>
+	<param name="pdbltotal"></param>
+	<param name="pdblcomnett"></param>
+	<param name="pdblcomvat"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.FeedInvoiceBossGet(System.Int32)">
+	<summary>
+	</summary>
+	<param name="pintTransactionnumber"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.FeedInvoiceBossGetAll(System.Int32)">
+	<summary>
+	</summary>
+	<param name="pintTransactionnumber"></param>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.save">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedInvoice.delete(System.Int32)">
+	<summary>
+	</summary>
+	<param name="pInvoiceid"></param>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="T:DatabaseObjects.FeedInvoice">
+	<summary>
+	</summary>
+	<remarks>Created 27/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.clsSystemNYSUser.makeSystemnysuserFromRow(System.Data.IDataReader)">
+	<summary>
+ Function makeSystemnysuserFromRow
+ </summary>
+	<param name="r"></param>
+	<returns>
+ Current logged in user details as a single record
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.clsSystemNYSUser.Populate(System.String)">
+	<summary>
+ Function Populate
+ </summary>
+	<param name="pSystemnysuserloginname"></param>
+	<returns>
+ All logged in user details
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="T:DatabaseObjects.clsSystemNYSUser">
+	<summary>
+ Class clsSystemNYSUser
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ Class retrieves currently logged in user details from their Windows login
+  to allow access to application and record against amendments of records
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.#ctor(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.DateTime})">
+	<summary>
+ Instantiate class with set parameters
+ </summary>
+	<param name="pAmendmentid"></param>
+	<param name="pSystemnysuserid"></param>
+	<param name="pDataid"></param>
+	<param name="pAmendmentdate"></param>
+	<remarks>Created 16/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.#ctor">
+	<summary>
+ Instantiate class
+ </summary>
+	<remarks>Created 16/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.makeFeedAmendmentFromRow(System.Data.IDataReader)">
+	<summary>
+ Function makeFeedAmendmentFromRow - creates a collection of FeedAmendment records
+ </summary>
+	<param name="r"></param>
+	<returns>
+ FeedAmendment table row as a single record
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.get(System.Int32)">
+	<summary>
+ Function [get] - retrieves a FeedAmendment record from the database
+ </summary>
+	<param name="pAmendmentid"></param>
+	<returns>
+ A single record from FeedAmendment table
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.list">
+	<summary>
+ Function list- retrieves a list of FeedAmendment records from the database
+ </summary>
+	<returns>
+ A list of records from FeedAmendment table
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedAmendment.save">
+	<summary>
+ Function save - saves a FeedAmendment record to the databse
+ </summary>
+	<returns>
+ Newly added or amended FeedAmendmentID
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="T:DatabaseObjects.FeedAmendment">
+	<summary>
+ Class FeedAmendment - Accesses database to add/edit/list records in FeedAmendment table
+ </summary>
+	<remarks>
+ Created 16/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.#ctor(System.Int32,System.Nullable{System.Int32},System.String,System.String)">
+	<summary>
+ Instantiate class with set parameters
+ </summary>
+	<param name="pCategoryid"></param>
+	<param name="pCategorycode"></param>
+	<param name="pCategoryname"></param>
+	<param name="pCategorybosscode"></param>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.#ctor">
+	<summary>
+ Instantiate class
+ </summary>
+	<remarks>Created 17/03/2009 Nick Massarella</remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.makeFeedCategoryFromRow(System.Data.IDataReader)">
+	<summary>
+ Function makeFeedCategoryFromRow - creates a FeedCategory list
+ </summary>
+	<param name="r"></param>
+	<returns>
+ FeedAmendment table row as a single record
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.get(System.Int32)">
+	<summary>
+Function [get]- retrieves a FeedCategory record from the database
+ </summary>
+	<param name="pCategoryid"></param>
+	<returns>
+ A single record from FeedCategory table
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.list">
+	<summary>
+ Function list- retrieves a list FeedCategory records from the database
+ </summary>
+	<returns>
+ A list of records from FeedAmendment table
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.save">
+	<summary>
+ Function save - saves a FeedCategory record to the database
+ </summary>
+	<returns>
+ Newly added or amended FeedAmendmentID
+ </returns>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.delete(System.Int32)">
+	<summary>
+ Sub delete - Deletes selected FeedCategory record from database 
+ </summary>
+	<param name="pCategoryid"></param>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="M:DatabaseObjects.FeedCategory.getCatergoryIDFromName(System.String)">
+	<summary>
+ Function getCatergoryIDFromName
+ </summary>
+	<param name="pCatergoryname"></param>
+	<returns>The unique ID for the passed in value</returns>
+	<remarks>Created 12/03/2009 Nick Massarella</remarks>
+</member><member name="T:DatabaseObjects.FeedCategory">
+	<summary>
+ Class FeedCategory - Accesses the database to add/edit/list records in FeedCategory table
+ </summary>
+	<remarks>
+ Created 12/03/2009 Nick Massarella
+ </remarks>
+</member><member name="P:DatabaseObjects.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DatabaseObjects.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DatabaseObjects.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

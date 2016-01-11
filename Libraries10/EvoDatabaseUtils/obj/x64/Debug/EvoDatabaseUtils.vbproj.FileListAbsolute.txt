@@ -1,0 +1,16 @@
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoDatabaseUtils.dll.config
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoDatabaseUtils.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoDatabaseUtils.pdb
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoDatabaseUtils.xml
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EntityFramework.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EntityFramework.SqlServer.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoUtilities.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\log4net.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoUtilities.pdb
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EvoUtilities.xml
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EntityFramework.xml
+E:\Development\Work\Libraries10\EvoDatabaseUtils\bin\Release\EntityFramework.SqlServer.xml
+E:\Development\Work\Libraries10\EvoDatabaseUtils\obj\x64\Debug\EvoDatabaseUtils.vbprojResolveAssemblyReference.cache
+E:\Development\Work\Libraries10\EvoDatabaseUtils\obj\x64\Debug\EvoDatabaseUtils.dll
+E:\Development\Work\Libraries10\EvoDatabaseUtils\obj\x64\Debug\EvoDatabaseUtils.xml
+E:\Development\Work\Libraries10\EvoDatabaseUtils\obj\x64\Debug\EvoDatabaseUtils.pdb

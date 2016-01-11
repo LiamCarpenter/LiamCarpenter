@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NYSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="AccomodationDetailsv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="ssoClientID" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="date" Mode="In" />
+          <Parameter Name="enddate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ComplaintsSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="groupidLocal" Type="int" Mode="In" />
+          <Parameter Name="startdateLocal" Type="date" Mode="In" />
+          <Parameter Name="enddateLocal" Type="date" Mode="In" />
+          <Parameter Name="clientLocal" Type="varchar" Mode="In" />
+          <Parameter Name="clientLocal2" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="ConferenceDetailsv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="ssoClientID" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="date" Mode="In" />
+          <Parameter Name="enddate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="ConferenceFeedbackDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="startdateLocal" Type="date" Mode="In" />
+          <Parameter Name="enddateLocal" Type="date" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="CorporateFeedbackDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="startdateLocal" Type="date" Mode="In" />
+          <Parameter Name="enddateLocal" Type="date" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Dashboardv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="GroupID" Type="int" Mode="In" />
+          <Parameter Name="StartDate" Type="date" Mode="In" />
+          <Parameter Name="EndDate" Type="date" Mode="In" />
+          <Parameter Name="ClientPrefix" Type="varchar" Mode="In" />
+          <Parameter Name="ClientPrefix2" Type="varchar" Mode="In" />
+          <Parameter Name="ClientName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="FlightDetailsv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="ssoClientID" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="date" Mode="In" />
+          <Parameter Name="enddate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="InternationalRailDetailsv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="ssoClientID" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="date" Mode="In" />
+          <Parameter Name="enddate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="RailBookingDetailsv2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="OnlineMI">
+          <Parameter Name="ssoClientID" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="date" Mode="In" />
+          <Parameter Name="enddate" Type="date" Mode="In" />
+        </Function>
+        <EntityContainer Name="NYSDBModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NYSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="AccomodationDetailsv2" ReturnType="Collection(NYSDBModel.AccomodationDetailsv2_Result)">
+            <Parameter Name="ssoClientID" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ComplaintsSummary" ReturnType="Collection(NYSDBModel.ComplaintsSummary_Result)">
+            <Parameter Name="groupidLocal" Mode="In" Type="Int32" />
+            <Parameter Name="startdateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="enddateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="clientLocal" Mode="In" Type="String" />
+            <Parameter Name="clientLocal2" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ConferenceDetailsv2" ReturnType="Collection(NYSDBModel.ConferenceDetailsv2_Result)">
+            <Parameter Name="ssoClientID" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="ConferenceFeedbackDetail" ReturnType="Collection(NYSDBModel.ConferenceFeedbackDetail_Result)">
+            <Parameter Name="startdateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="enddateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="CorporateFeedbackDetail" ReturnType="Collection(NYSDBModel.CorporateFeedbackDetail_Result)">
+            <Parameter Name="startdateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="enddateLocal" Mode="In" Type="DateTime" />
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Dashboardv2" ReturnType="Collection(NYSDBModel.Dashboardv2_Result)">
+            <Parameter Name="GroupID" Mode="In" Type="Int32" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ClientPrefix" Mode="In" Type="String" />
+            <Parameter Name="ClientPrefix2" Mode="In" Type="String" />
+            <Parameter Name="ClientName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="FlightDetailsv2" ReturnType="Collection(NYSDBModel.FlightDetailsv2_Result)">
+            <Parameter Name="ssoClientID" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InternationalRailDetailsv2" ReturnType="Collection(NYSDBModel.InternationalRailDetailsv2_Result)">
+            <Parameter Name="ssoClientID" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="RailBookingDetailsv2" ReturnType="Collection(NYSDBModel.RailBookingDetailsv2_Result)">
+            <Parameter Name="ssoClientID" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="AccomodationDetailsv2_Result">
+          <Property Type="String" Name="inm_no" Nullable="true" MaxLength="7" />
+          <Property Type="String" Name="inm_ldname" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="VenueName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Arrival" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Departure" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="FareIncVat" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FareExcVat" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="Decimal" Name="VAT" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="WorkOrder" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="DeptCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Booker" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="ComplaintsSummary_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ComplaintDetailAgainst" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="ComplaintDetailDate" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ComplaintDetailText" Nullable="true" />
+          <Property Type="String" Name="ComplaintDetailResolution" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ConferenceDetailsv2_Result">
+          <Property Type="Int64" Name="rk" Nullable="true" />
+          <Property Type="String" Name="inm_custid" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="booker" Nullable="true" MaxLength="61" />
+          <Property Type="String" Name="leadname" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="enquiryeventname" Nullable="true" MaxLength="300" />
+          <Property Type="DateTime" Name="bookingdate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="inm_start" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="days" Nullable="true" />
+          <Property Type="String" Name="HotelBooked" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="postcode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="dels" Nullable="true" />
+          <Property Type="String" Name="rcddr" Nullable="false" MaxLength="3" />
+          <Property Type="Decimal" Name="roomexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="roomincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="ddrexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="ddrincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="ehexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="ehincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="extraexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="extraincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="foodexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="foodincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="otherexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="otherincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="accexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="accincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="totalexvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="totalincvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="commission" Nullable="true" Precision="38" Scale="5" />
+          <Property Type="Decimal" Name="vat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="disbursmentvat" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="inm_no" Nullable="true" MaxLength="7" />
+          <Property Type="String" Name="enquiryNYSref" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="meetingname" Nullable="true" MaxLength="100" />
+          <Property Type="Double" Name="savingscancellationfees" Nullable="true" />
+          <Property Type="Double" Name="savingscomplaintrefund" Nullable="true" />
+          <Property Type="Double" Name="savingsinvoicesavings" Nullable="true" />
+          <Property Type="Double" Name="savingsroomhirevsddr" Nullable="true" />
+          <Property Type="Double" Name="savingschannelledtolowcostvenue" Nullable="true" />
+          <Property Type="Double" Name="savingsdynamicnegotiation" Nullable="true" />
+          <Property Type="Double" Name="savingslowcostequipment" Nullable="true" />
+          <Property Type="Double" Name="totalsavings" Nullable="true" />
+          <Property Type="Double" Name="savingslost" Nullable="true" />
+          <Property Type="Double" Name="savingsnottaken" Nullable="true" />
+          <Property Type="String" Name="savingscomments" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="CanxDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="systemparametervalue" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="canceldays" Nullable="true" />
+          <Property Type="DateTime" Name="inm_invdt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="inm_prod" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="ConferenceFeedbackDetail_Result">
+          <Property Type="String" Name="enquirynysref" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="Customer" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="nysfeedbackexists" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="feedbackdatereceived" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="initialenquiry" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="varietyofvenues" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="negotiationofrates" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="preeventadmin" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="nyscommunication" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="invoicingprocess" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="qualitychecking" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="nyscomments" Nullable="true" />
+          <Property Type="String" Name="venuefeedbackexists_" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="staffefficiency" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="staffhelpfulness" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="qualityoffood" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="varietyoffood" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="cleanlinessofrooms" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="technicalfacilities" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="overallimpression" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="woulduseagain" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="venuecomments" Nullable="true" />
+          <Property Type="String" Name="datereceived" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="CorporateFeedbackDetail_Result">
+          <Property Type="Int32" Name="corporatefeedbackid" Nullable="false" />
+          <Property Type="String" Name="ClientName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="contact" Nullable="true" />
+          <Property Type="String" Name="speedOfLogon" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="effectiveness" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="efficiency" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="availability" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ticketConfirmationsReceived" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="travelOptions" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="overallService" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="improvements" Nullable="true" />
+          <Property Type="String" Name="otherComments" Nullable="true" />
+          <Property Type="Boolean" Name="nysinvestigate" Nullable="true" />
+          <Property Type="String" Name="actiontaken" Nullable="true" />
+          <Property Type="String" Name="notes" Nullable="true" />
+          <Property Type="String" Name="datereceived" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="method" Nullable="false" MaxLength="7" />
+          <Property Type="String" Name="inm_no" Nullable="true" MaxLength="7" />
+          <Property Type="String" Name="inm_entry" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="inm_prod" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="inm_custid" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="Dashboardv2_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ClientName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Flights" Nullable="true" />
+          <Property Type="Int32" Name="IR" Nullable="true" />
+          <Property Type="Int32" Name="Rail" Nullable="true" />
+          <Property Type="Int32" Name="Accom" Nullable="true" />
+          <Property Type="Int32" Name="Complaints" Nullable="true" />
+          <Property Type="Int32" Name="Conference" Nullable="true" />
+          <Property Type="Int32" Name="ConferenceFeedback" Nullable="true" />
+          <Property Type="Int32" Name="CorporateFeedback" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="FlightDetailsv2_Result">
+          <Property Type="String" Name="rInvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rUKey" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="rPassengerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Supplier" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" />
+          <Property Type="String" Name="Route" Nullable="true" />
+          <Property Type="Decimal" Name="Fare" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Fee" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Tax" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Billed" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="String" Name="WorkOrder" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DeptCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Booker" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="InternationalRailDetailsv2_Result">
+          <Property Type="String" Name="rInvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rUKey" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="rPassengerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Supplier" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" />
+          <Property Type="String" Name="Route" Nullable="true" />
+          <Property Type="Decimal" Name="Fare" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Charge" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Discount" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Billed" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="String" Name="WorkOrder" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="DeptCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Booker" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="RailBookingDetailsv2_Result">
+          <Property Type="String" Name="rInvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="rUKey" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="rPassengerName" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" />
+          <Property Type="String" Name="Route" Nullable="true" />
+          <Property Type="Decimal" Name="Fare" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Charge" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Discount" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Billed" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="String" Name="WorkOrder" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="DeptCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Booker" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NYSDBModelStoreContainer" CdmEntityContainer="Entities" >
+          <FunctionImportMapping FunctionImportName="AccomodationDetailsv2" FunctionName="NYSDBModel.Store.AccomodationDetailsv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.AccomodationDetailsv2_Result">
+                <ScalarProperty Name="inm_no" ColumnName="inm_no" />
+                <ScalarProperty Name="inm_ldname" ColumnName="inm_ldname" />
+                <ScalarProperty Name="VenueName" ColumnName="VenueName" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+                <ScalarProperty Name="Departure" ColumnName="Departure" />
+                <ScalarProperty Name="FareIncVat" ColumnName="FareIncVat" />
+                <ScalarProperty Name="FareExcVat" ColumnName="FareExcVat" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="WorkOrder" ColumnName="WorkOrder" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="Booker" ColumnName="Booker" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ComplaintsSummary" FunctionName="NYSDBModel.Store.ComplaintsSummary">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.ComplaintsSummary_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ComplaintDetailAgainst" ColumnName="ComplaintDetailAgainst" />
+                <ScalarProperty Name="ComplaintDetailDate" ColumnName="ComplaintDetailDate" />
+                <ScalarProperty Name="ComplaintDetailText" ColumnName="ComplaintDetailText" />
+                <ScalarProperty Name="ComplaintDetailResolution" ColumnName="ComplaintDetailResolution" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ConferenceDetailsv2" FunctionName="NYSDBModel.Store.ConferenceDetailsv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.ConferenceDetailsv2_Result">
+                <ScalarProperty Name="rk" ColumnName="rk" />
+                <ScalarProperty Name="inm_custid" ColumnName="inm_custid" />
+                <ScalarProperty Name="booker" ColumnName="booker" />
+                <ScalarProperty Name="leadname" ColumnName="leadname" />
+                <ScalarProperty Name="enquiryeventname" ColumnName="enquiryeventname" />
+                <ScalarProperty Name="bookingdate" ColumnName="bookingdate" />
+                <ScalarProperty Name="inm_start" ColumnName="inm_start" />
+                <ScalarProperty Name="days" ColumnName="days" />
+                <ScalarProperty Name="HotelBooked" ColumnName="HotelBooked" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="postcode" ColumnName="postcode" />
+                <ScalarProperty Name="dels" ColumnName="dels" />
+                <ScalarProperty Name="rcddr" ColumnName="rcddr" />
+                <ScalarProperty Name="roomexvat" ColumnName="roomexvat" />
+                <ScalarProperty Name="roomincvat" ColumnName="roomincvat" />
+                <ScalarProperty Name="ddrexvat" ColumnName="ddrexvat" />
+                <ScalarProperty Name="ddrincvat" ColumnName="ddrincvat" />
+                <ScalarProperty Name="ehexvat" ColumnName="ehexvat" />
+                <ScalarProperty Name="ehincvat" ColumnName="ehincvat" />
+                <ScalarProperty Name="extraexvat" ColumnName="extraexvat" />
+                <ScalarProperty Name="extraincvat" ColumnName="extraincvat" />
+                <ScalarProperty Name="foodexvat" ColumnName="foodexvat" />
+                <ScalarProperty Name="foodincvat" ColumnName="foodincvat" />
+                <ScalarProperty Name="otherexvat" ColumnName="otherexvat" />
+                <ScalarProperty Name="otherincvat" ColumnName="otherincvat" />
+                <ScalarProperty Name="accexvat" ColumnName="accexvat" />
+                <ScalarProperty Name="accincvat" ColumnName="accincvat" />
+                <ScalarProperty Name="totalexvat" ColumnName="totalexvat" />
+                <ScalarProperty Name="totalincvat" ColumnName="totalincvat" />
+                <ScalarProperty Name="commission" ColumnName="commission" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="disbursmentvat" ColumnName="disbursmentvat" />
+                <ScalarProperty Name="inm_no" ColumnName="inm_no" />
+                <ScalarProperty Name="enquiryNYSref" ColumnName="enquiryNYSref" />
+                <ScalarProperty Name="meetingname" ColumnName="meetingname" />
+                <ScalarProperty Name="savingscancellationfees" ColumnName="savingscancellationfees" />
+                <ScalarProperty Name="savingscomplaintrefund" ColumnName="savingscomplaintrefund" />
+                <ScalarProperty Name="savingsinvoicesavings" ColumnName="savingsinvoicesavings" />
+                <ScalarProperty Name="savingsroomhirevsddr" ColumnName="savingsroomhirevsddr" />
+                <ScalarProperty Name="savingschannelledtolowcostvenue" ColumnName="savingschannelledtolowcostvenue" />
+                <ScalarProperty Name="savingsdynamicnegotiation" ColumnName="savingsdynamicnegotiation" />
+                <ScalarProperty Name="savingslowcostequipment" ColumnName="savingslowcostequipment" />
+                <ScalarProperty Name="totalsavings" ColumnName="totalsavings" />
+                <ScalarProperty Name="savingslost" ColumnName="savingslost" />
+                <ScalarProperty Name="savingsnottaken" ColumnName="savingsnottaken" />
+                <ScalarProperty Name="savingscomments" ColumnName="savingscomments" />
+                <ScalarProperty Name="CanxDate" ColumnName="CanxDate" />
+                <ScalarProperty Name="systemparametervalue" ColumnName="systemparametervalue" />
+                <ScalarProperty Name="canceldays" ColumnName="canceldays" />
+                <ScalarProperty Name="inm_invdt" ColumnName="inm_invdt" />
+                <ScalarProperty Name="inm_prod" ColumnName="inm_prod" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ConferenceFeedbackDetail" FunctionName="NYSDBModel.Store.ConferenceFeedbackDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.ConferenceFeedbackDetail_Result">
+                <ScalarProperty Name="enquirynysref" ColumnName="enquirynysref" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="nysfeedbackexists" ColumnName="nysfeedbackexists" />
+                <ScalarProperty Name="feedbackdatereceived" ColumnName="feedbackdatereceived" />
+                <ScalarProperty Name="initialenquiry" ColumnName="initialenquiry" />
+                <ScalarProperty Name="varietyofvenues" ColumnName="varietyofvenues" />
+                <ScalarProperty Name="negotiationofrates" ColumnName="negotiationofrates" />
+                <ScalarProperty Name="preeventadmin" ColumnName="preeventadmin" />
+                <ScalarProperty Name="nyscommunication" ColumnName="nyscommunication" />
+                <ScalarProperty Name="invoicingprocess" ColumnName="invoicingprocess" />
+                <ScalarProperty Name="qualitychecking" ColumnName="qualitychecking" />
+                <ScalarProperty Name="nyscomments" ColumnName="nyscomments" />
+                <ScalarProperty Name="venuefeedbackexists_" ColumnName="venuefeedbackexists?" />
+                <ScalarProperty Name="staffefficiency" ColumnName="staffefficiency" />
+                <ScalarProperty Name="staffhelpfulness" ColumnName="staffhelpfulness" />
+                <ScalarProperty Name="qualityoffood" ColumnName="qualityoffood" />
+                <ScalarProperty Name="varietyoffood" ColumnName="varietyoffood" />
+                <ScalarProperty Name="cleanlinessofrooms" ColumnName="cleanlinessofrooms" />
+                <ScalarProperty Name="technicalfacilities" ColumnName="technicalfacilities" />
+                <ScalarProperty Name="overallimpression" ColumnName="overallimpression" />
+                <ScalarProperty Name="woulduseagain" ColumnName="woulduseagain" />
+                <ScalarProperty Name="venuecomments" ColumnName="venuecomments" />
+                <ScalarProperty Name="datereceived" ColumnName="datereceived" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CorporateFeedbackDetail" FunctionName="NYSDBModel.Store.CorporateFeedbackDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.CorporateFeedbackDetail_Result">
+                <ScalarProperty Name="corporatefeedbackid" ColumnName="corporatefeedbackid" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="speedOfLogon" ColumnName="speedOfLogon" />
+                <ScalarProperty Name="effectiveness" ColumnName="effectiveness" />
+                <ScalarProperty Name="efficiency" ColumnName="efficiency" />
+                <ScalarProperty Name="availability" ColumnName="availability" />
+                <ScalarProperty Name="ticketConfirmationsReceived" ColumnName="ticketConfirmationsReceived" />
+                <ScalarProperty Name="travelOptions" ColumnName="travelOptions" />
+                <ScalarProperty Name="overallService" ColumnName="overallService" />
+                <ScalarProperty Name="improvements" ColumnName="improvements" />
+                <ScalarProperty Name="otherComments" ColumnName="otherComments" />
+                <ScalarProperty Name="nysinvestigate" ColumnName="nysinvestigate" />
+                <ScalarProperty Name="actiontaken" ColumnName="actiontaken" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="datereceived" ColumnName="datereceived" />
+                <ScalarProperty Name="method" ColumnName="method" />
+                <ScalarProperty Name="inm_no" ColumnName="inm_no" />
+                <ScalarProperty Name="inm_entry" ColumnName="inm_entry" />
+                <ScalarProperty Name="inm_prod" ColumnName="inm_prod" />
+                <ScalarProperty Name="inm_custid" ColumnName="inm_custid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Dashboardv2" FunctionName="NYSDBModel.Store.Dashboardv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.Dashboardv2_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="Flights" ColumnName="Flights" />
+                <ScalarProperty Name="IR" ColumnName="IR" />
+                <ScalarProperty Name="Rail" ColumnName="Rail" />
+                <ScalarProperty Name="Accom" ColumnName="Accom" />
+                <ScalarProperty Name="Complaints" ColumnName="Complaints" />
+                <ScalarProperty Name="Conference" ColumnName="Conference" />
+                <ScalarProperty Name="ConferenceFeedback" ColumnName="ConferenceFeedback" />
+                <ScalarProperty Name="CorporateFeedback" ColumnName="CorporateFeedback" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FlightDetailsv2" FunctionName="NYSDBModel.Store.FlightDetailsv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.FlightDetailsv2_Result">
+                <ScalarProperty Name="rInvoiceNo" ColumnName="rInvoiceNo" />
+                <ScalarProperty Name="rUKey" ColumnName="rUKey" />
+                <ScalarProperty Name="rPassengerName" ColumnName="rPassengerName" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Route" ColumnName="Route" />
+                <ScalarProperty Name="Fare" ColumnName="Fare" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Billed" ColumnName="Billed" />
+                <ScalarProperty Name="WorkOrder" ColumnName="WorkOrder" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="Booker" ColumnName="Booker" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="InternationalRailDetailsv2" FunctionName="NYSDBModel.Store.InternationalRailDetailsv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.InternationalRailDetailsv2_Result">
+                <ScalarProperty Name="rInvoiceNo" ColumnName="rInvoiceNo" />
+                <ScalarProperty Name="rUKey" ColumnName="rUKey" />
+                <ScalarProperty Name="rPassengerName" ColumnName="rPassengerName" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Route" ColumnName="Route" />
+                <ScalarProperty Name="Fare" ColumnName="Fare" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Billed" ColumnName="Billed" />
+                <ScalarProperty Name="WorkOrder" ColumnName="WorkOrder" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="Booker" ColumnName="Booker" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RailBookingDetailsv2" FunctionName="NYSDBModel.Store.RailBookingDetailsv2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NYSDBModel.RailBookingDetailsv2_Result">
+                <ScalarProperty Name="rInvoiceNo" ColumnName="rInvoiceNo" />
+                <ScalarProperty Name="rUKey" ColumnName="rUKey" />
+                <ScalarProperty Name="rPassengerName" ColumnName="rPassengerName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Route" ColumnName="Route" />
+                <ScalarProperty Name="Fare" ColumnName="Fare" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Billed" ColumnName="Billed" />
+                <ScalarProperty Name="WorkOrder" ColumnName="WorkOrder" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="Booker" ColumnName="Booker" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

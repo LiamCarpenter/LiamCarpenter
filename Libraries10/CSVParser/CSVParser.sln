@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CSVParser", "CSVParser.vbproj", "{EF690B6C-1FE1-4066-8727-3B46B5F8C600}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoUtilities", "..\EvoUtilities\EvoUtilities.vbproj", "{A9EC19B1-0065-4001-9C05-603F94AC0420}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nys-sql2012:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSVParser.vbproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\EvoUtilities\\EvoUtilities.vbproj
+		SccProjectName2 = ../EvoUtilities
+		SccLocalPath2 = ..\\EvoUtilities
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF690B6C-1FE1-4066-8727-3B46B5F8C600}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|x86.ActiveCfg = Debug|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|x86.Build.0 = Debug|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|x86.ActiveCfg = Release|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

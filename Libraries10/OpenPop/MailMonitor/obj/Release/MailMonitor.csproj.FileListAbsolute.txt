@@ -1,0 +1,54 @@
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\bin\Release\MailMonitor.exe
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\bin\Release\MIMEParser.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\bin\Release\OpenPOP.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\bin\Release\Interop.SHDocVw.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\bin\Release\AxInterop.SHDocVw.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\ResolveAssemblyReference.cache
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\Interop.SHDocVw.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\AxInterop.SHDocVw.dll
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.csproj.ResolveComReference.cache
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMail.resources
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMailBox.resources
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMails.resources
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMain.resources
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.frmSettings.resources
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.csproj.GenerateResource.Cache
+C:\Development\2008\LIBRARIES\OpenPop\MailMonitor\obj\Release\MailMonitor.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MailMonitor.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\Interop.SHDocVw.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\AxInterop.SHDocVw.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\Interop.SHDocVw.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\AxInterop.SHDocVw.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.csproj.ResolveComReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMail.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMailBox.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMails.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMain.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmSettings.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\ResGen.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\ResGen.write.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MailMonitor.exe.config
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\GenerateResource.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MailMonitor.exe.config
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MailMonitor.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\Interop.SHDocVw.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\bin\Release\AxInterop.SHDocVw.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\Interop.SHDocVw.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\AxInterop.SHDocVw.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.csproj.ResolveComReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMail.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMailBox.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMails.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmMain.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.frmSettings.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\GenerateResource.read.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MailMonitor\obj\Release\MailMonitor.exe

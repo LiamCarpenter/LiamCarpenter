@@ -1,0 +1,337 @@
+﻿
+
+1). runMainSelect
+
+    bossSuppliers
+
+	   From:   BOSSinvmain joined with BOSSsupplier
+
+	   runs Sproc bossSupplier_getID @invoiceref
+
+	   CREATE PROCEDURE [dbo].[bossSupplier_getID] 
+			@invoiceref varchar(50)
+		AS 
+		SET NOCOUNT ON;
+
+		select top 1 inm_suppid
+		from BOSSinvmain m
+		inner join BOSSsupplier s on s.sup_id = m.inm_suppid
+		where inm_no = @invoiceref
+		GO
+
+		Basically find out with Supplier the invoice belongs to
+		  
+		  
+		Work out a WHERE to date e.g.     WHERE (inm_dla = DATE() or inm_invdt = DATE() or inm_cdate = DATE())
+		     calculate date difference from Now
+
+			            Dim diff1 As Integer = DateDiff(DateInterval.Day, CDate(pstrstart), Now)
+                        Dim diff2 As Integer = DateDiff(DateInterval.Day, CDate(pstrend), Now)
+
+
+       Then with this table attempt to update NYSDB
+	      
+		<!>     selectInvMainRecords(dr.Item("inm_no").ToString)
+			   a). select existing records in NYSDB
+			   b). delete it from table
+			   c). from the DATASET from Boss create a BOSSinvmain structure and save it back to NYSDB copy
+
+--->
+
+
+                        <1>    If selectInvMainRecords(dr.Item("inm_no").ToString) Then
+                          <2>      If selectInvtotRecord(dr.Item("inm_no").ToString) Then
+                             <3>       If selectInvRouteRecords(dr.Item("inm_no").ToString) Then
+
+       
+	   Three tables are manipulated in NYSDB
+	   BOSSinvmain <1>
+	   BOSSinvtot  <2>
+	   BOSSinvroute <3>
+--->
+
+=== <1> ===
+			   Delete is BOSSinvmain_delete", "@InvmainID", pInvmainID, "@inm_no", pInm_no
+
+				CREATE procedure [dbo].[BOSSinvmain_delete](
+						@invmainID Int,
+						@inm_no VarChar(10)
+					) as
+
+					IF @invmainID =0
+						BEGIN
+							delete     from BOSSinvmain
+							where
+								inm_no = @inm_no
+						END
+					ELSE
+						BEGIN
+							delete     from BOSSinvmain
+							where
+								invmainID = @invmainID
+						END
+
+=== <2> ===
+ Dim dBaseConnection As New System.Data.OleDb.OleDbConnection(getConfig("BOSSConnectionString"))
+            Dim myDataSet As New DataSet()
+            Dim strLocalRef As String = ""
+
+            Try
+                Dim dBaseCommand As New System.Data.OleDb.OleDbCommand("SELECT tot_ukey,tot_custid,tot_invno,tot_change,tot_crsref,tot_br,tot_pono,tot_costc," & _
+                                                                                   "tot_type,tot_invdt,tot_duedt,tot_fare,tot_tax,tot_srvchg,tot_ourchg,tot_ourvat," & _
+                                                                                   "tot_supvat,tot_amtvat,tot_bilvat,tot_amount,tot_billed,tot_discnt,tot_ccamt," & _
+                                                                                   "tot_recvd,tot_dposit,tot_comm,tot_comdue,tot_vtoncm,tot_disput,tot_reason," & _
+                                                                                   "tot_noerrs,tot_note,tot_raddr,tot_rtelno,tot_paxs,tot_morcrs,tot_retail," & _
+                                                                                   "tot_bdm,tot_print,tot_errs,tot_atol,tot_atolx,tot_cref1,tot_cref2,tot_agcomm," & _
+                                                                                   "tot_agvat,tot_fileno,tot_nofee,tot_crstyp,tot_noprnt,tot_email,tot_curncy," & _
+                                                                                   "tot_roe,tot_cursym " & _
+                                                                                   "FROM Invtot where tot_invno = '" & pstrInvoiceRef & "'", dBaseConnection)
+
+                Dim myDataAdapter As New System.Data.OleDb.OleDbDataAdapter(dBaseCommand)
+                myDataAdapter.Fill(myDataSet, "Main")
+                dBaseConnection.Close()
+
+                Dim dtCreated As Date = BOSSinvmain.BOSSinvmainCdate(pstrInvoiceRef)
+
+                For Each dr As DataRow In myDataSet.Tables("Main").Rows
+                    'delete any existing record
+                    BOSSinvtot.delete(0, CStr(dr.Item("tot_invno")))
+                    'save tot record
+                    strLocalRef = dr.Item("tot_invno").ToString
+
+                    If dr.Item("tot_invno").ToString.Contains(Chr(187)) = False Then
+                        Dim oTot As New BOSSinvtot(0, CStr(dr.Item("tot_ukey")), CStr(dr.Item("tot_custid")), CStr(dr.Item("tot_invno")), CInt(dr.Item("tot_change")), CStr(dr.Item("tot_crsref")), _
+                                              CStr(dr.Item("tot_br")), CStr(dr.Item("tot_pono")), CStr(dr.Item("tot_costc")), CStr(dr.Item("tot_type")), CDate(dr.Item("tot_invdt")), CDate(dr.Item("tot_duedt")), _
+                                              CDec(dr.Item("tot_fare")), CDec(dr.Item("tot_tax")), CDec(dr.Item("tot_srvchg")), CDec(dr.Item("tot_ourchg")), CDec(dr.Item("tot_ourvat")), _
+                                              CDec(dr.Item("tot_supvat")), CDec(dr.Item("tot_amtvat")), CDec(dr.Item("tot_bilvat")), CDec(dr.Item("tot_amount")), CDec(dr.Item("tot_billed")), _
+                                              CDec(dr.Item("tot_discnt")), CDec(dr.Item("tot_ccamt")), CDec(dr.Item("tot_recvd")), CDec(dr.Item("tot_dposit")), CDec(dr.Item("tot_comm")), _
+                                              CDec(dr.Item("tot_comdue")), CDec(dr.Item("tot_vtoncm")), CBool(dr.Item("tot_disput")), CStr(dr.Item("tot_reason")), CBool(dr.Item("tot_noerrs")), _
+                                              CStr(dr.Item("tot_note")), CStr(dr.Item("tot_raddr")), CStr(dr.Item("tot_rtelno")), CInt(dr.Item("tot_paxs")), CStr(dr.Item("tot_morcrs")), _
+                                              CBool(dr.Item("tot_retail")), CStr(dr.Item("tot_bdm")), CInt(dr.Item("tot_print")), CBool(dr.Item("tot_errs")), CBool(dr.Item("tot_atol")), _
+                                              CStr(dr.Item("tot_atolx")), CStr(dr.Item("tot_cref1")), CStr(dr.Item("tot_cref2")), CDec(dr.Item("tot_agcomm")), CDec(dr.Item("tot_agvat")), _
+                                              CStr(dr.Item("tot_fileno")), CBool(dr.Item("tot_nofee")), CStr(dr.Item("tot_crstyp")), CBool(dr.Item("tot_noprnt")), CStr(dr.Item("tot_email")), _
+                                              CStr(dr.Item("tot_curncy")), CDec(dr.Item("tot_roe")), CStr(dr.Item("tot_cursym")), dtCreated)
+                        oTot.save()
+                    End If
+                Next
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Using
+
+
+
+=== <3> ===
+
+ Dim dBaseConnection As New System.Data.OleDb.OleDbConnection(getConfig("BOSSConnectionString"))
+            Dim myDataSet As New DataSet()
+
+            Try
+
+                Dim dBaseCommand As New System.Data.OleDb.OleDbCommand("SELECT inr_key, inr_invno, inr_prod, inr_bookno, inr_segno, inr_from, inr_to, inr_sttime," & _
+                                                                         "inr_start, inr_stterm, inr_etime, inr_end, inr_eterm, inr_flwncr, inr_flight, inr_class," & _
+                                                                         "inr_bpmt, inr_fbasis, inr_fare, inr_dest, inr_miles, inr_fee, inr_feevt, inr_feebas,inr_status " & _
+                                                                         "FROM invroute " & _
+                                                                         "WHERE inr_invno = '" & pstrInvoiceRef & "'", dBaseConnection)
+
+                Dim myDataAdapter As New System.Data.OleDb.OleDbDataAdapter(dBaseCommand)
+                myDataAdapter.Fill(myDataSet, "Main")
+                dBaseConnection.Close()
+
+                'first delete any records found in SQL
+                BOSSinvroute.delete(0, pstrInvoiceRef)
+
+                For Each dr As DataRow In myDataSet.Tables("Main").Rows
+                    'then save main record to SQL
+                    Dim oRt As New BOSSinvroute(0, CStr(dr.Item("inr_key")), CStr(dr.Item("inr_invno")), CStr(dr.Item("inr_prod")), CInt(dr.Item("inr_bookno")), CInt(dr.Item("inr_segno")), _
+                                                CStr(dr.Item("inr_from")), CStr(dr.Item("inr_to")), CStr(dr.Item("inr_sttime")), CDate(dr.Item("inr_start")), CStr(dr.Item("inr_stterm")), _
+                                                CStr(dr.Item("inr_etime")), CDate(dr.Item("inr_end")), CStr(dr.Item("inr_eterm")), CStr(dr.Item("inr_flwncr")), CStr(dr.Item("inr_flight")), _
+                                                CStr(dr.Item("inr_class")), CDec(dr.Item("inr_bpmt")), CStr(dr.Item("inr_fbasis")), CDec(dr.Item("inr_fare")), CBool(dr.Item("inr_dest")), _
+                                                CInt(dr.Item("inr_miles")), CDec(dr.Item("inr_fee")), CDec(dr.Item("inr_feevt")), CStr(dr.Item("inr_feebas")), CStr(dr.Item("inr_status")), _
+                                                Now)
+                    oRt.save()
+                Next
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Using
+=======================================   
+   oStatements = ClientStatement_autogenerated.getInvoices(ddClients.SelectedItem.Text)
+
+        runs sproc ClientStatement_getOutstandingInvoices,  pBossRef (pBossRef == ddl Selected Text
+
+		Having already updated    BOSSinvmain <1>	   BOSSinvtot  <2>	   BOSSinvroute <3>
+
+		CREATE PROCEDURE [dbo].[ClientStatement_getOutstandingInvoices] 
+			@BossId  as varchar(100) 	
+
+			--SA, latest version, based on Craig's code, but modified to reflect new changes!
+
+			AS SET NOCOUNT ON
+
+			declare @Terms as integer;
+			set @Terms = ISNULL((select top 1(cus_ptermv) from BOSScustomer where cus_id = @BossId or cus_grpid = @BossId),0);
+
+			 with Firstresults as(
+			select 
+				  (select top 1 m.inm_ldname from BOSSinvmain m 
+				   where m.inm_ino = t.tot_invno
+				   ) as 'leadname', 
+				   cd.csd_Reference as reference1,
+				   cd.csd_Reference2 as reference2,
+				   cd.csd_Reference3 as reference3,
+				   cd.csd_Reference4 as reference4,
+				   cd.csd_referenceTitle as reference1title,
+				   cd.csd_reference2Title as reference2title,
+				   cd.csd_reference3Title as reference3title,
+				   cd.csd_reference4Title as reference4title,
+				   @Terms as cus_ptermv,
+				   t.tot_billed, 
+				   t.tot_recvd,
+				   t.tot_invdt,          
+				   t.tot_invno,
+				   (select top 1 m.inm_prod from BOSSinvmain m 
+				   where m.inm_no = t.tot_invno) as product,
+       
+				   --extra columns for reportservice
+				   DATEDIFF(day,tot_invdt,getdate()) as DayDifference,
+				   isnull((select top 1(CoverInvoice) from ad_InvoiceList il where il.invoice = tot_invno),'') as CINo,
+					isnull(csd_OnConInvoice, 0) as IsOnConsolInv
+       
+				   from 
+				   BOSSinvtot t 
+				   inner join BOSScustomer c on t.tot_custid  = c.cus_id  
+				   inner join ClientStatementDetails cd on c.cus_grpid2 = cd.csd_BossRef
+				   where abs(t.tot_billed) > abs(t.tot_recvd)
+				   and 
+					(c.cus_id = @BossId or c.cus_grpid2 = @BossId)            
+				   ),
+				   fullresults as (
+				   select leadname as 'Lead Name',
+							  reference1,
+							  reference2,
+							  reference3,
+							  reference4,
+							  reference1title,
+							  reference2title,
+							  reference3title,
+							  reference4title,
+							  cus_ptermv as [Payment Terms],
+							  tot_billed as [Invoice Total],
+							  case when DayDifference <= cus_ptermv then
+									tot_billed - tot_recvd
+									else
+									0
+							  end as [Within Payment Terms],
+							  case when DayDifference >= (cus_ptermv + 1) and DayDifference <= (cus_ptermv * 2) then
+									tot_billed - tot_recvd
+									else
+									0 
+							  end as FirstOutstanding,
+							  case when DayDifference >= ((cus_ptermv * 2) + 1) and DayDifference <= (cus_ptermv * 3) then
+									tot_billed - tot_recvd
+									else
+									0
+							  end as SecondOutstanding,
+							  case when DayDifference >= ((cus_ptermv * 3) + 1) and DayDifference <= (cus_ptermv * 4) then
+									tot_billed - tot_recvd
+									else
+									0 
+							  end as ThirdOutstanding,
+							  case when DayDifference >= ((cus_ptermv * 4) + 1) and DayDifference <= (cus_ptermv * 5) then
+									tot_billed - tot_recvd
+									else
+									0 
+							  end as FourthOutstanding,
+							  case when DayDifference >= ((cus_ptermv * 5) + 1) then
+									tot_billed - tot_recvd
+									else
+									0
+							  end as FifthOutstanding,
+							  tot_billed - tot_recvd as [Amount Overdue],
+							  tot_invdt as [Invoice Date],
+							  tot_invno as [Invoice Number],
+							  CINo as [Consolidated Invoice Number (if applicable)]
+
+				   from firstresults
+       
+				   --only when not on consol invoices, or where the consol invoice number is present or consol number is empty but it's a hotel booking
+				   where (IsOnConsolInv = 0 or (IsOnConsolInv = 1 and CINo <> '') or (IsOnConsolInv = 1 and CINo = '' and product = 'H'))
+				   )
+       
+				   --put the results into a temp table
+				   select * INTO #TempClientStatTable from fullresults;
+       
+				   --now loop through the table and update the reference column value
+				   declare @CurrentInvoice varchar(15);
+				   declare @Reference1 varchar(max);
+				   declare @Reference2 varchar(max);
+				   declare @Reference3 varchar(max);
+				   declare @Reference4 varchar(max);
+				   declare statementCursor CURSOR FOR
+				   Select [Invoice Number], reference1, reference2, reference3, reference4 from #TempClientStatTable
+       
+				   open statementCursor
+       
+				   fetch next from statementCursor
+						into @CurrentInvoice, @Reference1, @Reference2, @Reference3, @Reference4
+
+				   while @@fetch_status = 0
+						begin
+            
+							  declare @sql varchar(max);
+                  
+							  --update reference1 if provided
+							  if @Reference1 <> ''
+							  begin
+									set @sql = 'update ttbl set ttbl.reference1 = bit.' + @Reference1 + ' from #TempClientStatTable ttbl inner join bossInvTot bit on ttbl.[Invoice Number] = bit.tot_invno where ttbl.[Invoice Number] = ''' + @CurrentInvoice + ''''
+									execute (@sql);
+							  end
+
+							  --update reference2 if provided
+							  if @Reference2 <> ''
+							  begin
+									set @sql = 'update ttbl set ttbl.reference2 = bit.' + @Reference2 + ' from #TempClientStatTable ttbl inner join bossInvTot bit on ttbl.[Invoice Number] = bit.tot_invno where ttbl.[Invoice Number] = ''' + @CurrentInvoice + ''''
+									execute (@sql);
+							  end
+                  
+							  --update reference3 if provided
+							  if @Reference3 <> ''
+							  begin
+									set @sql = 'update ttbl set ttbl.reference3 = bit.' + @Reference3 + ' from #TempClientStatTable ttbl inner join bossInvTot bit on ttbl.[Invoice Number] = bit.tot_invno where ttbl.[Invoice Number] = ''' + @CurrentInvoice + ''''
+									execute (@sql);
+							  end
+                  
+							  --update reference4 if provided
+							  if @Reference4 <> ''
+							  begin
+									set @sql = 'update ttbl set ttbl.reference4 = bit.' + @Reference4 + ' from #TempClientStatTable ttbl inner join bossInvTot bit on ttbl.[Invoice Number] = bit.tot_invno where ttbl.[Invoice Number] = ''' + @CurrentInvoice + ''''
+									execute (@sql);
+							  end
+
+							  --move on to the next one
+							  fetch next from statementCursor
+							  into @CurrentInvoice, @Reference1, @Reference2, @Reference3, @Reference4;
+						end
+       
+				   --close the cursor
+				   CLOSE statementCursor;
+					 DEALLOCATE statementCursor;
+       
+				   --run the select to return values
+				   Select * from #TempClientStatTable       
+				   order by [Invoice Date];
+       
+				   --finally get rid of the table
+				   drop table #TempClientStatTable;	
+	
+	
+
+The results of this table are in oStatements which is then passed to:
+
+    createStatementCSV or ASinServiceClientStatementCreateFile
+
+	which opens Excel fills with oStatements
+

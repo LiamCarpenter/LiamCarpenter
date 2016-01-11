@@ -1,0 +1,64 @@
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\BossData.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\BossData.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\BossData.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoUtilities.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\log4net.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoUtilities.pdb
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\bin\Debug\EvoUtilities.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.vbprojResolveAssemblyReference.cache
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.Resources.resources
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.vbproj.GenerateResource.Cache
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.dll
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.xml
+E:\Development\VS10\NYS_APPS10\BOSS_APP\BossData\obj\Debug\BossData.pdb
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\BossData.dll
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\BossData.pdb
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\BossData.xml
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.dll
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoUtilities.dll
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\log4net.dll
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.pdb
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoDatabaseUtils.xml
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoUtilities.pdb
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\bin\Debug\EvoUtilities.xml
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.vbprojResolveAssemblyReference.cache
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.Resources.resources
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.vbproj.GenerateResource.Cache
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.dll
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.xml
+C:\Users\ashleymarron\projects\BOSS_APP\BossData\obj\Debug\BossData.pdb
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\BossData.dll
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\BossData.pdb
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\BossData.xml
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoDatabaseUtils.dll
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoUtilities.dll
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\log4net.dll
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoDatabaseUtils.pdb
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoDatabaseUtils.xml
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoUtilities.pdb
+C:\Development\TFS Projects\BossApp\BossData\bin\Debug\EvoUtilities.xml
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.vbprojResolveAssemblyReference.cache
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.Resources.resources
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.vbproj.GenerateResource.Cache
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.dll
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.xml
+C:\Development\TFS Projects\BossApp\BossData\obj\Debug\BossData.pdb
+E:\Development\Work\BossApp\BossData\bin\Debug\BossData.dll
+E:\Development\Work\BossApp\BossData\bin\Debug\BossData.pdb
+E:\Development\Work\BossApp\BossData\bin\Debug\BossData.xml
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoDatabaseUtils.dll
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoUtilities.dll
+E:\Development\Work\BossApp\BossData\bin\Debug\log4net.dll
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoDatabaseUtils.pdb
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoDatabaseUtils.xml
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoUtilities.pdb
+E:\Development\Work\BossApp\BossData\bin\Debug\EvoUtilities.xml
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.vbprojResolveAssemblyReference.cache
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.Resources.resources
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.vbproj.GenerateResource.Cache
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.dll
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.xml
+E:\Development\Work\BossApp\BossData\obj\Debug\BossData.pdb

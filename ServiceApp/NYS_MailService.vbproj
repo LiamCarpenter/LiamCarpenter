@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{143D113C-FDF8-483B-A619-6032E47DE317}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>NYS_MailService.srvMail</StartupObject>
+    <RootNamespace>NYS_MailService</RootNamespace>
+    <AssemblyName>NYS_MailService</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NYS_MailService.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NYS_MailService.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>NYS_MailService.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>NYS_MailService.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.ADODB, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CDO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Interop.CDO.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NYS\Bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Simplify.Xml, Version=1.0.1.0, Culture=neutral, PublicKeyToken=bc9f823c6827798e, processorArchitecture=MSIL">
+      <HintPath>packages\Simplify.Xml.1.0.1\lib\net40\Simplify.Xml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="BackupManager" />
+    <Import Include="Microsoft.Office" />
+    <Import Include="Microsoft.Office.Interop.Excel" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOSSinvtotEF.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiesiGLIOCodes.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deserialize.vb" />
+    <Compile Include="EvolviDataEF.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Handoff.vb" />
+    <Compile Include="InterceptorCharges.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="interceptorClients.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlNYSDB.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlNYSDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlNYSDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlNYSDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="mdlNYSDB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.vb" />
+    <Compile Include="EventLogger.vb" />
+    <Compile Include="SendQueuedEmails.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.vb">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Serialize.vb" />
+    <Compile Include="SftpClient.vb" />
+    <Compile Include="srvMail.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="srvMail.Designer.vb">
+      <DependentUpon>srvMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SSODBObjects\ClsNys.vb" />
+    <Compile Include="SSODBObjects\SsoClient_autogenerated.vb" />
+    <Compile Include="SSODBObjects\SsoCodeList.vb" />
+    <Compile Include="SSODBObjects\SsoUser_autogenerated.vb" />
+    <Compile Include="TravellerProfiles.vb">
+      <DependentUpon>mdlNYSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsefulItems\clsBoss.vb" />
+    <Compile Include="UsefulItems\clslogger.vb" />
+    <Compile Include="UsefulItems\ConfigUtils.vb" />
+    <Compile Include="Web References\com.nyscorporate.onlineclient\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="srvMail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>srvMail.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="mdlNYSDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>mdlNYSDB.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="mdlNYSDB.edmx.diagram">
+      <DependentUpon>mdlNYSDB.edmx</DependentUpon>
+    </None>
+    <None Include="Non Deployment\LIVE_Configs\user.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Non Deployment\LIVE_Configs\web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="log4net.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="mail_install.bat" />
+    <None Include="mail_uninstall.bat" />
+    <None Include="packages.config" />
+    <None Include="Web References\com.nyscorporate.onlineclient\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.nyscorporate.onlineclient\srvemail.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BossApp\BossData\BossData.vbproj">
+      <Project>{DD714880-3FFB-4D08-BEEB-1324439FB66E}</Project>
+      <Name>BossData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CUBIT\Cubit\DatabaseObjects\DatabaseObjects.vbproj">
+      <Project>{18fa62ec-1d63-44e4-9577-a5292c9b13cd}</Project>
+      <Name>DatabaseObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries10\EvoDatabaseUtils\EvoDatabaseUtils.vbproj">
+      <Project>{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}</Project>
+      <Name>EvoDatabaseUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries10\EvoUtilities\EvoUtilities.vbproj">
+      <Project>{A9EC19B1-0065-4001-9C05-603F94AC0420}</Project>
+      <Name>EvoUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LIBRARIES10\Renci.SshNet\Renci.SshNet.csproj">
+      <Project>{2f5f8c90-0bd1-424f-997c-7bc6280919d1}</Project>
+      <Name>Renci.SshNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MevisApp\NysDat\NysDat.vbproj">
+      <Project>{E549FE24-DF7C-4391-8262-145EC6513190}</Project>
+      <Name>NysDat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlls\Interop.ADODB.dll" />
+    <Content Include="dlls\Interop.CDO.dll" />
+    <Content Include="dlls\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="mdlNYSDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mdlNYSDB.edmx</DependentUpon>
+      <LastGenOutput>mdlNYSDB.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="mdlNYSDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mdlNYSDB.edmx</DependentUpon>
+      <LastGenOutput>mdlNYSDB.vb</LastGenOutput>
+    </Content>
+    <Content Include="Non Deployment\Logs Extracts\TrackingMay21_2014_Issues.txt" />
+    <None Include="Web References\com.nyscorporate.onlineclient\srvemail.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://onlineclient.nyscorporate.com/sso/srvemail.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.nyscorporate.onlineclient\</RelPath>
+      <UpdateFromURL>https://onlineclient.nyscorporate.com/sso/srvemail.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NYS_MailService_com_nyscorporate_onlineclient_srvEmail</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VSTOEE100">
+      <Guid>{AAB9C2AA-6036-4AE1-A41C-A40AB7F39520}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Non Deployment\TSQL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://onlineclient.nyscorporate.com/sso/srvemail.asmx?wsdl" docRef="https://onlineclient.nyscorporate.com/sso/srvemail.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://onlineclient.nyscorporate.com/sso/srvemail.asmx" xmlns:q1="http://tempuri.org/" binding="q1:srvEmailSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://onlineclient.nyscorporate.com/sso/srvemail.asmx" xmlns:q2="http://tempuri.org/" binding="q2:srvEmailSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

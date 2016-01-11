@@ -1,0 +1,496 @@
+﻿body {
+}
+
+.list2 {
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	color:#404040;
+	overflow:scroll;
+	height:200px;
+	border: 1px solid #FF3300;
+	list-style-type: none;
+	margin: 0px;
+	background-color: #FFF;
+	text-align: left;
+	z-index:555;
+}
+
+	ul.list2 li {
+		padding: 0px 0px;
+	}
+
+	.listitem2 {
+		color: #404040;
+		z-index:555;
+	}
+
+	.hoverlistitem2 {
+		background-color: #FF3300;
+		cursor:pointer;
+		font-weight:600;
+		font-size:10pt;
+		z-index:555;
+	}
+
+.list3 {
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	color:#404040;
+	overflow:scroll;
+	height:100px;
+	border: 1px solid #FF3300;
+	list-style-type: none;
+	margin: 0px;
+	background-color: #FFF;
+	text-align: left;
+	z-index:555;
+}
+
+	ul.list3 li {
+		padding: 0px 0px 0px 10px;
+	}
+
+	.listitem3 {
+		color: #404040;
+		z-index:555;
+	}
+
+	.hoverlistitem3 {
+		background-color: #333333;
+		/*#FF3300*/
+		cursor:pointer;
+		font-weight:600;
+		font-size:10pt;
+		z-index:555;
+		color:#FFFFFF;
+	}
+
+.nysauto{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	color:#404040;
+	overflow:scroll;
+	height:200px;
+	}
+
+.gridHead	{	
+		background-color:#fd977e;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:7pt;
+		font-weight:bold;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		height:15px;
+		color:#171717;
+	}	
+.gridItem	{
+		background-color:LavenderBlush;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:7pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridAlternate	{
+		background-color:Lavender;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:7pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+	
+.gridREFUND	{
+		background-color:LightSlateGray;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:white;
+	}
+.gridBookingOnly {
+		background-color:RoyalBlue;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:white;
+	}
+.gridCurrency	{
+		background-color:MediumAquaMarine ;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridZero	{
+		background-color:Khaki;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:300;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridAlternateTwo	{
+		background-color:#fcb8a7;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:7pt;
+		font-weight:300;
+		font-style:italic;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.gridSelected	{
+		background-color:#FF6699;
+		font-family:Calibri, Arial, Helvetica, sans-serif;
+		font-size:7pt;
+		font-weight:bold;
+		font-style:normal;
+		text-decoration:none;
+		word-spacing:normal;
+		letter-spacing:normal;
+		text-transform:none;
+		color:#171717;
+	}
+.imageButton 
+{
+	width:79px;
+}
+.nyspanelwhite	{
+	background-color:white;
+	border-color:#FF3300;
+	border-style:solid;
+	border-width:2px;
+	}
+	
+.nyspanels	{
+	background-color:White;
+	border-color:#FF3300;
+	border-style:solid;
+	border-width:2px;
+	}
+
+.nysitaliclabel{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:italic;
+	text-align:left;
+	color:#B0B0B0;
+	}
+.nysitaliclabelred{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:italic;
+	text-align:left;
+	color:red;
+	}
+
+.nyslabel{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:left;
+	color:#404040;
+	}
+.nysheader{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:11pt;
+	font-weight:600;
+	font-style:normal;
+	text-decoration:underline;
+	text-align:left;
+	color:#404040;
+	}
+.nyslink{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:left;
+	}
+.nyslabelcentre{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:center;
+	color:#404040;
+	}
+
+.nysdropdown	{	
+	border: 1px solid Silver;
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	height:20px;
+	}
+.nysList	{	
+	border: 1px solid Silver;
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:#404040;
+	}
+.nystextbox	{	
+	border: 1px solid Silver;
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:#404040;
+	}
+	
+.nyscheckbox	{	
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:7pt;
+	font-weight:300;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	border-color:Silver;
+	background-color:White;
+	BORDER-BOTTOM:Silver 1px solid;	
+	BORDER-LEFT:Silver 1px solid;	
+	BORDER-RIGHT:Silver 1px solid;	
+	BORDER-TOP:Silver 1px solid;	
+	color:#404040 ;
+	height:20px;
+	width:20px;
+	}
+	
+.nystextboxred	{	
+	border: 1px solid red;
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-decoration:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	text-transform:none;
+	background-color:White;
+	color:#404040;
+	}
+.nyslink{
+	font-family:Calibri, Arial, Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight:500;
+	font-style:normal;
+	text-align:left;
+	color:Blue;
+	background-color:Transparent;
+	border-style:none;
+	cursor:pointer;
+	}
+	
+/* MonoSoftware.Web.Dialogs */
+	BODY {background:white;}
+	TD {font:10px Verdana, Arial, Helvetica, sans-serif;}
+	BUTTON, .Button {width:70px;height:23px;font:7pt Verdana, Arial, Helvetica, sans-serif;}
+	
+	.Error{font:10px Verdana, Arial, Helvetica, sans-serif; color:red;}
+	.InputBox {font:10px Verdana, Arial, Helvetica, sans-serif; width:100%}	
+	.bodyclass  { color: black; font-size: 9pt; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; text-decoration: none }
+.resultclass  { color: black; font-size: 10px; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif }
+.overresultclass  { color:Maroon; 
+				font-size: 9pt; 
+				font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+				font-weight :bold;}
+
+
+
+	#calendarDiv{
+	position:absolute;
+	width:205px;
+	border:1px solid #317082;
+	padding:1px;
+	background-color: #FFF;
+	font-family:arial;
+	font-size:10px;
+	padding-bottom:20px;
+	visibility:hidden;
+	z-index :5000;
+}
+#calendarDiv span,#calendarDiv img{
+	float:left;
+}
+#calendarDiv .selectBox,#calendarDiv .selectBoxOver{
+	
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+
+#calendarDiv .selectBoxTime,#calendarDiv .selectBoxTimeOver{	
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+
+#calendarDiv td{
+	padding:3px;
+	margin:0px;
+	font-size:10px;
+}
+
+#calendarDiv .selectBox{
+	border:1px solid #E2EBED;		
+	color: #E2EBED;
+	position:relative;
+}
+#calendarDiv .selectBoxOver{
+	border:1px solid #FFF;
+	background-color: #317082;
+	color: #FFF;
+	position:relative;
+}
+#calendarDiv .selectBoxTime{
+	border:1px solid #317082;		
+	color: #317082;
+	position:relative;
+}
+#calendarDiv .selectBoxTimeOver{
+	border:1px solid #216072;	
+	color: #216072;
+	position:relative;
+}
+
+#calendarDiv .topBar{
+	height:16px;
+	padding:2px;
+	background-color: #317082;
+
+
+}
+#calendarDiv .activeDay{	/* Active day in the calendar */
+	color:#FF0000;
+}
+#calendarDiv .todaysDate{
+	height:17px;
+	line-height:17px;
+	padding:2px;
+	background-color: #E2EBED;
+	text-align:center;
+	position:absolute;
+	bottom:0px;
+	width:201px;
+}
+#calendarDiv .todaysDate div{
+	float:left;
+}
+	
+#calendarDiv .timeBar{
+	height:17px;
+	line-height:17px;
+	background-color: #E2EBED;
+	width:72px;
+	color:#FFF;
+	position:absolute;
+	right:0px;
+}
+
+#calendarDiv .timeBar div{
+	float:left;
+	margin-right:1px;
+}
+
+
+#calendarDiv .monthYearPicker{
+	background-color: #E2EBED;
+	border:1px solid #AAAAAA;
+	position:absolute;
+	color: #317082;
+	left:0px;
+	top:15px;
+	z-index:1000;
+	display:none;
+
+}
+#calendarDiv #monthSelect{
+	width:70px;
+}
+#calendarDiv .monthYearPicker div{
+	float:none;
+	clear:both;	
+	padding:1px;
+	margin:1px;	
+	cursor:pointer;
+}
+#calendarDiv .monthYearActive{
+	background-color:#317082;
+	color: #E2EBED;
+}
+
+#calendarDiv td{
+	text-align:right;
+	cursor:pointer;
+}
+
+#calendarDiv .topBar img{
+	cursor:pointer;
+}
+#calendarDiv .topBar div{
+	float:left;
+	margin-right:1px;
+}

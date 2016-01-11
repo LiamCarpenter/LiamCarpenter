@@ -1,0 +1,99 @@
+﻿New AM Sprocs
+
+ 1) 4 AM sprocs to live - these basically deal with detail 
+
+       FeedData_exportlistAM   --- selection 
+	  FeedImportData_saveExcludeFromExportAM ---- update based on dataid rather than transaction number
+	  FeedInvoice_saveAM  --- from insert/update  and retrun invoiceid for use in prorgam
+	  SetBookingIDtoExportStatusAM  --- set per dataid rather than transaction number
+
+
+ 2). Checks ---  AvoidCheck2 needs a setting in the config file
+
+ To fine tune the exclude to transaction number plus dataid:
+
+
+           <add key="AvoidCheck2" value="true"/>  --- basically check that same name is on more than one room
+
+==========================================================
+
+
+			FeedData_exportcheck
+
+CREATE PROCEDURE [dbo].[FeedData_exportcheck] @transactionnumber Int,
+	@statusid Int
+as
+SET NOCOUNT ON;
+declare @pn varchar(100)
+set @pn = (select top 1 passengername 
+						from FeedImportData 
+						where transactionnumber = @transactionnumber
+						and statusid = @statusid)
+    select top 1 transactionnumber
+    from FeedImportData
+	where transactionnumber = @transactionnumber
+	and passengername = @pn
+	and statusid <> @statusid
+	and statusid <> 1004
+	and statusid <> 1005;
+
+GO
+
+----------------------------------------------
+2,4 and 5
+
+
+
+   ElseIf pstrGroupName.ToLower.Contains("lv=") Then
+                Dim blnError As Boolean = False
+                ccs = FeedImportData.CostCodeCheck(pintgroupid, pintstatus, 2)
+
+                Dim blnProjError As Boolean = False
+                Dim strProjErrors As String = ""
+                For Each cc As FeedImportData In ccs
+                    If cc.Expression.Length = 7 Then
+                        Try
+                            Dim inttest As Integer = CInt(cc.Expression)
+                        Catch ex As Exception
+                            strRet = strRet & cc.Transactionnumber & ";"
+                            'R2.11 SA 
+                            plstErrors.Add(New clsExportError(CInt(cc.Transactionnumber), 4))
+                        End Try
+                    ElseIf cc.Expression.Length = 8 Then
+                        Dim strEmployeeNumber As String = cc.Expression
+                        If strEmployeeNumber.ToLower.StartsWith("m") Then
+                            strEmployeeNumber = strEmployeeNumber.ToLower.Replace("m", "")
+                            Try
+                                Dim inttest As Integer = CInt(strEmployeeNumber)
+                            Catch ex As Exception
+                                strRet = strRet & cc.Transactionnumber & ";"
+                                'R2.11 SA 
+                                plstErrors.Add(New clsExportError(CInt(cc.Transactionnumber), 4))
+                            End Try
+                        Else
+                            strRet = strRet & cc.Transactionnumber & ";"
+                            'R2.11 SA 
+                            plstErrors.Add(New clsExportError(CInt(cc.Transactionnumber), 4))
+                        End If
+                    Else
+                        strRet = strRet & cc.Transactionnumber & ";"
+                        'R2.11 SA 
+                        plstErrors.Add(New clsExportError(CInt(cc.Transactionnumber), 4))
+                    End If
+
+                    'R2.5 NM
+                    'R2.10 CR - note: LV ACKCode in CostCentre field, only if record is in database do we check for a project code
+                    ' if record is NOT in database then just let it through - BOSS checks ACK Code is a valid one!
+                    If clsCode.checkLVCode(cc.Costcode) = 1 Then
+                        If cc.Po.ToUpper.Trim = "" Or cc.Po.ToUpper.Trim = "." Or cc.Po.ToUpper.Trim = "N/A" Or cc.Po.ToUpper.Trim = "NONE" Then
+                            strProjErrors = strProjErrors & cc.Transactionnumber & ";"
+                            'R2.11 SA 
+                            plstErrors.Add(New clsExportError(CInt(cc.Transactionnumber), 5))
+                        End If
+                    End If
+                Next
+
+
+Case 2 strErrorMessage = "The following Transactions have differing statuses:" & vbCrLf
+Case 4 strErrorMessage = "The following Transactions have incorrectly formatted codes:" & vbCrLf
+Case 5 strErrorMessage = "The following Transactions have invalid project codes:" & vbCrLf

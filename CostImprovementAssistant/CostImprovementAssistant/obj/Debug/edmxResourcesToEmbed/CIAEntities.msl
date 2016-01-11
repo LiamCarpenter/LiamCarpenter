@@ -321,5 +321,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SchemeBudgetTypes">
+      <EntityTypeMapping TypeName="ciaModel.SchemeBudgetTypes">
+        <MappingFragment StoreEntitySet="SchemeBudgetTypes">
+          <ScalarProperty Name="Trustcode" ColumnName="Trustcode" />
+          <ScalarProperty Name="BudgetTypeName" ColumnName="BudgetTypeName" />
+          <ScalarProperty Name="SchemeId" ColumnName="SchemeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trusts">
+      <EntityTypeMapping TypeName="ciaModel.Trusts">
+        <MappingFragment StoreEntitySet="Trusts">
+          <ScalarProperty Name="TrustName" ColumnName="TrustName" />
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

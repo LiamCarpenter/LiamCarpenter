@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Microsoft Visual Studio 2010 Web Deployment Project 
+  http://go.microsoft.com/fwlink/?LinkID=104956
+
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14F8002E-6602-4358-85D5-8751F9061ACC}</ProjectGuid>
+    <SourceWebPhysicalPath>..\Cubit</SourceWebPhysicalPath>
+    <SourceWebProject>{73AACE73-2129-4844-B0B7-D52E0F512889}|Cubit\Cubit.vbproj</SourceWebProject>
+    <SourceWebVirtualPath>/Cubit.vbproj</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\Debug</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Cubit.vbproj_deploy</SingleAssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\Release</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Cubit.vbproj_deploy</SingleAssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\*.txt" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\*.sln" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\*.suo" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\*.vbproj" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\*.vbproj.user" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\_*\**\*.*" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\.svn\**\*.*" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\log4net.log" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\Old_App_WebReferences\" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\BOSS_FILES_EXPORT\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\BOSS_FILES_IMPORT\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\downloadedFiles\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\downloadedFilesBooked\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\uploadedFiles\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\userdocs\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\VenueExport\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\VSMacros80\**" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\user.config" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\log4net.config" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\obj\**\*.*" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\logs\**\*.*" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\logs" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\dlls\**\*.*" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\bin\*.pdb" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\bin\*.xml" />
+    <ExcludeFromBuild Include="$(SourceWebPhysicalPath)\bin\*.tmp" />
+    <ProjectReference Include="..\Cubit\Cubit.vbproj">
+      <Project>{73AACE73-2129-4844-B0B7-D52E0F512889}</Project>
+      <Name>Cubit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WebDeployment\v10.0\Microsoft.WebDeployment.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.WebDeployment.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="BeforeMerge">
+  </Target>
+  <Target Name="AfterMerge">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

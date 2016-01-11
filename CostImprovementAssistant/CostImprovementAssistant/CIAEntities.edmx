@@ -268,6 +268,18 @@
           </Key>
           <Property Name="QualityIndicatorsTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="SchemeBudgetTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SchemeId" />
+            <PropertyRef Name="BudgetTypeName" />
+            <PropertyRef Name="Trustcode" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="SchemeId" Type="int" Nullable="false" />
+          <Property Name="BudgetTypeName" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="Trustcode" Type="nchar" MaxLength="45" Nullable="false" />
+        </EntityType>
         <EntityType Name="SchemeKpia">
           <Key>
             <PropertyRef Name="SchemeID" />
@@ -323,7 +335,7 @@
           <Property Name="Spare1" Type="bit" />
           <Property Name="Spare2" Type="bit" />
           <Property Name="Active" Type="bit" />
-          <Property Name="TrustCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="Stakeholders">
           <Key>
@@ -337,6 +349,277 @@
           <Property Name="Impact" Type="nvarchar" MaxLength="20" />
           <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
         </EntityType>
+        <EntityType Name="Trusts">
+          <Key>
+            <PropertyRef Name="TrustCode" />
+          </Key>
+          <Property Name="TrustCode" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="TrustName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Assumptio__Trust__7D0E9093">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Assumptions" Type="Self.Assumptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Assumptions">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Breakdown__Trust__7E02B4CC">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="BreakdownOfEnablingCosts" Type="Self.BreakdownOfEnablingCosts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BreakdownOfEnablingCosts">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Breakdown__Trust__7EF6D905">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="BreakdownOfSavings" Type="Self.BreakdownOfSavings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BreakdownOfSavings">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetTyp__Trust__7FEAFD3E">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="BudgetType" Type="Self.BudgetType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BudgetType">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BusinessL__Trust__00DF2177">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="BusinessLevel" Type="Self.BusinessLevel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BusinessLevel">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BusinessS__Trust__01D345B0">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="BusinessSector" Type="Self.BusinessSector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BusinessSector">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Category__TrustC__02C769E9">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CiaForm__TrustCo__03BB8E22">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="CiaForm" Type="Self.CiaForm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="CiaForm">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Trust__04AFB25B">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Department" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dependenc__Trust__05A3D694">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Dependencies" Type="Self.Dependencies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Dependencies">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Generated__Trust__0697FACD">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="GeneratedIncome" Type="Self.GeneratedIncome" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="GeneratedIncome">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Issues__TrustCod__078C1F06">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Issues" Type="Self.Issues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Issues">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__KpiaSourc__Trust__0880433F">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="KpiaSourcesReporting" Type="Self.KpiaSourcesReporting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="KpiaSourcesReporting">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Milestone__Trust__09746778">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Milestones" Type="Self.Milestones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Milestones">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QiConditi__Trust__0A688BB1">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="QiConditions" Type="Self.QiConditions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QiConditions">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QiConditi__Trust__0B5CAFEA">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="QiConditionTable" Type="Self.QiConditionTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QiConditionTable">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QualityIm__Trust__0C50D423">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="QualityImpact" Type="Self.QualityImpact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QualityImpact">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeKpi__Trust__0D44F85C">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="SchemeKpia" Type="Self.SchemeKpia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeKpia">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeQua__Trust__0E391C95">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="SchemeQualityIndicators" Type="Self.SchemeQualityIndicators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeQualityIndicators">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeRis__Trust__0F2D40CE">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="SchemeRisks" Type="Self.SchemeRisks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeRisks">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__TrustCode__14E61A24">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Stakehold__Trust__11158940">
+          <End Role="Trusts" Type="Self.Trusts" Multiplicity="1" />
+          <End Role="Stakeholders" Type="Self.Stakeholders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Stakeholders">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_breakdownofsavings_bt2">
           <End Role="BudgetType" Type="Self.BudgetType" Multiplicity="1" />
           <End Role="BreakdownOfSavings" Type="Self.BreakdownOfSavings" Multiplicity="*" />
@@ -691,11 +974,101 @@
           <EntitySet Name="QiConditionTable" EntityType="Self.QiConditionTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QualityImpact" EntityType="Self.QualityImpact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QualityIndicators" EntityType="Self.QualityIndicators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SchemeBudgetTypes" EntityType="Self.SchemeBudgetTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SchemeKpia" EntityType="Self.SchemeKpia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SchemeQualityIndicators" EntityType="Self.SchemeQualityIndicators" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SchemeRisks" EntityType="Self.SchemeRisks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stakeholders" EntityType="Self.Stakeholders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trusts" EntityType="Self.Trusts" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Assumptio__Trust__7D0E9093" Association="Self.FK__Assumptio__Trust__7D0E9093">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Assumptions" EntitySet="Assumptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Breakdown__Trust__7E02B4CC" Association="Self.FK__Breakdown__Trust__7E02B4CC">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BreakdownOfEnablingCosts" EntitySet="BreakdownOfEnablingCosts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Breakdown__Trust__7EF6D905" Association="Self.FK__Breakdown__Trust__7EF6D905">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetTyp__Trust__7FEAFD3E" Association="Self.FK__BudgetTyp__Trust__7FEAFD3E">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BudgetType" EntitySet="BudgetType" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BusinessL__Trust__00DF2177" Association="Self.FK__BusinessL__Trust__00DF2177">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BusinessS__Trust__01D345B0" Association="Self.FK__BusinessS__Trust__01D345B0">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BusinessSector" EntitySet="BusinessSector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Category__TrustC__02C769E9" Association="Self.FK__Category__TrustC__02C769E9">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CiaForm__TrustCo__03BB8E22" Association="Self.FK__CiaForm__TrustCo__03BB8E22">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="CiaForm" EntitySet="CiaForm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Trust__04AFB25B" Association="Self.FK__Departmen__Trust__04AFB25B">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dependenc__Trust__05A3D694" Association="Self.FK__Dependenc__Trust__05A3D694">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Dependencies" EntitySet="Dependencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Generated__Trust__0697FACD" Association="Self.FK__Generated__Trust__0697FACD">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="GeneratedIncome" EntitySet="GeneratedIncome" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Issues__TrustCod__078C1F06" Association="Self.FK__Issues__TrustCod__078C1F06">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Issues" EntitySet="Issues" />
+          </AssociationSet>
+          <AssociationSet Name="FK__KpiaSourc__Trust__0880433F" Association="Self.FK__KpiaSourc__Trust__0880433F">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="KpiaSourcesReporting" EntitySet="KpiaSourcesReporting" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Milestone__Trust__09746778" Association="Self.FK__Milestone__Trust__09746778">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Milestones" EntitySet="Milestones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QiConditi__Trust__0A688BB1" Association="Self.FK__QiConditi__Trust__0A688BB1">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QiConditions" EntitySet="QiConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QiConditi__Trust__0B5CAFEA" Association="Self.FK__QiConditi__Trust__0B5CAFEA">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QiConditionTable" EntitySet="QiConditionTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QualityIm__Trust__0C50D423" Association="Self.FK__QualityIm__Trust__0C50D423">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QualityImpact" EntitySet="QualityImpact" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeKpi__Trust__0D44F85C" Association="Self.FK__SchemeKpi__Trust__0D44F85C">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeKpia" EntitySet="SchemeKpia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeQua__Trust__0E391C95" Association="Self.FK__SchemeQua__Trust__0E391C95">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeQualityIndicators" EntitySet="SchemeQualityIndicators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeRis__Trust__0F2D40CE" Association="Self.FK__SchemeRis__Trust__0F2D40CE">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeRisks" EntitySet="SchemeRisks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__TrustCode__14E61A24" Association="Self.FK__Staff__TrustCode__14E61A24">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Stakehold__Trust__11158940" Association="Self.FK__Stakehold__Trust__11158940">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Stakeholders" EntitySet="Stakeholders" />
+          </AssociationSet>
           <AssociationSet Name="FK_breakdownofsavings_bt2" Association="Self.FK_breakdownofsavings_bt2">
             <End Role="BudgetType" EntitySet="BudgetType" />
             <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
@@ -918,6 +1291,96 @@
             <End Role="QiConditions" EntitySet="QiConditions" />
             <End Role="QiConditionTable" EntitySet="QiConditionTable" />
           </AssociationSet>
+          <EntitySet Name="SchemeBudgetTypes" EntityType="ciaModel.SchemeBudgetTypes" />
+          <EntitySet Name="Trusts" EntityType="ciaModel.Trusts" />
+          <AssociationSet Name="FK__Assumptio__Trust__7D0E9093" Association="ciaModel.FK__Assumptio__Trust__7D0E9093">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Assumptions" EntitySet="Assumptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Breakdown__Trust__7E02B4CC" Association="ciaModel.FK__Breakdown__Trust__7E02B4CC">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BreakdownOfEnablingCosts" EntitySet="BreakdownOfEnablingCosts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Breakdown__Trust__7EF6D905" Association="ciaModel.FK__Breakdown__Trust__7EF6D905">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetTyp__Trust__7FEAFD3E" Association="ciaModel.FK__BudgetTyp__Trust__7FEAFD3E">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BudgetType" EntitySet="BudgetType" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BusinessL__Trust__00DF2177" Association="ciaModel.FK__BusinessL__Trust__00DF2177">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BusinessS__Trust__01D345B0" Association="ciaModel.FK__BusinessS__Trust__01D345B0">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="BusinessSector" EntitySet="BusinessSector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Category__TrustC__02C769E9" Association="ciaModel.FK__Category__TrustC__02C769E9">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CiaForm__TrustCo__03BB8E22" Association="ciaModel.FK__CiaForm__TrustCo__03BB8E22">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="CiaForm" EntitySet="CiaForm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Trust__04AFB25B" Association="ciaModel.FK__Departmen__Trust__04AFB25B">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dependenc__Trust__05A3D694" Association="ciaModel.FK__Dependenc__Trust__05A3D694">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Dependencies" EntitySet="Dependencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Generated__Trust__0697FACD" Association="ciaModel.FK__Generated__Trust__0697FACD">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="GeneratedIncome" EntitySet="GeneratedIncome" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Issues__TrustCod__078C1F06" Association="ciaModel.FK__Issues__TrustCod__078C1F06">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Issues" EntitySet="Issues" />
+          </AssociationSet>
+          <AssociationSet Name="FK__KpiaSourc__Trust__0880433F" Association="ciaModel.FK__KpiaSourc__Trust__0880433F">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="KpiaSourcesReporting" EntitySet="KpiaSourcesReporting" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Milestone__Trust__09746778" Association="ciaModel.FK__Milestone__Trust__09746778">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Milestones" EntitySet="Milestones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QiConditi__Trust__0A688BB1" Association="ciaModel.FK__QiConditi__Trust__0A688BB1">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QiConditions" EntitySet="QiConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QiConditi__Trust__0B5CAFEA" Association="ciaModel.FK__QiConditi__Trust__0B5CAFEA">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QiConditionTable" EntitySet="QiConditionTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QualityIm__Trust__0C50D423" Association="ciaModel.FK__QualityIm__Trust__0C50D423">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="QualityImpact" EntitySet="QualityImpact" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeKpi__Trust__0D44F85C" Association="ciaModel.FK__SchemeKpi__Trust__0D44F85C">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeKpia" EntitySet="SchemeKpia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeQua__Trust__0E391C95" Association="ciaModel.FK__SchemeQua__Trust__0E391C95">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeQualityIndicators" EntitySet="SchemeQualityIndicators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SchemeRis__Trust__0F2D40CE" Association="ciaModel.FK__SchemeRis__Trust__0F2D40CE">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="SchemeRisks" EntitySet="SchemeRisks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__TrustCode__14E61A24" Association="ciaModel.FK__Staff__TrustCode__14E61A24">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Stakehold__Trust__11158940" Association="ciaModel.FK__Stakehold__Trust__11158940">
+            <End Role="Trusts" EntitySet="Trusts" />
+            <End Role="Stakeholders" EntitySet="Stakeholders" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Assumptions">
           <Key>
@@ -931,6 +1394,7 @@
           <Property Name="Impact" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Impact1" Relationship="ciaModel.fkAssuImpact" FromRole="Assumptions" ToRole="Impact" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Assumptio__Trust__7D0E9093" FromRole="Assumptions" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="BreakdownOfEnablingCosts">
           <Key>
@@ -946,6 +1410,7 @@
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBec" FromRole="BreakdownOfEnablingCosts" ToRole="CiaForm" />
           <NavigationProperty Name="BudgetType" Relationship="ciaModel.fkBec2" FromRole="BreakdownOfEnablingCosts" ToRole="BudgetType" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Breakdown__Trust__7E02B4CC" FromRole="BreakdownOfEnablingCosts" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="BreakdownOfSavings">
           <Key>
@@ -963,6 +1428,7 @@
           <NavigationProperty Name="BudgetType" Relationship="ciaModel.FK_breakdownofsavings_bt2" FromRole="BreakdownOfSavings" ToRole="BudgetType" />
           <NavigationProperty Name="BudgetType1" Relationship="ciaModel.FK_breakdownofsavings_budt" FromRole="BreakdownOfSavings" ToRole="BudgetType" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBos_BT" FromRole="BreakdownOfSavings" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Breakdown__Trust__7EF6D905" FromRole="BreakdownOfSavings" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="BudgetType">
           <Key>
@@ -975,6 +1441,7 @@
           <NavigationProperty Name="BreakdownOfEnablingCosts" Relationship="ciaModel.fkBec2" FromRole="BudgetType" ToRole="BreakdownOfEnablingCosts" />
           <NavigationProperty Name="BreakdownOfSavings" Relationship="ciaModel.FK_breakdownofsavings_bt2" FromRole="BudgetType" ToRole="BreakdownOfSavings" />
           <NavigationProperty Name="BreakdownOfSavings1" Relationship="ciaModel.FK_breakdownofsavings_budt" FromRole="BudgetType" ToRole="BreakdownOfSavings" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__BudgetTyp__Trust__7FEAFD3E" FromRole="BudgetType" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="BusinessLevel">
           <Key>
@@ -990,6 +1457,7 @@
           <NavigationProperty Name="BusinessSector" Relationship="ciaModel.FK_BusinessLevel_BusinessSector" FromRole="BusinessLevel" ToRole="BusinessSector" />
           <NavigationProperty Name="Department" Relationship="ciaModel.FK_BusinessLevel_dept" FromRole="BusinessLevel" ToRole="Department" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBusinessLevel" FromRole="BusinessLevel" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__BusinessL__Trust__00DF2177" FromRole="BusinessLevel" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="BusinessSector">
           <Key>
@@ -1001,6 +1469,7 @@
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.FK_BusinessLevel_BusinessSector" FromRole="BusinessSector" ToRole="BusinessLevel" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBusinessSector" FromRole="BusinessSector" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__BusinessS__Trust__01D345B0" FromRole="BusinessSector" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -1010,6 +1479,7 @@
           <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkCategory" FromRole="Category" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Category__TrustC__02C769E9" FromRole="Category" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="CiaForm">
           <Key>
@@ -1060,6 +1530,7 @@
           <NavigationProperty Name="Milestones" Relationship="ciaModel.fkMilestones_Cia_Form" FromRole="CiaForm" ToRole="Milestones" />
           <NavigationProperty Name="SchemeRisks" Relationship="ciaModel.fkRisks_Impact" FromRole="CiaForm" ToRole="SchemeRisks" />
           <NavigationProperty Name="Stakeholders" Relationship="ciaModel.fkStakeHolders_Cia_Form" FromRole="CiaForm" ToRole="Stakeholders" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__CiaForm__TrustCo__03BB8E22" FromRole="CiaForm" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -1070,6 +1541,7 @@
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.FK_BusinessLevel_dept" FromRole="Department" ToRole="BusinessLevel" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkDepartment" FromRole="Department" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Departmen__Trust__04AFB25B" FromRole="Department" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Dependencies">
           <Key>
@@ -1083,6 +1555,7 @@
           <Property Name="Impact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Impact1" Relationship="ciaModel.fkDepImpact" FromRole="Dependencies" ToRole="Impact" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Dependenc__Trust__05A3D694" FromRole="Dependencies" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="GeneratedIncome">
           <Key>
@@ -1122,6 +1595,7 @@
           <Property Name="ActualReccurentSavings" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkIncome" FromRole="GeneratedIncome" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Generated__Trust__0697FACD" FromRole="GeneratedIncome" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Impact">
           <Key>
@@ -1145,6 +1619,7 @@
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkIssues" FromRole="Issues" ToRole="CiaForm" />
           <NavigationProperty Name="Impact1" Relationship="ciaModel.FK_Issues_Impact" FromRole="Issues" ToRole="Impact" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Issues__TrustCod__078C1F06" FromRole="Issues" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="KpiaSourcesReporting">
           <Key>
@@ -1154,6 +1629,7 @@
           <Property Name="KPIAssurance" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SchemeKpia" Relationship="ciaModel.fkSkpi2" FromRole="KpiaSourcesReporting" ToRole="SchemeKpia" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__KpiaSourc__Trust__0880433F" FromRole="KpiaSourcesReporting" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Milestones">
           <Key>
@@ -1170,6 +1646,7 @@
           <Property Name="DateOFCompletion" Type="DateTime" Precision="0" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkMilestones_Cia_Form" FromRole="Milestones" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Milestone__Trust__09746778" FromRole="Milestones" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="QiConditions">
           <Key>
@@ -1179,6 +1656,7 @@
           <Property Name="ConditionTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="QiConditionTable" Relationship="ciaModel.fkQicons_qicon" FromRole="QiConditions" ToRole="QiConditionTable" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__QiConditi__Trust__0A688BB1" FromRole="QiConditions" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="QiConditionTable">
           <Key>
@@ -1195,6 +1673,7 @@
           <Property Name="Score" Type="Int32" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="QiConditions" Relationship="ciaModel.fkQicons_qicon" FromRole="QiConditionTable" ToRole="QiConditions" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__QiConditi__Trust__0B5CAFEA" FromRole="QiConditionTable" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="QualityImpact">
           <Key>
@@ -1218,6 +1697,7 @@
           <Property Name="EoStatuscomments" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_qualityimpact_CiaForm" FromRole="QualityImpact" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__QualityIm__Trust__0C50D423" FromRole="QualityImpact" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="QualityIndicators">
           <Key>
@@ -1236,6 +1716,7 @@
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_schemekpia_Cia_Form" FromRole="SchemeKpia" ToRole="CiaForm" />
           <NavigationProperty Name="KpiaSourcesReporting" Relationship="ciaModel.fkSkpi2" FromRole="SchemeKpia" ToRole="KpiaSourcesReporting" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__SchemeKpi__Trust__0D44F85C" FromRole="SchemeKpia" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="SchemeQualityIndicators">
           <Key>
@@ -1247,6 +1728,7 @@
           <Property Name="QualityIndicatorsTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_schemequalityindicators_Cia_Form" FromRole="SchemeQualityIndicators" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__SchemeQua__Trust__0E391C95" FromRole="SchemeQualityIndicators" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="SchemeRisks">
           <Key>
@@ -1262,6 +1744,7 @@
           <Property Name="Risk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkRisks_Impact" FromRole="SchemeRisks" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__SchemeRis__Trust__0F2D40CE" FromRole="SchemeRisks" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -1284,7 +1767,8 @@
           <Property Name="Spare1" Type="Boolean" />
           <Property Name="Spare2" Type="Boolean" />
           <Property Name="Active" Type="Boolean" />
-          <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Staff__TrustCode__14E61A24" FromRole="Staff" ToRole="Trusts" />
         </EntityType>
         <EntityType Name="Stakeholders">
           <Key>
@@ -1298,6 +1782,7 @@
           <Property Name="Impact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkStakeHolders_Cia_Form" FromRole="Stakeholders" ToRole="CiaForm" />
+          <NavigationProperty Name="Trusts" Relationship="ciaModel.FK__Stakehold__Trust__11158940" FromRole="Stakeholders" ToRole="Trusts" />
         </EntityType>
         <Association Name="fkAssuImpact">
           <End Type="ciaModel.Impact" Role="Impact" Multiplicity="1" />
@@ -1633,6 +2118,311 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="SchemeBudgetTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SchemeId" />
+            <PropertyRef Name="BudgetTypeName" />
+            <PropertyRef Name="Trustcode" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SchemeId" Type="Int32" Nullable="false" />
+          <Property Name="BudgetTypeName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Trustcode" Type="String" Nullable="false" MaxLength="45" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Trusts">
+          <Key>
+            <PropertyRef Name="TrustCode" />
+          </Key>
+          <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="TrustName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Assumptions" Relationship="ciaModel.FK__Assumptio__Trust__7D0E9093" FromRole="Trusts" ToRole="Assumptions" />
+          <NavigationProperty Name="BreakdownOfEnablingCosts" Relationship="ciaModel.FK__Breakdown__Trust__7E02B4CC" FromRole="Trusts" ToRole="BreakdownOfEnablingCosts" />
+          <NavigationProperty Name="BreakdownOfSavings" Relationship="ciaModel.FK__Breakdown__Trust__7EF6D905" FromRole="Trusts" ToRole="BreakdownOfSavings" />
+          <NavigationProperty Name="BudgetType" Relationship="ciaModel.FK__BudgetTyp__Trust__7FEAFD3E" FromRole="Trusts" ToRole="BudgetType" />
+          <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.FK__BusinessL__Trust__00DF2177" FromRole="Trusts" ToRole="BusinessLevel" />
+          <NavigationProperty Name="BusinessSector" Relationship="ciaModel.FK__BusinessS__Trust__01D345B0" FromRole="Trusts" ToRole="BusinessSector" />
+          <NavigationProperty Name="Category" Relationship="ciaModel.FK__Category__TrustC__02C769E9" FromRole="Trusts" ToRole="Category" />
+          <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK__CiaForm__TrustCo__03BB8E22" FromRole="Trusts" ToRole="CiaForm" />
+          <NavigationProperty Name="Department" Relationship="ciaModel.FK__Departmen__Trust__04AFB25B" FromRole="Trusts" ToRole="Department" />
+          <NavigationProperty Name="Dependencies" Relationship="ciaModel.FK__Dependenc__Trust__05A3D694" FromRole="Trusts" ToRole="Dependencies" />
+          <NavigationProperty Name="GeneratedIncome" Relationship="ciaModel.FK__Generated__Trust__0697FACD" FromRole="Trusts" ToRole="GeneratedIncome" />
+          <NavigationProperty Name="Issues" Relationship="ciaModel.FK__Issues__TrustCod__078C1F06" FromRole="Trusts" ToRole="Issues" />
+          <NavigationProperty Name="KpiaSourcesReporting" Relationship="ciaModel.FK__KpiaSourc__Trust__0880433F" FromRole="Trusts" ToRole="KpiaSourcesReporting" />
+          <NavigationProperty Name="Milestones" Relationship="ciaModel.FK__Milestone__Trust__09746778" FromRole="Trusts" ToRole="Milestones" />
+          <NavigationProperty Name="QiConditions" Relationship="ciaModel.FK__QiConditi__Trust__0A688BB1" FromRole="Trusts" ToRole="QiConditions" />
+          <NavigationProperty Name="QiConditionTable" Relationship="ciaModel.FK__QiConditi__Trust__0B5CAFEA" FromRole="Trusts" ToRole="QiConditionTable" />
+          <NavigationProperty Name="QualityImpact" Relationship="ciaModel.FK__QualityIm__Trust__0C50D423" FromRole="Trusts" ToRole="QualityImpact" />
+          <NavigationProperty Name="SchemeKpia" Relationship="ciaModel.FK__SchemeKpi__Trust__0D44F85C" FromRole="Trusts" ToRole="SchemeKpia" />
+          <NavigationProperty Name="SchemeQualityIndicators" Relationship="ciaModel.FK__SchemeQua__Trust__0E391C95" FromRole="Trusts" ToRole="SchemeQualityIndicators" />
+          <NavigationProperty Name="SchemeRisks" Relationship="ciaModel.FK__SchemeRis__Trust__0F2D40CE" FromRole="Trusts" ToRole="SchemeRisks" />
+          <NavigationProperty Name="Staff" Relationship="ciaModel.FK__Staff__TrustCode__14E61A24" FromRole="Trusts" ToRole="Staff" />
+          <NavigationProperty Name="Stakeholders" Relationship="ciaModel.FK__Stakehold__Trust__11158940" FromRole="Trusts" ToRole="Stakeholders" />
+        </EntityType>
+        <Association Name="FK__Assumptio__Trust__7D0E9093">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Assumptions" Role="Assumptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Assumptions">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Breakdown__Trust__7E02B4CC">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.BreakdownOfEnablingCosts" Role="BreakdownOfEnablingCosts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BreakdownOfEnablingCosts">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Breakdown__Trust__7EF6D905">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.BreakdownOfSavings" Role="BreakdownOfSavings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BreakdownOfSavings">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetTyp__Trust__7FEAFD3E">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.BudgetType" Role="BudgetType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BudgetType">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BusinessL__Trust__00DF2177">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.BusinessLevel" Role="BusinessLevel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BusinessLevel">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BusinessS__Trust__01D345B0">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.BusinessSector" Role="BusinessSector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="BusinessSector">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Category__TrustC__02C769E9">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Category" Role="Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CiaForm__TrustCo__03BB8E22">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="CiaForm">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Trust__04AFB25B">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Department" Role="Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dependenc__Trust__05A3D694">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Dependencies" Role="Dependencies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Dependencies">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Generated__Trust__0697FACD">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.GeneratedIncome" Role="GeneratedIncome" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="GeneratedIncome">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Issues__TrustCod__078C1F06">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Issues" Role="Issues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Issues">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__KpiaSourc__Trust__0880433F">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.KpiaSourcesReporting" Role="KpiaSourcesReporting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="KpiaSourcesReporting">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Milestone__Trust__09746778">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Milestones" Role="Milestones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Milestones">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QiConditi__Trust__0A688BB1">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.QiConditions" Role="QiConditions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QiConditions">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QiConditi__Trust__0B5CAFEA">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.QiConditionTable" Role="QiConditionTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QiConditionTable">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QualityIm__Trust__0C50D423">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.QualityImpact" Role="QualityImpact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="QualityImpact">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeKpi__Trust__0D44F85C">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.SchemeKpia" Role="SchemeKpia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeKpia">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeQua__Trust__0E391C95">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.SchemeQualityIndicators" Role="SchemeQualityIndicators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeQualityIndicators">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SchemeRis__Trust__0F2D40CE">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.SchemeRisks" Role="SchemeRisks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="SchemeRisks">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__TrustCode__14E61A24">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Staff" Role="Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Stakehold__Trust__11158940">
+          <End Type="ciaModel.Trusts" Role="Trusts" Multiplicity="1" />
+          <End Type="ciaModel.Stakeholders" Role="Stakeholders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trusts">
+              <PropertyRef Name="TrustCode" />
+            </Principal>
+            <Dependent Role="Stakeholders">
+              <PropertyRef Name="TrustCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1956,6 +2746,24 @@
                 <ScalarProperty Name="StakeholdersDetail" ColumnName="StakeholdersDetail" />
                 <ScalarProperty Name="StakeholdersID" ColumnName="StakeholdersID" />
                 <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchemeBudgetTypes">
+            <EntityTypeMapping TypeName="ciaModel.SchemeBudgetTypes">
+              <MappingFragment StoreEntitySet="SchemeBudgetTypes">
+                <ScalarProperty Name="Trustcode" ColumnName="Trustcode" />
+                <ScalarProperty Name="BudgetTypeName" ColumnName="BudgetTypeName" />
+                <ScalarProperty Name="SchemeId" ColumnName="SchemeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trusts">
+            <EntityTypeMapping TypeName="ciaModel.Trusts">
+              <MappingFragment StoreEntitySet="Trusts">
+                <ScalarProperty Name="TrustName" ColumnName="TrustName" />
+                <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

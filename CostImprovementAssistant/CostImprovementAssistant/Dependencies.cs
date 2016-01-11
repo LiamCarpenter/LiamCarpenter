@@ -21,5 +21,6 @@ namespace CostImprovementAssistant
         public string TrustCode { get; set; }
     
         public virtual Impact Impact1 { get; set; }
+        public virtual Trusts Trusts { get; set; }
     }
 }

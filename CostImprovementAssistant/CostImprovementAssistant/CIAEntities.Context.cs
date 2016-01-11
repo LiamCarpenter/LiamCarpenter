@@ -49,5 +49,7 @@ namespace CostImprovementAssistant
         public virtual DbSet<SchemeRisks> SchemeRisks { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<Stakeholders> Stakeholders { get; set; }
+        public virtual DbSet<SchemeBudgetTypes> SchemeBudgetTypes { get; set; }
+        public virtual DbSet<Trusts> Trusts { get; set; }
     }
 }

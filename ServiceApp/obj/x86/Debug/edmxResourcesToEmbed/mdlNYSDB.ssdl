@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NYSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NYSDB.dbo.BOSSinvtot' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BOSSinvtot">
+    <Key>
+      <PropertyRef Name="invtotID" />
+      <PropertyRef Name="tot_ukey" />
+    </Key>
+    <Property Name="invtotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tot_ukey" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="tot_custid" Type="varchar" MaxLength="10" />
+    <Property Name="tot_invno" Type="varchar" MaxLength="7" />
+    <Property Name="tot_change" Type="int" />
+    <Property Name="tot_crsref" Type="varchar" MaxLength="10" />
+    <Property Name="tot_br" Type="varchar" MaxLength="200" />
+    <Property Name="tot_pono" Type="varchar" MaxLength="25" />
+    <Property Name="tot_costc" Type="varchar" MaxLength="25" />
+    <Property Name="tot_type" Type="varchar" MaxLength="1" />
+    <Property Name="tot_invdt" Type="datetime" />
+    <Property Name="tot_duedt" Type="datetime" />
+    <Property Name="tot_fare" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_tax" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_srvchg" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_ourchg" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_ourvat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_supvat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_amtvat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_bilvat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_amount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_billed" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_discnt" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_ccamt" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_recvd" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_dposit" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_comm" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_comdue" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_vtoncm" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_disput" Type="bit" />
+    <Property Name="tot_reason" Type="varchar" MaxLength="25" />
+    <Property Name="tot_noerrs" Type="bit" />
+    <Property Name="tot_note" Type="varchar(max)" />
+    <Property Name="tot_raddr" Type="varchar(max)" />
+    <Property Name="tot_rtelno" Type="varchar" MaxLength="15" />
+    <Property Name="tot_paxs" Type="int" />
+    <Property Name="tot_morcrs" Type="varchar" MaxLength="1" />
+    <Property Name="tot_retail" Type="bit" />
+    <Property Name="tot_bdm" Type="varchar" MaxLength="3" />
+    <Property Name="tot_print" Type="int" />
+    <Property Name="tot_errs" Type="bit" />
+    <Property Name="tot_atol" Type="bit" />
+    <Property Name="tot_atolx" Type="varchar" MaxLength="1" />
+    <Property Name="tot_cref1" Type="varchar" MaxLength="20" />
+    <Property Name="tot_cref2" Type="varchar" MaxLength="20" />
+    <Property Name="tot_agcomm" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_agvat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_fileno" Type="varchar" MaxLength="10" />
+    <Property Name="tot_nofee" Type="bit" />
+    <Property Name="tot_crstyp" Type="varchar" MaxLength="1" />
+    <Property Name="tot_noprnt" Type="bit" />
+    <Property Name="tot_email" Type="varchar" MaxLength="50" />
+    <Property Name="tot_curncy" Type="varchar" MaxLength="3" />
+    <Property Name="tot_roe" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tot_cursym" Type="varchar" MaxLength="1" />
+    <Property Name="datecreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ChiesiGLIOCodes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NYSDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CostCentre" Type="bit" Nullable="false" />
+    <Property Name="GLCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IOCode" Type="varchar" MaxLength="50" />
+    <Property Name="GLDescription" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TravelType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvolviData">
+    <Key>
+      <PropertyRef Name="EvolviDataID" />
+    </Key>
+    <Property Name="EvolviDataID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ref" Type="int" />
+    <Property Name="ExternalRef" Type="varchar" MaxLength="20" />
+    <Property Name="IssueRef" Type="int" />
+    <Property Name="TransactionType" Type="varchar" MaxLength="10" />
+    <Property Name="TransactionDate" Type="varchar" MaxLength="10" />
+    <Property Name="MachineType" Type="int" />
+    <Property Name="MachineNumber" Type="varchar" MaxLength="10" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="10" />
+    <Property Name="PersonalCCUsed" Type="varchar" MaxLength="10" />
+    <Property Name="FulfilmentType" Type="varchar" MaxLength="20" />
+    <Property Name="AccountRef" Type="int" />
+    <Property Name="AccountExternalRef" Type="varchar" MaxLength="20" />
+    <Property Name="AccountType" Type="varchar" MaxLength="20" />
+    <Property Name="Period" Type="varchar" MaxLength="10" />
+    <Property Name="Immediate" Type="varchar" MaxLength="10" />
+    <Property Name="EvolviInvoice" Type="varchar" MaxLength="10" />
+    <Property Name="EvolviPayment" Type="varchar" MaxLength="10" />
+    <Property Name="EvolviFinancial" Type="varchar" MaxLength="10" />
+    <Property Name="BookingAgentRef" Type="int" />
+    <Property Name="BookingAgentExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="BranchExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="TicketingAgentRef" Type="int" />
+    <Property Name="TicketingAgentExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="TicketingAgentBranchExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="TicketingAgentUnit" Type="varchar" MaxLength="50" />
+    <Property Name="LeadRef" Type="int" />
+    <Property Name="AccountContactRef" Type="int" />
+    <Property Name="AccountContactFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountContactLastName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountContactTitle" Type="varchar" MaxLength="10" />
+    <Property Name="AccountContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="AccountContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="AccountContactOrganisation" Type="varchar" MaxLength="50" />
+    <Property Name="AccountContactAddress1" Type="varchar" MaxLength="100" />
+    <Property Name="AccountContactAddress2" Type="varchar" MaxLength="100" />
+    <Property Name="AccountContactAddress3" Type="varchar" MaxLength="100" />
+    <Property Name="AccountContactCity" Type="varchar" MaxLength="50" />
+    <Property Name="AccountContactCounty" Type="varchar" MaxLength="100" />
+    <Property Name="AccountContactPostcode" Type="varchar" MaxLength="20" />
+    <Property Name="DeliveryContactRef" Type="int" />
+    <Property Name="DeliveryContactFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryContactLastName" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryContactTitle" Type="varchar" MaxLength="10" />
+    <Property Name="DeliveryContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryContactOrganisation" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryContactAddress1" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryContactAddress2" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryContactAddress3" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryContactCity" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryContactCounty" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryContactPostcode" Type="varchar" MaxLength="20" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="lastupdated" Type="datetime" />
+    <Property Name="createdby" Type="varchar" MaxLength="50" />
+    <Property Name="updatedby" Type="varchar" MaxLength="50" />
+    <Property Name="BookingAgentFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="BookingAgentLastName" Type="varchar" MaxLength="50" />
+    <Property Name="BookingAgentTitle" Type="varchar" MaxLength="20" />
+    <Property Name="BookingAgentEmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="OnBehalfRef" Type="int" />
+    <Property Name="OnBehalfExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="OnBehalfBranchExternalRef" Type="varchar" MaxLength="10" />
+    <Property Name="OnBehalfUnit" Type="varchar" MaxLength="10" />
+    <Property Name="OnBehalfFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="OnBehalfLastName" Type="varchar" MaxLength="50" />
+    <Property Name="OnBehalfTitle" Type="varchar" MaxLength="20" />
+    <Property Name="OnBehalfEmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="InterceptorCharges">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueRef" Type="varchar" MaxLength="50" />
+    <Property Name="TotalTickets" Type="int" />
+    <Property Name="TransactionFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="TransactionFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="PostageFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="PostageFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="OfflineFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="OfflineFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SpecialDeliveryFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SpecialDeliveryFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CancellationFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CancellationFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="IssueType" Type="varchar" MaxLength="50" />
+    <Property Name="IssueDate" Type="varchar" MaxLength="10" />
+    <Property Name="ClientBossCode" Type="varchar" MaxLength="20" />
+    <Property Name="ToDFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ToDFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="KioskFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="KioskFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SaturdaySDFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SaturdaySDFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CourierFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CourierFeeTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="PlainPaperTicketingFee" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="PlainPaperTicketingFeeTotal" Type="numeric" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="interceptorClients">
+    <Key>
+      <PropertyRef Name="clientID" />
+    </Key>
+    <Property Name="clientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bossCode" Type="varchar" MaxLength="50" />
+    <Property Name="clientName" Type="varchar" MaxLength="200" />
+    <Property Name="customPO" Type="varchar" MaxLength="15" />
+    <Property Name="customPOActive" Type="bit" />
+    <Property Name="splitNodeName" Type="varchar" MaxLength="100" />
+    <Property Name="splitFieldName" Type="varchar" MaxLength="100" />
+    <Property Name="splitFieldValue" Type="varchar(max)" />
+    <Property Name="splitUniqueFieldName" Type="varchar" MaxLength="100" />
+    <Property Name="InterceptorFeesActive" Type="bit" />
+    <Property Name="KioskOnlineFeePerTicket" Type="float" />
+    <Property Name="KioskOnlineFeePerTraveller" Type="float" />
+    <Property Name="KioskOnlineFeePerOrderItem" Type="float" />
+    <Property Name="KioskOnlineFeePerBasket" Type="float" />
+    <Property Name="KioskOfflineFeePerTicket" Type="float" />
+    <Property Name="KioskOfflineFeePerTraveller" Type="float" />
+    <Property Name="KioskOfflineFeePerOrderItem" Type="float" />
+    <Property Name="KioskOfflineFeePerBasket" Type="float" />
+    <Property Name="ToDOnlineFeePerTicket" Type="float" />
+    <Property Name="ToDOnlineFeePerTraveller" Type="float" />
+    <Property Name="ToDOnlineFeePerOrderItem" Type="float" />
+    <Property Name="ToDOnlineFeePerBasket" Type="float" />
+    <Property Name="ToDOfflineFeePerTicket" Type="float" />
+    <Property Name="ToDOfflineFeePerTraveller" Type="float" />
+    <Property Name="ToDOfflineFeePerOrderItem" Type="float" />
+    <Property Name="ToDOfflineFeePerBasket" Type="float" />
+    <Property Name="PostageOnlineFeePerTicket" Type="float" />
+    <Property Name="PostageOnlineFeePerTraveller" Type="float" />
+    <Property Name="PostageOnlineFeePerOrderItem" Type="float" />
+    <Property Name="PostageOnlineFeePerBasket" Type="float" />
+    <Property Name="PostageOfflineFeePerTicket" Type="float" />
+    <Property Name="PostageOfflineFeePerTraveller" Type="float" />
+    <Property Name="PostageOfflineFeePerOrderItem" Type="float" />
+    <Property Name="PostageOfflineFeePerBasket" Type="float" />
+    <Property Name="CourierOnlineFeePerTicket" Type="float" />
+    <Property Name="CourierOnlineFeePerTraveller" Type="float" />
+    <Property Name="CourierOnlineFeePerOrderItem" Type="float" />
+    <Property Name="CourierOnlineFeePerBasket" Type="float" />
+    <Property Name="CourierOfflineFeePerTicket" Type="float" />
+    <Property Name="CourierOfflineFeePerTraveller" Type="float" />
+    <Property Name="CourierOfflineFeePerOrderItem" Type="float" />
+    <Property Name="CourierOfflineFeePerBasket" Type="float" />
+    <Property Name="SpecialDeliveryOnlineFeePerTicket" Type="float" />
+    <Property Name="SpecialDeliveryOnlineFeePerTraveller" Type="float" />
+    <Property Name="SpecialDeliveryOnlineFeePerOrderItem" Type="float" />
+    <Property Name="SpecialDeliveryOnlineFeePerBasket" Type="float" />
+    <Property Name="SpecialDeliveryOfflineFeePerTicket" Type="float" />
+    <Property Name="SpecialDeliveryOfflineFeePerTraveller" Type="float" />
+    <Property Name="SpecialDeliveryOfflineFeePerOrderItem" Type="float" />
+    <Property Name="SpecialDeliveryOfflineFeePerBasket" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOnlineFeePerTicket" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOnlineFeePerTraveller" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOnlineFeePerOrderItem" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOnlineFeePerBasket" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOfflineFeePerTicket" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOfflineFeePerTraveller" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOfflineFeePerOrderItem" Type="float" />
+    <Property Name="SaturdaySpecialDeliveryOfflineFeePerBasket" Type="float" />
+    <Property Name="addBookerToInvoice" Type="bit" />
+    <Property Name="InterceptorDiscountActive" Type="bit" />
+    <Property Name="InterceptorDiscountPercent" Type="float" />
+    <Property Name="PlainPaperTicketingOnlineTicketFee" Type="float" />
+    <Property Name="PlainPaperTicketingOnlineFeePerPassenger" Type="float" />
+    <Property Name="PlainPaperTicketingOnlineFeePerOrderItem" Type="float" />
+    <Property Name="PlainPaperTicketingOnlineFeePerBasket" Type="float" />
+    <Property Name="PlainPaperTicketingOfflineTicketFee" Type="float" />
+    <Property Name="PlainPaperTicketingOfflineFeePerPassenger" Type="float" />
+    <Property Name="PlainPaperTicketingOfflineFeePerOrderItem" Type="float" />
+    <Property Name="PlainPaperTicketingOfflineFeePerBasket" Type="float" />
+  </EntityType>
+  <EntityType Name="TravellerProfiles">
+    <Key>
+      <PropertyRef Name="TravellerID" />
+    </Key>
+    <Property Name="TravellerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TravellerEmail" Type="varchar" MaxLength="200" />
+    <Property Name="TravellerCode1" Type="varchar" MaxLength="50" />
+    <Property Name="TravellerCode2" Type="varchar" MaxLength="50" />
+    <Property Name="TravellerSex" Type="varchar" MaxLength="1" />
+    <Property Name="TravellerFirstname" Type="varchar" MaxLength="50" />
+    <Property Name="TravellerLastname" Type="varchar" MaxLength="50" />
+    <Property Name="TravellerActive" Type="bit" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="TravellerGroupID" Type="int" />
+    <Property Name="TravellerLocation" Type="varchar(max)" />
+    <Property Name="TravellerCode3" Type="varchar(max)" />
+    <Property Name="TravellerCode4" Type="varchar(max)" />
+    <Property Name="TravellerCode5" Type="varchar(max)" />
+    <Property Name="TravellerCode6" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="NYSDBModelStoreContainer">
+    <EntitySet Name="ChiesiGLIOCodes" EntityType="Self.ChiesiGLIOCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EvolviData" EntityType="Self.EvolviData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InterceptorCharges" EntityType="Self.InterceptorCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="interceptorClients" EntityType="Self.interceptorClients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TravellerProfiles" EntityType="Self.TravellerProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BOSSinvtot" EntityType="Self.BOSSinvtot" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BOSSinvtot].[invtotID] AS [invtotID], 
+    [BOSSinvtot].[tot_ukey] AS [tot_ukey], 
+    [BOSSinvtot].[tot_custid] AS [tot_custid], 
+    [BOSSinvtot].[tot_invno] AS [tot_invno], 
+    [BOSSinvtot].[tot_change] AS [tot_change], 
+    [BOSSinvtot].[tot_crsref] AS [tot_crsref], 
+    [BOSSinvtot].[tot_br] AS [tot_br], 
+    [BOSSinvtot].[tot_pono] AS [tot_pono], 
+    [BOSSinvtot].[tot_costc] AS [tot_costc], 
+    [BOSSinvtot].[tot_type] AS [tot_type], 
+    [BOSSinvtot].[tot_invdt] AS [tot_invdt], 
+    [BOSSinvtot].[tot_duedt] AS [tot_duedt], 
+    [BOSSinvtot].[tot_fare] AS [tot_fare], 
+    [BOSSinvtot].[tot_tax] AS [tot_tax], 
+    [BOSSinvtot].[tot_srvchg] AS [tot_srvchg], 
+    [BOSSinvtot].[tot_ourchg] AS [tot_ourchg], 
+    [BOSSinvtot].[tot_ourvat] AS [tot_ourvat], 
+    [BOSSinvtot].[tot_supvat] AS [tot_supvat], 
+    [BOSSinvtot].[tot_amtvat] AS [tot_amtvat], 
+    [BOSSinvtot].[tot_bilvat] AS [tot_bilvat], 
+    [BOSSinvtot].[tot_amount] AS [tot_amount], 
+    [BOSSinvtot].[tot_billed] AS [tot_billed], 
+    [BOSSinvtot].[tot_discnt] AS [tot_discnt], 
+    [BOSSinvtot].[tot_ccamt] AS [tot_ccamt], 
+    [BOSSinvtot].[tot_recvd] AS [tot_recvd], 
+    [BOSSinvtot].[tot_dposit] AS [tot_dposit], 
+    [BOSSinvtot].[tot_comm] AS [tot_comm], 
+    [BOSSinvtot].[tot_comdue] AS [tot_comdue], 
+    [BOSSinvtot].[tot_vtoncm] AS [tot_vtoncm], 
+    [BOSSinvtot].[tot_disput] AS [tot_disput], 
+    [BOSSinvtot].[tot_reason] AS [tot_reason], 
+    [BOSSinvtot].[tot_noerrs] AS [tot_noerrs], 
+    [BOSSinvtot].[tot_note] AS [tot_note], 
+    [BOSSinvtot].[tot_raddr] AS [tot_raddr], 
+    [BOSSinvtot].[tot_rtelno] AS [tot_rtelno], 
+    [BOSSinvtot].[tot_paxs] AS [tot_paxs], 
+    [BOSSinvtot].[tot_morcrs] AS [tot_morcrs], 
+    [BOSSinvtot].[tot_retail] AS [tot_retail], 
+    [BOSSinvtot].[tot_bdm] AS [tot_bdm], 
+    [BOSSinvtot].[tot_print] AS [tot_print], 
+    [BOSSinvtot].[tot_errs] AS [tot_errs], 
+    [BOSSinvtot].[tot_atol] AS [tot_atol], 
+    [BOSSinvtot].[tot_atolx] AS [tot_atolx], 
+    [BOSSinvtot].[tot_cref1] AS [tot_cref1], 
+    [BOSSinvtot].[tot_cref2] AS [tot_cref2], 
+    [BOSSinvtot].[tot_agcomm] AS [tot_agcomm], 
+    [BOSSinvtot].[tot_agvat] AS [tot_agvat], 
+    [BOSSinvtot].[tot_fileno] AS [tot_fileno], 
+    [BOSSinvtot].[tot_nofee] AS [tot_nofee], 
+    [BOSSinvtot].[tot_crstyp] AS [tot_crstyp], 
+    [BOSSinvtot].[tot_noprnt] AS [tot_noprnt], 
+    [BOSSinvtot].[tot_email] AS [tot_email], 
+    [BOSSinvtot].[tot_curncy] AS [tot_curncy], 
+    [BOSSinvtot].[tot_roe] AS [tot_roe], 
+    [BOSSinvtot].[tot_cursym] AS [tot_cursym], 
+    [BOSSinvtot].[datecreated] AS [datecreated]
+    FROM [dbo].[BOSSinvtot] AS [BOSSinvtot]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

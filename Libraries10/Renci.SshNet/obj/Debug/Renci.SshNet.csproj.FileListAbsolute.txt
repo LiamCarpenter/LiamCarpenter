@@ -1,0 +1,10 @@
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\Renci.SshNet.dll.config
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\Renci.SshNet.xml
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\Renci.SshNet.dll
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\Renci.SshNet.pdb
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\EntityFramework.dll
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\EntityFramework.xml
+E:\Development\Work\LIBRARIES10\Renci.SshNet\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development\Work\LIBRARIES10\Renci.SshNet\obj\Debug\Renci.SshNet.dll
+E:\Development\Work\LIBRARIES10\Renci.SshNet\obj\Debug\Renci.SshNet.pdb

@@ -1,0 +1,135 @@
+2014-04-09 10:57:52,893 [9080] INFO  Cubit.NSLogUtils.LogUtils 150 [(null)] - Config refresh
+2014-04-09 10:58:03,981 [9080] INFO  Cubit.FeedMain 11237 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 10:58:03,981 [9080] INFO  Cubit.FeedMain 11237 [(null)] - Start Cubit
+2014-04-09 10:58:03,981 [9080] INFO  Cubit.FeedMain 11237 [(null)] - Add 1
+2014-04-09 10:58:03,981 [9080] ERROR Cubit.FeedMain 11237 [(null)] - Error Test 
+2014-04-09 10:58:03,982 [9080] INFO  Cubit.FeedMain 11238 [(null)] - Add 2
+2014-04-09 10:58:03,982 [9080] INFO  Cubit.FeedMain 11238 [(null)] - start Cubit.FeedMain.setPanels
+2014-04-09 10:58:03,983 [9080] INFO  Cubit.FeedMain 11239 [(null)] - end Cubit.FeedMain.setPanels
+2014-04-09 10:58:03,987 [9080] INFO  Cubit.FeedMain 11243 [(null)] - start Cubit.FeedMain.checkLoginstatus
+2014-04-09 10:58:16,207 [9080] INFO  Cubit.FeedMain 23464 [(null)] - end Cubit.FeedMain.checkLoginstatus
+2014-04-09 10:58:16,210 [9080] INFO  Cubit.FeedMain 23467 [(null)] - start Cubit.FeedMain.setUser
+2014-04-09 10:58:16,211 [9080] INFO  Cubit.FeedMain 23468 [(null)] - Current user: Ashley Marron
+2014-04-09 10:58:16,211 [9080] INFO  Cubit.FeedMain 23468 [(null)] - end Cubit.FeedMain.setUser
+2014-04-09 10:58:16,212 [9080] INFO  Cubit.FeedMain 23469 [(null)] - start Cubit.FeedMain.setAjax
+2014-04-09 10:58:16,214 [9080] INFO  Cubit.FeedMain 23471 [(null)] - end Cubit.FeedMain.setAjax
+2014-04-09 10:58:16,220 [9080] INFO  Cubit.FeedMain 23477 [(null)] - start Cubit.FeedMain.populateGroups
+2014-04-09 10:58:25,047 [9080] INFO  Cubit.FeedMain 32303 [(null)] - end Cubit.FeedMain.populateGroups
+2014-04-09 10:58:25,047 [9080] INFO  Cubit.FeedMain 32303 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:21:42,607 [7172] INFO  Cubit.NSLogUtils.LogUtils 85 [(null)] - Config refresh
+2014-04-09 11:21:45,257 [7172] INFO  Cubit.FeedMain 2735 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:21:45,257 [7172] INFO  Cubit.FeedMain 2735 [(null)] - start Cubit.FeedMain.setPanels
+2014-04-09 11:21:45,258 [7172] INFO  Cubit.FeedMain 2736 [(null)] - end Cubit.FeedMain.setPanels
+2014-04-09 11:21:45,264 [7172] INFO  Cubit.FeedMain 2742 [(null)] - start Cubit.FeedMain.checkLoginstatus
+2014-04-09 11:21:49,130 [7172] INFO  Cubit.FeedMain 6608 [(null)] - end Cubit.FeedMain.checkLoginstatus
+2014-04-09 11:21:49,133 [7172] INFO  Cubit.FeedMain 6611 [(null)] - start Cubit.FeedMain.setUser
+2014-04-09 11:21:49,134 [7172] INFO  Cubit.FeedMain 6612 [(null)] - Current user: Ashley Marron
+2014-04-09 11:21:49,134 [7172] INFO  Cubit.FeedMain 6612 [(null)] - end Cubit.FeedMain.setUser
+2014-04-09 11:21:49,135 [7172] INFO  Cubit.FeedMain 6613 [(null)] - start Cubit.FeedMain.setAjax
+2014-04-09 11:21:49,136 [7172] INFO  Cubit.FeedMain 6614 [(null)] - end Cubit.FeedMain.setAjax
+2014-04-09 11:21:49,143 [7172] INFO  Cubit.FeedMain 6621 [(null)] - start Cubit.FeedMain.populateGroups
+2014-04-09 11:21:58,094 [7172] INFO  Cubit.FeedMain 15571 [(null)] - end Cubit.FeedMain.populateGroups
+2014-04-09 11:21:58,094 [7172] INFO  Cubit.FeedMain 15571 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:22:06,305 [9028] INFO  Cubit.FeedMain 23783 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:22:06,305 [9028] INFO  Cubit.FeedMain 23783 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:22:06,306 [9028] INFO  Cubit.FeedMain 23784 [(null)] - start Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:22:06,825 [9028] INFO  Cubit.FeedMain 24303 [(null)] - end Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:22:11,650 [7860] INFO  Cubit.FeedMain 29127 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:22:11,650 [7860] INFO  Cubit.FeedMain 29127 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:22:11,651 [7860] INFO  Cubit.FeedMain 29128 [(null)] - start Cubit.FeedMain.btnexport_Click
+2014-04-09 11:22:11,707 [7860] INFO  Cubit.FeedMain 29184 [(null)] - start Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:22:11,737 [7860] INFO  Cubit.FeedMain 29214 [(null)] - end Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:22:11,737 [7860] INFO  Cubit.FeedMain 29214 [(null)] - start Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:22:11,739 [7860] INFO  Cubit.FeedMain 29216 [(null)] - end Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:22:11,739 [7860] INFO  Cubit.FeedMain 29216 [(null)] - end Cubit.FeedMain.btnexport_Click
+2014-04-09 11:22:13,676 [9084] INFO  Cubit.FeedMain 31153 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:22:13,676 [9084] INFO  Cubit.FeedMain 31153 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:22:13,676 [9084] INFO  Cubit.FeedMain 31153 [(null)] - start Cubit.FeedMain.btnyes_Click
+2014-04-09 11:22:13,700 [9084] INFO  Cubit.FeedMain 31177 [(null)] - start Cubit.FeedMain.checkExportStatus
+2014-04-09 11:22:13,732 [9084] INFO  Cubit.FeedMain 31209 [(null)] - end Cubit.FeedMain.checkExportStatus
+2014-04-09 11:22:13,732 [9084] INFO  Cubit.FeedMain 31209 [(null)] - start Cubit.FeedMain.checkExportStatus
+2014-04-09 11:22:13,734 [9084] INFO  Cubit.FeedMain 31211 [(null)] - end Cubit.FeedMain.checkExportStatus
+2014-04-09 11:22:13,742 [9084] INFO  Cubit.FeedMain 31219 [(null)] - start Cubit.FeedMain.checkCostCodes
+2014-04-09 11:22:13,795 [9084] INFO  Cubit.FeedMain 31272 [(null)] - end Cubit.FeedMain.checkCostCodes
+2014-04-09 11:22:13,804 [9084] INFO  Cubit.FeedMain 31281 [(null)] - start Cubit.FeedMain.exportSingle
+2014-04-09 11:22:13,806 [9084] INFO  Cubit.FeedMain 31283 [(null)] - start Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:22:14,063 [9084] INFO  Cubit.FeedMain 31540 [(null)] - start Cubit.FeedMain.createInvoice
+2014-04-09 11:22:14,283 [9084] INFO  Cubit.FeedMain 31760 [(null)] - end Cubit.FeedMain.createInvoice
+2014-04-09 11:22:14,309 [9084] INFO  Cubit.FeedMain 31786 [(null)] - start Cubit.FeedMain.exportData
+2014-04-09 11:22:14,428 [9084] INFO  Cubit.FeedMain 31905 [(null)] - end Cubit.FeedMain.exportData
+2014-04-09 11:22:14,429 [9084] INFO  Cubit.FeedMain 31906 [(null)] - start Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:22:14,494 [9084] INFO  Cubit.FeedMain 31971 [(null)] - end Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:22:14,494 [9084] INFO  Cubit.FeedMain 31971 [(null)] - exsPositive(SetBookingIDtoExportStatusAM) - Transaction=3300917, DataId=1189
+2014-04-09 11:22:14,495 [9084] INFO  Cubit.FeedMain 31972 [(null)] - end Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:22:14,495 [9084] INFO  Cubit.FeedMain 31972 [(null)] - end Cubit.FeedMain.exportSingle
+2014-04-09 11:22:14,495 [9084] INFO  Cubit.FeedMain 31972 [(null)] - start Cubit.FeedMain.exportSingle
+2014-04-09 11:22:14,495 [9084] INFO  Cubit.FeedMain 31972 [(null)] - start Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:22:14,499 [9084] INFO  Cubit.FeedMain 31976 [(null)] - start Cubit.FeedMain.createInvoice
+2014-04-09 11:22:14,502 [9084] INFO  Cubit.FeedMain 31979 [(null)] - end Cubit.FeedMain.createInvoice
+2014-04-09 11:22:14,502 [9084] INFO  Cubit.FeedMain 31979 [(null)] - start Cubit.FeedMain.exportData
+2014-04-09 11:22:14,579 [9084] INFO  Cubit.FeedMain 32056 [(null)] - end Cubit.FeedMain.exportData
+2014-04-09 11:22:14,579 [9084] INFO  Cubit.FeedMain 32056 [(null)] - start Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:22:14,622 [9084] INFO  Cubit.FeedMain 32099 [(null)] - end Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:22:14,622 [9084] INFO  Cubit.FeedMain 32099 [(null)] - exsPositive(SetBookingIDtoExportStatusAM) - Transaction=3301069, DataId=1192
+2014-04-09 11:22:14,622 [9084] INFO  Cubit.FeedMain 32099 [(null)] - end Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:22:14,622 [9084] INFO  Cubit.FeedMain 32099 [(null)] - end Cubit.FeedMain.exportSingle
+2014-04-09 11:22:14,685 [9084] ERROR Cubit.FeedMain 32162 [(null)] - All records exported OK - no errors
+Cubit.NYSFriendlyException: All records exported OK - no errors
+   at Cubit.FeedMain.NewExportAttempt() in C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\FeedMain.aspx.vb:line 2444
+   at Cubit.FeedMain.btnyes_Click(Object sender, ImageClickEventArgs e) in C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\FeedMain.aspx.vb:line 2520
+2014-04-09 11:22:14,691 [9084] INFO  Cubit.FeedMain 32168 [(null)] - end Cubit.FeedMain.btnyes_Click
+2014-04-09 11:50:37,783 [1540] INFO  Cubit.NSLogUtils.LogUtils 84 [(null)] - Config refresh
+2014-04-09 11:50:40,904 [1540] INFO  Cubit.FeedMain 3205 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:50:40,904 [1540] INFO  Cubit.FeedMain 3205 [(null)] - start Cubit.FeedMain.setPanels
+2014-04-09 11:50:40,905 [1540] INFO  Cubit.FeedMain 3206 [(null)] - end Cubit.FeedMain.setPanels
+2014-04-09 11:50:40,909 [1540] INFO  Cubit.FeedMain 3210 [(null)] - start Cubit.FeedMain.checkLoginstatus
+2014-04-09 11:51:10,114 [1540] INFO  Cubit.FeedMain 32414 [(null)] - end Cubit.FeedMain.checkLoginstatus
+2014-04-09 11:51:10,117 [1540] INFO  Cubit.FeedMain 32417 [(null)] - start Cubit.FeedMain.setUser
+2014-04-09 11:51:10,118 [1540] INFO  Cubit.FeedMain 32418 [(null)] - Current user: Ashley Marron
+2014-04-09 11:51:10,118 [1540] INFO  Cubit.FeedMain 32418 [(null)] - end Cubit.FeedMain.setUser
+2014-04-09 11:51:10,119 [1540] INFO  Cubit.FeedMain 32419 [(null)] - start Cubit.FeedMain.setAjax
+2014-04-09 11:51:10,121 [1540] INFO  Cubit.FeedMain 32421 [(null)] - end Cubit.FeedMain.setAjax
+2014-04-09 11:51:10,127 [1540] INFO  Cubit.FeedMain 32427 [(null)] - start Cubit.FeedMain.populateGroups
+2014-04-09 11:51:38,508 [1540] INFO  Cubit.FeedMain 60808 [(null)] - end Cubit.FeedMain.populateGroups
+2014-04-09 11:51:38,508 [1540] INFO  Cubit.FeedMain 60808 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:13,772 [6204] INFO  Cubit.FeedMain 96072 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:52:13,773 [6204] INFO  Cubit.FeedMain 96073 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:13,773 [6204] INFO  Cubit.FeedMain 96073 [(null)] - start Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:14,215 [6204] INFO  Cubit.FeedMain 96515 [(null)] - end Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:16,769 [6452] INFO  Cubit.FeedMain 99069 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:52:16,769 [6452] INFO  Cubit.FeedMain 99069 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:16,769 [6452] INFO  Cubit.FeedMain 99069 [(null)] - start Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:16,826 [6452] INFO  Cubit.FeedMain 99126 [(null)] - end Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:20,825 [3716] INFO  Cubit.FeedMain 103125 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:52:20,825 [3716] INFO  Cubit.FeedMain 103125 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:20,825 [3716] INFO  Cubit.FeedMain 103125 [(null)] - start Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:20,831 [3716] INFO  Cubit.FeedMain 103131 [(null)] - end Cubit.FeedMain.ddgroup_SelectedIndexChanged
+2014-04-09 11:52:24,819 [6452] INFO  Cubit.FeedMain 107120 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:52:24,819 [6452] INFO  Cubit.FeedMain 107120 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:24,821 [6452] INFO  Cubit.FeedMain 107122 [(null)] - start Cubit.FeedMain.btnexport_Click
+2014-04-09 11:52:24,861 [6452] INFO  Cubit.FeedMain 107162 [(null)] - start Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:52:24,931 [6452] INFO  Cubit.FeedMain 107232 [(null)] - end Cubit.FeedMain.checkCategoryStatus
+2014-04-09 11:52:24,931 [6452] INFO  Cubit.FeedMain 107232 [(null)] - end Cubit.FeedMain.btnexport_Click
+2014-04-09 11:52:26,982 [8228] INFO  Cubit.FeedMain 109283 [(null)] - start Cubit.FeedMain.Page_Load
+2014-04-09 11:52:26,982 [8228] INFO  Cubit.FeedMain 109283 [(null)] - end Cubit.FeedMain.Page_Load
+2014-04-09 11:52:26,982 [8228] INFO  Cubit.FeedMain 109283 [(null)] - start Cubit.FeedMain.btnyes_Click
+2014-04-09 11:52:27,013 [8228] INFO  Cubit.FeedMain 109314 [(null)] - start Cubit.FeedMain.checkExportStatus
+2014-04-09 11:52:27,027 [8228] INFO  Cubit.FeedMain 109328 [(null)] - end Cubit.FeedMain.checkExportStatus
+2014-04-09 11:52:27,036 [8228] INFO  Cubit.FeedMain 109337 [(null)] - start Cubit.FeedMain.checkCostCodes
+2014-04-09 11:52:27,108 [8228] INFO  Cubit.FeedMain 109409 [(null)] - end Cubit.FeedMain.checkCostCodes
+2014-04-09 11:52:27,109 [8228] INFO  Cubit.FeedMain 109410 [(null)] - start Cubit.FeedMain.exportSingle
+2014-04-09 11:52:27,111 [8228] INFO  Cubit.FeedMain 109412 [(null)] - start Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:52:27,329 [8228] INFO  Cubit.FeedMain 109630 [(null)] - start Cubit.FeedMain.createInvoice
+2014-04-09 11:52:27,425 [8228] INFO  Cubit.FeedMain 109726 [(null)] - end Cubit.FeedMain.createInvoice
+2014-04-09 11:52:27,450 [8228] INFO  Cubit.FeedMain 109751 [(null)] - start Cubit.FeedMain.exportData
+2014-04-09 11:52:27,469 [8228] INFO  Cubit.FeedMain 109770 [(null)] - end Cubit.FeedMain.exportData
+2014-04-09 11:52:27,469 [8228] INFO  Cubit.FeedMain 109770 [(null)] - start Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:52:27,503 [8228] INFO  Cubit.FeedMain 109804 [(null)] - end Cubit.FeedMain.SetBookingIDtoExportStatusAM
+2014-04-09 11:52:27,503 [8228] INFO  Cubit.FeedMain 109804 [(null)] - exsPositive(SetBookingIDtoExportStatusAM) - Transaction=3287821, DataId=1153
+2014-04-09 11:52:27,503 [8228] INFO  Cubit.FeedMain 109804 [(null)] - end Cubit.FeedMain.ExportSALEREFUND
+2014-04-09 11:52:27,503 [8228] INFO  Cubit.FeedMain 109804 [(null)] - end Cubit.FeedMain.exportSingle
+2014-04-09 11:52:27,536 [8228] ERROR Cubit.FeedMain 109837 [(null)] - All records exported OK - no errors
+Cubit.NYSFriendlyException: All records exported OK - no errors
+   at Cubit.FeedMain.NewExportAttempt() in C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\FeedMain.aspx.vb:line 2438
+   at Cubit.FeedMain.btnyes_Click(Object sender, ImageClickEventArgs e) in C:\Users\ashleymarron\projects\CUBIT_APP2\Cubit\Cubit\FeedMain.aspx.vb:line 2514
+2014-04-09 11:52:27,539 [8228] INFO  Cubit.FeedMain 109840 [(null)] - end Cubit.FeedMain.btnyes_Click

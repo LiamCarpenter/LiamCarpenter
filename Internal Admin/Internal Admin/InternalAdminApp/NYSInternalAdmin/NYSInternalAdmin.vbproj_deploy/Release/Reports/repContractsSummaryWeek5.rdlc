@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="SqlServerConnStr">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>2a8dc0be-19ba-4da2-ac79-30dea73714de</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsContractsSummary_contractsSummary">
+      <Fields>
+        <Field Name="groupname">
+          <DataField>groupname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week1header">
+          <DataField>week1header</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week1">
+          <DataField>week1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="week2header">
+          <DataField>week2header</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week2">
+          <DataField>week2</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="week3header">
+          <DataField>week3header</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week3">
+          <DataField>week3</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="week4header">
+          <DataField>week4header</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week4">
+          <DataField>week4</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="week5header">
+          <DataField>week5header</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="week5">
+          <DataField>week5</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="totalbookings">
+          <DataField>totalbookings</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="totalvalue">
+          <DataField>totalvalue</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="lessthan10k">
+          <DataField>lessthan10k</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="lessthan10kvalue">
+          <DataField>lessthan10kvalue</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="between10k_25k">
+          <DataField>between10k_25k</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="between10k_25kvalue">
+          <DataField>between10k_25kvalue</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="above25k">
+          <DataField>above25k</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="above25kvalue">
+          <DataField>above25kvalue</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SqlServerConnStr</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.contractsSummary</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsContractsSummary</rd:DataSetName>
+        <rd:TableName>contractsSummary</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>contractsSummaryTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Chart Name="chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="chart1_CategoryGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!groupname.Value</GroupExpression>
+                </GroupExpressions>
+                <Filters>
+                  <Filter>
+                    <FilterExpression>=formatnumber(Fields!week5.Value,0)</FilterExpression>
+                    <Operator>GreaterThan</Operator>
+                    <FilterValues>
+                      <FilterValue>0</FilterValue>
+                    </FilterValues>
+                  </Filter>
+                </Filters>
+              </Group>
+              <Label>=Fields!groupname.Value</Label>
+              <DataElementOutput>Output</DataElementOutput>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label />
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="Series1">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!week5.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style>
+                      <FontFamily>Verdana</FontFamily>
+                      <FontSize>7pt</FontSize>
+                    </Style>
+                    <Label>=Fields!groupname.Value &amp; ", " &amp; Fields!week5.Value</Label>
+                    <Visible>true</Visible>
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>Black</Color>
+                    </Border>
+                  </Style>
+                  <ChartMarker>
+                    <Type>Auto</Type>
+                    <Size>6pt</Size>
+                    <Style />
+                  </ChartMarker>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PieLabelStyle</Name>
+                      <Value>Outside</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Subtype>ExplodedPie</Subtype>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <Margin>False</Margin>
+                <Interval>1</Interval>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>-1</IntervalOffset>
+                </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                </ChartMajorTickMarks>
+                <ChartMinorTickMarks>
+                  <Type>None</Type>
+                </ChartMinorTickMarks>
+                <PreventFontShrink>true</PreventFontShrink>
+                <PreventFontGrow>true</PreventFontGrow>
+                <IncludeZero>false</IncludeZero>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <Margin>True</Margin>
+                <ChartMajorGridLines>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                      <Width>0.75pt</Width>
+                    </Border>
+                  </Style>
+                  <Interval>NaN</Interval>
+                </ChartMajorTickMarks>
+                <ChartMinorTickMarks>
+                  <Type>None</Type>
+                </ChartMinorTickMarks>
+                <Scalar>true</Scalar>
+                <Minimum>0</Minimum>
+                <PreventFontShrink>true</PreventFontShrink>
+                <PreventFontGrow>true</PreventFontGrow>
+                <IncludeZero>false</IncludeZero>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartValueAxes>
+            <ChartThreeDProperties>
+              <ProjectionMode>Perspective</ProjectionMode>
+              <Shading>Simple</Shading>
+              <WallThickness>15</WallThickness>
+              <Clustered>true</Clustered>
+            </ChartThreeDProperties>
+            <Style>
+              <Border>
+                <Width>0.75pt</Width>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Default">
+            <Hidden>true</Hidden>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.75pt</Width>
+              </Border>
+            </Style>
+            <Position>RightCenter</Position>
+            <Layout>Column</Layout>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <AutoFitTextDisabled>true</AutoFitTextDisabled>
+          </ChartLegend>
+        </ChartLegends>
+        <Palette>SemiTransparent</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>dsContractsSummary_contractsSummary</DataSetName>
+        <Height>7.25cm</Height>
+        <Width>13cm</Width>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>__Upgraded2005__</Name>
+            <Value>__Upgraded2005__</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>7.25cm</Height>
+    <Style />
+  </Body>
+  <Width>13cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2.5cm</LeftMargin>
+    <RightMargin>2.5cm</RightMargin>
+    <TopMargin>2.5cm</TopMargin>
+    <BottomMargin>2.5cm</BottomMargin>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportID>8909c4c4-4f3d-4e76-a1a6-f447d9e73686</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+NYS_MailService
+</name>
+</assembly>
+<members>
+<member name="P:NYS_MailService.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:NYS_MailService.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:NYS_MailService.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:NYS_MailService.SsoCodeList.search(System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Search for codes for the selected client
+ </summary>
+	<param name="pintClientID"></param>
+	<param name="pstrCode"></param>
+	<param name="pstrCodeName"></param>
+	<param name="pstrCodeType"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.SsoCodeList.listClientCodeTypes(System.Int32)">
+	<summary>
+ List unique code types for the specified client.
+ Returns a list of strings, not of class instances
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.SsoCodeList.saveSync">
+	<summary>
+ Save codes from the syncing service, doesn't do it by ID because ID's could be different.
+ Keeps all old codes too - which is good for feeder files
+ </summary>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.SendEmail.send(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Send an email to/from the specified addresses. Any html images are converted to attachments and added to the email to force inline images to work.
+ New version now uses system.mail instead of old CDO coding.
+ </summary>
+	<param name="pstrFrom"></param>
+	<param name="pstrTo"></param>
+	<param name="pstrSubject"></param>
+	<param name="pstrMessage"></param>
+	<param name="pstrBcc"></param>
+	<param name="pstrcc"></param>
+	<param name="pstrHomePath"></param>
+	<param name="pFile"></param>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.srvMail.checkETPenquiries">
+	<summary>
+ R21 NM
+ </summary>
+	<remarks>Checks for enquiries that have been at ETP only for 2 weeks or more, then for a week following that</remarks>
+</member><member name="M:NYS_MailService.srvMail.getInterceptorFileLetter(System.Int32)">
+	<summary>
+ Pass in a number, upper case letter of the alphabet is returned. eg: 0 = "", 1 = "A", 2 = "B"
+ For values over 26 double letters are returned.
+ For Values over 52 "error" is returned.
+ </summary>
+	<param name="pintNumber"></param>
+	<returns>Sequence letter OR string "error"</returns>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.srvMail.readToNextSibling(System.Xml.XmlReader@)">
+	<summary>
+ Advances Xml reader to the close tag of the current node. Child nodes are skipped. 
+ If current element is empty then reader does not advance.
+ If no end tag is found then it will advance to the end of the file.
+ </summary>
+	<param name="pxmlReader"></param>
+	<remarks></remarks>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.#ctor">
+	<remarks/>
+</member><member name="E:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getClientDataCompleted">
+	<remarks/>
+</member><member name="E:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getUserDataCompleted">
+	<remarks/>
+</member><member name="E:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getCodeListCompleted">
+	<remarks/>
+</member><member name="E:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.saveTrainedCompleted">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getClientData(System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getClientDataAsync(System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getClientDataAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getUserData(System.Int32,System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getUserDataAsync(System.Int32,System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getUserDataAsync(System.Int32,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getCodeList(System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getCodeListAsync(System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.getCodeListAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.saveTrained(System.String,System.Int32,System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.saveTrainedAsync(System.String,System.Int32,System.String)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.saveTrainedAsync(System.String,System.Int32,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:NYS_MailService.com.nyscorporate.onlineclient.srvEmail.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.srvEmail">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getClientDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:NYS_MailService.com.nyscorporate.onlineclient.getClientDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getClientDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getUserDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:NYS_MailService.com.nyscorporate.onlineclient.getUserDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getUserDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getCodeListCompletedEventHandler">
+	<remarks/>
+</member><member name="P:NYS_MailService.com.nyscorporate.onlineclient.getCodeListCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.getCodeListCompletedEventArgs">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.saveTrainedCompletedEventHandler">
+	<remarks/>
+</member><member name="P:NYS_MailService.com.nyscorporate.onlineclient.saveTrainedCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:NYS_MailService.com.nyscorporate.onlineclient.saveTrainedCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

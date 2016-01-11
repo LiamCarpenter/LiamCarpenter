@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SSOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ssoClient">
+          <Key>
+            <PropertyRef Name="ssoClientID" />
+          </Key>
+          <Property Name="ssoClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ssoClientName" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientConfermaID" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientSbookerUrl" Type="varchar" MaxLength="500" />
+          <Property Name="ssoClientWebformsUrl" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientEtravelUrl" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientEtravelKey" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientEtravelKeyEnc" Type="varchar" MaxLength="500" />
+          <Property Name="ssoClientEtravelSiteCode" Type="varchar" MaxLength="50" />
+          <Property Name="ssoClientEvolviUrl" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientMIUrl" Type="varchar" MaxLength="200" />
+          <Property Name="ssoClientConfermaVersion" Type="int" />
+          <Property Name="ssoClientPrefix" Type="varchar" MaxLength="100" />
+          <Property Name="ssoClientPrefix2" Type="varchar" MaxLength="100" />
+          <Property Name="ssoClientIsLive" Type="bit" />
+          <Property Name="ssoClientComplaintID" Type="int" />
+          <Property Name="ssoClientUseSpecVids" Type="bit" />
+          <Property Name="ssoClientForceTraining" Type="bit" />
+        </EntityType>
+        <EntityType Name="ssoUser">
+          <Key>
+            <PropertyRef Name="ssoUserID" />
+          </Key>
+          <Property Name="ssoUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ssoUserFirstname" Type="varchar" MaxLength="50" />
+          <Property Name="ssoUserLastName" Type="varchar" MaxLength="100" />
+          <Property Name="ssoUserEmail" Type="varchar" MaxLength="200" />
+          <Property Name="ssoUserPassword" Type="varchar" MaxLength="200" />
+          <Property Name="ssoUserConferma" Type="bit" />
+          <Property Name="ssoUserEtravel" Type="bit" />
+          <Property Name="ssoUserEvolvi" Type="bit" />
+          <Property Name="ssoUserSbooker" Type="bit" />
+          <Property Name="ssoUserWebforms" Type="bit" />
+          <Property Name="ssoClientID" Type="int" />
+          <Property Name="ssoUserActive" Type="bit" />
+          <Property Name="ssoUserMi" Type="bit" />
+          <Property Name="ssoUserPasswordDate" Type="varchar" MaxLength="50" />
+          <Property Name="ssoUserOldPasswords" Type="varchar(max)" />
+          <Property Name="ssoUserResetDate" Type="varchar" MaxLength="200" />
+          <Property Name="ssoUserSentDate" Type="varchar" MaxLength="200" />
+          <Property Name="ssoUserEvolviPassword" Type="varchar" MaxLength="50" />
+          <Property Name="ssoUserSbookerGroup" Type="varchar" MaxLength="12" />
+          <Property Name="ssoUserEbisID" Type="varchar" MaxLength="50" />
+          <Property Name="ssoUserTerms" Type="bit" />
+          <Property Name="ssoUserDeleted" Type="bit" />
+          <Property Name="ssoUserTrainedEvolvi" Type="bit" />
+          <Property Name="ssoUserTrainedEtravel" Type="bit" />
+          <Property Name="ssoUserTrainedConferma" Type="bit" />
+          <Property Name="ssoUserTrainedSbooker" Type="bit" />
+          <Property Name="ssoUserDateCreated" Type="datetime" />
+          <Property Name="ssoUserUnsubscribed" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="SSOModelStoreContainer">
+          <EntitySet Name="ssoClient" EntityType="Self.ssoClient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ssoUser" EntityType="Self.ssoUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ssoClient">
+          <Key>
+            <PropertyRef Name="ssoClientID" />
+          </Key>
+          <Property Name="ssoClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ssoClientName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientConfermaID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientSbookerUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientWebformsUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientEtravelUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientEtravelKey" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientEtravelKeyEnc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientEtravelSiteCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientEvolviUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientMIUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientConfermaVersion" Type="Int32" />
+          <Property Name="ssoClientPrefix" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientPrefix2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ssoClientIsLive" Type="Boolean" />
+          <Property Name="ssoClientComplaintID" Type="Int32" />
+          <Property Name="ssoClientUseSpecVids" Type="Boolean" />
+          <Property Name="ssoClientForceTraining" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ssoUser">
+          <Key>
+            <PropertyRef Name="ssoUserID" />
+          </Key>
+          <Property Name="ssoUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ssoUserFirstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserLastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserConferma" Type="Boolean" />
+          <Property Name="ssoUserEtravel" Type="Boolean" />
+          <Property Name="ssoUserEvolvi" Type="Boolean" />
+          <Property Name="ssoUserSbooker" Type="Boolean" />
+          <Property Name="ssoUserWebforms" Type="Boolean" />
+          <Property Name="ssoClientID" Type="Int32" />
+          <Property Name="ssoUserActive" Type="Boolean" />
+          <Property Name="ssoUserMi" Type="Boolean" />
+          <Property Name="ssoUserPasswordDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserOldPasswords" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserResetDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserSentDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserEvolviPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserSbookerGroup" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserEbisID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ssoUserTerms" Type="Boolean" />
+          <Property Name="ssoUserDeleted" Type="Boolean" />
+          <Property Name="ssoUserTrainedEvolvi" Type="Boolean" />
+          <Property Name="ssoUserTrainedEtravel" Type="Boolean" />
+          <Property Name="ssoUserTrainedConferma" Type="Boolean" />
+          <Property Name="ssoUserTrainedSbooker" Type="Boolean" />
+          <Property Name="ssoUserDateCreated" Type="DateTime" Precision="3" />
+          <Property Name="ssoUserUnsubscribed" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="SSOEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ssoClient" EntityType="Self.ssoClient" />
+          <EntitySet Name="ssoUser" EntityType="Self.ssoUser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SSOModelStoreContainer" CdmEntityContainer="SSOEntities">
+          <EntitySetMapping Name="ssoClient">
+            <EntityTypeMapping TypeName="SSOModel.ssoClient">
+              <MappingFragment StoreEntitySet="ssoClient">
+                <ScalarProperty Name="ssoClientID" ColumnName="ssoClientID" />
+                <ScalarProperty Name="ssoClientName" ColumnName="ssoClientName" />
+                <ScalarProperty Name="ssoClientConfermaID" ColumnName="ssoClientConfermaID" />
+                <ScalarProperty Name="ssoClientSbookerUrl" ColumnName="ssoClientSbookerUrl" />
+                <ScalarProperty Name="ssoClientWebformsUrl" ColumnName="ssoClientWebformsUrl" />
+                <ScalarProperty Name="ssoClientEtravelUrl" ColumnName="ssoClientEtravelUrl" />
+                <ScalarProperty Name="ssoClientEtravelKey" ColumnName="ssoClientEtravelKey" />
+                <ScalarProperty Name="ssoClientEtravelKeyEnc" ColumnName="ssoClientEtravelKeyEnc" />
+                <ScalarProperty Name="ssoClientEtravelSiteCode" ColumnName="ssoClientEtravelSiteCode" />
+                <ScalarProperty Name="ssoClientEvolviUrl" ColumnName="ssoClientEvolviUrl" />
+                <ScalarProperty Name="ssoClientMIUrl" ColumnName="ssoClientMIUrl" />
+                <ScalarProperty Name="ssoClientConfermaVersion" ColumnName="ssoClientConfermaVersion" />
+                <ScalarProperty Name="ssoClientPrefix" ColumnName="ssoClientPrefix" />
+                <ScalarProperty Name="ssoClientPrefix2" ColumnName="ssoClientPrefix2" />
+                <ScalarProperty Name="ssoClientIsLive" ColumnName="ssoClientIsLive" />
+                <ScalarProperty Name="ssoClientComplaintID" ColumnName="ssoClientComplaintID" />
+                <ScalarProperty Name="ssoClientUseSpecVids" ColumnName="ssoClientUseSpecVids" />
+                <ScalarProperty Name="ssoClientForceTraining" ColumnName="ssoClientForceTraining" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ssoUser">
+            <EntityTypeMapping TypeName="SSOModel.ssoUser">
+              <MappingFragment StoreEntitySet="ssoUser">
+                <ScalarProperty Name="ssoUserID" ColumnName="ssoUserID" />
+                <ScalarProperty Name="ssoUserFirstname" ColumnName="ssoUserFirstname" />
+                <ScalarProperty Name="ssoUserLastName" ColumnName="ssoUserLastName" />
+                <ScalarProperty Name="ssoUserEmail" ColumnName="ssoUserEmail" />
+                <ScalarProperty Name="ssoUserPassword" ColumnName="ssoUserPassword" />
+                <ScalarProperty Name="ssoUserConferma" ColumnName="ssoUserConferma" />
+                <ScalarProperty Name="ssoUserEtravel" ColumnName="ssoUserEtravel" />
+                <ScalarProperty Name="ssoUserEvolvi" ColumnName="ssoUserEvolvi" />
+                <ScalarProperty Name="ssoUserSbooker" ColumnName="ssoUserSbooker" />
+                <ScalarProperty Name="ssoUserWebforms" ColumnName="ssoUserWebforms" />
+                <ScalarProperty Name="ssoClientID" ColumnName="ssoClientID" />
+                <ScalarProperty Name="ssoUserActive" ColumnName="ssoUserActive" />
+                <ScalarProperty Name="ssoUserMi" ColumnName="ssoUserMi" />
+                <ScalarProperty Name="ssoUserPasswordDate" ColumnName="ssoUserPasswordDate" />
+                <ScalarProperty Name="ssoUserOldPasswords" ColumnName="ssoUserOldPasswords" />
+                <ScalarProperty Name="ssoUserResetDate" ColumnName="ssoUserResetDate" />
+                <ScalarProperty Name="ssoUserSentDate" ColumnName="ssoUserSentDate" />
+                <ScalarProperty Name="ssoUserEvolviPassword" ColumnName="ssoUserEvolviPassword" />
+                <ScalarProperty Name="ssoUserSbookerGroup" ColumnName="ssoUserSbookerGroup" />
+                <ScalarProperty Name="ssoUserEbisID" ColumnName="ssoUserEbisID" />
+                <ScalarProperty Name="ssoUserTerms" ColumnName="ssoUserTerms" />
+                <ScalarProperty Name="ssoUserDeleted" ColumnName="ssoUserDeleted" />
+                <ScalarProperty Name="ssoUserTrainedEvolvi" ColumnName="ssoUserTrainedEvolvi" />
+                <ScalarProperty Name="ssoUserTrainedEtravel" ColumnName="ssoUserTrainedEtravel" />
+                <ScalarProperty Name="ssoUserTrainedConferma" ColumnName="ssoUserTrainedConferma" />
+                <ScalarProperty Name="ssoUserTrainedSbooker" ColumnName="ssoUserTrainedSbooker" />
+                <ScalarProperty Name="ssoUserDateCreated" ColumnName="ssoUserDateCreated" />
+                <ScalarProperty Name="ssoUserUnsubscribed" ColumnName="ssoUserUnsubscribed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

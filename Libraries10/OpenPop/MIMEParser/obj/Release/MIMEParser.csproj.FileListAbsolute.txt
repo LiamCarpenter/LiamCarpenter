@@ -1,0 +1,8 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Release\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Release\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Release\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Release\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Release\MIMEParser.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\bin\Release\MIMEParser.dll
+E:\Development\VS10\LIBRARIES10\OpenPop\MIMEParser\obj\Release\MIMEParser.dll

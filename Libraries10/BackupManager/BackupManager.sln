@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BackupManager", "BackupManager.vbproj", "{DDFE02E3-46B2-476B-B68B-84876F354C2C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoUtilities", "..\EvoUtilities\EvoUtilities.vbproj", "{A9EC19B1-0065-4001-9C05-603F94AC0420}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoDatabaseUtils", "..\EvoDatabaseUtils\EvoDatabaseUtils.vbproj", "{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoZipUtils", "..\EvoZipUtils\EvoZipUtils.vbproj", "{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nys-sql2012:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = ..\\EvoUtilities\\EvoUtilities.vbproj
+		SccProjectName0 = ../EvoUtilities
+		SccAuxPath0 = http://nys-sql2012:8080/tfs/defaultcollection
+		SccLocalPath0 = ..\\EvoUtilities
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\EvoZipUtils\\EvoZipUtils.vbproj
+		SccProjectName1 = ../EvoZipUtils
+		SccAuxPath1 = http://nys-sql2012:8080/tfs/defaultcollection
+		SccLocalPath1 = ..\\EvoZipUtils
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDFE02E3-46B2-476B-B68B-84876F354C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFE02E3-46B2-476B-B68B-84876F354C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFE02E3-46B2-476B-B68B-84876F354C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFE02E3-46B2-476B-B68B-84876F354C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3570CADF-3A0C-4C84-9C6A-A23C5015E2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

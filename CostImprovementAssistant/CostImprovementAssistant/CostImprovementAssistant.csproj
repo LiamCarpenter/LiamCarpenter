@@ -261,6 +261,9 @@
     <Compile Include="QualityIndicators.cs">
       <DependentUpon>CIAEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="SchemeBudgetTypes.cs">
+      <DependentUpon>CIAEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="SchemeKpia.cs">
       <DependentUpon>CIAEntities.tt</DependentUpon>
     </Compile>
@@ -301,6 +304,10 @@
     <Compile Include="Controllers\SchemeRisksController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\StakeholdersController.cs" />
+    <Compile Include="Trusts.cs">
+      <DependentUpon>CIAEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TrustsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CIAEntities.Context.tt">
@@ -1215,6 +1222,11 @@
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Scripts\plugins\slimScroll\slimScroll.jquery.json" />
     <Content Include="Scripts\respond.min.js.map" />
+    <Content Include="Views\Trusts\Create.cshtml" />
+    <Content Include="Views\Trusts\Delete.cshtml" />
+    <Content Include="Views\Trusts\Details.cshtml" />
+    <Content Include="Views\Trusts\Edit.cshtml" />
+    <Content Include="Views\Trusts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

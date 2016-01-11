@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/NYSInternalAdmin.vbproj/global.asax" hash="ffffffffe41d2e37" filehash="ffffdf8b61828ff3" flags="150000" assembly="NYSInternalAdmin.vbproj_deploy" type="ASP._global_asax">
+  <filedeps>
+    <filedep name="/NYSInternalAdmin.vbproj/global.asax" />
+  </filedeps>
+</preserve>

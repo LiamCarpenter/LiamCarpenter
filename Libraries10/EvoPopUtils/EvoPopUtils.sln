@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoPopUtils", "EvoPopUtils.vbproj", "{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPOP", "OpenPOP\OpenPOP.csproj", "{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIMEParser", "MIMEParser\MIMEParser.csproj", "{CC4C4334-335D-4369-B0ED-F3C17CD57364}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EvoUtilities", "..\EvoUtilities\EvoUtilities.vbproj", "{A9EC19B1-0065-4001-9C05-603F94AC0420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B74D4E-5DC5-4A06-B15F-9FA0F24D6CE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B3E0DF-61C3-4643-AB47-DBE1CFE3D303}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4C4334-335D-4369-B0ED-F3C17CD57364}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|x86.ActiveCfg = Debug|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Debug|x86.Build.0 = Debug|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|x86.ActiveCfg = Release|x86
+		{A9EC19B1-0065-4001-9C05-603F94AC0420}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

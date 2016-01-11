@@ -1,0 +1,25 @@
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\TNEFTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\TNEFTest.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\MIMEParser.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\OpenPOP.dll
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\MIMEParser.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\OpenPOP.pdb
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.frmTest.resources
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\ResGen.read.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\ResGen.write.1.tlog
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.exe
+C:\Development\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\TNEFTest.exe.config
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\TNEFTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\TNEFTest.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\MIMEParser.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\OpenPOP.dll
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\MIMEParser.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\bin\Debug\OpenPOP.pdb
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\ResolveAssemblyReference.cache
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.frmTest.resources
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\GenerateResource.read.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\GenerateResource.write.1.tlog
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.exe
+C:\DEV FOLDER\Development10\VS10\LIBRARIES10\OpenPop\TNEFTest\obj\Debug\TNEFTest.pdb
