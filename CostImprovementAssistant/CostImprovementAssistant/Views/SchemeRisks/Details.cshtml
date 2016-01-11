@@ -1,0 +1,59 @@
+﻿@model CostImprovementAssistant.SchemeRisks
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SchemeRisks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SchemeRiskDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SchemeRiskDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Likelyhood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Likelyhood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Impact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Impact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Risk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Risk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

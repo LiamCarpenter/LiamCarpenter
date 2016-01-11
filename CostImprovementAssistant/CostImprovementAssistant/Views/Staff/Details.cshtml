@@ -1,0 +1,138 @@
+﻿@model CostImprovementAssistant.Staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Administrator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Administrator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompletingQI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompletingQI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewingQI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewingQI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChiefNursing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChiefNursing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spare1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spare1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spare2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spare2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

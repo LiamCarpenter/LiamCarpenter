@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ciaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assumptions" EntityType="ciaModel.Assumptions" />
+    <EntitySet Name="BreakdownOfEnablingCosts" EntityType="ciaModel.BreakdownOfEnablingCosts" />
+    <EntitySet Name="BreakdownOfSavings" EntityType="ciaModel.BreakdownOfSavings" />
+    <EntitySet Name="BudgetType" EntityType="ciaModel.BudgetType" />
+    <EntitySet Name="BusinessLevel" EntityType="ciaModel.BusinessLevel" />
+    <EntitySet Name="BusinessSector" EntityType="ciaModel.BusinessSector" />
+    <EntitySet Name="Category" EntityType="ciaModel.Category" />
+    <EntitySet Name="CiaForm" EntityType="ciaModel.CiaForm" />
+    <EntitySet Name="Department" EntityType="ciaModel.Department" />
+    <EntitySet Name="Dependencies" EntityType="ciaModel.Dependencies" />
+    <EntitySet Name="GeneratedIncome" EntityType="ciaModel.GeneratedIncome" />
+    <EntitySet Name="Impact" EntityType="ciaModel.Impact" />
+    <EntitySet Name="Issues" EntityType="ciaModel.Issues" />
+    <EntitySet Name="KpiaSourcesReporting" EntityType="ciaModel.KpiaSourcesReporting" />
+    <EntitySet Name="Milestones" EntityType="ciaModel.Milestones" />
+    <EntitySet Name="QiConditions" EntityType="ciaModel.QiConditions" />
+    <EntitySet Name="QiConditionTable" EntityType="ciaModel.QiConditionTable" />
+    <EntitySet Name="QualityImpact" EntityType="ciaModel.QualityImpact" />
+    <EntitySet Name="QualityIndicators" EntityType="ciaModel.QualityIndicators" />
+    <EntitySet Name="SchemeKpia" EntityType="ciaModel.SchemeKpia" />
+    <EntitySet Name="SchemeQualityIndicators" EntityType="ciaModel.SchemeQualityIndicators" />
+    <EntitySet Name="SchemeRisks" EntityType="ciaModel.SchemeRisks" />
+    <EntitySet Name="Staff" EntityType="ciaModel.Staff" />
+    <EntitySet Name="Stakeholders" EntityType="ciaModel.Stakeholders" />
+    <AssociationSet Name="fkAssuImpact" Association="ciaModel.fkAssuImpact">
+      <End Role="Impact" EntitySet="Impact" />
+      <End Role="Assumptions" EntitySet="Assumptions" />
+    </AssociationSet>
+    <AssociationSet Name="fkBec" Association="ciaModel.fkBec">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="BreakdownOfEnablingCosts" EntitySet="BreakdownOfEnablingCosts" />
+    </AssociationSet>
+    <AssociationSet Name="fkBec2" Association="ciaModel.fkBec2">
+      <End Role="BudgetType" EntitySet="BudgetType" />
+      <End Role="BreakdownOfEnablingCosts" EntitySet="BreakdownOfEnablingCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_breakdownofsavings_bt2" Association="ciaModel.FK_breakdownofsavings_bt2">
+      <End Role="BudgetType" EntitySet="BudgetType" />
+      <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_breakdownofsavings_budt" Association="ciaModel.FK_breakdownofsavings_budt">
+      <End Role="BudgetType" EntitySet="BudgetType" />
+      <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+    </AssociationSet>
+    <AssociationSet Name="fkBos_BT" Association="ciaModel.fkBos_BT">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="BreakdownOfSavings" EntitySet="BreakdownOfSavings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessLevel_BusinessSector" Association="ciaModel.FK_BusinessLevel_BusinessSector">
+      <End Role="BusinessSector" EntitySet="BusinessSector" />
+      <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessLevel_dept" Association="ciaModel.FK_BusinessLevel_dept">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+    </AssociationSet>
+    <AssociationSet Name="fkBusinessLevel" Association="ciaModel.fkBusinessLevel">
+      <End Role="BusinessLevel" EntitySet="BusinessLevel" />
+      <End Role="CiaForm" EntitySet="CiaForm" />
+    </AssociationSet>
+    <AssociationSet Name="fkBusinessSector" Association="ciaModel.fkBusinessSector">
+      <End Role="BusinessSector" EntitySet="BusinessSector" />
+      <End Role="CiaForm" EntitySet="CiaForm" />
+    </AssociationSet>
+    <AssociationSet Name="fkCategory" Association="ciaModel.fkCategory">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="CiaForm" EntitySet="CiaForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qualityimpact_CiaForm" Association="ciaModel.FK_qualityimpact_CiaForm">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="QualityImpact" EntitySet="QualityImpact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_schemekpia_Cia_Form" Association="ciaModel.FK_schemekpia_Cia_Form">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="SchemeKpia" EntitySet="SchemeKpia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_schemequalityindicators_Cia_Form" Association="ciaModel.FK_schemequalityindicators_Cia_Form">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="SchemeQualityIndicators" EntitySet="SchemeQualityIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="fkDepartment" Association="ciaModel.fkDepartment">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="CiaForm" EntitySet="CiaForm" />
+    </AssociationSet>
+    <AssociationSet Name="fkIncome" Association="ciaModel.fkIncome">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="GeneratedIncome" EntitySet="GeneratedIncome" />
+    </AssociationSet>
+    <AssociationSet Name="fkIssues" Association="ciaModel.fkIssues">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="Issues" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="fkMilestones_Cia_Form" Association="ciaModel.fkMilestones_Cia_Form">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="Milestones" EntitySet="Milestones" />
+    </AssociationSet>
+    <AssociationSet Name="fkRisks_Impact" Association="ciaModel.fkRisks_Impact">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="SchemeRisks" EntitySet="SchemeRisks" />
+    </AssociationSet>
+    <AssociationSet Name="fkStakeHolders_Cia_Form" Association="ciaModel.fkStakeHolders_Cia_Form">
+      <End Role="CiaForm" EntitySet="CiaForm" />
+      <End Role="Stakeholders" EntitySet="Stakeholders" />
+    </AssociationSet>
+    <AssociationSet Name="fkDepImpact" Association="ciaModel.fkDepImpact">
+      <End Role="Impact" EntitySet="Impact" />
+      <End Role="Dependencies" EntitySet="Dependencies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_Impact" Association="ciaModel.FK_Issues_Impact">
+      <End Role="Impact" EntitySet="Impact" />
+      <End Role="Issues" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="fkSkpi2" Association="ciaModel.fkSkpi2">
+      <End Role="KpiaSourcesReporting" EntitySet="KpiaSourcesReporting" />
+      <End Role="SchemeKpia" EntitySet="SchemeKpia" />
+    </AssociationSet>
+    <AssociationSet Name="fkQicons_qicon" Association="ciaModel.fkQicons_qicon">
+      <End Role="QiConditions" EntitySet="QiConditions" />
+      <End Role="QiConditionTable" EntitySet="QiConditionTable" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assumptions">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="AssumptionsID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="AssumptionsID" Type="Int32" Nullable="false" />
+    <Property Name="AssumptionsDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Impact" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Impact1" Relationship="ciaModel.fkAssuImpact" FromRole="Assumptions" ToRole="Impact" />
+  </EntityType>
+  <EntityType Name="BreakdownOfEnablingCosts">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="BudgetTypeNameA" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="BudgetTypeNameA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BudgetTypeNameB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WTE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Costs" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBec" FromRole="BreakdownOfEnablingCosts" ToRole="CiaForm" />
+    <NavigationProperty Name="BudgetType" Relationship="ciaModel.fkBec2" FromRole="BreakdownOfEnablingCosts" ToRole="BudgetType" />
+  </EntityType>
+  <EntityType Name="BreakdownOfSavings">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="BudgetTypeNameA" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="BudgetTypeNameA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BudgetTypeNameB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WTE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Year1Saving" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ReccurentSavingValue" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BudgetType" Relationship="ciaModel.FK_breakdownofsavings_bt2" FromRole="BreakdownOfSavings" ToRole="BudgetType" />
+    <NavigationProperty Name="BudgetType1" Relationship="ciaModel.FK_breakdownofsavings_budt" FromRole="BreakdownOfSavings" ToRole="BudgetType" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBos_BT" FromRole="BreakdownOfSavings" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="BudgetType">
+    <Key>
+      <PropertyRef Name="BudgetTypeName" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="BudgetTypeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BudgetStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BreakdownOfEnablingCosts" Relationship="ciaModel.fkBec2" FromRole="BudgetType" ToRole="BreakdownOfEnablingCosts" />
+    <NavigationProperty Name="BreakdownOfSavings" Relationship="ciaModel.FK_breakdownofsavings_bt2" FromRole="BudgetType" ToRole="BreakdownOfSavings" />
+    <NavigationProperty Name="BreakdownOfSavings1" Relationship="ciaModel.FK_breakdownofsavings_budt" FromRole="BudgetType" ToRole="BreakdownOfSavings" />
+  </EntityType>
+  <EntityType Name="BusinessLevel">
+    <Key>
+      <PropertyRef Name="BusinesslevelName" />
+      <PropertyRef Name="BusinessSectorName" />
+      <PropertyRef Name="DepartmentName" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="BusinesslevelName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessSectorName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BusinessSector" Relationship="ciaModel.FK_BusinessLevel_BusinessSector" FromRole="BusinessLevel" ToRole="BusinessSector" />
+    <NavigationProperty Name="Department" Relationship="ciaModel.FK_BusinessLevel_dept" FromRole="BusinessLevel" ToRole="Department" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBusinessLevel" FromRole="BusinessLevel" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="BusinessSector">
+    <Key>
+      <PropertyRef Name="BusinessSectorName" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="BusinessSectorName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TargetValue" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.FK_BusinessLevel_BusinessSector" FromRole="BusinessSector" ToRole="BusinessLevel" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkBusinessSector" FromRole="BusinessSector" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkCategory" FromRole="Category" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="CiaForm">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateofScheme" Type="DateTime" Precision="0" />
+    <Property Name="SchemeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessLevelName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessSectorName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Overview" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentState" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TargetState" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectSupervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectManager" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BudgetSupervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HrSupervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExecutiveOwner" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConfidenceFactor" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ImplementationDate" Type="DateTime" Precision="0" />
+    <Property Name="BenefitExpectedInCiaYear" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ReccuringAnualBenefit" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="EnablingCosts" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NettCiaYearSavings" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PSAuthorisationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PSAuthorisationDate" Type="DateTime" Precision="0" />
+    <Property Name="BSAuthorisationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BSAuthorisationDate" Type="DateTime" Precision="0" />
+    <Property Name="RiskAdjustedValue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="ConfidenceCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="QIRequired" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BreakdownOfEnablingCosts" Relationship="ciaModel.fkBec" FromRole="CiaForm" ToRole="BreakdownOfEnablingCosts" />
+    <NavigationProperty Name="BreakdownOfSavings" Relationship="ciaModel.fkBos_BT" FromRole="CiaForm" ToRole="BreakdownOfSavings" />
+    <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.fkBusinessLevel" FromRole="CiaForm" ToRole="BusinessLevel" />
+    <NavigationProperty Name="BusinessSector" Relationship="ciaModel.fkBusinessSector" FromRole="CiaForm" ToRole="BusinessSector" />
+    <NavigationProperty Name="Category" Relationship="ciaModel.fkCategory" FromRole="CiaForm" ToRole="Category" />
+    <NavigationProperty Name="QualityImpact" Relationship="ciaModel.FK_qualityimpact_CiaForm" FromRole="CiaForm" ToRole="QualityImpact" />
+    <NavigationProperty Name="SchemeKpia" Relationship="ciaModel.FK_schemekpia_Cia_Form" FromRole="CiaForm" ToRole="SchemeKpia" />
+    <NavigationProperty Name="SchemeQualityIndicators" Relationship="ciaModel.FK_schemequalityindicators_Cia_Form" FromRole="CiaForm" ToRole="SchemeQualityIndicators" />
+    <NavigationProperty Name="Department" Relationship="ciaModel.fkDepartment" FromRole="CiaForm" ToRole="Department" />
+    <NavigationProperty Name="GeneratedIncome" Relationship="ciaModel.fkIncome" FromRole="CiaForm" ToRole="GeneratedIncome" />
+    <NavigationProperty Name="Issues" Relationship="ciaModel.fkIssues" FromRole="CiaForm" ToRole="Issues" />
+    <NavigationProperty Name="Milestones" Relationship="ciaModel.fkMilestones_Cia_Form" FromRole="CiaForm" ToRole="Milestones" />
+    <NavigationProperty Name="SchemeRisks" Relationship="ciaModel.fkRisks_Impact" FromRole="CiaForm" ToRole="SchemeRisks" />
+    <NavigationProperty Name="Stakeholders" Relationship="ciaModel.fkStakeHolders_Cia_Form" FromRole="CiaForm" ToRole="Stakeholders" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentName" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BusinessLevel" Relationship="ciaModel.FK_BusinessLevel_dept" FromRole="Department" ToRole="BusinessLevel" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkDepartment" FromRole="Department" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="Dependencies">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="DependenciesID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="DependenciesID" Type="Int32" Nullable="false" />
+    <Property Name="DependenciesDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Impact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Impact1" Relationship="ciaModel.fkDepImpact" FromRole="Dependencies" ToRole="Impact" />
+  </EntityType>
+  <EntityType Name="GeneratedIncome">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="IncomeDescription" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="IncomeDescription" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IncomeYear1SavingValueTotal" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="April" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="May" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="June" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="July" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="August" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="September" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="October" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="November" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="December" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="January" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="February" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="March" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ReccurentSavingValue" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualIncomeYear1Savings" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualApril" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualMay" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualJune" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualJuly" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualAugust" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualSeptember" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualOctober" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualNovember" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualDecember" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualJanuary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualFebruary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualMarch" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ActualReccurentSavings" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkIncome" FromRole="GeneratedIncome" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="Impact">
+    <Key>
+      <PropertyRef Name="ImpactTitle" />
+    </Key>
+    <Property Name="ImpactTitle" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Assumptions" Relationship="ciaModel.fkAssuImpact" FromRole="Impact" ToRole="Assumptions" />
+    <NavigationProperty Name="Dependencies" Relationship="ciaModel.fkDepImpact" FromRole="Impact" ToRole="Dependencies" />
+    <NavigationProperty Name="Issues" Relationship="ciaModel.FK_Issues_Impact" FromRole="Impact" ToRole="Issues" />
+  </EntityType>
+  <EntityType Name="Issues">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="IssueID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="IssueID" Type="Int32" Nullable="false" />
+    <Property Name="IssueDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Impact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkIssues" FromRole="Issues" ToRole="CiaForm" />
+    <NavigationProperty Name="Impact1" Relationship="ciaModel.FK_Issues_Impact" FromRole="Issues" ToRole="Impact" />
+  </EntityType>
+  <EntityType Name="KpiaSourcesReporting">
+    <Key>
+      <PropertyRef Name="KPIAssurance" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="KPIAssurance" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SchemeKpia" Relationship="ciaModel.fkSkpi2" FromRole="KpiaSourcesReporting" ToRole="SchemeKpia" />
+  </EntityType>
+  <EntityType Name="Milestones">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="MilestonesID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="MilestonesID" Type="Int32" Nullable="false" />
+    <Property Name="MilestonesDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ExpectedCompletionDate" Type="DateTime" Precision="0" />
+    <Property Name="RevisedDate" Type="DateTime" Precision="0" />
+    <Property Name="RevisionReason" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DateOFCompletion" Type="DateTime" Precision="0" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkMilestones_Cia_Form" FromRole="Milestones" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="QiConditions">
+    <Key>
+      <PropertyRef Name="ConditionTitle" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="ConditionTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="QiConditionTable" Relationship="ciaModel.fkQicons_qicon" FromRole="QiConditions" ToRole="QiConditionTable" />
+  </EntityType>
+  <EntityType Name="QiConditionTable">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="ConditionTitle" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="ConditionTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ConditionDetail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mittigation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Consiquence" Type="Int32" />
+    <Property Name="Likelyhood" Type="Int32" />
+    <Property Name="Score" Type="Int32" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="QiConditions" Relationship="ciaModel.fkQicons_qicon" FromRole="QiConditionTable" ToRole="QiConditions" />
+  </EntityType>
+  <EntityType Name="QualityImpact">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="ImpactDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CompletingQi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OverallRiskScore" Type="Int32" Nullable="false" />
+    <Property Name="ReviewedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Equality" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConsiderationComments" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EvidenceComments" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerDate" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerStatus" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerStatusComments" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EoDate" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="EoStatus" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EoStatuscomments" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_qualityimpact_CiaForm" FromRole="QualityImpact" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="QualityIndicators">
+    <Key>
+      <PropertyRef Name="QualityIndicatorsTitle" />
+    </Key>
+    <Property Name="QualityIndicatorsTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SchemeKpia">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="KPIAssurances" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="KPIAssurances" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_schemekpia_Cia_Form" FromRole="SchemeKpia" ToRole="CiaForm" />
+    <NavigationProperty Name="KpiaSourcesReporting" Relationship="ciaModel.fkSkpi2" FromRole="SchemeKpia" ToRole="KpiaSourcesReporting" />
+  </EntityType>
+  <EntityType Name="SchemeQualityIndicators">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="QualityIndicatorsTitle" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="QualityIndicatorsTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.FK_schemequalityindicators_Cia_Form" FromRole="SchemeQualityIndicators" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="SchemeRisks">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="RiskID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="RiskID" Type="Int32" Nullable="false" />
+    <Property Name="SchemeRiskDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Likelyhood" Type="Int32" />
+    <Property Name="Impact" Type="Int32" />
+    <Property Name="Risk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkRisks_Impact" FromRole="SchemeRisks" ToRole="CiaForm" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="StaffName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StaffPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Administrator" Type="Boolean" />
+    <Property Name="PM" Type="Boolean" />
+    <Property Name="PS" Type="Boolean" />
+    <Property Name="BS" Type="Boolean" />
+    <Property Name="HR" Type="Boolean" />
+    <Property Name="EO" Type="Boolean" />
+    <Property Name="CompletingQI" Type="Boolean" />
+    <Property Name="ReviewingQI" Type="Boolean" />
+    <Property Name="ChiefNursing" Type="Boolean" />
+    <Property Name="Spare1" Type="Boolean" />
+    <Property Name="Spare2" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Stakeholders">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+      <PropertyRef Name="StakeholdersID" />
+      <PropertyRef Name="TrustCode" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" />
+    <Property Name="StakeholdersID" Type="Int32" Nullable="false" />
+    <Property Name="StakeholdersDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Impact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrustCode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CiaForm" Relationship="ciaModel.fkStakeHolders_Cia_Form" FromRole="Stakeholders" ToRole="CiaForm" />
+  </EntityType>
+  <Association Name="fkAssuImpact">
+    <End Type="ciaModel.Impact" Role="Impact" Multiplicity="1" />
+    <End Type="ciaModel.Assumptions" Role="Assumptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impact">
+        <PropertyRef Name="ImpactTitle" />
+      </Principal>
+      <Dependent Role="Assumptions">
+        <PropertyRef Name="Impact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkBec">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.BreakdownOfEnablingCosts" Role="BreakdownOfEnablingCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfEnablingCosts">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkBec2">
+    <End Type="ciaModel.BudgetType" Role="BudgetType" Multiplicity="1" />
+    <End Type="ciaModel.BreakdownOfEnablingCosts" Role="BreakdownOfEnablingCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetType">
+        <PropertyRef Name="BudgetTypeName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfEnablingCosts">
+        <PropertyRef Name="BudgetTypeNameA" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_breakdownofsavings_bt2">
+    <End Type="ciaModel.BudgetType" Role="BudgetType" Multiplicity="1" />
+    <End Type="ciaModel.BreakdownOfSavings" Role="BreakdownOfSavings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetType">
+        <PropertyRef Name="BudgetTypeName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfSavings">
+        <PropertyRef Name="BudgetTypeNameB" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_breakdownofsavings_budt">
+    <End Type="ciaModel.BudgetType" Role="BudgetType" Multiplicity="1" />
+    <End Type="ciaModel.BreakdownOfSavings" Role="BreakdownOfSavings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetType">
+        <PropertyRef Name="BudgetTypeName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfSavings">
+        <PropertyRef Name="BudgetTypeNameA" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkBos_BT">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.BreakdownOfSavings" Role="BreakdownOfSavings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BreakdownOfSavings">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessLevel_BusinessSector">
+    <End Type="ciaModel.BusinessSector" Role="BusinessSector" Multiplicity="1" />
+    <End Type="ciaModel.BusinessLevel" Role="BusinessLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessSector">
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BusinessLevel">
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessLevel_dept">
+    <End Type="ciaModel.Department" Role="Department" Multiplicity="1" />
+    <End Type="ciaModel.BusinessLevel" Role="BusinessLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="BusinessLevel">
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkBusinessLevel">
+    <End Type="ciaModel.BusinessLevel" Role="BusinessLevel" Multiplicity="1" />
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessLevel">
+        <PropertyRef Name="BusinesslevelName" />
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="CiaForm">
+        <PropertyRef Name="BusinessLevelName" />
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkBusinessSector">
+    <End Type="ciaModel.BusinessSector" Role="BusinessSector" Multiplicity="1" />
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessSector">
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="CiaForm">
+        <PropertyRef Name="BusinessSectorName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkCategory">
+    <End Type="ciaModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="CiaForm">
+        <PropertyRef Name="CategoryName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qualityimpact_CiaForm">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.QualityImpact" Role="QualityImpact" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="QualityImpact">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_schemekpia_Cia_Form">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.SchemeKpia" Role="SchemeKpia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeKpia">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_schemequalityindicators_Cia_Form">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.SchemeQualityIndicators" Role="SchemeQualityIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeQualityIndicators">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkDepartment">
+    <End Type="ciaModel.Department" Role="Department" Multiplicity="1" />
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="CiaForm">
+        <PropertyRef Name="DepartmentName" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkIncome">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.GeneratedIncome" Role="GeneratedIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="GeneratedIncome">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkIssues">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.Issues" Role="Issues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Issues">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkMilestones_Cia_Form">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.Milestones" Role="Milestones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Milestones">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkRisks_Impact">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.SchemeRisks" Role="SchemeRisks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeRisks">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkStakeHolders_Cia_Form">
+    <End Type="ciaModel.CiaForm" Role="CiaForm" Multiplicity="1" />
+    <End Type="ciaModel.Stakeholders" Role="Stakeholders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CiaForm">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="Stakeholders">
+        <PropertyRef Name="SchemeID" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkDepImpact">
+    <End Type="ciaModel.Impact" Role="Impact" Multiplicity="0..1" />
+    <End Type="ciaModel.Dependencies" Role="Dependencies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impact">
+        <PropertyRef Name="ImpactTitle" />
+      </Principal>
+      <Dependent Role="Dependencies">
+        <PropertyRef Name="Impact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_Impact">
+    <End Type="ciaModel.Impact" Role="Impact" Multiplicity="0..1" />
+    <End Type="ciaModel.Issues" Role="Issues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impact">
+        <PropertyRef Name="ImpactTitle" />
+      </Principal>
+      <Dependent Role="Issues">
+        <PropertyRef Name="Impact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkSkpi2">
+    <End Type="ciaModel.KpiaSourcesReporting" Role="KpiaSourcesReporting" Multiplicity="1" />
+    <End Type="ciaModel.SchemeKpia" Role="SchemeKpia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KpiaSourcesReporting">
+        <PropertyRef Name="KPIAssurance" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="SchemeKpia">
+        <PropertyRef Name="KPIAssurances" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkQicons_qicon">
+    <End Type="ciaModel.QiConditions" Role="QiConditions" Multiplicity="1" />
+    <End Type="ciaModel.QiConditionTable" Role="QiConditionTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QiConditions">
+        <PropertyRef Name="ConditionTitle" />
+        <PropertyRef Name="TrustCode" />
+      </Principal>
+      <Dependent Role="QiConditionTable">
+        <PropertyRef Name="ConditionTitle" />
+        <PropertyRef Name="TrustCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

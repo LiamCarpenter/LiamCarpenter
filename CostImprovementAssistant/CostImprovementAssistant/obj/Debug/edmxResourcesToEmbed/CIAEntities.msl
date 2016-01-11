@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ciaModelStoreContainer" CdmEntityContainer="ciaEntities">
+    <EntitySetMapping Name="Assumptions">
+      <EntityTypeMapping TypeName="ciaModel.Assumptions">
+        <MappingFragment StoreEntitySet="Assumptions">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Impact" ColumnName="Impact" />
+          <ScalarProperty Name="AssumptionsDetail" ColumnName="AssumptionsDetail" />
+          <ScalarProperty Name="AssumptionsID" ColumnName="AssumptionsID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BreakdownOfEnablingCosts">
+      <EntityTypeMapping TypeName="ciaModel.BreakdownOfEnablingCosts">
+        <MappingFragment StoreEntitySet="BreakdownOfEnablingCosts">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Costs" ColumnName="Costs" />
+          <ScalarProperty Name="WTE" ColumnName="WTE" />
+          <ScalarProperty Name="BudgetTypeNameB" ColumnName="BudgetTypeNameB" />
+          <ScalarProperty Name="BudgetTypeNameA" ColumnName="BudgetTypeNameA" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BreakdownOfSavings">
+      <EntityTypeMapping TypeName="ciaModel.BreakdownOfSavings">
+        <MappingFragment StoreEntitySet="BreakdownOfSavings">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="ReccurentSavingValue" ColumnName="ReccurentSavingValue" />
+          <ScalarProperty Name="Year1Saving" ColumnName="Year1Saving" />
+          <ScalarProperty Name="WTE" ColumnName="WTE" />
+          <ScalarProperty Name="BudgetTypeNameB" ColumnName="BudgetTypeNameB" />
+          <ScalarProperty Name="BudgetTypeNameA" ColumnName="BudgetTypeNameA" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetType">
+      <EntityTypeMapping TypeName="ciaModel.BudgetType">
+        <MappingFragment StoreEntitySet="BudgetType">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="BudgetStatus" ColumnName="BudgetStatus" />
+          <ScalarProperty Name="BudgetTypeName" ColumnName="BudgetTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessLevel">
+      <EntityTypeMapping TypeName="ciaModel.BusinessLevel">
+        <MappingFragment StoreEntitySet="BusinessLevel">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="BusinessSectorName" ColumnName="BusinessSectorName" />
+          <ScalarProperty Name="BusinesslevelName" ColumnName="BusinesslevelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessSector">
+      <EntityTypeMapping TypeName="ciaModel.BusinessSector">
+        <MappingFragment StoreEntitySet="BusinessSector">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="TargetValue" ColumnName="TargetValue" />
+          <ScalarProperty Name="BusinessSectorName" ColumnName="BusinessSectorName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="ciaModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CiaForm">
+      <EntityTypeMapping TypeName="ciaModel.CiaForm">
+        <MappingFragment StoreEntitySet="CiaForm">
+          <ScalarProperty Name="QIRequired" ColumnName="QIRequired" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="ConfidenceCode" ColumnName="ConfidenceCode" />
+          <ScalarProperty Name="RiskAdjustedValue" ColumnName="RiskAdjustedValue" />
+          <ScalarProperty Name="BSAuthorisationDate" ColumnName="BSAuthorisationDate" />
+          <ScalarProperty Name="BSAuthorisationCode" ColumnName="BSAuthorisationCode" />
+          <ScalarProperty Name="PSAuthorisationDate" ColumnName="PSAuthorisationDate" />
+          <ScalarProperty Name="PSAuthorisationCode" ColumnName="PSAuthorisationCode" />
+          <ScalarProperty Name="NettCiaYearSavings" ColumnName="NettCiaYearSavings" />
+          <ScalarProperty Name="EnablingCosts" ColumnName="EnablingCosts" />
+          <ScalarProperty Name="ReccuringAnualBenefit" ColumnName="ReccuringAnualBenefit" />
+          <ScalarProperty Name="BenefitExpectedInCiaYear" ColumnName="BenefitExpectedInCiaYear" />
+          <ScalarProperty Name="ImplementationDate" ColumnName="ImplementationDate" />
+          <ScalarProperty Name="ConfidenceFactor" ColumnName="ConfidenceFactor" />
+          <ScalarProperty Name="ExecutiveOwner" ColumnName="ExecutiveOwner" />
+          <ScalarProperty Name="HrSupervisor" ColumnName="HrSupervisor" />
+          <ScalarProperty Name="BudgetSupervisor" ColumnName="BudgetSupervisor" />
+          <ScalarProperty Name="ProjectManager" ColumnName="ProjectManager" />
+          <ScalarProperty Name="ProjectSupervisor" ColumnName="ProjectSupervisor" />
+          <ScalarProperty Name="TargetState" ColumnName="TargetState" />
+          <ScalarProperty Name="CurrentState" ColumnName="CurrentState" />
+          <ScalarProperty Name="Overview" ColumnName="Overview" />
+          <ScalarProperty Name="BusinessSectorName" ColumnName="BusinessSectorName" />
+          <ScalarProperty Name="BusinessLevelName" ColumnName="BusinessLevelName" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="DateofScheme" ColumnName="DateofScheme" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="ciaModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dependencies">
+      <EntityTypeMapping TypeName="ciaModel.Dependencies">
+        <MappingFragment StoreEntitySet="Dependencies">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Impact" ColumnName="Impact" />
+          <ScalarProperty Name="DependenciesDetail" ColumnName="DependenciesDetail" />
+          <ScalarProperty Name="DependenciesID" ColumnName="DependenciesID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneratedIncome">
+      <EntityTypeMapping TypeName="ciaModel.GeneratedIncome">
+        <MappingFragment StoreEntitySet="GeneratedIncome">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="ActualReccurentSavings" ColumnName="ActualReccurentSavings" />
+          <ScalarProperty Name="ActualMarch" ColumnName="ActualMarch" />
+          <ScalarProperty Name="ActualFebruary" ColumnName="ActualFebruary" />
+          <ScalarProperty Name="ActualJanuary" ColumnName="ActualJanuary" />
+          <ScalarProperty Name="ActualDecember" ColumnName="ActualDecember" />
+          <ScalarProperty Name="ActualNovember" ColumnName="ActualNovember" />
+          <ScalarProperty Name="ActualOctober" ColumnName="ActualOctober" />
+          <ScalarProperty Name="ActualSeptember" ColumnName="ActualSeptember" />
+          <ScalarProperty Name="ActualAugust" ColumnName="ActualAugust" />
+          <ScalarProperty Name="ActualJuly" ColumnName="ActualJuly" />
+          <ScalarProperty Name="ActualJune" ColumnName="ActualJune" />
+          <ScalarProperty Name="ActualMay" ColumnName="ActualMay" />
+          <ScalarProperty Name="ActualApril" ColumnName="ActualApril" />
+          <ScalarProperty Name="ActualIncomeYear1Savings" ColumnName="ActualIncomeYear1Savings" />
+          <ScalarProperty Name="ReccurentSavingValue" ColumnName="ReccurentSavingValue" />
+          <ScalarProperty Name="March" ColumnName="March" />
+          <ScalarProperty Name="February" ColumnName="February" />
+          <ScalarProperty Name="January" ColumnName="January" />
+          <ScalarProperty Name="December" ColumnName="December" />
+          <ScalarProperty Name="November" ColumnName="November" />
+          <ScalarProperty Name="October" ColumnName="October" />
+          <ScalarProperty Name="September" ColumnName="September" />
+          <ScalarProperty Name="August" ColumnName="August" />
+          <ScalarProperty Name="July" ColumnName="July" />
+          <ScalarProperty Name="June" ColumnName="June" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="April" ColumnName="April" />
+          <ScalarProperty Name="IncomeYear1SavingValueTotal" ColumnName="IncomeYear1SavingValueTotal" />
+          <ScalarProperty Name="IncomeDescription" ColumnName="IncomeDescription" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impact">
+      <EntityTypeMapping TypeName="ciaModel.Impact">
+        <MappingFragment StoreEntitySet="Impact">
+          <ScalarProperty Name="ImpactTitle" ColumnName="ImpactTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issues">
+      <EntityTypeMapping TypeName="ciaModel.Issues">
+        <MappingFragment StoreEntitySet="Issues">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Impact" ColumnName="Impact" />
+          <ScalarProperty Name="IssueDetail" ColumnName="IssueDetail" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KpiaSourcesReporting">
+      <EntityTypeMapping TypeName="ciaModel.KpiaSourcesReporting">
+        <MappingFragment StoreEntitySet="KpiaSourcesReporting">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="KPIAssurance" ColumnName="KPIAssurance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Milestones">
+      <EntityTypeMapping TypeName="ciaModel.Milestones">
+        <MappingFragment StoreEntitySet="Milestones">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="DateOFCompletion" ColumnName="DateOFCompletion" />
+          <ScalarProperty Name="RevisionReason" ColumnName="RevisionReason" />
+          <ScalarProperty Name="RevisedDate" ColumnName="RevisedDate" />
+          <ScalarProperty Name="ExpectedCompletionDate" ColumnName="ExpectedCompletionDate" />
+          <ScalarProperty Name="MilestonesDetail" ColumnName="MilestonesDetail" />
+          <ScalarProperty Name="MilestonesID" ColumnName="MilestonesID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QiConditions">
+      <EntityTypeMapping TypeName="ciaModel.QiConditions">
+        <MappingFragment StoreEntitySet="QiConditions">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="ConditionTitle" ColumnName="ConditionTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QiConditionTable">
+      <EntityTypeMapping TypeName="ciaModel.QiConditionTable">
+        <MappingFragment StoreEntitySet="QiConditionTable">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Likelyhood" ColumnName="Likelyhood" />
+          <ScalarProperty Name="Consiquence" ColumnName="Consiquence" />
+          <ScalarProperty Name="Mittigation" ColumnName="Mittigation" />
+          <ScalarProperty Name="ConditionDetail" ColumnName="ConditionDetail" />
+          <ScalarProperty Name="ConditionTitle" ColumnName="ConditionTitle" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QualityImpact">
+      <EntityTypeMapping TypeName="ciaModel.QualityImpact">
+        <MappingFragment StoreEntitySet="QualityImpact">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="EoStatuscomments" ColumnName="EoStatuscomments" />
+          <ScalarProperty Name="EoStatus" ColumnName="EoStatus" />
+          <ScalarProperty Name="EoDate" ColumnName="EoDate" />
+          <ScalarProperty Name="ManagerStatusComments" ColumnName="ManagerStatusComments" />
+          <ScalarProperty Name="ManagerStatus" ColumnName="ManagerStatus" />
+          <ScalarProperty Name="ManagerDate" ColumnName="ManagerDate" />
+          <ScalarProperty Name="EvidenceComments" ColumnName="EvidenceComments" />
+          <ScalarProperty Name="ConsiderationComments" ColumnName="ConsiderationComments" />
+          <ScalarProperty Name="Equality" ColumnName="Equality" />
+          <ScalarProperty Name="ReviewedBy" ColumnName="ReviewedBy" />
+          <ScalarProperty Name="OverallRiskScore" ColumnName="OverallRiskScore" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CompletingQi" ColumnName="CompletingQi" />
+          <ScalarProperty Name="ImpactDate" ColumnName="ImpactDate" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QualityIndicators">
+      <EntityTypeMapping TypeName="ciaModel.QualityIndicators">
+        <MappingFragment StoreEntitySet="QualityIndicators">
+          <ScalarProperty Name="QualityIndicatorsTitle" ColumnName="QualityIndicatorsTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeKpia">
+      <EntityTypeMapping TypeName="ciaModel.SchemeKpia">
+        <MappingFragment StoreEntitySet="SchemeKpia">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="KPIAssurances" ColumnName="KPIAssurances" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeQualityIndicators">
+      <EntityTypeMapping TypeName="ciaModel.SchemeQualityIndicators">
+        <MappingFragment StoreEntitySet="SchemeQualityIndicators">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="QualityIndicatorsTitle" ColumnName="QualityIndicatorsTitle" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeRisks">
+      <EntityTypeMapping TypeName="ciaModel.SchemeRisks">
+        <MappingFragment StoreEntitySet="SchemeRisks">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Risk" ColumnName="Risk" />
+          <ScalarProperty Name="Impact" ColumnName="Impact" />
+          <ScalarProperty Name="Likelyhood" ColumnName="Likelyhood" />
+          <ScalarProperty Name="SchemeRiskDetail" ColumnName="SchemeRiskDetail" />
+          <ScalarProperty Name="RiskID" ColumnName="RiskID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="ciaModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Spare2" ColumnName="Spare2" />
+          <ScalarProperty Name="Spare1" ColumnName="Spare1" />
+          <ScalarProperty Name="ChiefNursing" ColumnName="ChiefNursing" />
+          <ScalarProperty Name="ReviewingQI" ColumnName="ReviewingQI" />
+          <ScalarProperty Name="CompletingQI" ColumnName="CompletingQI" />
+          <ScalarProperty Name="EO" ColumnName="EO" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="BS" ColumnName="BS" />
+          <ScalarProperty Name="PS" ColumnName="PS" />
+          <ScalarProperty Name="PM" ColumnName="PM" />
+          <ScalarProperty Name="Administrator" ColumnName="Administrator" />
+          <ScalarProperty Name="StaffPassword" ColumnName="StaffPassword" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stakeholders">
+      <EntityTypeMapping TypeName="ciaModel.Stakeholders">
+        <MappingFragment StoreEntitySet="Stakeholders">
+          <ScalarProperty Name="TrustCode" ColumnName="TrustCode" />
+          <ScalarProperty Name="Impact" ColumnName="Impact" />
+          <ScalarProperty Name="StakeholdersDetail" ColumnName="StakeholdersDetail" />
+          <ScalarProperty Name="StakeholdersID" ColumnName="StakeholdersID" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

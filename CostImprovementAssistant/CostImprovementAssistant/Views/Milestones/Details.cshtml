@@ -1,0 +1,67 @@
+﻿@model CostImprovementAssistant.Milestones
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Milestones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MilestonesDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MilestonesDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpectedCompletionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpectedCompletionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RevisedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RevisedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RevisionReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RevisionReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOFCompletion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOFCompletion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

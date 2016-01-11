@@ -1,0 +1,46 @@
+/* MonoSoftware.Web.Dialogs */
+/* MonoSoftware.Web.Dialogs */
+	BODY { background: white; }
+
+	TD {
+	    font: 10px Verdana, Arial, Helvetica, sans-serif;
+	    text-align: center;
+	}
+
+	BUTTON, .Button {
+	    font: x-small Verdana, Arial, Helvetica, sans-serif;
+	    height: 23px;
+	    width: 70px;
+	}
+
+	.Error {
+	    color: red;
+	    font: 10px Verdana, Arial, Helvetica, sans-serif;
+	}
+
+	.InputBox {
+	    font: 10px Verdana, Arial, Helvetica, sans-serif;
+	    width: 100%
+	}
+
+	.bodyclass {
+	    color: black;
+	    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	    font-size: 9pt;
+	    text-align: center;
+	    text-decoration: none
+	}
+
+	.evolink {
+	    background-color: Transparent;
+	    border-style: none;
+	    color: Blue;
+	    /*cursor: hand; - replace for valid css. hand value outdate as of IE 5.5*/
+	    cursor: pointer;
+	    font-family: Verdana, Arial, Helvetica, sans-serif;
+	    font-size: x-small;
+	    font-style: normal;
+	    font-weight: 500;
+	
+	    text-align: left;
+	}

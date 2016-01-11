@@ -1,0 +1,202 @@
+﻿@model IEnumerable<CostImprovementAssistant.GeneratedIncome>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomeYear1SavingValueTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.April)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.May)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.June)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.July)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.August)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.September)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.October)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.November)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.December)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.January)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.February)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.March)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReccurentSavingValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualIncomeYear1Savings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualApril)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualMay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualJune)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualJuly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualAugust)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualSeptember)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualOctober)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualNovember)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualDecember)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualJanuary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualFebruary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualMarch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualReccurentSavings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomeYear1SavingValueTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.April)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.May)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.June)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.July)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.August)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.September)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.October)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.November)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.December)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.January)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.February)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.March)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReccurentSavingValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualIncomeYear1Savings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualApril)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualMay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualJune)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualJuly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualAugust)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualSeptember)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualOctober)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualNovember)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualDecember)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualJanuary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualFebruary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualMarch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualReccurentSavings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiaForm.SchemeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

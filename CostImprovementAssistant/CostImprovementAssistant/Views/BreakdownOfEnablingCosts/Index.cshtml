@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CostImprovementAssistant.BreakdownOfEnablingCosts>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BudgetTypeNameB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Costs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BudgetType.BudgetStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudgetTypeNameB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Costs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiaForm.SchemeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudgetType.BudgetStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

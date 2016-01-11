@@ -1,0 +1,244 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>AdminLTE | Dashboard</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+    <!-- bootstrap 3.0.2 -->
+    <link href="../../Content/Frameworks/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <link href="../../Content/Frameworks/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="../../Content/Frameworks/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="../../Content/Frameworks/AdminLTE.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    @Styles.Render("~/Content/")
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom CSS Content -->
+    <link href="Content/Custom/custom.css" rel="stylesheet" />
+
+    <!--start: Custom Page Head Content -->
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+    <!--end: Custom Page Head Content -->
+</head>
+<body class="skin-NYS">
+<!-- header logo: style can be found in header.less -->
+<header class="header">
+    <i class="logo" style="font-size: 12px">
+        @Html.ActionLink("C I A", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+    </i>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope"></i>
+                        <span class="label label-success">1</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 1 messages</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="../../../img/avatar3.png" class="img-circle" alt="User Image"/>
+                                        </div>
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li><!-- end message -->
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-warning"></i>
+                        <span class="label label-warning">1</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 1 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="ion ion-ios7-people info"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+                <!-- Tasks: style can be found in dropdown.less -->
+                <li class="dropdown tasks-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-tasks"></i>
+                        <span class="label label-danger">1</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 1 tasks</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <!-- Task item -->
+                                    <a href="#">
+                                        <h3>
+                                            Design some buttons
+                                            <small class="pull-right">20%</small>
+                                        </h3>
+                                        <div class="progress xs">
+                                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li><!-- end task item -->
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">View all tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>User <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header bg-light-blue">
+                            <img src="../../../img/avatar3.png" class="img-circle" alt="User Image"/>
+                            <p>
+                                User - Job
+                                <small>Member since Nov. 2012</small>
+                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="left-side sidebar-offcanvas">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="../../../img/avatar3.png" class="img-circle" alt="User Image"/>
+                </div>
+                <div class="pull-left info">
+                    <p>Hello, Jane</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+            <!-- search form -->
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                    <span class="input-group-btn">
+                            <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                        </span>
+                </div>
+            </form>
+            <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li><a href="./Home"><i class="fa fa-users"></i>CiaForm</a></li>
+               
+                <li><a href="./Staff"><i class="fa fa-users"></i>Staff</a></li>
+                <li><a href="./Departments"><i class="fa fa-users"></i>Departments</a></li>
+                <li><a href="./BusinessLevels"><i class="fa fa-users"></i>BusinessLevels</a></li>
+                <li><a href="./BusinessSectors"><i class="fa fa-users"></i>BusinessSectors</a></li>
+                <li><a href="./Categories"><i class="fa fa-users"></i>Categories</a></li>
+                <li><a href="./Impact"><i class="fa fa-users"></i>Impact</a></li>
+                <li><a href="./QiConditions"><i class="fa fa-users"></i>QiConditions</a></li>
+                <li><a href="./QualityImpacts"><i class="fa fa-users"></i>QualityImpacts</a></li>
+                <li><a href="./QiConditionTables"><i class="fa fa-users"></i>QiConditionTables</a></li>
+
+                <li><a href="./BudgetTypes"><i class="fa fa-users"></i>BudgetTypes</a></li>
+                <li><a href="./Assumptions"><i class="fa fa-users"></i>Assumptions</a></li>
+                <li><a href="./Issues"><i class="fa fa-users"></i>Issues</a></li>
+                <li><a href="./Milestones"><i class="fa fa-users"></i>Milestones</a></li>
+                <li><a href="./Dependencies"><i class="fa fa-users"></i>Dependencies</a></li>
+                <li><a href="./Stakeholders"><i class="fa fa-users"></i>Stakeholders</a></li>
+
+                <li><a href="./CiaForms"><i class="fa fa-users"></i>CiaForms</a></li>
+                <li><a href="./GeneratedIncome"><i class="fa fa-users"></i>GeneratedIncome</a></li>
+                <li><a href="./BreakdownOfEnablingCosts"><i class="fa fa-users"></i>BreakdownOfEnablingCosts</a></li>
+                <li><a href="./BreakdownOfSavings"><i class="fa fa-users"></i>BreakdownOfSavings</a></li>
+                
+
+                <li><a href="./KpiaSourceReporting"><i class="fa fa-users"></i>KpiaSourceReporting</a></li>
+                <li><a href="./SchemeKpias"><i class="fa fa-users"></i>SchemeKpias</a></li>
+                <li><a href="./SchemeRisks"><i class="fa fa-users"></i>SchemeRisks</a></li>
+                <li><a href="./SchemeQualityIndicators"><i class="fa fa-users"></i>SchemeQualityIndicators</a></li>
+
+                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content">
+            @RenderBody()
+        </section><!-- /.content -->
+    </aside><!-- /.right-side -->
+</div><!-- ./wrapper -->
+<!--start: Custom Page Footer Content -->
+<asp:ContentPlaceHolder ID="cphFooter" runat="server"></asp:ContentPlaceHolder>
+<!--end: Custom Page Footer Content -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/AdminLTE")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", false)
+</body>
+</html>
+
+
+

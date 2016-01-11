@@ -1,0 +1,43 @@
+﻿@model CostImprovementAssistant.Issues
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Issues</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssueDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Impact1.ImpactTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Impact1.ImpactTitle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

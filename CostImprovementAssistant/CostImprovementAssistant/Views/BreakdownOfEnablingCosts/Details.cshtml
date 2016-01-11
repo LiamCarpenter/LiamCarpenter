@@ -1,0 +1,59 @@
+﻿@model CostImprovementAssistant.BreakdownOfEnablingCosts
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BreakdownOfEnablingCosts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetTypeNameB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetTypeNameB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Costs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetType.BudgetStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetType.BudgetStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

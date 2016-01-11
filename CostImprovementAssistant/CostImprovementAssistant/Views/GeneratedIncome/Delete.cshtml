@@ -1,0 +1,257 @@
+﻿@model CostImprovementAssistant.GeneratedIncome
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GeneratedIncome</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IncomeYear1SavingValueTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncomeYear1SavingValueTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.April)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.April)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.May)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.May)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.June)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.June)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.July)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.July)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.August)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.August)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.September)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.September)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.October)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.October)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.November)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.November)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.December)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.December)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.January)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.January)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.February)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.February)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.March)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.March)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReccurentSavingValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReccurentSavingValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualIncomeYear1Savings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualIncomeYear1Savings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualApril)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualApril)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualMay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualMay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualJune)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualJune)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualJuly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualJuly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualAugust)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualAugust)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualSeptember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualSeptember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualOctober)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualOctober)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualNovember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualNovember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualDecember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualDecember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualJanuary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualJanuary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualFebruary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualFebruary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualMarch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualMarch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualReccurentSavings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualReccurentSavings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

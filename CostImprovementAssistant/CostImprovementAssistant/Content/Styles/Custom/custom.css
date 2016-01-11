@@ -1,0 +1,488 @@
+﻿/*
+    Skin CorporateBible
+    --------
+*/
+/* skin-CorporateBible navbar */
+
+.button {
+    -moz-appearance: button;
+    /* Firefox */
+    -webkit-appearance: button;
+    margin: 10px;
+    /* Safari and Chrome */
+    padding: 10px;
+    width: 70px;
+}
+
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    height: 65px;
+    margin: 10px;
+    padding-top: 25px;
+    text-align: center;
+    width: 200px;
+}
+
+.dragover { border: 5px dashed blue; }
+
+.ClientCategorySpendHeader {
+    background: rgb(0, 157, 221); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(61%, rgba(0, 157, 221, 1)), color-stop(100%, rgba(0, 133, 186, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* Chrome10+,Safari5.1+ */
+   
+    background: -o-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* W3C */
+    background-color: rgb(0, 157, 221);
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009ddd', endColorstr='#0085ba', GradientType=0); /* IE6-9 */
+    font-size: large;
+    text-align: left;
+}
+
+.ClientDetailsHeader {
+    background: rgb(0, 157, 221); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(61%, rgba(0, 157, 221, 1)), color-stop(100%, rgba(0, 133, 186, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 157, 221, 1) 61%, rgba(0, 133, 186, 1) 100%); /* W3C */
+    min-height: 40px;
+    background-color: rgb(0, 157, 221);
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009ddd', endColorstr='#0085ba', GradientType=0); /* IE6-9 */
+    font-size: large;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ContactBox {
+   /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(210, 235, 249, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(254, 255, 255, 1)), color-stop(100%, rgba(210, 235, 249, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(210, 235, 249, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(210, 235, 249, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(210, 235, 249, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(254, 255, 255, 1) 0%, rgba(210, 235, 249, 1) 100%); /* W3C */
+    background-color: lightgray;
+ 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+    border: 3px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#feffff', endColorstr='#d2ebf9', GradientType=0); /* IE6-9 */
+    font-size: 12px;
+    margin: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.ClientNewsHeader {
+    background-color: #003976;
+    color: white;
+    font-size: x-large;
+    padding: 10px 0px 10px 0px;
+}
+
+.ClientNewsSubHeader {
+    background-color: rgb(110, 127, 173);
+    color: white;
+    font-size: large;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+}
+
+.ClientDescription {
+    background-color: rgb(226, 227, 228);
+    font-size: medium;
+    padding: 2px 0px 2px 0px;
+    text-align: center;
+}
+
+.text-travel { color: rgb(0, 157, 221) !important; }
+
+.text-conferences { color: rgb(178, 187, 26) !important; }
+
+.text-events { color: rgb(236, 0, 141) !important; }
+
+
+.bg-Grey1 { background-color: #9fa1a4; }
+
+.bg-Grey2 { background-color: #c5c7c8; }
+
+.bg-Grey3 { background-color: #e2e3e4; }
+
+.bg-Grey4 { background-color: #EBEBEC; }
+
+.EditBorder:hover {
+    /*border:dashed;
+        border-width:1px;
+        border-color:red;*/
+    background-color: #e0d0a4;
+}
+
+.skin-CorporateBible .navbar {
+    background-color: rgb(0, 57, 118);
+    border-bottom: 1px solid #eee;
+}
+
+.skin-CorporateBible .navbar .nav a { color: #ffffff; }
+
+.skin-CorporateBible .navbar .nav > li > a:hover,
+.skin-CorporateBible .navbar .nav > li > a:active,
+.skin-CorporateBible .navbar .nav > li > a:focus,
+.skin-CorporateBible .navbar .nav .open > a,
+.skin-CorporateBible .navbar .nav .open > a:hover,
+.skin-CorporateBible .navbar .nav .open > a:focus {
+    background: #ffffff;
+    color: #999999;
+}
+
+.skin-CorporateBible .navbar .navbar-right > .nav { margin-right: 10px; }
+
+.skin-CorporateBible .navbar .sidebar-toggle .icon-bar { background: #ffffff; }
+
+.skin-CorporateBible .navbar .sidebar-toggle:hover .icon-bar { background: #999999 !important; }
+
+/* skin-CorporateBible logo */
+
+.skin-CorporateBible .logo {
+    background-color: rgb(0, 57, 118);
+    color: #f9f9f9;
+}
+
+.skin-CorporateBible .logo > a { color: #f9f9f9; }
+
+.skin-CorporateBible .logo:hover { /*background: #005699;*/ }
+
+/* skin-CorporateBible content header */
+
+.skin-CorporateBible .right-side > .content-header {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Skin-red user panel */
+
+.skin-CorporateBible .user-panel > .image > img { border: 1px solid #444; }
+
+.skin-CorporateBible .user-panel > .info,
+.skin-CorporateBible .user-panel > .info > a { color: #eee; }
+
+/* skin-CorporateBible sidebar */
+
+.skin-CorporateBible .sidebar { border-bottom: 0px solid #333; }
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li {
+    border-bottom: 0px solid #3380bc;
+    border-top: 0px solid #3380bc;
+}
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li:first-of-type { border-top: 0px solid #3380bc; }
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li:first-of-type > a { border-top: 0px solid #3380bc; }
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li > a { margin-right: 1px; }
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li > a:hover,
+.skin-CorporateBible .sidebar > .sidebar-menu > li.active > a {
+    background: rgb(0, 57, 118);
+    color: #FFFFFF;
+}
+
+.skin-CorporateBible .sidebar > .sidebar-menu > li > .treeview-menu {
+    background: #6e7fad;
+    margin: 0 1px;
+}
+
+.skin-CorporateBible .left-side { background: rgb(29, 84, 146); }
+
+.skin-CorporateBible .sidebar a { color: #eee; }
+
+.skin-CorporateBible .sidebar a:hover { text-decoration: none; }
+
+.skin-CorporateBible .treeview-menu > li > a { color: #ccc; }
+
+.skin-CorporateBible .treeview-menu > li.active > a,
+.skin-CorporateBible .treeview-menu > li > a:hover { color: #fff; }
+
+.skin-CorporateBible .sidebar-form {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 0px solid #555;
+    border-radius: 2px;
+    margin: 10px 10px;
+}
+
+.skin-CorporateBible .sidebar-form input[type="text"],
+.skin-CorporateBible .sidebar-form .btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0 solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    height: 35px;
+    outline: none;
+}
+
+.skin-CorporateBible .sidebar-form input[type="text"] {
+    -moz-border-radius-bottomleft: 2px !important;
+    -moz-border-radius-bottomright: 0 !important;
+    -moz-border-radius-topleft: 2px !important;
+    -moz-border-radius-topright: 0 !important;
+    -webkit-border-bottom-left-radius: 2px !important;
+    -webkit-border-bottom-right-radius: 0 !important;
+    -webkit-border-top-left-radius: 2px !important;
+    -webkit-border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 2px !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 0 !important;
+    color: #666;
+}
+
+.skin-CorporateBible .sidebar-form input[type="text"]:focus,
+.skin-CorporateBible .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+    background-color: #3380bc;
+    border: 0;
+}
+
+.skin-CorporateBible .sidebar-form input[type="text"]:focus + .input-group-btn .btn { border-left: 0; }
+
+.skin-CorporateBible .sidebar-form .btn {
+    -moz-border-radius-bottomleft: 0 !important;
+    -moz-border-radius-bottomright: 2px !important;
+    -moz-border-radius-topleft: 0 !important;
+    -moz-border-radius-topright: 2px !important;
+    -webkit-border-bottom-left-radius: 0 !important;
+    -webkit-border-bottom-right-radius: 2px !important;
+    -webkit-border-top-left-radius: 0 !important;
+    -webkit-border-top-right-radius: 2px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 2px !important;
+    border-left: 0;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 2px !important;
+    color: #8ab23f;
+}
+
+.readonly {
+    background-color: #f9f9f9;
+    border: 0;
+}
+
+.serviceScroll {
+    float: left;
+    height: 225px;
+    overflow-y: auto;
+}
+
+#airFilter, #hotelFilter, #eventsFilter, #conferenceFilter, #travelFilter, #firstAndOr, #secondAndOr, #thirdAndOr, #fourAndOr {
+    background-color: white;
+    cursor: pointer;
+    display: none;
+    left: -100%;
+    position: absolute;
+    top: -100%;
+}
+
+#airFilter + label i#greenPlane {
+    background-color: white;
+    display: none;
+}
+
+/* when the checkbox is checked, hide the orangePlane icon */
+
+#airFilter:checked + label i#orangePlane {
+    background-color: white;
+    display: none;
+}
+
+/* and show the greenPlane icon */
+
+#airFilter:checked + label i#greenPlane {
+    background-color: white;
+    display: block;
+}
+
+#hotelFilter + label i#greenHotel {
+    background-color: white;
+    display: none;
+}
+
+/* when the checkbox is checked, hide the orangePlane icon */
+
+#hotelFilter:checked + label i#orangeHotel {
+    background-color: white;
+    display: none;
+}
+
+/* and show the greenHotel icon */
+
+#hotelFilter:checked + label i#greenHotel {
+    background-color: white;
+    display: block;
+}
+
+#travelFilter + label i#greenTrain {
+    background-color: white;
+    display: none;
+}
+
+/* when the checkbox is checked, hide the orangeTrain icon */
+
+#travelFilter:checked + label i#orangeTrain {
+    background-color: white;
+    display: none;
+}
+
+/* and show the greenTrain icon */
+
+#travelFilter:checked + label i#greenTrain {
+    background-color: white;
+    display: block;
+}
+
+#eventsFilter + label i#greenEvents {
+    background-color: white;
+    display: none;
+}
+
+/* when the checkbox is checked, hide the orangeEvent icon */
+
+#eventsFilter:checked + label i#orangeEvents {
+    background-color: white;
+    display: none;
+}
+
+/* and show the greenEvent icon */
+
+#eventsFilter:checked + label i#greenEvents {
+    background-color: white;
+    display: block;
+}
+
+#conferenceFilter + label i#greenConference {
+    background-color: white;
+    display: none;
+}
+
+/* when the checkbox is checked, hide the orangeConference icon */
+
+#conferenceFilter:checked + label i#orangeConference {
+    background-color: white;
+    display: none;
+}
+
+/* and show the greenConference icon */
+
+#conferenceFilter:checked + label i#greenConference {
+    background-color: white;
+    display: block;
+}
+
+#firstAndOr + label i#firstAnd {
+    background-color: white;
+    display: none;
+}
+
+#firstAndOr:checked + label i#firstOr {
+    background-color: white;
+    display: none;
+}
+
+#firstAndOr:checked + label i#firstAnd {
+    background-color: white;
+    display: block;
+}
+
+#secondAndOr + label i#secondAnd {
+    background-color: white;
+    display: none;
+}
+
+#secondAndOr:checked + label i#secondOr {
+    background-color: white;
+    display: none;
+}
+
+#secondAndOr:checked + label i#secondAnd {
+    background-color: white;
+    display: block;
+}
+
+#thirdAndOr + label i#thirdAnd {
+    background-color: white;
+    display: none;
+}
+
+#thirdAndOr:checked + label i#thirdOr {
+    background-color: white;
+    display: none;
+}
+
+#thirdAndOr:checked + label i#thirdAnd {
+    background-color: white;
+    display: block;
+}
+
+#fourAndOr + label i#fourAnd {
+    background-color: white;
+    display: none;
+}
+
+#fourAndOr:checked + label i#fourOr {
+    background-color: white;
+    display: none;
+}
+
+#fourAndOr:checked + label i#fourAnd {
+    background-color: white;
+    display: block;
+}
+
+.breakword {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.col-md-20 {
+    float: left;
+    width: 20%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.spacingBarNoColour {
+    min-height: 10px; 
+}
+
+.spacingBar {
+    min-height: 10px;
+    background-color: white;
+}
+
+.ib {
+    display:inline-block;            
+}
+
+.select-page {
+  width: 50px;
+  text-align: center;
+}
+.pagination li a input {
+  padding: 0;
+  margin: -5px 0;
+}
+
+.st-sort-ascent:before{
+content: '\25B2';
+}
+
+.st-sort-descent:before{
+content: '\25BC';
+}

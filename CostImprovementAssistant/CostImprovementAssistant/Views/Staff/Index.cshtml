@@ -1,0 +1,117 @@
+﻿@model IEnumerable<CostImprovementAssistant.Staff>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Administrator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletingQI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewingQI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChiefNursing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Spare1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Spare2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Administrator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletingQI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewingQI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChiefNursing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Spare1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Spare2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

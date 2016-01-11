@@ -1,0 +1,67 @@
+﻿@model CostImprovementAssistant.BreakdownOfSavings
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BreakdownOfSavings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year1Saving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year1Saving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReccurentSavingValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReccurentSavingValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetType.BudgetStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetType.BudgetStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetType1.BudgetStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetType1.BudgetStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

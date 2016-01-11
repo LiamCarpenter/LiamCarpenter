@@ -1,0 +1,67 @@
+﻿@model CostImprovementAssistant.QiConditionTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QiConditionTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConditionDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConditionDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mittigation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mittigation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Consiquence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Consiquence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Likelyhood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Likelyhood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QiConditions.ConditionTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QiConditions.ConditionTitle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

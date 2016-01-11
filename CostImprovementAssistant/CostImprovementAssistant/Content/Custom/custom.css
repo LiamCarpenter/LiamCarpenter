@@ -1,0 +1,150 @@
+﻿/*
+    Skin NYS
+    --------
+*/
+/* skin-NYS navbar */
+.skin-NYS .navbar {
+  background-color: rgb(0, 57, 118);
+  border-bottom: 1px solid #eee;
+}
+.skin-NYS .navbar .nav a {
+  color: #ffffff;
+}
+.skin-NYS .navbar .nav > li > a:hover,
+.skin-NYS .navbar .nav > li > a:active,
+.skin-NYS .navbar .nav > li > a:focus,
+.skin-NYS .navbar .nav .open > a,
+.skin-NYS .navbar .nav .open > a:hover,
+.skin-NYS .navbar .nav .open > a:focus {
+  background: #ffffff;
+  color: #999999;
+}
+.skin-NYS .navbar .navbar-right > .nav {
+  margin-right: 10px;
+}
+.skin-NYS .navbar .sidebar-toggle .icon-bar {
+  background: #ffffff;
+}
+.skin-NYS .navbar .sidebar-toggle:hover .icon-bar {
+  background: #999999 !important;
+}
+/* skin-NYS logo */
+.skin-NYS .logo {
+  background-color: rgb(0, 57, 118);
+  color: #f9f9f9;
+}
+.skin-NYS .logo > a {
+  color: #f9f9f9;
+}
+.skin-NYS .logo:hover {
+  /*background: #005699;*/
+}
+/* skin-NYS content header */
+.skin-NYS .right-side > .content-header {
+  background: transparent;
+  box-shadow: none;
+}
+/* Skin-red user panel */
+.skin-NYS .user-panel > .image > img {
+  border: 1px solid #444;
+}
+.skin-NYS .user-panel > .info,
+.skin-NYS .user-panel > .info > a {
+  color: #eee;
+}
+/* skin-NYS sidebar */
+.skin-NYS .sidebar {
+  border-bottom: 0px solid #333;
+}
+.skin-NYS .sidebar > .sidebar-menu > li {
+  border-top: 0px solid #3380bc;
+  border-bottom: 0px solid #3380bc;
+}
+.skin-NYS .sidebar > .sidebar-menu > li:first-of-type {
+  border-top: 0px solid #3380bc;
+}
+.skin-NYS .sidebar > .sidebar-menu > li:first-of-type > a {
+  border-top: 0px solid #3380bc;
+}
+.skin-NYS .sidebar > .sidebar-menu > li > a {
+  margin-right: 1px;
+}
+.skin-NYS .sidebar > .sidebar-menu > li > a:hover,
+.skin-NYS .sidebar > .sidebar-menu > li.active > a {
+  color: #FFFFFF;
+  background: rgb(0, 57, 118);
+}
+.skin-NYS .sidebar > .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #6e7fad;
+}
+.skin-NYS .left-side {
+  background: rgb(29, 84, 146);
+}
+.skin-NYS .sidebar a {
+  color: #eee;
+}
+.skin-NYS .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-NYS .treeview-menu > li > a {
+  color: #ccc;
+}
+.skin-NYS .treeview-menu > li.active > a,
+.skin-NYS .treeview-menu > li > a:hover {
+  color: #fff;
+}
+.skin-NYS .sidebar-form {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 0px solid #555;
+  margin: 10px 10px;
+}
+.skin-NYS .sidebar-form input[type="text"],
+.skin-NYS .sidebar-form .btn {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0 solid rgba(255, 255, 255, 0.1);
+  height: 35px;
+  outline: none;
+}
+.skin-NYS .sidebar-form input[type="text"] {
+  color: #666;
+  -webkit-border-top-left-radius: 2px !important;
+  -webkit-border-top-right-radius: 0 !important;
+  -webkit-border-bottom-right-radius: 0 !important;
+  -webkit-border-bottom-left-radius: 2px !important;
+  -moz-border-radius-topleft: 2px !important;
+  -moz-border-radius-topright: 0 !important;
+  -moz-border-radius-bottomright: 0 !important;
+  -moz-border-radius-bottomleft: 2px !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 2px !important;
+}
+.skin-NYS .sidebar-form input[type="text"]:focus,
+.skin-NYS .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #3380bc;
+  border: 0;
+}
+.skin-NYS .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left: 0;
+}
+.skin-NYS .sidebar-form .btn {
+  color: #8ab23f;
+  -webkit-border-top-left-radius: 0 !important;
+  -webkit-border-top-right-radius: 2px !important;
+  -webkit-border-bottom-right-radius: 2px !important;
+  -webkit-border-bottom-left-radius: 0 !important;
+  -moz-border-radius-topleft: 0 !important;
+  -moz-border-radius-topright: 2px !important;
+  -moz-border-radius-bottomright: 2px !important;
+  -moz-border-radius-bottomleft: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 0;
+}

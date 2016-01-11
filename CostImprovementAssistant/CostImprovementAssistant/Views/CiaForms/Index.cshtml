@@ -1,0 +1,202 @@
+﻿@model IEnumerable<CostImprovementAssistant.CiaForm>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateofScheme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SchemeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Overview)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectSupervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectManager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BudgetSupervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HrSupervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExecutiveOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfidenceFactor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImplementationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BenefitExpectedInCiaYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReccuringAnualBenefit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnablingCosts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NettCiaYearSavings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSAuthorisationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSAuthorisationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BSAuthorisationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BSAuthorisationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RiskAdjustedValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfidenceCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QIRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessLevel.BusinesslevelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessSector.BusinessSectorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualityImpact.ImpactDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateofScheme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SchemeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Overview)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectSupervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectManager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudgetSupervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HrSupervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExecutiveOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfidenceFactor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImplementationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BenefitExpectedInCiaYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReccuringAnualBenefit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnablingCosts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NettCiaYearSavings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PSAuthorisationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PSAuthorisationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BSAuthorisationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BSAuthorisationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RiskAdjustedValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfidenceCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QIRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessLevel.BusinesslevelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessSector.BusinessSectorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualityImpact.ImpactDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

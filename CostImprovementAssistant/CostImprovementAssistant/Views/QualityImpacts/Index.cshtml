@@ -1,0 +1,118 @@
+﻿@model IEnumerable<CostImprovementAssistant.QualityImpact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImpactDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletingQi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OverallRiskScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Equality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConsiderationComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EvidenceComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerStatusComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EoDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EoStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EoStatuscomments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImpactDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletingQi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OverallRiskScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConsiderationComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EvidenceComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerStatusComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EoDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EoStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EoStatuscomments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiaForm.SchemeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,251 @@
+﻿@model CostImprovementAssistant.CiaForm
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CiaForm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofScheme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofScheme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SchemeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Overview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Overview)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectSupervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectSupervisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectManager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectManager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetSupervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetSupervisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HrSupervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HrSupervisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExecutiveOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExecutiveOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfidenceFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfidenceFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImplementationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImplementationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BenefitExpectedInCiaYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BenefitExpectedInCiaYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReccuringAnualBenefit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReccuringAnualBenefit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnablingCosts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnablingCosts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NettCiaYearSavings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NettCiaYearSavings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PSAuthorisationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PSAuthorisationCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PSAuthorisationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PSAuthorisationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BSAuthorisationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BSAuthorisationCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BSAuthorisationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BSAuthorisationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskAdjustedValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskAdjustedValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfidenceCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfidenceCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QIRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QIRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessLevel.BusinesslevelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessLevel.BusinesslevelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessSector.BusinessSectorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessSector.BusinessSectorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QualityImpact.ImpactDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QualityImpact.ImpactDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepartmentName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

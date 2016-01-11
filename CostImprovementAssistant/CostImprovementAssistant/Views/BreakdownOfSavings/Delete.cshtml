@@ -1,0 +1,73 @@
+﻿@model CostImprovementAssistant.BreakdownOfSavings
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BreakdownOfSavings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year1Saving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year1Saving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReccurentSavingValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReccurentSavingValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetType.BudgetStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetType.BudgetStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetType1.BudgetStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetType1.BudgetStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiaForm.SchemeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiaForm.SchemeName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

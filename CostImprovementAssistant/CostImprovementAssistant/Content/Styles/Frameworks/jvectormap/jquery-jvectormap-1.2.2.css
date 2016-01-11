@@ -1,0 +1,32 @@
+.jvectormap-label {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #292929;
+    border: solid 1px #CDCDCD;
+    border-radius: 3px;
+    color: white;
+    display: none;
+    font-size: 10px !important;
+    padding: 3px;
+    position: absolute;
+    z-index: 9999;
+}
+
+.jvectormap-zoomin, .jvectormap-zoomout {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #292929;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    left: 10px;
+    line-height: 10px;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+}
+
+.jvectormap-zoomin { top: 10px; }
+
+.jvectormap-zoomout { top: 35px; }
