@@ -14,3 +14,15 @@ E:\Development\Work\LIBRARIES10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.vbpr
 E:\Development\Work\LIBRARIES10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.dll
 E:\Development\Work\LIBRARIES10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.xml
 E:\Development\Work\LIBRARIES10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.pdb
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoDatabaseUtils.dll.config
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoDatabaseUtils.dll
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoDatabaseUtils.pdb
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoDatabaseUtils.xml
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoUtilities.dll
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\log4net.dll
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoUtilities.pdb
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\bin\Debug\EvoUtilities.xml
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.vbprojResolveAssemblyReference.cache
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.dll
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.xml
+C:\Users\Liam Carpentet\Documents\LiamCarpenter\Libraries10\EvoDatabaseUtils\obj\Debug\EvoDatabaseUtils.pdb

@@ -278,6 +278,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="bin\Release\NysDat.dll.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -291,6 +292,17 @@
     <None Include="NysDat.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Release\adodb.dll" />
+    <Content Include="bin\Release\EvoDatabaseUtils.dll" />
+    <Content Include="bin\Release\EvoDatabaseUtils.pdb" />
+    <Content Include="bin\Release\EvoDatabaseUtils.xml" />
+    <Content Include="bin\Release\EvoUtilities.dll" />
+    <Content Include="bin\Release\EvoUtilities.pdb" />
+    <Content Include="bin\Release\EvoUtilities.xml" />
+    <Content Include="bin\Release\log4net.dll" />
+    <Content Include="bin\Release\NysDat.dll" />
+    <Content Include="bin\Release\NysDat.pdb" />
+    <Content Include="bin\Release\NysDat.xml" />
     <Content Include="dlls\log4net.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -311,18 +323,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LIBRARIES10\CSVParser\CSVParser.vbproj">
-      <Project>{EF690B6C-1FE1-4066-8727-3B46B5F8C600}</Project>
+    <ProjectReference Include="..\..\..\Libraries10\CSVParser\CSVParser.vbproj">
+      <Project>{ef690b6c-1fe1-4066-8727-3b46b5f8c600}</Project>
       <Name>CSVParser</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\LIBRARIES10\EvoDatabaseUtils\EvoDatabaseUtils.vbproj">
+    <ProjectReference Include="..\..\..\Libraries10\EvoDatabaseUtils\EvoDatabaseUtils.vbproj">
       <Project>{45AD55B9-7A28-43D6-AADE-E9B5D83A925C}</Project>
       <Name>EvoDatabaseUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\LIBRARIES10\EvoUtilities\EvoUtilities.vbproj">
+    <ProjectReference Include="..\..\..\Libraries10\EvoUtilities\EvoUtilities.vbproj">
       <Project>{A9EC19B1-0065-4001-9C05-603F94AC0420}</Project>
       <Name>EvoUtilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\x64\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
